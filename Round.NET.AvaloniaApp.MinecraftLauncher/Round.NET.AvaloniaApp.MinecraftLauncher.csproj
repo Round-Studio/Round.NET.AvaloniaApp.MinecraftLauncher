@@ -21,10 +21,11 @@
     <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" Version="11.3.0-beta1" />
     <PackageReference Include="DotNet.Bundle" Version="0.9.13" />
     <PackageReference Include="DotNetZip" Version="1.16.0" />
-    <PackageReference Include="Downloader" Version="3.3.3" />
+    <PackageReference Include="Downloader" Version="3.3.4" />
     <PackageReference Include="FluentAvalonia.FluentIcons" Version="1.1.201.1-preview7" />
     <PackageReference Include="FluentAvaloniaUI" Version="2.4.0-preview1" />
     <PackageReference Include="HeroIcons.Avalonia" Version="1.0.2" />
+    <PackageReference Include="OverrideLauncher.Core" Version="25.5.3.705" />
     <PackageReference Include="RestSharp" Version="106.11.5" />
     <PackageReference Include="System.Management" Version="10.0.0-preview.1.25080.5" />
   </ItemGroup>

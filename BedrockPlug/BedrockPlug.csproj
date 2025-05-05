@@ -13,7 +13,7 @@
     <ItemGroup>
       <PackageReference Include="DotNet.Bundle" Version="0.9.13" />
       <PackageReference Include="DotNetZip" Version="1.16.0" />
-      <PackageReference Include="Downloader" Version="3.3.3" />
+      <PackageReference Include="Downloader" Version="3.3.4" />
     </ItemGroup>
 
 </Project>
