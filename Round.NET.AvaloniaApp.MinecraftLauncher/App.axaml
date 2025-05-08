@@ -26,4 +26,14 @@
             <Setter Property="Margin" Value="10"/>
         </Style>
     </Application.Styles>
+             
+    <Application.Resources>
+        <ControlTheme x:Key="TitleBarButton" TargetType="Button">
+            <Setter Property="Width" Value="32"/>
+            <Setter Property="Height" Value="32"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="BorderBrush" Value="Transparent"/>
+            <Setter Property="Background" Value="Transparent"/>
+        </ControlTheme>
+    </Application.Resources>
 </Application>
