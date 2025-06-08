@@ -23,7 +23,7 @@ public partial class JavaSetting : UserControl
         
         JavaManager.JavaManager.JavaRoot.Javas.ForEach(x =>
         {
-            ChooseDefaultJava.Items.Add(new ComboBoxItem() { Content = x.Path });
+            ChooseDefaultJava.Items.Add(new ComboBoxItem() { Content = x.JavaWPath });
         });
         ChooseDefaultJava.SelectedIndex = JavaManager.JavaManager.JavaRoot.SelectIndex;
 

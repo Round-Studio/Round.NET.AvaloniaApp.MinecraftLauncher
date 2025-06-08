@@ -25,7 +25,7 @@ public class LaunchService
             Account = new OffineAuthenticator("test").Authenticator(),
             JavaInfo = new JavaInfo()
             {
-                JavaPath = Info.Java.Path,
+                JavaPath = Info.Java.JavaWPath,
                 Version = Info.Java.Version
             },
             LauncherInfo = "RMCL",

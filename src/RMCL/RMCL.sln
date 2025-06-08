@@ -1,5 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36202.13 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RMCL", "RMCL\RMCL.csproj", "{E785506F-4E62-4D2B-8ED8-730550C1FEF1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RMCL.Config", "RMCL.Config\RMCL.Config.csproj", "{EE00B849-2D11-42F0-A0AC-2F1F3B00B269}"
@@ -23,6 +26,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompositionScroll", "CompositionScroll\CompositionScroll.csproj", "{C76FCD04-EB37-44CF-A9A9-AF452FE05D71}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RMCL.NetworkService", "RMCL.NetworkService\RMCL.NetworkService.csproj", "{92BB8208-4416-4DB6-B771-D40C61514742}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTest", "UnitTest\UnitTest.csproj", "{134964D1-9076-4C55-9CDE-0FD54F0F6E01}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -78,5 +83,12 @@ Global
 		{92BB8208-4416-4DB6-B771-D40C61514742}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{92BB8208-4416-4DB6-B771-D40C61514742}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{92BB8208-4416-4DB6-B771-D40C61514742}.Release|Any CPU.Build.0 = Release|Any CPU
+		{134964D1-9076-4C55-9CDE-0FD54F0F6E01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{134964D1-9076-4C55-9CDE-0FD54F0F6E01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{134964D1-9076-4C55-9CDE-0FD54F0F6E01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{134964D1-9076-4C55-9CDE-0FD54F0F6E01}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 EndGlobal

@@ -5,7 +5,7 @@ namespace RMCL.Base.Entry;
 
 public class LaunchClientInfo
 {
-    public JavaInfoEntry Java { get; set; }
+    public JavaDetils Java { get; set; }
     public string GameFolder { get; set; }
     public string GameName { get; set; }
 }
