@@ -23,6 +23,13 @@ public partial class Setting : UserControl
         });
         NavigationPage.RegisterRoute(new NavigationRouteConfig()
         {
+            Route = "DownloadSetting",
+            Title = "下载设置",
+            Page = new DownloadSetting(),
+            Icon = FluentIconSymbol.ArrowDownload20Regular,
+        });
+        NavigationPage.RegisterRoute(new NavigationRouteConfig()
+        {
             Route = "JavaSetting",
             Title = "Java 和内存设置",
             Page = new JavaSetting(),

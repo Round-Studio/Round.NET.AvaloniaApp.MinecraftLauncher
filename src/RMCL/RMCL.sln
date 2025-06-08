@@ -27,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompositionScroll", "Compos
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RMCL.NetworkService", "RMCL.NetworkService\RMCL.NetworkService.csproj", "{92BB8208-4416-4DB6-B771-D40C61514742}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RMCL.Update", "RMCL.Update\RMCL.Update.csproj", "{AE57B78A-06EE-4AD6-A4BC-DF70699A608B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -81,6 +83,10 @@ Global
 		{92BB8208-4416-4DB6-B771-D40C61514742}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{92BB8208-4416-4DB6-B771-D40C61514742}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{92BB8208-4416-4DB6-B771-D40C61514742}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE57B78A-06EE-4AD6-A4BC-DF70699A608B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE57B78A-06EE-4AD6-A4BC-DF70699A608B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE57B78A-06EE-4AD6-A4BC-DF70699A608B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE57B78A-06EE-4AD6-A4BC-DF70699A608B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

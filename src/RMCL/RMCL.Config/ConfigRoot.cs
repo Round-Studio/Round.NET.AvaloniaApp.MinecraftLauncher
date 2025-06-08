@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using RMCL.Base.Entry.Style;
+using RMCL.Base.Entry.Update;
 
 namespace RMCL.Config;
 
@@ -20,9 +21,7 @@ public class ConfigRoot
     public int SelectedGameFolder { get; set; } = 0;
     public int SelectedJava { get; set; } = 0;
     public int SelectedUser { get; set; } = 0;
-    public int UpdateSourse { get; set; } = 0;
     public bool ShowErrorWindow { get; set; } = true;
-    public bool IsAutoUpdate { get; set; } = true;
     public bool IsDebug { get; set; } = false;
     public int WindowWidth { get; set; } = 850;
     public int WindowHeight { get; set; } = 450;
@@ -38,6 +37,7 @@ public class ConfigRoot
     public int WindowY { get; set; } = 0;
     public string RSAccount { get; set; } = string.Empty;
     public ThemeType Theme { get; set; } = ThemeType.Dark;
+    public UpdateConfigEntry UpdateModel { get; set; } = new();
 }
 public class GameFolderConfig
 {

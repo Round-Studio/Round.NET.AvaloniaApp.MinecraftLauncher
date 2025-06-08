@@ -1,0 +1,30 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:fluentIcons="clr-namespace:FluentAvalonia.FluentIcons;assembly=FluentAvalonia.FluentIcons"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450" 
+        Width="800" Height="450"
+        MinWidth="800" MinHeight="450"
+        x:Class="RMCL.Views.Windows.Main.ErrorReportWindow"
+        Title="RMCL 错误报告" Padding="10">
+    <Grid>
+        <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top">
+            <DockPanel>
+                <fluentIcons:FluentIcon Icon="ErrorCircle24Regular" Foreground="DarkRed" Margin="5" Width="46" Height="46"/>
+                <TextBlock FontSize="64" FontWeight="Heavy" Margin="5,-14,0,0" Height="80">Error</TextBlock>
+            </DockPanel>
+        
+            <TextBlock>
+                <Run>RMCL 在运行时发生了崩溃性错误。</Run>
+                <Run Foreground="DarkRed" FontWeight="Bold">请不要把此窗口截图提交，这将无任何意义！</Run>
+            </TextBlock>
+        </StackPanel>
+        
+        <StackPanel HorizontalAlignment="Right" VerticalAlignment="Top">
+            <TextBlock HorizontalAlignment="Right">RMCL 崩溃追踪器</TextBlock>
+            <TextBlock HorizontalAlignment="Right" Foreground="Gray">DataTime</TextBlock>
+            <TextBlock HorizontalAlignment="Right" Foreground="Gray">Version</TextBlock>
+        </StackPanel>
+    </Grid>
+</Window>

@@ -15,10 +15,12 @@ using Avalonia.Styling;
 using Avalonia.Threading;
 using FluentAvalonia.Interop;
 using FluentAvalonia.UI.Controls;
+using RMCL.Base.Enum.Update;
 using RMCL.Config;
 using RMCL.Models.Classes;
 using RMCL.Models.Classes.Manager.StyleManager;
 using RMCL.Models.Classes.Manager.TaskManager;
+using RMCL.Update;
 
 namespace RMCL.Views;
 
@@ -56,7 +58,6 @@ public partial class MainWindow : Window
         HomeButtonTips.IsOpen = Config.Config.MainConfig.FirstLauncher;
 
         StyleManager.UpdateBackground();
-        
         
         Console.WriteLine("Opened MainWindow!");
     }

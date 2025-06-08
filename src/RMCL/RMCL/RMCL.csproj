@@ -62,5 +62,6 @@
       <ProjectReference Include="..\RMCL.JavaManager\RMCL.JavaManager.csproj" />
       <ProjectReference Include="..\RMCL.Logger\RMCL.Logger.csproj" />
       <ProjectReference Include="..\RMCL.NetworkService\RMCL.NetworkService.csproj" />
+      <ProjectReference Include="..\RMCL.Update\RMCL.Update.csproj" />
     </ItemGroup>
 </Project>

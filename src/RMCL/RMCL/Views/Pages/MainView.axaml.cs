@@ -1,12 +1,19 @@
 using System;
+using System.Threading;
+using System.Threading.Tasks;
 using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Interactivity;
 using Avalonia.Markup.Xaml;
+using Avalonia.Threading;
 using FluentAvalonia.FluentIcons;
+using FluentAvalonia.UI.Controls;
+using RMCL.Base.Enum.Update;
 using RMCL.Controls.ControlHelper;
 using RMCL.Models.Classes;
+using RMCL.Update;
 using RMCL.Views.Pages.Main;
+using RMCL.Views.Pages.UpdateView;
 
 namespace RMCL.Views.Pages;
 
@@ -53,5 +60,33 @@ public partial class MainView : UserControl
             Title = new Label() { Content = "设置" },
             Page = new Setting()
         });
+
+        this.Loaded += async (sender, args) =>
+        {
+            var Update =
+                new Update.UpdateDetect(
+                    "https://api.github.com/repos/Round-Studio/Round.NET.AvaloniaApp.MinecraftLauncher/releases/latest");
+            
+            Update.BranchIndex = Config.Config.MainConfig.UpdateModel.Branch;
+            Update.OnUpdate = (s, entry) =>
+            {
+                Task.Run(() =>
+                {
+                    var url = s;
+                    if (Config.Config.MainConfig.UpdateModel.Proxy == UpdateProxy.Faster)
+                    {
+                        var sel = new GitHubProxySelector();
+                        url = sel.GetBestProxyUrl().Replace("{url}", s);
+                    }
+
+                    Console.WriteLine(url);
+                    Dispatcher.UIThread.Invoke(() =>
+                    {
+                        Core.ChildFrame.Show(new UpdatePage(url, entry));
+                    });
+                });
+            };
+            Update.Detect();
+        };
     }
 }

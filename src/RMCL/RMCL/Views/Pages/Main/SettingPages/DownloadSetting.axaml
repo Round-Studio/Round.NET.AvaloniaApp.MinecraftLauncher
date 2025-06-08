@@ -1,0 +1,50 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:controls="clr-namespace:FluentAvalonia.UI.Controls;assembly=FluentAvalonia"
+             xmlns:fluentIcons="clr-namespace:FluentAvalonia.FluentIcons;assembly=FluentAvalonia.FluentIcons"
+             xmlns:view="clr-namespace:RMCL.Controls.View;assembly=RMCL.Controls"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="RMCL.Views.Pages.Main.SettingPages.DownloadSetting">
+    <Grid>
+        <ScrollViewer Margin="5">
+            <StackPanel>
+                <controls:SettingsExpander Header="更新"
+                                     Description="设置启动器的更新配置"
+                                     IsExpanded="True">
+                    <controls:SettingsExpander.IconSource>
+                        <fluentIcons:FluentIconSource Icon="PhoneUpdate20Regular"/>
+                    </controls:SettingsExpander.IconSource>
+                    <controls:SettingsExpanderItem Content="发行版"
+                                                   Description="更新发行版">
+                        <controls:SettingsExpanderItem.Footer>
+                            <ComboBox Name="ChoosePublishSource" Width="400" SelectionChanged="ChoosePublishSource_OnSelectionChanged">
+                                <ComboBoxItem Tag="Release">稳定版 (Release)</ComboBoxItem>
+                                <ComboBoxItem Tag="Transcend">测试版 (Transcend)</ComboBoxItem>
+                            </ComboBox>
+                        </controls:SettingsExpanderItem.Footer>
+                    </controls:SettingsExpanderItem>
+                    <controls:SettingsExpanderItem Content="下载源"
+                                                   Description="下载更新的源">
+                        <controls:SettingsExpanderItem.Footer>
+                            <ComboBox Name="ChooseDownloadSource" Width="400" SelectionChanged="ChooseDownloadSource_OnSelectionChanged">
+                                <ComboBoxItem Tag="Github">Github (很慢)</ComboBoxItem>
+                                <ComboBoxItem Tag="Proxy">自动选择加速地址 (快，不稳定)</ComboBoxItem>
+                            </ComboBox>
+                        </controls:SettingsExpanderItem.Footer>
+                    </controls:SettingsExpanderItem>
+                    <controls:SettingsExpanderItem Content="更新源"
+                                                   Description="获取更新信息的源">
+                        <controls:SettingsExpanderItem.Footer>
+                            <ComboBox Name="ChooseUpdateAPISource" Width="400" SelectionChanged="ChooseUpdateAPISource_OnSelectionChanged">
+                                <ComboBoxItem Tag="Github">Github (很慢)</ComboBoxItem>
+                                <ComboBoxItem Tag="Proxy">加速地址 (快，不稳定)</ComboBoxItem>
+                            </ComboBox>
+                        </controls:SettingsExpanderItem.Footer>
+                    </controls:SettingsExpanderItem>
+                </controls:SettingsExpander>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</UserControl>

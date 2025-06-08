@@ -1,0 +1,32 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:fluentIcons="clr-namespace:FluentAvalonia.FluentIcons;assembly=FluentAvalonia.FluentIcons"
+             xmlns:item="clr-namespace:RMCL.Controls.Item;assembly=RMCL.Controls"
+             xmlns:button="clr-namespace:RMCL.Controls.Button;assembly=RMCL.Controls"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="RMCL.Views.Pages.UpdateView.UpdatePage">
+    <Grid>
+        <DockPanel VerticalAlignment="Top" HorizontalAlignment="Left" Margin="5">
+            <fluentIcons:FluentIcon Icon="PhoneUpdate20Regular" Width="24" Height="24"/>
+            <TextBlock HorizontalAlignment="Left" FontSize="18" Margin="5" FontWeight="Bold">发现新的本体更新</TextBlock>
+        </DockPanel>
+        
+        
+        <DockPanel HorizontalAlignment="Right" VerticalAlignment="Top" Margin="4.5,8">
+            <item:LabelBox Text="发布者：Round-Studio" Margin="2.5,0" Name="Publisher"/>
+            <item:LabelBox Text="Data" Margin="2.5,0" Name="Released"/>
+        </DockPanel>
+        <DockPanel HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="5">
+            <button:IconButton Content="打开网页链接" Icon="Link20Regular" Margin="5" Name="OpenALinkToAWebPage" Click="OpenALinkToAWebPage_OnClick"/>
+            <button:AccentIconButton Content="更新" Icon="ArrowDownload20Regular" Margin="5" Name="OnUpdateBtn" Click="OnUpdateBtn_OnClick"/>
+        </DockPanel>
+        
+        <StackPanel Margin="10,48,10,48">
+            <TextBlock Name="CurrentVersion">当前版本</TextBlock>
+            <TextBlock Name="UpdatedVersion">更新版本</TextBlock>
+            <TextBlock Name="VersionBranch">版本分支</TextBlock>
+        </StackPanel>
+    </Grid>
+</UserControl>
