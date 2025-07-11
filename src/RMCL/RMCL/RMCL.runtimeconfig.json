@@ -1,12 +1,16 @@
 ﻿{
   "runtimeOptions": {
     "configProperties": {
-      "System.GC.Server": true,      
-      "System.GC.Concurrent": true,     
-      "System.GC.RetainVM": false,      
-      "System.GC.HeapHardLimit": 0,    
-      "System.GC.HeapHardLimitPercent": 0, 
-      "System.GC.NoAffinitize": false   
+      "System.GC.Server": true,
+      "System.GC.Concurrent": true,
+      "System.GC.RetainVM": true,
+      "System.GC.HeapHardLimitPercent": 80,
+      "System.GC.NoAffinitize": false,
+      "System.GC.LOHThreshold": 85000,
+      "System.Threading.ThreadPool.MinWorkerThreads": 4,
+      "System.Threading.ThreadPool.MinCompletionPortThreads": 4,
+      "System.Threading.ThreadPool.MaxWorkerThreads": 32,
+      "System.Threading.ThreadPool.MaxCompletionPortThreads": 32
     }
   }
 }

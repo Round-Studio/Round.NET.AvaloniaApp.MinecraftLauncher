@@ -7,19 +7,21 @@ using Avalonia.Layout;
 using Avalonia.Markup.Xaml;
 using Avalonia.Media;
 using System;
+using System.Collections.Generic;
 using Avalonia.Controls.Primitives;
 using Avalonia.Threading;
 using RMCL.Base.Enum.ButtonStyle;
 using RMCL.Base.Interface;
 using RMCL.Core.Models.Classes.Manager.UserManager;
+using RMCL.Core.Models.Classes.Manager;
 using ColorHelper = RMCL.Core.Models.Classes.Manager.StyleManager.ColorHelper;
 
 namespace RMCL.Core.Views.Pages.Main.HomePages;
 
-public partial class HomeQuickChoosePlayer : ISetting
+public partial class HomeQuickChoosePlayer : ISetting, IDisposable
 {
-    private IDisposable? _pointerEnterSubscription;
-    private IDisposable? _pointerLeaveSubscription;
+    private readonly List<IDisposable> _subscriptions = new();
+    private bool _disposed = false;
 
     public HomeQuickChoosePlayer()
     {
@@ -35,15 +37,18 @@ public partial class HomeQuickChoosePlayer : ISetting
 
     private void SetupHoverEvents()
     {
-        // 订阅鼠标进入事件
-        _pointerEnterSubscription = HoverArea.AddDisposableHandler(
+        // 使用优化的事件订阅管理器
+        var enterSubscription = HoverArea.AddDisposableHandler(
             InputElement.PointerEnteredEvent,
             (sender, e) => ShowContentBox());
-        
-        // 订阅鼠标离开事件
-        _pointerLeaveSubscription = HoverArea.AddDisposableHandler(
+
+        var leaveSubscription = HoverArea.AddDisposableHandler(
             InputElement.PointerExitedEvent,
             (sender, e) => HideContentBox());
+
+        _subscriptions.Add(enterSubscription);
+        _subscriptions.Add(leaveSubscription);
+
         HideContentBox();
     }
 
@@ -189,5 +194,19 @@ public partial class HomeQuickChoosePlayer : ISetting
 
             UpdateUI(false);
         }
+    }
+
+    public void Dispose()
+    {
+        if (_disposed) return;
+
+        _disposed = true;
+
+        // 清理所有事件订阅
+        foreach (var subscription in _subscriptions)
+        {
+            subscription?.Dispose();
+        }
+        _subscriptions.Clear();
     }
 }

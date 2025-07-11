@@ -29,7 +29,7 @@ public partial class ClientScreenshotSetting : ISetting ,IUISetting
                 try
                 {
                     using var fileStream = new FileStream(file, FileMode.Open, FileAccess.Read, FileShare.Read, 4096, FileOptions.Asynchronous);
-                    var bitmap = await Task.Run(() => Bitmap.DecodeToWidth(fileStream, 120));
+                    var bitmap = await Task.Run(() => Bitmap.DecodeToWidth(fileStream, 210));
                 
                     await Dispatcher.UIThread.InvokeAsync(() =>
                     {

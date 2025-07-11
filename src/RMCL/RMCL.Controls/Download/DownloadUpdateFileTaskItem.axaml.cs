@@ -22,7 +22,7 @@ public partial class DownloadUpdateFileTaskItem : UserControl
 
     public void StartDownload()
     {
-        DownloadService down = new DownloadService();
+        Downloader.DownloadService down = new Downloader.DownloadService();
         down.DownloadFileCompleted += (s, e) => InstallUpdate();
         down.DownloadProgressChanged += (s, e) =>
         {

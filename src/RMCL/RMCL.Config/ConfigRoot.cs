@@ -28,7 +28,7 @@ public class ConfigRoot
     public int SelectedGameFolder { get; set; } = 0;
     public int WindowWidth { get; set; } = 850;
     public int WindowHeight { get; set; } = 450;
-    public int DownloadThreads { get; set; } = 256;
+    public int DownloadThreads { get; set; } = Math.Min(Environment.ProcessorCount * 4, 32); // 优化下载线程数
     public int WindowX { get; set; } = 0;
     public int WindowY { get; set; } = 0;
     public UpdateConfigEntry UpdateModel { get; set; } = new();

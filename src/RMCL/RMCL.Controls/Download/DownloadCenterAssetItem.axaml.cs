@@ -31,7 +31,7 @@ public partial class DownloadCenterAssetItem : UserControl
         {
             info.Files.ForEach(async x =>
             {
-                DownloadService downloadService = new DownloadService();
+                Downloader.DownloadService downloadService = new Downloader.DownloadService();
                 downloadService.DownloadFileCompleted += (s, e) => Completed();
                 downloadService.DownloadProgressChanged += (s, e) =>
                 {

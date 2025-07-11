@@ -1,16 +1,12 @@
-using System.Collections.Concurrent;
 using Avalonia.Controls;
 using Avalonia.Interactivity;
-using Avalonia.Media.Imaging;
-using Avalonia.Platform;
 using OverrideLauncher.Core.Modules.Entry.DownloadEntry;
+using RMCL.Controls.Helpers;
 
 namespace RMCL.Controls.Item
 {
     public partial class DownloadGameItem : UserControl
     {
-        private static readonly ConcurrentDictionary<string, Bitmap> _imageCache = new ConcurrentDictionary<string, Bitmap>();
-
         public Action<string> OnDownload = s => { };
 
         public DownloadGameItem(VersionManifestEntry.Version version)
@@ -20,14 +16,14 @@ namespace RMCL.Controls.Item
             VersionType.Text = version.Type;
             VersionTime.Text = DateTime.Parse(version.Time).ToString("yyyy/MM/dd HH:mm:ss");
 
+            // 使用简化的图像缓存
             string resourcePath = $"avares://RMCL.Controls/Assets/MinecraftIcons/{version.Type}.png";
-            var bitmap = _imageCache.GetOrAdd(resourcePath, key =>
-            {
-                using var stream = AssetLoader.Open(new Uri(key));
-                return Bitmap.DecodeToWidth(stream, 24); // 按需调整目标宽度
-            });
+            var bitmap = SimpleImageCache.GetOrCreateBitmapFromAsset(resourcePath, 24);
 
-            IconImage.Source = bitmap;
+            if (bitmap != null)
+            {
+                IconImage.Source = bitmap;
+            }
         }
 
         private void Button_OnClick(object? sender, RoutedEventArgs e)

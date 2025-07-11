@@ -14,8 +14,14 @@ sealed class Program
 {
     public static void Main(string[] args)
     {
-// 设置 GC 延迟模式（默认是 Interactive，可改为 LowLatency/Batch）
-        System.Runtime.GCSettings.LatencyMode = GCLatencyMode.Batch;
+        // 优化GC设置以提高性能
+        System.Runtime.GCSettings.LatencyMode = GCLatencyMode.Interactive;
+
+        // 设置进程优先级
+        Process.GetCurrentProcess().PriorityClass = ProcessPriorityClass.High;
+
+        // 预热线程池
+        ThreadPool.SetMinThreads(Environment.ProcessorCount * 2, Environment.ProcessorCount * 2);
         
         if (args.Length >= 4)
         {

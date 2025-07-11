@@ -76,20 +76,14 @@ public class UserInfoSerch
     
     public static async Task<string> GetImageAsBase64Async(string imageUrl)
     {
-        HttpClient _httpClient = new HttpClient();
         try
         {
-            // 下载图片数据
-            byte[] imageBytes = await _httpClient.GetByteArrayAsync(imageUrl);
-            
+            // 使用优化的HTTP客户端下载图片数据
+            byte[] imageBytes = await NetworkService.SingleInstanceDetector.HttpApiClient.GetByteArrayAsync(imageUrl);
+
             // 转换为Base64字符串
             string base64String = Convert.ToBase64String(imageBytes);
-            
-            // 如果需要数据URI格式，可以添加前缀
-            // 首先需要确定图片类型，这里简单假设为JPEG
-            // string mimeType = "image/jpeg";
-            // string dataUri = $"data:{mimeType};base64,{base64String}";
-            
+
             return base64String;
         }
         catch (Exception ex)

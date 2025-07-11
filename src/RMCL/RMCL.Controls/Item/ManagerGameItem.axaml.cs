@@ -1,11 +1,10 @@
-using System.Collections.Concurrent;
 using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Interactivity;
 using Avalonia.Markup.Xaml;
 using Avalonia.Media.Imaging;
-using Avalonia.Platform;
 using OverrideLauncher.Core.Modules.Classes.Version;
+using RMCL.Controls.Helpers;
 
 namespace RMCL.Controls.Item;
 
@@ -14,7 +13,6 @@ public partial class ManagerGameItem : UserControl
     public Action<VersionParse> OnLaunch = s => { };
     public Action<VersionParse> OnSetting = s => { };
     private VersionParse _versionParse;
-    private static readonly ConcurrentDictionary<string, Bitmap> _imageCache = new ConcurrentDictionary<string, Bitmap>();
     public ManagerGameItem(VersionParse versionInfo)
     {
         _versionParse = versionInfo;
@@ -37,13 +35,14 @@ public partial class ManagerGameItem : UserControl
             RightBtnBox.IsVisible = false;
         }
         
-        var bitmap = _imageCache.GetOrAdd($"avares://RMCL.Controls/Assets/MinecraftIcons/{type}.png", key =>
-        {
-            using var stream = AssetLoader.Open(new Uri(key));
-            return Bitmap.DecodeToWidth(stream, 24); // 按需调整目标宽度
-        });
+        // 使用简化的图像缓存
+        var assetPath = $"avares://RMCL.Controls/Assets/MinecraftIcons/{type}.png";
+        var bitmap = SimpleImageCache.GetOrCreateBitmapFromAsset(assetPath, 24);
 
-        IconImage.Source = bitmap;
+        if (bitmap != null)
+        {
+            IconImage.Source = bitmap;
+        }
     }
 
     private void Button_OnClick(object? sender, RoutedEventArgs e)

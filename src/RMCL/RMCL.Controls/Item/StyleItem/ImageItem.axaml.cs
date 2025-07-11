@@ -4,6 +4,7 @@ using Avalonia.Interactivity;
 using Avalonia.Markup.Xaml;
 using Avalonia.Media;
 using Avalonia.Media.Imaging;
+using RMCL.Controls.Helpers;
 
 namespace RMCL.Controls.Item.StyleItem;
 
@@ -15,13 +16,13 @@ public partial class ImageItem : UserControl
     {
         InitializeComponent();
         path = Path;
-        
+
         if (File.Exists(Path))
         {
-            using (var stream = File.OpenRead(Path))
+            // 使用简化的图像缓存
+            var bitmap = SimpleImageCache.GetOrCreateBitmapFromFile(Path, 48);
+            if (bitmap != null)
             {
-                // 按宽度等比缩放解码（保持纵横比）
-                var bitmap = Bitmap.DecodeToWidth(stream, 48);
                 ImageShowBox.Background = new ImageBrush()
                 {
                     Source = bitmap,
