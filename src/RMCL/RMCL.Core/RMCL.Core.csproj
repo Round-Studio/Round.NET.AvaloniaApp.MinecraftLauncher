@@ -28,7 +28,7 @@
             <PrivateAssets Condition="'$(Configuration)' != 'Debug'">All</PrivateAssets>
         </PackageReference>
         <PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.0" />
-        <PackageReference Include="FluentAvaloniaUI" Version="2.4.0-preview1" />
+        <PackageReference Include="FluentAvaloniaUI" Version="2.4.0" />
         <PackageReference Include="LuaCSharp" Version="0.4.2" />
         <PackageReference Include="OverrideLauncher.Core" Version="25.7.10.224" />
     </ItemGroup>

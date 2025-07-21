@@ -25,6 +25,7 @@ using RMCL.Core.Models.Classes.Manager.StyleManager;
 using RMCL.Core.Models.Classes.Manager.TaskManager;
 using RMCL.Core.Models.Classes;
 using RMCL.Core.Models.Classes.Manager.BackCallManager;
+using RMCL.Core.Views.Windows;
 using RMCL.Core.Views.Windows.Initialize;
 using RMCL.PathsDictionary;
 using RMCL.Plug;
@@ -142,6 +143,8 @@ public partial class MainWindow : Window
         // 添加拖放事件处理器
         AddHandler(DragDrop.DragOverEvent, OnDragOver);
         AddHandler(DragDrop.DropEvent, OnDrop);
+        
+        new TestDrag().Show();
     }
 
     private void OnDragOver(object? sender, DragEventArgs e)
