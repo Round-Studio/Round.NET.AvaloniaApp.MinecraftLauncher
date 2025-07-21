@@ -4,6 +4,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Avalonia;
 using Avalonia.Controls;
+using Avalonia.Input;
 using Avalonia.Interactivity;
 using Avalonia.Markup.Xaml;
 using Avalonia.Threading;
@@ -26,6 +27,7 @@ public partial class MainView : UserControl
     public MainView()
     {
         InitializeComponent();
+
         Models.Classes.Core.BottomBar = BottomBar;
         Models.Classes.Core.ChildFrame = ChildFrame;
         BottomBar.ContentFrame = MainFrame;
@@ -34,10 +36,7 @@ public partial class MainView : UserControl
             Models.Classes.Core.MainWindow.HomeButton.Content = new FluentIcon()
                 { Icon = FluentIconSymbol.ArrowLeft20Regular, Margin = new Thickness(3) };
         };
-        Models.Classes.Core.ChildFrame.ClosedCallBack = () =>
-        {
-            Models.Classes.Core.MainWindow.UpdateButtonStyle();
-        };
+        Models.Classes.Core.ChildFrame.ClosedCallBack = () => { Models.Classes.Core.MainWindow.UpdateButtonStyle(); };
 
         BottomBar.RegisterNavigationItem(new BottomBarNavigationEntry()
         {
@@ -100,13 +99,15 @@ public partial class MainView : UserControl
                         Update.Detect();
                     });
                 }
-                catch(Exception ex)
+                catch (Exception ex)
                 {
                     Console.WriteLine(ex.StackTrace);
                     Models.Classes.Core.MessageShowBox.AddInfoBar("无法更新", "无法获取更新，可能您未连接互联网", InfoBarSeverity.Error);
                 }
             }
         };
+
+        DragDrop.SetAllowDrop(this , true);
     }
 
     private void LauncherButton_OnClick(object? sender, RoutedEventArgs e)

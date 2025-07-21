@@ -29,6 +29,7 @@ public partial class App : Application
     public override void Initialize()
     {
         Console.WriteLine("App Init...");
+        
         Task.Run(() =>
         {
             while (true)
@@ -40,7 +41,6 @@ public partial class App : Application
                 }
             }
         });
-        AvaloniaXamlLoader.Load(this);
         
         // 订阅所有全局异常处理器
         AppDomain.CurrentDomain.UnhandledException += CurrentDomain_UnhandledException;
@@ -48,7 +48,7 @@ public partial class App : Application
         Dispatcher.UIThread.UnhandledException += UIThread_UnhandledException;
     }
 
-    public override async void OnFrameworkInitializationCompleted()
+    public override void OnFrameworkInitializationCompleted()
     {
         Console.WriteLine("On Framework Initialization Completed");
         DisableAvaloniaDataAnnotationValidation();

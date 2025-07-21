@@ -6,7 +6,7 @@
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="RMCL.Core.Views.Windows.ErrorWindow"
         Width="820"
-        Height="450"
+        Height="450" DragDrop.AllowDrop="True"
         MinWidth="820"
         MinHeight="450"
         WindowStartupLocation="CenterScreen"

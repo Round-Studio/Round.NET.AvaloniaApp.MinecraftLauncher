@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading;
 using Avalonia;
 using Avalonia.Controls;
+using Avalonia.Input;
 using Avalonia.Interactivity;
 using Avalonia.Markup.Xaml;
 using FluentAvalonia.UI.Controls;
@@ -23,9 +24,9 @@ public partial class ErrorWindow : Window
     public ErrorWindow()
     {
         InitializeComponent();
-        TimeShow.Content = DateTime.Now.ToString();
+        TimeShow.Content = DateTime.Now.ToString(); 
     }
-
+    
     public void ShowEx(Exception ex,DateTime time)
     {
         TimeZoneInfo localTimeZone = TimeZoneInfo.Local;

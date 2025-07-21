@@ -138,6 +138,42 @@ public partial class MainWindow : Window
         }
         
         MusicCapsule.SetVolume(Config.Config.MainConfig.BackMusicEntry.Volume * 100);
+
+        // 添加拖放事件处理器
+        AddHandler(DragDrop.DragOverEvent, OnDragOver);
+        AddHandler(DragDrop.DropEvent, OnDrop);
+    }
+
+    private void OnDragOver(object? sender, DragEventArgs e)
+    {
+        // 检查拖拽的数据是否包含文件
+        if (e.Data.Contains(DataFormats.Files))
+        {
+            e.DragEffects = DragDropEffects.Copy;
+        }
+        else
+        {
+            e.DragEffects = DragDropEffects.None;
+        }
+        e.Handled = true;
+    }
+
+    private void OnDrop(object? sender, DragEventArgs e)
+    {
+        if (e.Data.Contains(DataFormats.Files))
+        {
+            var files = e.Data.GetFiles();
+            if (files != null)
+            {
+                foreach (var file in files)
+                {
+                    Console.WriteLine($"拖放文件: {file.Path.LocalPath}");
+                    // 在这里处理拖放的文件
+                    // 例如：检查文件类型，处理.jar文件等
+                }
+            }
+        }
+        e.Handled = true;
     }
     private bool _ctrlPressed = false;
     private void OnKeyDown(object sender, KeyEventArgs e)

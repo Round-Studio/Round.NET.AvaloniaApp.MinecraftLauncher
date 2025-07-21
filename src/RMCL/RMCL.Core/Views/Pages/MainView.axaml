@@ -1,15 +1,16 @@
 <UserControl xmlns="https://github.com/avaloniaui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             xmlns:controls="clr-namespace:RMCL.Controls;assembly=RMCL.Controls"
+             xmlns:controls="clr-namespace:RMCL.Controls;assembly=RMCL.Controls" 
              xmlns:button="clr-namespace:RMCL.Controls.Button;assembly=RMCL.Controls"
              xmlns:container="clr-namespace:RMCL.Controls.Container;assembly=RMCL.Controls"
              xmlns:controls1="clr-namespace:FluentAvalonia.UI.Controls;assembly=FluentAvalonia"
              xmlns:taskView="clr-namespace:RMCL.Core.Views.Pages.TaskView"
              xmlns:fluentIcons="clr-namespace:FluentAvalonia.FluentIcons;assembly=FluentAvalonia.FluentIcons"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-             x:Class="RMCL.Core.Views.Pages.MainView">
+             x:Class="RMCL.Core.Views.Pages.MainView"
+             DragDrop.AllowDrop="True">
     <Grid>
         <controls1:Frame Margin="0,0,0,70" Name="MainFrame"/>
         <container:BottomBar DefaultTag="Home" Name="BottomBar" HorizontalAlignment="Stretch" VerticalAlignment="Bottom"/>
@@ -20,5 +21,11 @@
             <button:AccentIconButton ToolTip.Tip="启动游戏" CornerRadius="20" Margin="5" Height="40" Width="120" Icon="Play24Regular" Name="LauncherButton" Click="LauncherButton_OnClick">启动游戏</button:AccentIconButton>
         </DockPanel>
         <container:ChildFrame Name="ChildFrame" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0"></container:ChildFrame>
+        <Border 
+            DragDrop.AllowDrop="True"
+            Name="Border"
+            Width="400" Height="400" Background="Black">
+            
+        </Border>
     </Grid>
 </UserControl>

@@ -12,15 +12,16 @@
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="RMCL.Core.Views.MainWindow"
         WindowStartupLocation="CenterScreen"
-        Width="1000"
-        Height="590"
+        DragDrop.AllowDrop="True" 
+        Width="1000" SystemDecorations="Full"
+        Height="590" IsHitTestVisible="True"
         MinWidth="1000"
-        MinHeight="590"
+        MinHeight="590" Background="Transparent"
         ExtendClientAreaToDecorationsHint="True"
         ExtendClientAreaChromeHints="NoChrome"
         Title="RMCL">
     <Grid>
-        <Grid Name="BackOpacity" Background="{DynamicResource BackgroundTransparencyOverride}" Opacity="0"></Grid>
+        <Grid Name="BackOpacity" IsVisible="False" Background="{DynamicResource BackgroundTransparencyOverride}" Opacity="0"></Grid>
         <miniControls:MusicCapsule Name="MusicCapsule" VerticalAlignment="Top" Margin="0,-90,0,0"/>
         <Grid>
             <Grid.RowDefinitions>
