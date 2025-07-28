@@ -4,5 +4,8 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="RMCL.Core.Views.Pages.ChildFramePage.Game.GameClientSettingSubPages.ClientArchiveSetting">
-    Welcome to Avalonia!
+	<Grid>
+		<ListBox x:Name="list" Grid.Row="1"></ListBox>
+		<TextBlock Text="没有存档文件" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="2" Name="nothingtext"></TextBlock>
+	</Grid>
 </UserControl>

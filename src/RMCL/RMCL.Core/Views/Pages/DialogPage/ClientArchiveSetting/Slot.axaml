@@ -1,0 +1,14 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:controls1="clr-namespace:FluentAvalonia.UI.Controls;assembly=FluentAvalonia"
+             xmlns:fluentIcons="clr-namespace:FluentAvalonia.FluentIcons;assembly=FluentAvalonia.FluentIcons"
+             mc:Ignorable="d"
+             x:Class="RMCL.Core.Views.Pages.DialogPage.ClientArchiveSetting.Slot">
+	<Grid Width="48" Height="48">
+		<Grid Background="DimGray" Opacity="0.3"></Grid>
+		<Image Name="Image" Height="24" Width="24" HorizontalAlignment="Center" VerticalAlignment="Center" ></Image>
+		<Label Name="count" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="2" FontSize="12"></Label>
+	</Grid>
+</UserControl>

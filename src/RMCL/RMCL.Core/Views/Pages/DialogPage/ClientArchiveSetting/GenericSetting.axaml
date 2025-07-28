@@ -1,0 +1,30 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="RMCL.Core.Views.Pages.DialogPage.ClientArchiveSetting.GenericSetting">
+	<StackPanel Margin="2" HorizontalAlignment="Left">
+		<TextBlock Text="基本信息" FontSize="18" Margin="2"></TextBlock>
+		<StackPanel Margin="2">
+			<TextBlock Text="世界种子" ></TextBlock>
+			<TextBox Text="" Name="seed" IsReadOnly="True" Width="300" HorizontalAlignment="Left"></TextBox>
+		</StackPanel>
+		<TextBlock Text="难度设置" FontSize="18" Margin="2"></TextBlock>
+		<CheckBox Content="极限模式" Name="hardcore" Margin="2"></CheckBox>
+		<CheckBox Content="锁定难度" Name="lockdiff" Margin="2"></CheckBox>
+		<ComboBox Name="diff" Margin="2">
+			<ComboBoxItem Content="和平" Tag="0"></ComboBoxItem>
+			<ComboBoxItem Content="简单" Tag="1"></ComboBoxItem>
+			<ComboBoxItem Content="普通" Tag="2"></ComboBoxItem>
+			<ComboBoxItem Content="困难" Tag="3"></ComboBoxItem>
+		</ComboBox>
+		<TextBlock Text="天气和时间" FontSize="18" Margin="2" ></TextBlock>
+		<StackPanel Margin="2">
+			<TextBlock Text="游戏时间" ></TextBlock>
+			<TextBox Text="" Name="time" Width="200" HorizontalAlignment="Left"></TextBox>
+		</StackPanel>
+		<CheckBox Content="下雨" Name="rain" Margin="2"></CheckBox>
+		<CheckBox Content="闪电" Name="thunder" Margin="2"></CheckBox>
+	</StackPanel>
+</UserControl>

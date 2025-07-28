@@ -1,0 +1,107 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:RMCL.Core.Views.Pages.DialogPage.ClientArchiveSetting"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="RMCL.Core.Views.Pages.DialogPage.ClientArchiveSetting.PlayerSettings">
+	<StackPanel Margin="2" HorizontalAlignment="Center">
+		<TextBlock Text="基本信息" FontSize="18" Margin="2"></TextBlock>
+		<StackPanel Margin="2">
+			<TextBlock Text="UUID"></TextBlock>
+			<TextBox Text="" IsReadOnly="True" Name="uuid" Margin="2" Width="300" HorizontalAlignment="Left"></TextBox>
+		</StackPanel>
+		<StackPanel Margin="2">
+			<TextBlock Text="氧气值" ></TextBlock>
+			<Slider Name="air" ValueChanged="air_ValueChanged" Margin="2" Width="300" Maximum="300" HorizontalAlignment="Left"></Slider>
+		</StackPanel>
+		<StackPanel Margin="2">
+			<TextBlock Text="生命值" ></TextBlock>
+			<Slider Name="health" ValueChanged="health_ValueChanged"  Margin="2" Width="300" Maximum="20" HorizontalAlignment="Left"></Slider>
+		</StackPanel>
+		<StackPanel Margin="2">
+			<TextBlock Text="饥饿值" ></TextBlock>
+			<Slider Name="food" ValueChanged="food_ValueChanged"  Margin="2" Width="300" Maximum="20" HorizontalAlignment="Left"></Slider>
+		</StackPanel>
+		<StackPanel Margin="2">
+			<TextBlock Text="经验值" ></TextBlock>
+			<TextBox Name="xp" TextChanged="xp_TextChanged"  Margin="2" Width="300" HorizontalAlignment="Left"></TextBox>
+		</StackPanel>
+		<StackPanel Margin="2">
+			<TextBlock Text="燃烧时间" ></TextBlock>
+			<TextBox Name="fire" TextChanged="fire_TextChanged"   Margin="2" Width="300" HorizontalAlignment="Left"></TextBox>
+		</StackPanel>
+		<StackPanel Margin="2">
+			<TextBlock Text="属性" ></TextBlock>
+			<ListBox Name="attributes" Width="450"></ListBox>
+		</StackPanel>
+		<StackPanel Margin="2">
+			<TextBlock Text="坐标" ></TextBlock>
+			<StackPanel Orientation="Horizontal" Margin="2">
+				<TextBlock Text="X：" VerticalAlignment="Center"></TextBlock>
+				<TextBox Text="" Name="xpos" Width="80" IsReadOnly="True"></TextBox>
+				<TextBlock Text="Y：" VerticalAlignment="Center"></TextBlock>
+				<TextBox Text="" Name="ypos" Width="80" IsReadOnly="True"> </TextBox>
+				<TextBlock Text="Z：" VerticalAlignment="Center"></TextBlock>
+				<TextBox Text="" Name="zpos" Width="80"  IsReadOnly="True"></TextBox>
+			</StackPanel>
+		</StackPanel>
+		<TextBlock Text="背包物品" FontSize="18" Margin="2"></TextBlock>
+		<StackPanel HorizontalAlignment="Center">
+			<TextBlock Text="！无法显示的纹理会显示为屏障" Foreground="OrangeRed" FontSize="12" Margin="2"></TextBlock>
+			<StackPanel Margin="2,2,2,2" Orientation="Horizontal">
+				<local:Slot Name="head" Margin="2" />
+				<local:Slot Name="body" Margin="2" />
+				<local:Slot Name="leggings" Margin="2" />
+				<local:Slot Name="boots" Margin="2" />
+				<local:Slot Name="hand" Margin="2" />
+			</StackPanel>
+			<StackPanel Margin="2">
+				<StackPanel  Orientation="Horizontal">
+					<local:Slot Name="s11" Margin="2" />
+					<local:Slot Name="s12" Margin="2" />
+					<local:Slot Name="s13" Margin="2" />
+					<local:Slot Name="s14" Margin="2" />
+					<local:Slot Name="s15" Margin="2" />
+					<local:Slot Name="s16" Margin="2" />
+					<local:Slot Name="s17" Margin="2" />
+					<local:Slot Name="s18" Margin="2" />
+					<local:Slot Name="s19" Margin="2"></local:Slot>
+				</StackPanel>
+				<StackPanel Orientation="Horizontal">
+					<local:Slot Name="s21" Margin="2" />
+					<local:Slot Name="s22" Margin="2" />
+					<local:Slot Name="s23" Margin="2" />
+					<local:Slot Name="s24" Margin="2" />
+					<local:Slot Name="s25" Margin="2" />
+					<local:Slot Name="s26" Margin="2" />
+					<local:Slot Name="s27" Margin="2" />
+					<local:Slot Name="s28" Margin="2" />
+					<local:Slot Name="s29" Margin="2"></local:Slot>
+				</StackPanel>
+				<StackPanel Orientation="Horizontal">
+					<local:Slot Name="s31" Margin="2" />
+					<local:Slot Name="s32" Margin="2" />
+					<local:Slot Name="s33" Margin="2" />
+					<local:Slot Name="s34" Margin="2" />
+					<local:Slot Name="s35" Margin="2" />
+					<local:Slot Name="s36" Margin="2" />
+					<local:Slot Name="s37" Margin="2" />
+					<local:Slot Name="s38" Margin="2" />
+					<local:Slot Name="s39" Margin="2" />
+				</StackPanel>
+				<StackPanel Margin="0,4,0,0" Orientation="Horizontal">
+					<local:Slot Name="s1" Margin="2" />
+					<local:Slot Name="s2" Margin="2" />
+					<local:Slot Name="s3" Margin="2" />
+					<local:Slot Name="s4" Margin="2" />
+					<local:Slot Name="s5" Margin="2" />
+					<local:Slot Name="s6" Margin="2" />
+					<local:Slot Name="s7" Margin="2" />
+					<local:Slot Name="s8" Margin="2" />
+					<local:Slot Name="s9" Margin="2" />
+				</StackPanel>
+			</StackPanel>
+		</StackPanel>
+	</StackPanel>
+</UserControl>
