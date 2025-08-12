@@ -7,8 +7,15 @@ using RMCL.Base.Interface;
 
 namespace RMCL.Core.Views.Pages.ChildFramePage.Game.GameClientSettingSubPages;
 
-public partial class ClientLaunchSetting : ISetting ,IUISetting
+public partial class ClientLaunchSetting : ISetting, IUISetting
 {
+    public ClientLaunchSetting()
+    {
+        InitializeComponent();
+    }
+
+    public VersionParse Version { get; set; }
+
     public void UpdateUI()
     {
         LaunchSetting.Config = ClientManager.ClientSelfConfig.GetClientConfig(new LaunchClientInfo()
@@ -22,10 +29,5 @@ public partial class ClientLaunchSetting : ISetting ,IUISetting
             GameName = Version.ClientInstances.GameName
         }, config);
         LaunchSetting.OnLoaded();
-    }
-    public VersionParse Version { get; set; }
-    public ClientLaunchSetting()
-    {
-        InitializeComponent();
     }
 }

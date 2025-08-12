@@ -14,6 +14,19 @@ namespace RMCL.Core.Views.Pages.ChildFramePage.Game.GameClientSettingSubPages
 {
     public partial class ClientModSetting : ISetting, IUISetting
     {
+        private void Refresh_OnClick(object? sender, RoutedEventArgs e)
+        {
+            UpdateUI();
+        }
+
+        public ClientModSetting()
+        {
+            InitializeComponent();
+            this.Loaded += (s, e) => UpdateUI();
+        }
+
+        public string Path { get; set; }
+
         public void UpdateUI()
         {
             SearchBox.Watermark = $"在 0 个已安装模组中搜索...";
@@ -53,7 +66,6 @@ namespace RMCL.Core.Views.Pages.ChildFramePage.Game.GameClientSettingSubPages
                         ModsList.Children.Add(it);
                         it.LoadInfoAsync(file); // 调用异步方法
 
-
                         SearchBox.Watermark = $"在 {ModsList.Children.Count} 个已安装模组中搜索...";
                     });
                 }
@@ -66,7 +78,7 @@ namespace RMCL.Core.Views.Pages.ChildFramePage.Game.GameClientSettingSubPages
                         var it = new ClientModItem();
                         ModsList.Children.Add(it);
                         it.LoadInfoAsync(file); // 调用异步方法
-                        
+
                         SearchBox.Watermark = $"在 {ModsList.Children.Count} 个已安装模组中搜索...";
                     });
                 }
@@ -76,18 +88,6 @@ namespace RMCL.Core.Views.Pages.ChildFramePage.Game.GameClientSettingSubPages
 
             ModsList.IsVisible = true;
             IsEdit = true;
-        }
-
-        public string Path { get; set; }
-        public ClientModSetting()
-        {
-            InitializeComponent();
-            this.Loaded += (s, e) => UpdateUI();
-        }
-
-        private void Refresh_OnClick(object? sender, RoutedEventArgs e)
-        {
-            UpdateUI();
         }
     }
 }

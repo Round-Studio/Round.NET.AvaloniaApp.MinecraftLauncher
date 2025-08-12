@@ -62,7 +62,7 @@ public partial class ClientArchiveSetting : ISetting, IUISetting
                                 };
                                 var launch = new Button()
                                 {
-                                    Content = $"Æô¶¯ÓÎÏ·",
+                                    Content = $"å¯åŠ¨æ¸¸æˆ",
                                     Margin = new Thickness(5),
                                     Height = 32,
                                     Width = 150
@@ -92,9 +92,9 @@ public partial class ClientArchiveSetting : ISetting, IUISetting
                                     var c = new ContentDialog()
                                     {
                                         Content = CurrentLevelSettings,
-                                        Title = "ÐÞ¸Ä´æµµÉèÖÃ",
-                                        PrimaryButtonText = "±£´æÐÞ¸Ä²¢ÍË³ö",
-                                        SecondaryButtonText = "È¡Ïû",
+                                        Title = "ä¿®æ”¹å­˜æ¡£è®¾ç½®",
+                                        PrimaryButtonText = "ä¿å­˜ä¿®æ”¹å¹¶é€€å‡º",
+                                        SecondaryButtonText = "å–æ¶ˆ",
                                     };
                                     c.PrimaryButtonClick += (_, __) =>
                                     {
@@ -141,7 +141,7 @@ public partial class ClientArchiveSetting : ISetting, IUISetting
                                                             new Label()
                                                             {
                                                                 Content =
-                                                                    $"´´½¨Ê±¼ä£º{new DirectoryInfo(ver).CreationTime}£¬ÄÑ¶È£º{data.Get<NbtInt>("GameType").Value}",
+                                                                    $"åˆ›å»ºæ—¶é—´ï¼š{new DirectoryInfo(ver).CreationTime}ï¼Œéš¾åº¦ï¼š{data.Get<NbtInt>("GameType").Value}",
                                                                 HorizontalContentAlignment = Avalonia.Layout.HorizontalAlignment.Left,
                                                                 VerticalContentAlignment = Avalonia.Layout.VerticalAlignment.Bottom,
                                                                 Margin = new Thickness(5),
