@@ -17,7 +17,7 @@
 ![GitHub Watchers](https://img.shields.io/github/watchers/Round-Studio/Round.NET.AvaloniaApp.MinecraftLauncher)
 </div>  
 
-# 下载 RMCL
+# 下载
 
 你当然可以在本启动器仓库的 Release 中下载构建，你也可以前往我们的产品下载页面：  
 [RMCL 产品下载](https://docs.roundstudio.top/docs/%E4%B8%8B%E8%BD%BD/RMCL)
