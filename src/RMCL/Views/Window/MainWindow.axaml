@@ -8,6 +8,13 @@
         x:Class="RMCL.Views.MainWindow"
         x:DataType="vm:MainWindowViewModel"
         Icon="/Assets/avalonia-logo.ico"
+        ExtendClientAreaToDecorationsHint="True"
+        ExtendClientAreaTitleBarHeightHint="-1"
+        ExtendClientAreaChromeHints="NoChrome"
+        WindowStartupLocation="CenterOwner"
+        Width="1000" MinWidth="1000"
+        Height="560" MinHeight="560"
+        PointerPressed="InputElement_OnPointerPressed"
         Title="{Binding WindowTitle}">
 
     <Design.DataContext>

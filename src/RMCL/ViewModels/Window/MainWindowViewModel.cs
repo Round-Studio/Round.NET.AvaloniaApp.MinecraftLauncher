@@ -1,6 +1,8 @@
-﻿namespace RMCL.ViewModels;
+﻿using RMCL.Properties;
+
+namespace RMCL.ViewModels;
 
 public partial class MainWindowViewModel : ViewModelBase
 {
-    public string WindowTitle { get; } = "RMCL - Minecraft 启动器";
+    public string WindowTitle { get; } = Resource.WindowTitle;
 }

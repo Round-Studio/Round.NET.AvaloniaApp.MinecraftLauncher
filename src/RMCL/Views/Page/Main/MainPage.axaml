@@ -1,0 +1,42 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             xmlns:res="clr-namespace:RMCL.Properties"
+             xmlns:onePointControls="clr-namespace:OnePointUI.Avalonia.Styling.Controls.OnePointControls;assembly=OnePointUI.Avalonia"
+             x:Class="RMCL.Views.Page.Main.MainPage">
+    <Grid>
+        <Button Classes="NoBorder"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Bottom"
+                Margin="15"
+                Width="48" Height="48">
+            <onePointControls:FontIcon Glyph="&#xE700;"
+                                       FontSize="18"/>
+        </Button>
+        
+        <Button Classes="NoBorder"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Bottom"
+                Margin="15"
+                Background="{DynamicResource AccentBorderBrush}"
+                Width="150" Height="48">
+            <StackPanel Height="40"
+                        Width="120">
+                <DockPanel>
+                    <onePointControls:FontIcon Glyph="&#xE709;"
+                                               FontSize="15"
+                                               Foreground="White"
+                                               Margin="0,0,5,0"
+                                               VerticalAlignment="Center"></onePointControls:FontIcon>
+                    <TextBlock Text="{x:Static res:Resource.MainPage_Launch}"
+                               Foreground="White"
+                               FontSize="16"></TextBlock>
+                </DockPanel>
+                <TextBlock FontSize="12"
+                           Foreground="LightGray">1.12.2</TextBlock>
+            </StackPanel>
+        </Button>
+    </Grid>
+</UserControl>

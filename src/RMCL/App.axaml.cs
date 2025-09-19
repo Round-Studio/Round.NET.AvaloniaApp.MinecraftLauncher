@@ -3,6 +3,7 @@ using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Data.Core;
 using Avalonia.Data.Core.Plugins;
 using System.Linq;
+using System.Threading;
 using Avalonia.Markup.Xaml;
 using OnePointUI.Avalonia.Style.Core;
 using RMCL.ViewModels;
@@ -16,6 +17,8 @@ public partial class App : Application
     {
         ThemeManager.Initialize(this);
         AvaloniaXamlLoader.Load(this);
+         Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("zh-hans"); // 简体中文
+        // Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("en"); // 英文
     }
 
     public override void OnFrameworkInitializationCompleted()
