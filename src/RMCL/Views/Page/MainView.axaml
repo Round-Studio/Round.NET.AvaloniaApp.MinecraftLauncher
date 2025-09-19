@@ -7,34 +7,7 @@
              xmlns:res="clr-namespace:RMCL.Properties"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="RMCL.Views.Page.MainView">
-    <Grid RowDefinitions="64,*">
-        <Grid>
-            <TextBlock HorizontalAlignment="Left"
-                       VerticalAlignment="Center"
-                       FontSize="16"
-                       Margin="20,0,0,0"
-                       Text="{x:Static res:Resource.WindowTitle}"></TextBlock>
-            <StackPanel Orientation="Horizontal"
-                        HorizontalAlignment="Right"
-                        Margin="0,0,15,0">
-                <Button Classes="NoBorder"
-                        Width="32" Height="32"
-                        Margin="5,5,0,5">
-                    <onePointControls:FontIcon Glyph="&#xE921;"/>
-                </Button>
-                <Button Classes="NoBorder"
-                        Width="32" Height="32"
-                        Margin="5,5,0,5">
-                    <onePointControls:FontIcon Glyph="&#xE922;"/>
-                </Button>
-                <Button Classes="NoBorder"
-                        Width="32" Height="32"
-                        Margin="5,5,0,5">
-                    <onePointControls:FontIcon Glyph="&#xE8BB;"/>
-                </Button>
-            </StackPanel>
-        </Grid>
-        
-        <main:MainPage Grid.Row="1"/>
+    <Grid>
+        <main:MainPage></main:MainPage>
     </Grid>
 </UserControl>

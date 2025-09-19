@@ -60,6 +60,33 @@ namespace RMCL.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to RMCL.
+        /// </summary>
+        public static string App_WindowTitle {
+            get {
+                return ResourceManager.GetString("App.WindowTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Download.
+        /// </summary>
+        public static string MainPage_Download {
+            get {
+                return ResourceManager.GetString("MainPage.Download", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Game List.
+        /// </summary>
+        public static string MainPage_GameList {
+            get {
+                return ResourceManager.GetString("MainPage.GameList", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Home.
         /// </summary>
         public static string MainPage_Home {
@@ -78,20 +105,11 @@ namespace RMCL.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Setting.
+        ///   Looks up a localized string similar to Settings.
         /// </summary>
         public static string MainPage_Setting {
             get {
                 return ResourceManager.GetString("MainPage.Setting", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to RMCL - Minecraft Launcher.
-        /// </summary>
-        public static string WindowTitle {
-            get {
-                return ResourceManager.GetString("WindowTitle", resourceCulture);
             }
         }
     }
