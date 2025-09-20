@@ -17,51 +17,80 @@
                 VerticalAlignment="Bottom"
                 Height="48"
                 Background="{DynamicResource PrimaryBackgroundBrush}">
-            <StackPanel Orientation="Horizontal"
-                        Margin="4,0,12,0">
-                <Button VerticalAlignment="Center"
+            <Grid>
+                <Button Classes="NoBorder"
+                        HorizontalAlignment="Right"
+                        VerticalAlignment="Center"
+                        CornerRadius="16"
+                        Margin="15,0"
+                        Background="{DynamicResource AccentBorderBrush}"
                         Height="32"
-                        Margin="8,0,0,0"
-                        Classes="NoBorder"
-                        CornerRadius="16">
-                    <DockPanel>
-                        <onePointControls:FontIcon Glyph="&#xE80F;"
-                                                   Foreground="White"
-                                                   Margin="12,8,8,8"></onePointControls:FontIcon>
-                        <TextBlock Text="{x:Static res:Resource.MainPage_Home}"
-                                   VerticalAlignment="Center"
-                                   Margin="0,0,12,0"></TextBlock>
-                    </DockPanel>
+                        Padding="12,0">
+                    <Grid>
+                        <StackPanel Orientation="Horizontal">
+                            <onePointControls:FontIcon Glyph="&#xE768;"
+                                                       Margin="0,0,8,1"
+                                                       FontSize="14"
+                                                       FontWeight="Heavy"
+                                                       VerticalAlignment="Center"
+                                                       Foreground="White"></onePointControls:FontIcon>
+                            
+                            <TextBlock Text="{x:Static res:Resource.MainPage_Launch}"
+                                       Foreground="White"
+                                       VerticalAlignment="Center"
+                                       Margin="0,0,0,1"
+                                       FontWeight="Heavy"></TextBlock>
+                        </StackPanel>
+                    </Grid>
                 </Button>
                 
-                <Button VerticalAlignment="Center"
-                        Height="32"
-                        Margin="8,0,0,0"
-                        Classes="NoBorder"
-                        CornerRadius="16">
-                    <DockPanel>
-                        <onePointControls:FontIcon Glyph="&#xE896;"
-                                                   Margin="12,8,8,8"></onePointControls:FontIcon>
-                        <TextBlock Text="{x:Static res:Resource.MainPage_Download}"
-                                   VerticalAlignment="Center"
-                                   Margin="0,0,12,0"></TextBlock>
-                    </DockPanel>
-                </Button>
-                
-                <Button VerticalAlignment="Center"
-                        Height="32"
-                        Margin="8,0,0,0"
-                        Classes="NoBorder"
-                        CornerRadius="16">
-                    <DockPanel>
-                        <onePointControls:FontIcon Glyph="&#xE713;"
-                                                   Margin="12,8,8,8"></onePointControls:FontIcon>
-                        <TextBlock Text="{x:Static res:Resource.MainPage_Setting}"
-                                   VerticalAlignment="Center"
-                                   Margin="0,0,12,0"></TextBlock>
-                    </DockPanel>
-                </Button>
-            </StackPanel>
+                <StackPanel Orientation="Horizontal"
+                            HorizontalAlignment="Center"
+                            Margin="4,0,12,0">
+                    <Button VerticalAlignment="Center"
+                            Height="32"
+                            Margin="8,0,0,0"
+                            Classes="NoBorder"
+                            CornerRadius="16">
+                        <DockPanel>
+                            <onePointControls:FontIcon Glyph="&#xE80F;"
+                                                       Foreground="White"
+                                                       Margin="12,8,8,8"></onePointControls:FontIcon>
+                            <TextBlock Text="{x:Static res:Resource.MainPage_Home}"
+                                       VerticalAlignment="Center"
+                                       Margin="0,0,12,0"></TextBlock>
+                        </DockPanel>
+                    </Button>
+                    
+                    <Button VerticalAlignment="Center"
+                            Height="32"
+                            Margin="8,0,0,0"
+                            Classes="NoBorder"
+                            CornerRadius="16">
+                        <DockPanel>
+                            <onePointControls:FontIcon Glyph="&#xE896;"
+                                                       Margin="12,8,8,8"></onePointControls:FontIcon>
+                            <TextBlock Text="{x:Static res:Resource.MainPage_Download}"
+                                       VerticalAlignment="Center"
+                                       Margin="0,0,12,0"></TextBlock>
+                        </DockPanel>
+                    </Button>
+                    
+                    <Button VerticalAlignment="Center"
+                            Height="32"
+                            Margin="8,0,0,0"
+                            Classes="NoBorder"
+                            CornerRadius="16">
+                        <DockPanel>
+                            <onePointControls:FontIcon Glyph="&#xE713;"
+                                                       Margin="12,8,8,8"></onePointControls:FontIcon>
+                            <TextBlock Text="{x:Static res:Resource.MainPage_Setting}"
+                                       VerticalAlignment="Center"
+                                       Margin="0,0,12,0"></TextBlock>
+                        </DockPanel>
+                    </Button>
+                </StackPanel>
+            </Grid>
         </Border>
     </Grid>
 </UserControl>

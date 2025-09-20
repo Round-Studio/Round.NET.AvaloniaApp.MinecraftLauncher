@@ -26,10 +26,6 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\OnePointUI.Avalonia\src\OnePointUI.Avalonia\OnePointUI.Avalonia.csproj" />
-    </ItemGroup>
-
-    <ItemGroup>
       <Compile Update="Properties\Resource.Designer.cs">
         <DesignTime>True</DesignTime>
         <AutoGen>True</AutoGen>
@@ -46,5 +42,9 @@
         <Generator>PublicResXFileCodeGenerator</Generator>
         <LastGenOutput>Resource.Designer.cs</LastGenOutput>
       </EmbeddedResource>
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\OnePointUI.Avalonia\src\OnePointUI.Avalonia\OnePointUI.Avalonia.csproj" />
     </ItemGroup>
 </Project>

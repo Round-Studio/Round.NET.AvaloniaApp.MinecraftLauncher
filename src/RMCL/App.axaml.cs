@@ -17,8 +17,8 @@ public partial class App : Application
     {
         ThemeManager.Initialize(this);
         AvaloniaXamlLoader.Load(this);
-        // Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("zh-hans"); // 简体中文
-        Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("en"); // 英文
+        Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("zh-hans"); // 简体中文
+        // Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("en"); // 英文
     }
 
     public override void OnFrameworkInitializationCompleted()
