@@ -6,6 +6,7 @@
         xmlns:page="clr-namespace:RMCL.Views.Page"
         xmlns:onePointControls="clr-namespace:OnePointUI.Avalonia.Styling.Controls.OnePointControls;assembly=OnePointUI.Avalonia"
         xmlns:res="clr-namespace:RMCL.Properties"
+        xmlns:notice="clr-namespace:RMCL.Views.Control.Notice"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="RMCL.Views.MainWindow"
         x:DataType="vm:MainWindowViewModel"
@@ -67,6 +68,12 @@
         </Grid>
         
         <page:MainView Grid.Row="1"/>
+        
+        <notice:NoticePanel Grid.Row="1"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Bottom"
+                            Name="NoticePanel"
+                            Margin="0,0,0,59"/>
     </Grid>
 
 </Window>

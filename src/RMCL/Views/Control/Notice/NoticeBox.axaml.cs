@@ -1,0 +1,69 @@
+﻿using System;
+using System.Threading.Tasks;
+using Avalonia;
+using Avalonia.Animation;
+using Avalonia.Animation.Easings;
+using Avalonia.Controls;
+using Avalonia.Markup.Xaml;
+using Avalonia.Styling;
+using Avalonia.Threading;
+using RMCL.Base.Entry.Notice;
+
+namespace RMCL.Views.Control.Notice;
+
+public partial class NoticeBox : UserControl
+{
+    public NoticeBox(NoticeInfo noticeInfo)
+    {
+        InitializeComponent();
+
+        NoticeTitle.Text = noticeInfo.Title;
+        NoticeContent.Content = noticeInfo.Message;
+
+        // 使用DispatcherTimer替代Thread.Sleep
+        var closeTimer = new DispatcherTimer();
+        closeTimer.Interval = TimeSpan.FromMilliseconds(4500);
+        closeTimer.Tick += (s, e) =>
+        {
+            closeTimer.Stop();
+            CloseThis();
+        };
+        closeTimer.Start();
+    }
+
+    public Action<NoticeBox> OnClose { get; set; }
+
+    public async void CloseThis()
+    {
+        // 创建动画（总时长800ms）
+        var animation = new Animation
+        {
+            Duration = TimeSpan.FromMilliseconds(800),
+            Easing = new ExponentialEaseOut(),
+            Children =
+            {
+                new KeyFrame
+                {
+                    Cue = new Cue(0),
+                    Setters =
+                    {
+                        new Setter(MarginProperty, new Thickness(15, 4))
+                    }
+                },
+                new KeyFrame
+                {
+                    Cue = new Cue(1),
+                    Setters =
+                    {
+                        new Setter(MarginProperty, new Thickness(-220, 4, 220, 4))
+                    }
+                }
+            }
+        };
+
+        animation.RunAsync(PATH_Border);
+        await Task.Delay(600);
+        
+        OnClose?.Invoke(this);
+    }
+}

@@ -19,6 +19,8 @@ public partial class MainWindow : Window
         RenderOptions.SetTextRenderingMode(this, TextRenderingMode.SubpixelAntialias); // 字体渲染模式
         RenderOptions.SetBitmapInterpolationMode(this, BitmapInterpolationMode.MediumQuality); // 图片渲染模式
         RenderOptions.SetEdgeMode(this, EdgeMode.Antialias); // 形状渲染模式
+
+        GlobalModels.NoticePanel = NoticePanel;
     }
 
     private void InputElement_OnPointerPressed(object? sender, PointerPressedEventArgs e)

@@ -2,92 +2,98 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              xmlns:res="clr-namespace:RMCL.Properties"
              xmlns:onePointControls="clr-namespace:OnePointUI.Avalonia.Styling.Controls.OnePointControls;assembly=OnePointUI.Avalonia"
              xmlns:mainSubPage="clr-namespace:RMCL.Views.Page.Main.MainSubPage"
+             mc:Ignorable="d" 
+             d:DesignWidth="800" 
+             d:DesignHeight="450"
              x:Class="RMCL.Views.Page.Main.MainPage">
-    <Grid>
+    
+    <Grid RowDefinitions="*,Auto">
+        <!-- 主内容区域 -->
         <ContentControl Name="MainPageContent"
-                        IsVisible="False">
+                        Grid.Row="0">
             <mainSubPage:MainHomePage/>
         </ContentControl>
         
-        <Border HorizontalAlignment="Stretch"
+        <!-- 底部导航栏 -->
+        <Border Grid.Row="1"
+                HorizontalAlignment="Stretch"
                 VerticalAlignment="Bottom"
                 Height="48"
                 Background="{DynamicResource PrimaryBackgroundBrush}">
             <Grid>
-                <Button Classes="NoBorder"
-                        HorizontalAlignment="Right"
-                        VerticalAlignment="Center"
-                        CornerRadius="16"
-                        Margin="15,0"
-                        Background="{DynamicResource AccentBorderBrush}"
-                        Height="32"
-                        Padding="12,0">
-                    <Grid>
-                        <StackPanel Orientation="Horizontal">
-                            <onePointControls:FontIcon Glyph="&#xE768;"
-                                                       Margin="0,0,8,1"
-                                                       FontSize="14"
-                                                       FontWeight="Heavy"
-                                                       VerticalAlignment="Center"
-                                                       Foreground="White"></onePointControls:FontIcon>
-                            
-                            <TextBlock Text="{x:Static res:Resource.MainPage_Launch}"
-                                       Foreground="White"
-                                       VerticalAlignment="Center"
-                                       Margin="0,0,0,1"
-                                       FontWeight="Heavy"></TextBlock>
-                        </StackPanel>
-                    </Grid>
-                </Button>
+                <StackPanel Orientation="Horizontal"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Center"
+                            Margin="15,0"
+                            Spacing="8">
+                    <Button VerticalAlignment="Center"
+                            Height="32"
+                            Width="32"
+                            Classes="NoBorder"
+                            CornerRadius="16">
+                        <onePointControls:FontIcon Glyph="&#xE7C4;"
+                                                   FontSize="14"
+                                                   VerticalAlignment="Center"
+                                                   HorizontalAlignment="Center"/>
+                    </Button>
+                </StackPanel>
                 
                 <StackPanel Orientation="Horizontal"
-                            HorizontalAlignment="Center"
-                            Margin="4,0,12,0">
-                    <Button VerticalAlignment="Center"
-                            Height="32"
-                            Margin="8,0,0,0"
-                            Classes="NoBorder"
-                            CornerRadius="16">
-                        <DockPanel>
-                            <onePointControls:FontIcon Glyph="&#xE80F;"
-                                                       Foreground="White"
-                                                       Margin="12,8,8,8"></onePointControls:FontIcon>
-                            <TextBlock Text="{x:Static res:Resource.MainPage_Home}"
-                                       VerticalAlignment="Center"
-                                       Margin="0,0,12,0"></TextBlock>
-                        </DockPanel>
-                    </Button>
+                            HorizontalAlignment="Right"
+                            VerticalAlignment="Center"
+                            Margin="15,0"
+                            Spacing="8">
                     
                     <Button VerticalAlignment="Center"
                             Height="32"
-                            Margin="8,0,0,0"
                             Classes="NoBorder"
                             CornerRadius="16">
-                        <DockPanel>
-                            <onePointControls:FontIcon Glyph="&#xE896;"
-                                                       Margin="12,8,8,8"></onePointControls:FontIcon>
-                            <TextBlock Text="{x:Static res:Resource.MainPage_Download}"
-                                       VerticalAlignment="Center"
-                                       Margin="0,0,12,0"></TextBlock>
-                        </DockPanel>
-                    </Button>
-                    
-                    <Button VerticalAlignment="Center"
-                            Height="32"
-                            Margin="8,0,0,0"
-                            Classes="NoBorder"
-                            CornerRadius="16">
-                        <DockPanel>
+                        <StackPanel Orientation="Horizontal"
+                                    Margin="12,0">
                             <onePointControls:FontIcon Glyph="&#xE713;"
-                                                       Margin="12,8,8,8"></onePointControls:FontIcon>
+                                                       FontSize="14"
+                                                       VerticalAlignment="Center"
+                                                       Margin="0,0,8,0"/>
                             <TextBlock Text="{x:Static res:Resource.MainPage_Setting}"
                                        VerticalAlignment="Center"
-                                       Margin="0,0,12,0"></TextBlock>
-                        </DockPanel>
+                                       FontWeight="Medium"/>
+                        </StackPanel>
+                    </Button>
+                    
+                    <Button VerticalAlignment="Center"
+                            Height="32"
+                            Classes="NoBorder"
+                            CornerRadius="16">
+                        <StackPanel Orientation="Horizontal"
+                                    Margin="12,0">
+                            <onePointControls:FontIcon Glyph="&#xE896;"
+                                                       FontSize="14"
+                                                       VerticalAlignment="Center"
+                                                       Margin="0,0,8,0"/>
+                            <TextBlock Text="{x:Static res:Resource.MainPage_Download}"
+                                       VerticalAlignment="Center"
+                                       FontWeight="Medium"/>
+                        </StackPanel>
+                    </Button>
+                    
+                    <Button VerticalAlignment="Center"
+                            Height="32"
+                            Classes="NoBorder"
+                            CornerRadius="16">
+                        <StackPanel Orientation="Horizontal"
+                                    Margin="12,0">
+                            <onePointControls:FontIcon Glyph="&#xE80F;"
+                                                       Foreground="White"
+                                                       FontSize="14"
+                                                       VerticalAlignment="Center"
+                                                       Margin="0,0,8,0"/>
+                            <TextBlock Text="{x:Static res:Resource.MainPage_Home}"
+                                       VerticalAlignment="Center"
+                                       FontWeight="Medium"/>
+                        </StackPanel>
                     </Button>
                 </StackPanel>
             </Grid>
