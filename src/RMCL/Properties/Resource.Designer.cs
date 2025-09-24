@@ -112,5 +112,23 @@ namespace RMCL.Properties {
                 return ResourceManager.GetString("MainPage.Setting", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Style.
+        /// </summary>
+        public static string Settings_Style {
+            get {
+                return ResourceManager.GetString("Settings.Style", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Launcher personalization settings.
+        /// </summary>
+        public static string Settings_Style_Description {
+            get {
+                return ResourceManager.GetString("Settings.Style.Description", resourceCulture);
+            }
+        }
     }
 }

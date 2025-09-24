@@ -32,7 +32,7 @@ public partial class NavigationFrame : UserControl
 
             // 立即将即将隐藏的Frame设置为半透明和偏移
             Frame2.Opacity = 0;
-            Frame2.Margin = new Thickness(0, 80, 0, -80);
+            Frame2.Margin = new Thickness(0, 220, 0, -220);
 
             // 立即显示并重置目标Frame的状态
             Frame1.IsVisible = true;
@@ -61,7 +61,7 @@ public partial class NavigationFrame : UserControl
             IsOneFrame = false;
 
             Frame1.Opacity = 0;
-            Frame1.Margin = new Thickness(0, 80, 0, -80);
+            Frame1.Margin = new Thickness(0, 220, 0, -220);
 
             Frame2.IsVisible = true;
             Frame2.Opacity = 1;

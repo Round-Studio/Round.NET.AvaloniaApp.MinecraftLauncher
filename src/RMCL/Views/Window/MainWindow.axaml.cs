@@ -47,6 +47,6 @@ public partial class MainWindow : Window
 
     private void TitleBtn_OnClick(object? sender, RoutedEventArgs e)
     {
-        GlobalModels.MainPageContent.Content = new MainHomePage();
+        GlobalModels.MainPageContent.NavigateTo(new MainHomePage());
     }
 }

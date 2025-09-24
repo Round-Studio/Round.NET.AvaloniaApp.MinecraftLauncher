@@ -135,4 +135,10 @@
   <data name="MainPage.Download" xml:space="preserve">
     <value>Download</value>
   </data>
+  <data name="Settings.Style" xml:space="preserve">
+    <value>Style</value>
+  </data>
+  <data name="Settings.Style.Description" xml:space="preserve">
+    <value>Launcher personalization settings</value>
+  </data>
 </root>

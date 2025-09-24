@@ -135,4 +135,10 @@
   <data name="MainPage.Download" xml:space="preserve">
     <value>下载</value>
   </data>
+  <data name="Settings.Style" xml:space="preserve">
+    <value>个性化</value>
+  </data>
+  <data name="Settings.Style.Description" xml:space="preserve">
+    <value>启动器个性化设置</value>
+  </data>
 </root>

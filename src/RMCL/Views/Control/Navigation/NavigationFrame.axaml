@@ -10,11 +10,11 @@
                 <Transitions>
                     <ThicknessTransition Property="Margin"
                                          Easing="ExponentialEaseOut"
-                                         Duration="0:0:0.3"></ThicknessTransition>
+                                         Duration="0:0:0.38"></ThicknessTransition>
                     
                     <DoubleTransition Property="Opacity"
                                       Easing="ExponentialEaseOut"
-                                      Duration="0:0:0.3"></DoubleTransition>
+                                      Duration="0:0:0.38"></DoubleTransition>
                 </Transitions>
             </Setter>
         </Style>

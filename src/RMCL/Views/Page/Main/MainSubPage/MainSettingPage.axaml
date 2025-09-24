@@ -2,8 +2,25 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:onePointControls="clr-namespace:OnePointUI.Avalonia.Styling.Controls.OnePointControls;assembly=OnePointUI.Avalonia"
+             xmlns:properties="clr-namespace:RMCL.Properties"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="RMCL.Views.Page.Main.MainSubPage.MainSettingPage"
              Background="{DynamicResource PrimaryBackgroundOverBrush}">
-    
+    <Grid>
+        <TextBlock FontSize="28"
+                   HorizontalAlignment="Left"
+                   VerticalAlignment="Top"
+                   Margin="20"
+                   Text="{x:Static properties:Resource.MainPage_Setting}"></TextBlock>
+        <ScrollViewer Margin="0,58,0,0">
+            <StackPanel Margin="15">
+                <onePointControls:SettingCard Header="{x:Static properties:Resource.Settings_Style}"
+                                              Margin="5,5,5,10"
+                                              Description="{x:Static properties:Resource.Settings_Style_Description}"
+                                              Glyph="&#xE790;"
+                                              IsClickable="True"/>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
 </UserControl>
