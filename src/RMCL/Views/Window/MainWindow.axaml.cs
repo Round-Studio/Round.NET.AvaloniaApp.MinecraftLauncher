@@ -4,6 +4,8 @@ using Avalonia.Input;
 using Avalonia.Interactivity;
 using Avalonia.Media;
 using Avalonia.Media.Imaging;
+using RMCL.Base.Entry.Notice;
+using RMCL.Base.Enum.Notice;
 using RMCL.Models.Global;
 using RMCL.Views.Page.Main;
 using RMCL.Views.Page.Main.MainSubPage;
@@ -21,6 +23,13 @@ public partial class MainWindow : Window
         RenderOptions.SetEdgeMode(this, EdgeMode.Antialias); // 形状渲染模式
 
         GlobalModels.NoticePanel = NoticePanel;
+        
+        GlobalModels.NoticePanel.AddNotice(new NoticeInfo()
+        {
+            Message = "欢迎使用 RMCL",
+            Title = "Welcome to RMCL",
+            NoticeType = NoticeType.Info
+        });
     }
 
     private void InputElement_OnPointerPressed(object? sender, PointerPressedEventArgs e)

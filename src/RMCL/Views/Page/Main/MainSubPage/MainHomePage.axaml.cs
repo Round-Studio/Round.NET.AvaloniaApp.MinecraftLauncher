@@ -3,6 +3,7 @@ using Avalonia.Controls;
 using Avalonia.Interactivity;
 using Avalonia.Markup.Xaml;
 using RMCL.Base.Entry.Notice;
+using RMCL.Base.Enum.Notice;
 using RMCL.Models.Global;
 
 namespace RMCL.Views.Page.Main.MainSubPage;
