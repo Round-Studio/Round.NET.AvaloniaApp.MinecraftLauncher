@@ -4,9 +4,9 @@ using Avalonia.Markup.Xaml;
 
 namespace RMCL.Views.Page.Main.MainSubPage;
 
-public partial class MainNavigationPage : UserControl
+public partial class MainDownloadPage : UserControl
 {
-    public MainNavigationPage()
+    public MainDownloadPage()
     {
         InitializeComponent();
     }

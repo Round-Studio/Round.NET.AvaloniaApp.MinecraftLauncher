@@ -5,17 +5,14 @@
              xmlns:res="clr-namespace:RMCL.Properties"
              xmlns:onePointControls="clr-namespace:OnePointUI.Avalonia.Styling.Controls.OnePointControls;assembly=OnePointUI.Avalonia"
              xmlns:mainSubPage="clr-namespace:RMCL.Views.Page.Main.MainSubPage"
+             xmlns:navigation="clr-namespace:RMCL.Views.Control.Navigation"
              mc:Ignorable="d" 
              d:DesignWidth="800" 
              d:DesignHeight="450"
              x:Class="RMCL.Views.Page.Main.MainPage">
     
     <Grid RowDefinitions="*,Auto">
-        <!-- 主内容区域 -->
-        <ContentControl Name="MainPageContent"
-                        Grid.Row="0">
-            <mainSubPage:MainHomePage/>
-        </ContentControl>
+        <navigation:NavigationFrame Name="MainPageContent"></navigation:NavigationFrame>
         
         <!-- 底部导航栏 -->
         <Border Grid.Row="1"
@@ -41,61 +38,8 @@
                     </Button>
                 </StackPanel>
                 
-                <StackPanel Orientation="Horizontal"
-                            HorizontalAlignment="Right"
-                            VerticalAlignment="Center"
-                            Margin="15,0"
-                            Spacing="8">
-                    
-                    <Button VerticalAlignment="Center"
-                            Height="32"
-                            Classes="NoBorder"
-                            CornerRadius="16">
-                        <StackPanel Orientation="Horizontal"
-                                    Margin="12,0">
-                            <onePointControls:FontIcon Glyph="&#xE713;"
-                                                       FontSize="14"
-                                                       VerticalAlignment="Center"
-                                                       Margin="0,0,8,0"/>
-                            <TextBlock Text="{x:Static res:Resource.MainPage_Setting}"
-                                       VerticalAlignment="Center"
-                                       FontWeight="Medium"/>
-                        </StackPanel>
-                    </Button>
-                    
-                    <Button VerticalAlignment="Center"
-                            Height="32"
-                            Classes="NoBorder"
-                            CornerRadius="16">
-                        <StackPanel Orientation="Horizontal"
-                                    Margin="12,0">
-                            <onePointControls:FontIcon Glyph="&#xE896;"
-                                                       FontSize="14"
-                                                       VerticalAlignment="Center"
-                                                       Margin="0,0,8,0"/>
-                            <TextBlock Text="{x:Static res:Resource.MainPage_Download}"
-                                       VerticalAlignment="Center"
-                                       FontWeight="Medium"/>
-                        </StackPanel>
-                    </Button>
-                    
-                    <Button VerticalAlignment="Center"
-                            Height="32"
-                            Classes="NoBorder"
-                            CornerRadius="16">
-                        <StackPanel Orientation="Horizontal"
-                                    Margin="12,0">
-                            <onePointControls:FontIcon Glyph="&#xE80F;"
-                                                       Foreground="White"
-                                                       FontSize="14"
-                                                       VerticalAlignment="Center"
-                                                       Margin="0,0,8,0"/>
-                            <TextBlock Text="{x:Static res:Resource.MainPage_Home}"
-                                       VerticalAlignment="Center"
-                                       FontWeight="Medium"/>
-                        </StackPanel>
-                    </Button>
-                </StackPanel>
+                <navigation:BottomBar HorizontalAlignment="Right"
+                                      Name="BottomBar"/>
             </Grid>
         </Border>
     </Grid>

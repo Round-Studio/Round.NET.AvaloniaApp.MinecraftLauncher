@@ -17,6 +17,8 @@
         WindowStartupLocation="CenterOwner"
         Width="1000" MinWidth="1000"
         Height="560" MinHeight="560"
+        TransparencyLevelHint="Mica"
+        Background="Transparent"
         PointerPressed="InputElement_OnPointerPressed"
         Title="{Binding WindowTitle}">
 
@@ -26,54 +28,74 @@
         <vm:MainWindowViewModel/>
     </Design.DataContext>
 
-    <Grid RowDefinitions="64,*">
-        <Grid>
-            <Button Margin="15,0,0,0"
-                    HorizontalAlignment="Left"
-                    VerticalAlignment="Center"
-                    Height="32"
-                    Name="TitleBtn"
-                    Click="TitleBtn_OnClick"
-                    Padding="8,0"
-                    Classes="NoBorder">
-                <TextBlock FontSize="16"
-                           Text="{x:Static res:Resource.App_WindowTitle}"></TextBlock>
-            </Button>
+    <Grid>
+        <Image Source="../../Assets/Image/电路图,Backround.png"
+               Width="322.5" Height="165"
+               HorizontalAlignment="Right"
+               VerticalAlignment="Top"
+               Opacity="0.3"></Image>
+        
+        <Image Source="../../Assets/Image/电路图,Backround.png"
+               Width="322.5" Height="165"
+               HorizontalAlignment="Left"
+               VerticalAlignment="Bottom"
+               Margin="0,0,0,48"
+               Opacity="0.3">
+            <Image.RenderTransform>
+                <RotateTransform Angle="180"/>
+            </Image.RenderTransform>
+        </Image>
+        
+        <Grid RowDefinitions="64,*">
+            <Grid>
+                <Button Margin="15,0,0,0"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Center"
+                        Height="32"
+                        Name="TitleBtn"
+                        Click="TitleBtn_OnClick"
+                        Padding="8,0"
+                        FontFamily="{DynamicResource DinPro}"
+                        Classes="NoBorder">
+                    <TextBlock FontSize="16"
+                               Text="{x:Static res:Resource.App_WindowTitle}"></TextBlock>
+                </Button>
+                
+                <StackPanel Orientation="Horizontal"
+                            HorizontalAlignment="Right"
+                            Margin="0,0,15,0">
+                    <Button Classes="NoBorder"
+                            Width="32" Height="32"
+                            Name="MinBtn"
+                            Click="MinBtn_OnClick"
+                            Margin="5,5,0,5">
+                        <onePointControls:FontIcon Glyph="&#xE921;"/>
+                    </Button>
+                    <Button Classes="NoBorder"
+                            Width="32" Height="32"
+                            Name="MaxBtn"
+                            Click="MaxBtn_OnClick"
+                            Margin="5,5,0,5">
+                        <onePointControls:FontIcon Glyph="&#xE922;"/>
+                    </Button>
+                    <Button Classes="NoBorder"
+                            Width="32" Height="32"
+                            Name="CloseBtn"
+                            Click="CloseBtn_OnClick"
+                            Margin="5,5,0,5">
+                        <onePointControls:FontIcon Glyph="&#xE8BB;"/>
+                    </Button>
+                </StackPanel>
+            </Grid>
             
-            <StackPanel Orientation="Horizontal"
-                        HorizontalAlignment="Right"
-                        Margin="0,0,15,0">
-                <Button Classes="NoBorder"
-                        Width="32" Height="32"
-                        Name="MinBtn"
-                        Click="MinBtn_OnClick"
-                        Margin="5,5,0,5">
-                    <onePointControls:FontIcon Glyph="&#xE921;"/>
-                </Button>
-                <Button Classes="NoBorder"
-                        Width="32" Height="32"
-                        Name="MaxBtn"
-                        Click="MaxBtn_OnClick"
-                        Margin="5,5,0,5">
-                    <onePointControls:FontIcon Glyph="&#xE922;"/>
-                </Button>
-                <Button Classes="NoBorder"
-                        Width="32" Height="32"
-                        Name="CloseBtn"
-                        Click="CloseBtn_OnClick"
-                        Margin="5,5,0,5">
-                    <onePointControls:FontIcon Glyph="&#xE8BB;"/>
-                </Button>
-            </StackPanel>
+            <page:MainView Grid.Row="1"/>
+            
+            <notice:NoticePanel Grid.Row="1"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Bottom"
+                                Name="NoticePanel"
+                                Margin="0,0,0,59"/>
         </Grid>
-        
-        <page:MainView Grid.Row="1"/>
-        
-        <notice:NoticePanel Grid.Row="1"
-                            HorizontalAlignment="Left"
-                            VerticalAlignment="Bottom"
-                            Name="NoticePanel"
-                            Margin="0,0,0,59"/>
     </Grid>
 
 </Window>

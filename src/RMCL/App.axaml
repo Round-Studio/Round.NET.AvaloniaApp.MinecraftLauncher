@@ -13,4 +13,8 @@
     <Application.Styles>
         <core:OnePointTheme AccentColor="DeepPink" ThemeVariant="Dark"/>
     </Application.Styles>
+             
+    <Application.Resources>
+        <FontFamily x:Key="DinPro">/Assets/Font/DinPro.ttf#DINPro</FontFamily>
+    </Application.Resources>
 </Application>

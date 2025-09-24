@@ -41,6 +41,7 @@ public partial class MainWindow : Window
     private void CloseBtn_OnClick(object? sender, RoutedEventArgs e)
     {
         this.Close();
+        
         Environment.Exit(0);
     }
 

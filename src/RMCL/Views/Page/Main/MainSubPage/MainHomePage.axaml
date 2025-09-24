@@ -7,7 +7,23 @@
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="RMCL.Views.Page.Main.MainSubPage.MainHomePage">
     <Grid>
-       
+        <Button Classes="NoBorder"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Bottom"
+                CornerRadius="16"
+                Margin="0,0,15,62"
+                Padding="12,0">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock FontSize="72"
+                           FontWeight="Bold"
+                           FontFamily="{DynamicResource DinPro}">1.12.2</TextBlock>
+                <onePointControls1:FontIcon Glyph="&#xE971;"
+                                            VerticalAlignment="Center"
+                                            IsVisible="False"
+                                            Margin="8,0,0,0"></onePointControls1:FontIcon>
+            </StackPanel>
+        </Button>
+        
         <!-- 启动按钮 -->
         <Button Classes="NoBorder"
                 HorizontalAlignment="Right"
