@@ -39,7 +39,7 @@
                Width="322.5" Height="165"
                HorizontalAlignment="Left"
                VerticalAlignment="Bottom"
-               Margin="0,0,0,48"
+               Margin="0,0,0,0"
                Opacity="0.3">
             <Image.RenderTransform>
                 <RotateTransform Angle="180"/>
@@ -94,7 +94,7 @@
                                 HorizontalAlignment="Left"
                                 VerticalAlignment="Bottom"
                                 Name="NoticePanel"
-                                Margin="0,0,0,59"/>
+                                Margin="0,0,0,78"/>
         </Grid>
     </Grid>
 

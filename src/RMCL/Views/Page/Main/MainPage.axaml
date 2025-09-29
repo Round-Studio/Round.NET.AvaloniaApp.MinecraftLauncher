@@ -11,36 +11,25 @@
              d:DesignHeight="450"
              x:Class="RMCL.Views.Page.Main.MainPage">
     
-    <Grid RowDefinitions="*,Auto">
-        <navigation:NavigationFrame Name="MainPageContent"></navigation:NavigationFrame>
+    <Grid>
+        <!--<navigation:NavigationFrame Name="MainPageContent"></navigation:NavigationFrame>-->
+        <ContentControl Name="MainContentControl">
+            <mainSubPage:MainHomePage></mainSubPage:MainHomePage>
+        </ContentControl>
         
-        <!-- 底部导航栏 -->
-        <Border Grid.Row="1"
-                HorizontalAlignment="Stretch"
-                VerticalAlignment="Bottom"
+        <Button VerticalAlignment="Bottom"
+                HorizontalAlignment="Left"
+                Margin="15"
                 Height="48"
-                Background="{DynamicResource PrimaryBackgroundBrush}">
-            <Grid>
-                <StackPanel Orientation="Horizontal"
-                            HorizontalAlignment="Left"
-                            VerticalAlignment="Center"
-                            Margin="15,0"
-                            Spacing="8">
-                    <Button VerticalAlignment="Center"
-                            Height="32"
-                            Width="32"
-                            Classes="NoBorder"
-                            CornerRadius="16">
-                        <onePointControls:FontIcon Glyph="&#xE7C4;"
-                                                   FontSize="14"
-                                                   VerticalAlignment="Center"
-                                                   HorizontalAlignment="Center"/>
-                    </Button>
-                </StackPanel>
-                
-                <navigation:BottomBar HorizontalAlignment="Right"
-                                      Name="BottomBar"/>
-            </Grid>
-        </Border>
+                Width="48"
+                Classes="NoBorder"
+                CornerRadius="16"
+                Name="NavigationBtn"
+                Click="NavigationBtn_OnClick">
+            <onePointControls:FontIcon Glyph="&#xE7C4;"
+                                       FontSize="18"
+                                       VerticalAlignment="Center"
+                                       HorizontalAlignment="Center"/>
+        </Button>
     </Grid>
 </UserControl>

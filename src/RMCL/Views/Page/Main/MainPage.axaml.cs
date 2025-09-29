@@ -1,6 +1,7 @@
 ﻿using System;
 using Avalonia;
 using Avalonia.Controls;
+using Avalonia.Interactivity;
 using Avalonia.Markup.Xaml;
 using RMCL.Base.Entry.Navigation;
 using RMCL.Models.Global;
@@ -16,10 +17,10 @@ public partial class MainPage : UserControl
     {
         InitializeComponent();
 
-        GlobalModels.MainPageContent = this.MainPageContent;
-        MainPageContent.NavigateTo(new MainHomePage());
+        /*GlobalModels.MainPageContent = this.MainPageContent;
+        MainPageContent.NavigateTo(new MainHomePage());*/
         
-        BottomBar.OnNavigation = tag =>
+        /*BottomBar.OnNavigation = tag =>
         {
             if (oldTag != tag)
             {
@@ -57,6 +58,11 @@ public partial class MainPage : UserControl
             ItemText = Resource.MainPage_Home,
             Tag = "Home",
             IsSelected = true
-        });
+        });*/
+    }
+
+    private void NavigationBtn_OnClick(object? sender, RoutedEventArgs e)
+    {
+        MainContentControl.Content = new MainNavigationPage();
     }
 }

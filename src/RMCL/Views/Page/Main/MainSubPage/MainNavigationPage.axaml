@@ -1,0 +1,65 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:mainSubPage="clr-namespace:RMCL.Views.Page.Main.MainSubPage"
+             xmlns:onePointControls="clr-namespace:OnePointUI.Avalonia.Styling.Controls.OnePointControls;assembly=OnePointUI.Avalonia"
+             xmlns:properties="clr-namespace:RMCL.Properties"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="RMCL.Views.Page.Main.MainSubPage.MainNavigationPage">
+    <UserControl.Styles>
+        <Style Selector="mainSubPage|MainNavigationPage">
+            <Style.Animations>
+                <Animation Duration="0:0:1.1"
+                           Easing="ExponentialEaseInOut">
+                    <KeyFrame Cue="0%">
+                        <Setter Property="ScaleTransform.ScaleX" Value="0.9"/>
+                        <Setter Property="ScaleTransform.ScaleY" Value="0.9"/>
+                    </KeyFrame>
+                </Animation>
+            </Style.Animations>
+        </Style>
+    </UserControl.Styles>
+    <Grid>
+        <WrapPanel Margin="20,-48,20,20"
+                   VerticalAlignment="Center">
+            <StackPanel>
+                
+                <Button Classes="NoBorder"
+                        Margin="5"
+                        Width="212" Height="101"
+                        Background="{DynamicResource PrimaryBackgroundBrush}">
+                    <Grid Width="200" Height="90">
+                        <onePointControls:FontIcon FontSize="30"
+                                                   Glyph="&#xE713;"
+                                                   HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    
+                        <TextBlock Text="{x:Static properties:Resource.MainPage_Setting}"
+                                   HorizontalAlignment="Right"
+                                   VerticalAlignment="Bottom"
+                                   FontSize="9"></TextBlock>
+                    </Grid>
+                </Button>
+                
+                <StackPanel Orientation="Horizontal">
+                    
+                    <Button Classes="NoBorder"
+                            Margin="5"
+                            Width="101" Height="101"
+                            Background="{DynamicResource PrimaryBackgroundBrush}">
+                        <Grid Width="88" Height="88">
+                            <onePointControls:FontIcon FontSize="30"
+                                                       Glyph="&#xE896;"
+                                                       HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    
+                            <TextBlock Text="{x:Static properties:Resource.MainPage_Download}"
+                                       HorizontalAlignment="Right"
+                                       VerticalAlignment="Bottom"
+                                       FontSize="9"></TextBlock>
+                        </Grid>
+                    </Button>
+                </StackPanel>
+            </StackPanel>
+        </WrapPanel>
+    </Grid>
+</UserControl>
