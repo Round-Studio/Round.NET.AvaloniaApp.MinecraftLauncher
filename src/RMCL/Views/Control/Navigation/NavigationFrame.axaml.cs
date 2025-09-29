@@ -32,7 +32,7 @@ public partial class NavigationFrame : UserControl
 
             // 立即将即将隐藏的Frame设置为半透明和偏移
             Frame2.Opacity = 0;
-            Frame2.Margin = new Thickness(0, 220, 0, -220);
+            Frame2.Margin = new Thickness(0, 20, 0, -20);
 
             // 立即显示并重置目标Frame的状态
             Frame1.IsVisible = true;
@@ -43,7 +43,7 @@ public partial class NavigationFrame : UserControl
             try
             {
                 // 等待400毫秒，但如果token被取消，这里会抛出异常
-                await Task.Delay(300, token);
+                await Task.Delay(190, token);
             
                 // 只有当token未被取消时，才执行隐藏操作
                 if (!token.IsCancellationRequested)
@@ -61,7 +61,7 @@ public partial class NavigationFrame : UserControl
             IsOneFrame = false;
 
             Frame1.Opacity = 0;
-            Frame1.Margin = new Thickness(0, 220, 0, -220);
+            Frame1.Margin = new Thickness(0, 20, 0, -20);
 
             Frame2.IsVisible = true;
             Frame2.Opacity = 1;
@@ -70,7 +70,7 @@ public partial class NavigationFrame : UserControl
 
             try
             {
-                await Task.Delay(300, token);
+                await Task.Delay(190, token);
                 if (!token.IsCancellationRequested)
                 {
                     Frame1.IsVisible = false;
