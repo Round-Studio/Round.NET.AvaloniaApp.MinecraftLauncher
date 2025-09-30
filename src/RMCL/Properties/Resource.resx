@@ -139,6 +139,21 @@
     <value>Style</value>
   </data>
   <data name="Settings.Style.Description" xml:space="preserve">
-    <value>Launcher personalization settings</value>
+    <value>Launcher personalization settings.</value>
+  </data>
+  <data name="Settings.Restart" xml:space="preserve">
+    <value>Restart</value>
+  </data>
+  <data name="Settings.Launch" xml:space="preserve">
+    <value>Start</value>
+  </data>
+  <data name="Settings.Launch.Description" xml:space="preserve">
+    <value>Launcher and game launch behavior.</value>
+  </data>
+  <data name="Settings.Account" xml:space="preserve">
+    <value>Account</value>
+  </data>
+  <data name="Settings.Account.Description" xml:space="preserve">
+    <value>Game account and launcher account.</value>
   </data>
 </root>

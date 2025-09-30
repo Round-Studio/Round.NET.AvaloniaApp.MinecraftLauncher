@@ -114,6 +114,51 @@ namespace RMCL.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Account.
+        /// </summary>
+        public static string Settings_Account {
+            get {
+                return ResourceManager.GetString("Settings.Account", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Game account and launcher account..
+        /// </summary>
+        public static string Settings_Account_Description {
+            get {
+                return ResourceManager.GetString("Settings.Account.Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Start.
+        /// </summary>
+        public static string Settings_Launch {
+            get {
+                return ResourceManager.GetString("Settings.Launch", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Launcher and game launch behavior..
+        /// </summary>
+        public static string Settings_Launch_Description {
+            get {
+                return ResourceManager.GetString("Settings.Launch.Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Restart.
+        /// </summary>
+        public static string Settings_Restart {
+            get {
+                return ResourceManager.GetString("Settings.Restart", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Style.
         /// </summary>
         public static string Settings_Style {
@@ -123,7 +168,7 @@ namespace RMCL.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Launcher personalization settings.
+        ///   Looks up a localized string similar to Launcher personalization settings..
         /// </summary>
         public static string Settings_Style_Description {
             get {

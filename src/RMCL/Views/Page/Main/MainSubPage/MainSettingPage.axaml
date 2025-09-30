@@ -13,12 +13,49 @@
                                         VerticalAlignment="Top"
                                         Margin="20"
                                         Text="{x:Static properties:Resource.MainPage_Setting}"></onePointControls:LineTextBlock>
+        <Button HorizontalAlignment="Right"
+                VerticalAlignment="Top"
+                Margin="20,23"
+                Height="32"
+                Padding="12,0">
+            <StackPanel Orientation="Horizontal">
+                <onePointControls:FontIcon Glyph="&#xE895;"
+                                           Margin="0,0,8,0"
+                                           VerticalAlignment="Center"></onePointControls:FontIcon>
+                
+                <TextBlock Text="{x:Static properties:Resource.Settings_Restart}"></TextBlock>
+            </StackPanel>
+        </Button>
         <ScrollViewer Margin="0,58,0,0">
             <StackPanel Margin="15">
                 <onePointControls:SettingCard Header="{x:Static properties:Resource.Settings_Style}"
                                               Margin="5,5,5,10"
                                               Description="{x:Static properties:Resource.Settings_Style_Description}"
                                               Glyph="&#xE790;"
+                                              IsClickable="True"/>
+                
+                <onePointControls:SettingCard Header="{x:Static properties:Resource.Settings_Launch}"
+                                              Margin="5,5,5,10"
+                                              Description="{x:Static properties:Resource.Settings_Launch_Description}"
+                                              Glyph="&#xE950;"
+                                              IsClickable="True"/>
+                
+                <onePointControls:SettingCard Header="{x:Static properties:Resource.Settings_Account}"
+                                              Margin="5,5,5,10"
+                                              Description="{x:Static properties:Resource.Settings_Account_Description}"
+                                              Glyph="&#xE716;"
+                                              IsClickable="True"/>
+                
+                <onePointControls:SettingCard Header="辅助"
+                                              Margin="5,5,5,10"
+                                              Description="辅助与帮助"
+                                              Glyph="&#xE776;"
+                                              IsClickable="True"/>
+                
+                <onePointControls:SettingCard Header="关于"
+                                              Margin="5,5,5,10"
+                                              Description="关于我们"
+                                              Glyph="&#xE946;"
                                               IsClickable="True"/>
             </StackPanel>
         </ScrollViewer>
