@@ -6,13 +6,14 @@
              xmlns:onePointControls="clr-namespace:OnePointUI.Avalonia.Styling.Controls.OnePointControls;assembly=OnePointUI.Avalonia"
              xmlns:mainSubPage="clr-namespace:RMCL.Views.Page.Main.MainSubPage"
              xmlns:navigation="clr-namespace:RMCL.Views.Control.Navigation"
+             xmlns:navigation1="clr-namespace:OnePointUI.Avalonia.Styling.Controls.OnePointControls.Navigation;assembly=OnePointUI.Avalonia"
              mc:Ignorable="d" 
              d:DesignWidth="800" 
              d:DesignHeight="450"
              x:Class="RMCL.Views.Page.Main.MainPage">
     
     <Grid RowDefinitions="*,Auto">
-        <navigation:NavigationFrame Name="MainPageContent"></navigation:NavigationFrame>
+        <navigation1:NavigationFrame Name="MainPageContent"></navigation1:NavigationFrame>
         
         <!-- 底部导航栏 -->
         <Border Grid.Row="1"
@@ -36,6 +37,10 @@
                                                    VerticalAlignment="Center"
                                                    HorizontalAlignment="Center"/>
                     </Button>
+                    
+                    <onePointControls:ProgressRing VerticalAlignment="Center"
+                                                   HorizontalAlignment="Left"
+                                                   Margin="5,0"></onePointControls:ProgressRing>
                 </StackPanel>
                 
                 <navigation:BottomBar HorizontalAlignment="Right"
