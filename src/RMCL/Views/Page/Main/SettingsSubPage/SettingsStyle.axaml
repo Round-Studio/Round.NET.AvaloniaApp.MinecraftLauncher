@@ -2,7 +2,50 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:onePointControls="clr-namespace:OnePointUI.Avalonia.Styling.Controls.OnePointControls;assembly=OnePointUI.Avalonia"
+             xmlns:properties="clr-namespace:RMCL.Properties"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="RMCL.Views.Page.Main.SettingsSubPage.SettingsStyle">
-    Welcome to Avalonia!
+    <ScrollViewer Margin="0,0,0,0">
+        <StackPanel Margin="15">
+            <onePointControls:SettingCard Header="语言"
+                                          Margin="5,5,5,10"
+                                          Description="语言 / Language"
+                                          Glyph="&#xF2B7;">
+                <ComboBox Width="200"
+                          SelectedIndex="0">
+                    <ComboBoxItem>English</ComboBoxItem>
+                    <ComboBoxItem>简体中文</ComboBoxItem>
+                </ComboBox>
+            </onePointControls:SettingCard>
+            
+            <onePointControls:SettingCard Header="背景"
+                                          Margin="5,5,5,10"
+                                          Description="启动器窗口背景"
+                                          Glyph="&#xE91B;"
+                                          IsClickable="True">
+            </onePointControls:SettingCard>
+            
+            <onePointControls:SettingCard Header="颜色"
+                                          Margin="5,5,5,10"
+                                          Description="强调色与深浅模式"
+                                          Glyph="&#xE790;"
+                                          IsClickable="True">
+            </onePointControls:SettingCard>
+            
+            <onePointControls:SettingCard Header="音乐"
+                                          Margin="5,5,5,10"
+                                          Description="背景音乐设置"
+                                          Glyph="&#xE8D6;"
+                                          IsClickable="True">
+            </onePointControls:SettingCard>
+            
+            <onePointControls:SettingCard Header="主题包制作"
+                                          Margin="5,5,5,10"
+                                          Description="制作 [Round Studio] 通用格式主题包"
+                                          Glyph="&#xE835;"
+                                          IsClickable="True">
+            </onePointControls:SettingCard>
+        </StackPanel>
+    </ScrollViewer>
 </UserControl>

@@ -11,7 +11,7 @@
                 <onePointControls:SettingCard Header="{x:Static properties:Resource.Settings_Style}"
                                               Margin="5,5,5,10"
                                               Description="{x:Static properties:Resource.Settings_Style_Description}"
-                                              Glyph="&#xE790;"
+                                              Glyph="&#xEE56;"
                                               Name="StyleSetting"
                                               Click="StyleSetting_OnClick"
                                               IsClickable="True"/>
@@ -28,15 +28,15 @@
                                               Glyph="&#xE716;"
                                               IsClickable="True"/>
                 
-                <onePointControls:SettingCard Header="辅助"
+                <onePointControls:SettingCard Header="{x:Static properties:Resource.Settings_Help}"
                                               Margin="5,5,5,10"
-                                              Description="辅助与帮助"
+                                              Description="{x:Static properties:Resource.Settings_Help_Description}"
                                               Glyph="&#xE776;"
                                               IsClickable="True"/>
                 
-                <onePointControls:SettingCard Header="关于"
+                <onePointControls:SettingCard Header="{x:Static properties:Resource.Settings_About}"
                                               Margin="5,5,5,10"
-                                              Description="关于我们"
+                                              Description="{x:Static properties:Resource.Settings_About_Description}"
                                               Glyph="&#xE946;"
                                               Name="AboutUs"
                                               Click="AboutUs_OnClick"

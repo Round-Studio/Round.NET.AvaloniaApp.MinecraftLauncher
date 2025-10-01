@@ -136,7 +136,7 @@
     <value>Download</value>
   </data>
   <data name="Settings.Style" xml:space="preserve">
-    <value>Style</value>
+    <value>Personalization</value>
   </data>
   <data name="Settings.Style.Description" xml:space="preserve">
     <value>Launcher personalization settings.</value>
@@ -155,5 +155,17 @@
   </data>
   <data name="Settings.Account.Description" xml:space="preserve">
     <value>Game account and launcher account.</value>
+  </data>
+  <data name="Settings.Help" xml:space="preserve">
+    <value>Helper</value>
+  </data>
+  <data name="Settings.Help.Description" xml:space="preserve">
+    <value>Assistance and assistance.</value>
+  </data>
+  <data name="Settings.About" xml:space="preserve">
+    <value>About</value>
+  </data>
+  <data name="Settings.About.Description" xml:space="preserve">
+    <value>About us.</value>
   </data>
 </root>

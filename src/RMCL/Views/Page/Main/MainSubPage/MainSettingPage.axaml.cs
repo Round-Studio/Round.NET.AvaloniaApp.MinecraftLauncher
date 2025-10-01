@@ -11,9 +11,11 @@ namespace RMCL.Views.Page.Main.MainSubPage;
 public partial class MainSettingPage : UserControl
 {
     public static MainSettingPage Page { get; set; }
+    public static object BackPage { get; set; } = new SettingsNavigation();
     public MainSettingPage()
     {
         InitializeComponent();
+        BackPage = new SettingsNavigation();
         Page = this;
         
         SettingsNavigation.NavigateTo(new SettingsNavigation());
@@ -40,6 +42,6 @@ public partial class MainSettingPage : UserControl
 
     private void BackBtn_OnClick(object? sender, RoutedEventArgs e)
     {
-        NavigationTo(new SettingsNavigation());
+        NavigationTo(BackPage);
     }
 }

@@ -45,9 +45,9 @@
                     VerticalAlignment="Top"
                     Orientation="Horizontal"
                     Margin="20,23">
-            <onePointControls:LabelBox Text="需要重启"
+            <!--<onePointControls:LabelBox Text="需要重启"
                                        VerticalAlignment="Center"
-                                       Margin="12,0"></onePointControls:LabelBox>
+                                       Margin="12,0"></onePointControls:LabelBox>-->
             
             <Button Height="32"
                     Padding="12,0">

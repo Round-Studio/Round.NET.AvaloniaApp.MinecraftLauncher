@@ -114,6 +114,24 @@ namespace RMCL.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to About.
+        /// </summary>
+        public static string Settings_About {
+            get {
+                return ResourceManager.GetString("Settings.About", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to About us..
+        /// </summary>
+        public static string Settings_About_Description {
+            get {
+                return ResourceManager.GetString("Settings.About.Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Account.
         /// </summary>
         public static string Settings_Account {
@@ -128,6 +146,24 @@ namespace RMCL.Properties {
         public static string Settings_Account_Description {
             get {
                 return ResourceManager.GetString("Settings.Account.Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Helper.
+        /// </summary>
+        public static string Settings_Help {
+            get {
+                return ResourceManager.GetString("Settings.Help", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Assistance and assistance..
+        /// </summary>
+        public static string Settings_Help_Description {
+            get {
+                return ResourceManager.GetString("Settings.Help.Description", resourceCulture);
             }
         }
         
@@ -159,7 +195,7 @@ namespace RMCL.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Style.
+        ///   Looks up a localized string similar to Personalization.
         /// </summary>
         public static string Settings_Style {
             get {

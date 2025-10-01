@@ -142,7 +142,7 @@
     <value>启动器个性化设置</value>
   </data>
   <data name="Settings.Restart" xml:space="preserve">
-    <value>启动器需要重启</value>
+    <value>立即重启</value>
   </data>
   <data name="Settings.Launch" xml:space="preserve">
     <value>启动</value>
@@ -155,5 +155,17 @@
   </data>
   <data name="Settings.Account.Description" xml:space="preserve">
     <value>游戏账户与启动器账户</value>
+  </data>
+  <data name="Settings.Help" xml:space="preserve">
+    <value>帮助</value>
+  </data>
+  <data name="Settings.Help.Description" xml:space="preserve">
+    <value>辅助与帮助</value>
+  </data>
+  <data name="Settings.About" xml:space="preserve">
+    <value>关于</value>
+  </data>
+  <data name="Settings.About.Description" xml:space="preserve">
+    <value>关于我们</value>
   </data>
 </root>
