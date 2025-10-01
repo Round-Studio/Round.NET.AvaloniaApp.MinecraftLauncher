@@ -1,0 +1,50 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="200" d:DesignHeight="120"
+             MinHeight="120" MinWidth="200"
+             x:Class="RMCL.Views.Control.StyleBox">
+    <Border CornerRadius="6"
+            BoxShadow="0 0 5 Gray"
+            Margin="5">
+        <Border ClipToBounds="True">
+            <Grid>
+                <Image Source="../../Assets/Image/电路图,Backround.png"
+                       Width="86.8" Height="32"
+                       HorizontalAlignment="Right"
+                       VerticalAlignment="Top"
+                       Margin="0,0,0,0"
+                       Opacity="0.3"></Image>
+        
+                <Image Source="../../Assets/Image/电路图,Backround.png"
+                       Width="86.8" Height="32"
+                       HorizontalAlignment="Left"
+                       VerticalAlignment="Bottom"
+                       Margin="0,0,0,6"
+                       Opacity="0.3">
+                    <Image.RenderTransform>
+                        <RotateTransform Angle="180"/>
+                    </Image.RenderTransform>
+                </Image>
+                
+                <Grid VerticalAlignment="Bottom">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                
+                    <Border Grid.Column="0" Height="6"
+                            CornerRadius="0,0,0,6"
+                            Background="{DynamicResource AccentBackgroundBrush}"></Border>
+                    <Border Grid.Column="1" Height="6"
+                            Background="{DynamicResource AccentBorderBrush}"></Border>
+                    <Border Grid.Column="2" Height="6"
+                            CornerRadius="0,0,6,0"
+                            Background="{DynamicResource AccentBackgroundOverBrush}"></Border>
+                </Grid>
+            </Grid>
+        </Border>
+    </Border>
+</UserControl>

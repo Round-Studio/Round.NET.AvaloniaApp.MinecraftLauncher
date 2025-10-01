@@ -11,7 +11,7 @@
     </Application.DataTemplates>
   
     <Application.Styles>
-        <core:OnePointTheme AccentColor="DeepPink" ThemeVariant="Dark"/>
+        <core:OnePointTheme AccentColor="Orange" ThemeVariant="Dark"/>
     </Application.Styles>
              
     <Application.Resources>

@@ -47,7 +47,7 @@ public partial class NoticeBox : UserControl
                     Cue = new Cue(0),
                     Setters =
                     {
-                        new Setter(MarginProperty, new Thickness(15, 4))
+                        new Setter(MarginProperty, new Thickness(15, 5))
                     }
                 },
                 new KeyFrame
@@ -55,7 +55,7 @@ public partial class NoticeBox : UserControl
                     Cue = new Cue(1),
                     Setters =
                     {
-                        new Setter(MarginProperty, new Thickness(-220, 4, 220, 4))
+                        new Setter(MarginProperty, new Thickness(-220, 5, 220, 5))
                     }
                 }
             }

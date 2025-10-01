@@ -1,6 +1,11 @@
 ﻿using Avalonia;
 using System;
 using System.Threading;
+using HarfBuzzSharp;
+using RMCL.Base.Entry.Config;
+using RMCL.Config;
+using RMCL.Models;
+using RMCL.Models.Global;
 
 namespace RMCL;
 
@@ -12,8 +17,10 @@ sealed class Program
     [STAThread]
     public static void Main(string[] args)
     {
+        GlobalModels.Config = new Config<ConfigEntry>(PathsList.ConfigPath);
+        
         // Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("zh-hans"); // 简体中文
-        Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("en"); // 英文
+        Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo(LanguageHelper.GetStringName(GlobalModels.Config.Data.Language));
         
         BuildAvaloniaApp()
             .StartWithClassicDesktopLifetime(args);

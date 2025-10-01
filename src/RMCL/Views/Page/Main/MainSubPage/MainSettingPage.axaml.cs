@@ -1,4 +1,6 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Diagnostics;
+using System.Threading.Tasks;
 using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Interactivity;
@@ -19,6 +21,11 @@ public partial class MainSettingPage : UserControl
         Page = this;
         
         SettingsNavigation.NavigateTo(new SettingsNavigation());
+    }
+
+    public void SetReStart()
+    {
+        RestartBtn.IsVisible = true;
     }
 
     public async Task NavigationTo(object obj)
@@ -43,5 +50,24 @@ public partial class MainSettingPage : UserControl
     private void BackBtn_OnClick(object? sender, RoutedEventArgs e)
     {
         NavigationTo(BackPage);
+    }
+
+    private void RestartBtn_OnClick(object? sender, RoutedEventArgs e)
+    {
+        // 获取当前应用程序的路径和文件名
+        string applicationPath = Process.GetCurrentProcess().MainModule.FileName;
+            
+        // 启动新的应用程序实例
+        ProcessStartInfo startInfo = new ProcessStartInfo
+        {
+            FileName = applicationPath,
+            UseShellExecute = true
+        };
+            
+        // 启动新实例
+        Process.Start(startInfo);
+            
+        // 关闭当前应用程序
+        Environment.Exit(0);
     }
 }

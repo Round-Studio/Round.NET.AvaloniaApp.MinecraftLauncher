@@ -1,0 +1,65 @@
+﻿<root>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <data name="App.WindowTitle" xml:space="preserve">
+        <value>RMCL</value>
+    </data>
+    <data name="MainPage.Download" xml:space="preserve">
+        <value>Download</value>
+    </data>
+    <data name="MainPage.GameList" xml:space="preserve">
+        <value>Game List</value>
+    </data>
+    <data name="MainPage.Home" xml:space="preserve">
+        <value>Home</value>
+    </data>
+    <data name="MainPage.Launch" xml:space="preserve">
+        <value>Launch Game</value>
+    </data>
+    <data name="MainPage.Setting" xml:space="preserve">
+        <value>Settings</value>
+    </data>
+    <data name="Settings.About" xml:space="preserve">
+        <value>About</value>
+    </data>
+    <data name="Settings.About.Description" xml:space="preserve">
+        <value>About us.</value>
+    </data>
+    <data name="Settings.Account" xml:space="preserve">
+        <value>Account</value>
+    </data>
+    <data name="Settings.Account.Description" xml:space="preserve">
+        <value>Game account and launcher account.</value>
+    </data>
+    <data name="Settings.Help" xml:space="preserve">
+        <value>Helper</value>
+    </data>
+    <data name="Settings.Help.Description" xml:space="preserve">
+        <value>Assistance and assistance.</value>
+    </data>
+    <data name="Settings.Launch" xml:space="preserve">
+        <value>Start</value>
+    </data>
+    <data name="Settings.Launch.Description" xml:space="preserve">
+        <value>Launcher and game launch behavior.</value>
+    </data>
+    <data name="Settings.Restart" xml:space="preserve">
+        <value>Restart</value>
+    </data>
+    <data name="Settings.Style" xml:space="preserve">
+        <value>Personalization</value>
+    </data>
+    <data name="Settings.Style.Description" xml:space="preserve">
+        <value>Launcher personalization settings.</value>
+    </data>
+</root>

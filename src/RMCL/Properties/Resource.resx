@@ -121,51 +121,51 @@
     <value>RMCL</value>
   </data>
   <data name="MainPage.Home" xml:space="preserve">
-    <value>Home</value>
+    <value>主页</value>
   </data>
   <data name="MainPage.Setting" xml:space="preserve">
-    <value>Settings</value>
+    <value>设置</value>
   </data>
   <data name="MainPage.Launch" xml:space="preserve">
-    <value>Launch Game</value>
+    <value>启动游戏</value>
   </data>
   <data name="MainPage.GameList" xml:space="preserve">
-    <value>Game List</value>
+    <value>版本列表</value>
   </data>
   <data name="MainPage.Download" xml:space="preserve">
-    <value>Download</value>
+    <value>下载</value>
   </data>
   <data name="Settings.Style" xml:space="preserve">
-    <value>Personalization</value>
+    <value>个性化</value>
   </data>
   <data name="Settings.Style.Description" xml:space="preserve">
-    <value>Launcher personalization settings.</value>
+    <value>启动器个性化设置</value>
   </data>
   <data name="Settings.Restart" xml:space="preserve">
-    <value>Restart</value>
+    <value>立即重启</value>
   </data>
   <data name="Settings.Launch" xml:space="preserve">
-    <value>Start</value>
+    <value>启动</value>
   </data>
   <data name="Settings.Launch.Description" xml:space="preserve">
-    <value>Launcher and game launch behavior.</value>
+    <value>启动器与游戏启动行为</value>
   </data>
   <data name="Settings.Account" xml:space="preserve">
-    <value>Account</value>
+    <value>账户</value>
   </data>
   <data name="Settings.Account.Description" xml:space="preserve">
-    <value>Game account and launcher account.</value>
+    <value>游戏账户与启动器账户</value>
   </data>
   <data name="Settings.Help" xml:space="preserve">
-    <value>Helper</value>
+    <value>帮助</value>
   </data>
   <data name="Settings.Help.Description" xml:space="preserve">
-    <value>Assistance and assistance.</value>
+    <value>辅助与帮助</value>
   </data>
   <data name="Settings.About" xml:space="preserve">
-    <value>About</value>
+    <value>关于</value>
   </data>
   <data name="Settings.About.Description" xml:space="preserve">
-    <value>About us.</value>
+    <value>关于我们</value>
   </data>
 </root>

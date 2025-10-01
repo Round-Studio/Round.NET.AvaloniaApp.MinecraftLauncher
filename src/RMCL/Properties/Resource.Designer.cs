@@ -69,7 +69,7 @@ namespace RMCL.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Download.
+        ///   Looks up a localized string similar to 下载.
         /// </summary>
         public static string MainPage_Download {
             get {
@@ -78,7 +78,7 @@ namespace RMCL.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Game List.
+        ///   Looks up a localized string similar to 版本列表.
         /// </summary>
         public static string MainPage_GameList {
             get {
@@ -87,7 +87,7 @@ namespace RMCL.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Home.
+        ///   Looks up a localized string similar to 主页.
         /// </summary>
         public static string MainPage_Home {
             get {
@@ -96,7 +96,7 @@ namespace RMCL.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Launch Game.
+        ///   Looks up a localized string similar to 启动游戏.
         /// </summary>
         public static string MainPage_Launch {
             get {
@@ -105,7 +105,7 @@ namespace RMCL.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Settings.
+        ///   Looks up a localized string similar to 设置.
         /// </summary>
         public static string MainPage_Setting {
             get {
@@ -114,7 +114,7 @@ namespace RMCL.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to About.
+        ///   Looks up a localized string similar to 关于.
         /// </summary>
         public static string Settings_About {
             get {
@@ -123,7 +123,7 @@ namespace RMCL.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to About us..
+        ///   Looks up a localized string similar to 关于我们.
         /// </summary>
         public static string Settings_About_Description {
             get {
@@ -132,7 +132,7 @@ namespace RMCL.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Account.
+        ///   Looks up a localized string similar to 账户.
         /// </summary>
         public static string Settings_Account {
             get {
@@ -141,7 +141,7 @@ namespace RMCL.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Game account and launcher account..
+        ///   Looks up a localized string similar to 游戏账户与启动器账户.
         /// </summary>
         public static string Settings_Account_Description {
             get {
@@ -150,7 +150,7 @@ namespace RMCL.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Helper.
+        ///   Looks up a localized string similar to 帮助.
         /// </summary>
         public static string Settings_Help {
             get {
@@ -159,7 +159,7 @@ namespace RMCL.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Assistance and assistance..
+        ///   Looks up a localized string similar to 辅助与帮助.
         /// </summary>
         public static string Settings_Help_Description {
             get {
@@ -168,7 +168,7 @@ namespace RMCL.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Start.
+        ///   Looks up a localized string similar to 启动.
         /// </summary>
         public static string Settings_Launch {
             get {
@@ -177,7 +177,7 @@ namespace RMCL.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Launcher and game launch behavior..
+        ///   Looks up a localized string similar to 启动器与游戏启动行为.
         /// </summary>
         public static string Settings_Launch_Description {
             get {
@@ -186,7 +186,7 @@ namespace RMCL.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Restart.
+        ///   Looks up a localized string similar to 立即重启.
         /// </summary>
         public static string Settings_Restart {
             get {
@@ -195,7 +195,7 @@ namespace RMCL.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Personalization.
+        ///   Looks up a localized string similar to 个性化.
         /// </summary>
         public static string Settings_Style {
             get {
@@ -204,7 +204,7 @@ namespace RMCL.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Launcher personalization settings..
+        ///   Looks up a localized string similar to 启动器个性化设置.
         /// </summary>
         public static string Settings_Style_Description {
             get {

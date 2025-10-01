@@ -4,18 +4,26 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:onePointControls="clr-namespace:OnePointUI.Avalonia.Styling.Controls.OnePointControls;assembly=OnePointUI.Avalonia"
              xmlns:properties="clr-namespace:RMCL.Properties"
+             xmlns:control="clr-namespace:RMCL.Views.Control"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="RMCL.Views.Page.Main.SettingsSubPage.SettingsStyle">
     <ScrollViewer Margin="0,0,0,0">
         <StackPanel Margin="15">
+            <control:StyleBox Margin="2.5,5,5,10"
+                              Width="200"
+                              Height="120"
+                              HorizontalAlignment="Left">
+            </control:StyleBox>
+            
             <onePointControls:SettingCard Header="语言"
                                           Margin="5,5,5,10"
                                           Description="语言 / Language"
                                           Glyph="&#xF2B7;">
                 <ComboBox Width="200"
-                          SelectedIndex="0">
-                    <ComboBoxItem>English</ComboBoxItem>
+                          Name="ChooseLanguage"
+                          SelectionChanged="ChooseLanguage_OnSelectionChanged">
                     <ComboBoxItem>简体中文</ComboBoxItem>
+                    <ComboBoxItem>English</ComboBoxItem>
                 </ComboBox>
             </onePointControls:SettingCard>
             

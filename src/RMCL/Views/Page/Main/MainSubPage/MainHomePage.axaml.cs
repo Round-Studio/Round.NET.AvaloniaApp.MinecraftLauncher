@@ -14,4 +14,14 @@ public partial class MainHomePage : UserControl
     {
         InitializeComponent();
     }
+
+    private void Button_OnClick(object? sender, RoutedEventArgs e)
+    {
+        GlobalModels.NoticePanel.AddNotice(new NoticeInfo()
+        {
+            Message = "欢迎使用 RMCL\naa\naa",
+            Title = "Welcome to RMCL",
+            NoticeType = NoticeType.Info
+        });
+    }
 }

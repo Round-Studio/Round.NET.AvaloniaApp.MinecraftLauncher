@@ -45,6 +45,7 @@
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\..\RMCL.Config\RMCL.Config.csproj" />
       <ProjectReference Include="..\OnePointUI.Avalonia\src\OnePointUI.Avalonia\OnePointUI.Avalonia.csproj" />
     </ItemGroup>
 </Project>
