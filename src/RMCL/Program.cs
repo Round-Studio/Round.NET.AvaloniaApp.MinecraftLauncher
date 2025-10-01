@@ -12,8 +12,8 @@ sealed class Program
     [STAThread]
     public static void Main(string[] args)
     {
-        Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("zh-hans"); // 简体中文
-        // Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("en"); // 英文
+        // Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("zh-hans"); // 简体中文
+        Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("en"); // 英文
         
         BuildAvaloniaApp()
             .StartWithClassicDesktopLifetime(args);

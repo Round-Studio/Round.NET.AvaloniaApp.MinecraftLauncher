@@ -1,0 +1,46 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:onePointControls="clr-namespace:OnePointUI.Avalonia.Styling.Controls.OnePointControls;assembly=OnePointUI.Avalonia"
+             xmlns:properties="clr-namespace:RMCL.Properties"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="RMCL.Views.Page.Main.SettingsSubPage.SettingsNavigation">
+    <ScrollViewer Margin="0,0,0,0">
+            <StackPanel Margin="15">
+                <onePointControls:SettingCard Header="{x:Static properties:Resource.Settings_Style}"
+                                              Margin="5,5,5,10"
+                                              Description="{x:Static properties:Resource.Settings_Style_Description}"
+                                              Glyph="&#xE790;"
+                                              Name="StyleSetting"
+                                              Click="StyleSetting_OnClick"
+                                              IsClickable="True"/>
+                
+                <onePointControls:SettingCard Header="{x:Static properties:Resource.Settings_Launch}"
+                                              Margin="5,5,5,10"
+                                              Description="{x:Static properties:Resource.Settings_Launch_Description}"
+                                              Glyph="&#xE950;"
+                                              IsClickable="True"/>
+                
+                <onePointControls:SettingCard Header="{x:Static properties:Resource.Settings_Account}"
+                                              Margin="5,5,5,10"
+                                              Description="{x:Static properties:Resource.Settings_Account_Description}"
+                                              Glyph="&#xE716;"
+                                              IsClickable="True"/>
+                
+                <onePointControls:SettingCard Header="辅助"
+                                              Margin="5,5,5,10"
+                                              Description="辅助与帮助"
+                                              Glyph="&#xE776;"
+                                              IsClickable="True"/>
+                
+                <onePointControls:SettingCard Header="关于"
+                                              Margin="5,5,5,10"
+                                              Description="关于我们"
+                                              Glyph="&#xE946;"
+                                              Name="AboutUs"
+                                              Click="AboutUs_OnClick"
+                                              IsClickable="True"/>
+            </StackPanel>
+        </ScrollViewer>
+</UserControl>

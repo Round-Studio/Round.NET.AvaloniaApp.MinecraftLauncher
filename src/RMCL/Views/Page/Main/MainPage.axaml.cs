@@ -1,6 +1,7 @@
 ﻿using System;
 using Avalonia;
 using Avalonia.Controls;
+using Avalonia.Interactivity;
 using Avalonia.Markup.Xaml;
 using RMCL.Base.Entry.Navigation;
 using RMCL.Models.Global;
@@ -58,5 +59,10 @@ public partial class MainPage : UserControl
             Tag = "Home",
             IsSelected = true
         });
+    }
+
+    private void TaskBtn_OnClick(object? sender, RoutedEventArgs e)
+    {
+        GlobalModels.TaskPanel.ToggleOpen();
     }
 }

@@ -23,6 +23,7 @@ public partial class MainWindow : Window
         RenderOptions.SetEdgeMode(this, EdgeMode.Antialias); // 形状渲染模式
 
         GlobalModels.NoticePanel = NoticePanel;
+        GlobalModels.TaskPanel = TaskPanel;
         
         GlobalModels.NoticePanel.AddNotice(new NoticeInfo()
         {
@@ -30,6 +31,8 @@ public partial class MainWindow : Window
             Title = "Welcome to RMCL",
             NoticeType = NoticeType.Info
         });
+
+        if (TaskPanel.GetOpenState()) TaskPanel.ToggleOpen();
     }
 
     private void InputElement_OnPointerPressed(object? sender, PointerPressedEventArgs e)
@@ -56,6 +59,9 @@ public partial class MainWindow : Window
 
     private void TitleBtn_OnClick(object? sender, RoutedEventArgs e)
     {
-        GlobalModels.MainPageContent.NavigateTo(new MainHomePage());
+        if (TaskPanel.GetOpenState())
+        {
+            TaskPanel.ToggleOpen();
+        }else GlobalModels.MainPageContent.NavigateTo(new MainHomePage());
     }
 }

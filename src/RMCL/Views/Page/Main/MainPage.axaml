@@ -31,6 +31,8 @@
                             Height="32"
                             Width="32"
                             Classes="NoBorder"
+                            Name="TaskBtn"
+                            Click="TaskBtn_OnClick"
                             CornerRadius="16">
                         <onePointControls:FontIcon Glyph="&#xE7C4;"
                                                    FontSize="14"
@@ -40,7 +42,8 @@
                     
                     <onePointControls:ProgressRing VerticalAlignment="Center"
                                                    HorizontalAlignment="Left"
-                                                   Margin="5,0"></onePointControls:ProgressRing>
+                                                   Margin="5,0"
+                                                   RingWidth="3"></onePointControls:ProgressRing>
                 </StackPanel>
                 
                 <navigation:BottomBar HorizontalAlignment="Right"

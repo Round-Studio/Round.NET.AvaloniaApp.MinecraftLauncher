@@ -4,15 +4,42 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:onePointControls="clr-namespace:OnePointUI.Avalonia.Styling.Controls.OnePointControls;assembly=OnePointUI.Avalonia"
              xmlns:properties="clr-namespace:RMCL.Properties"
+             xmlns:navigation="clr-namespace:OnePointUI.Avalonia.Styling.Controls.OnePointControls.Navigation;assembly=OnePointUI.Avalonia"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="RMCL.Views.Page.Main.MainSubPage.MainSettingPage"
              Background="{DynamicResource PrimaryBackgroundOverBrush}">
     <Grid>
+        <Button Classes="NoBorder"
+                Width="32"
+                Height="32"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Name="BackBtn"
+                Click="BackBtn_OnClick"
+                Margin="-80,23,80,23">
+            <Button.Transitions>
+                <Transitions>
+                    <ThicknessTransition Property="Margin"
+                                         Duration="0:0:0.38"
+                                         Easing="QuinticEaseOut"></ThicknessTransition>
+                </Transitions>
+            </Button.Transitions>
+            <onePointControls:FontIcon Glyph="&#xE72B;"></onePointControls:FontIcon>
+        </Button>
+        
         <onePointControls:LineTextBlock FontSize="28"
                                         HorizontalAlignment="Left"
                                         VerticalAlignment="Top"
+                                        Name="LineTextBlock"
                                         Margin="20"
-                                        Text="{x:Static properties:Resource.MainPage_Setting}"></onePointControls:LineTextBlock>
+                                        Text="{x:Static properties:Resource.MainPage_Setting}">
+            <onePointControls:LineTextBlock.Transitions>
+                <Transitions>
+                    <ThicknessTransition Property="Margin"
+                                         Duration="0:0:0.38"
+                                         Easing="QuinticEaseOut"></ThicknessTransition>
+                </Transitions>
+            </onePointControls:LineTextBlock.Transitions></onePointControls:LineTextBlock>
        
         <StackPanel HorizontalAlignment="Right"
                     VerticalAlignment="Top"
@@ -34,38 +61,7 @@
             </Button>
         </StackPanel>
         
-        <ScrollViewer Margin="0,58,0,0">
-            <StackPanel Margin="15">
-                <onePointControls:SettingCard Header="{x:Static properties:Resource.Settings_Style}"
-                                              Margin="5,5,5,10"
-                                              Description="{x:Static properties:Resource.Settings_Style_Description}"
-                                              Glyph="&#xE790;"
-                                              IsClickable="True"/>
-                
-                <onePointControls:SettingCard Header="{x:Static properties:Resource.Settings_Launch}"
-                                              Margin="5,5,5,10"
-                                              Description="{x:Static properties:Resource.Settings_Launch_Description}"
-                                              Glyph="&#xE950;"
-                                              IsClickable="True"/>
-                
-                <onePointControls:SettingCard Header="{x:Static properties:Resource.Settings_Account}"
-                                              Margin="5,5,5,10"
-                                              Description="{x:Static properties:Resource.Settings_Account_Description}"
-                                              Glyph="&#xE716;"
-                                              IsClickable="True"/>
-                
-                <onePointControls:SettingCard Header="辅助"
-                                              Margin="5,5,5,10"
-                                              Description="辅助与帮助"
-                                              Glyph="&#xE776;"
-                                              IsClickable="True"/>
-                
-                <onePointControls:SettingCard Header="关于"
-                                              Margin="5,5,5,10"
-                                              Description="关于我们"
-                                              Glyph="&#xE946;"
-                                              IsClickable="True"/>
-            </StackPanel>
-        </ScrollViewer>
+        <navigation:NavigationFrame Name="SettingsNavigation"
+                                    Margin="0,64,0,0"/>
     </Grid>
 </UserControl>
