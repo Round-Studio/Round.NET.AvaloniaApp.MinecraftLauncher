@@ -114,6 +114,231 @@ namespace RMCL.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 鸣谢.
+        /// </summary>
+        public static string OtherAboutUs_Acknowledgement {
+            get {
+                return ResourceManager.GetString("OtherAboutUs.Acknowledgement", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to RMCL 使用了来自 bangbang93 提供的 BMCLAPI 作为部分 Minecraft 资源下载源。.
+        /// </summary>
+        public static string OtherAboutUs_Acknowledgement_BMCLAPI {
+            get {
+                return ResourceManager.GetString("OtherAboutUs.Acknowledgement.BMCLAPI", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 组件库.
+        /// </summary>
+        public static string OtherAboutUs_ComponentLibrary {
+            get {
+                return ResourceManager.GetString("OtherAboutUs.ComponentLibrary", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to RMCL 使用了 OnePoint UI 作为用户交互风格.
+        /// </summary>
+        public static string OtherAboutUs_ComponentLibrary_OnePoint {
+            get {
+                return ResourceManager.GetString("OtherAboutUs.ComponentLibrary.OnePoint", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 第三方组件库.
+        /// </summary>
+        public static string OtherAboutUs_ComponentLibrary_OpenSource {
+            get {
+                return ResourceManager.GetString("OtherAboutUs.ComponentLibrary.OpenSource", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to RMCL 使用的第三方开源库.
+        /// </summary>
+        public static string OtherAboutUs_ComponentLibrary_OpenSource_Description {
+            get {
+                return ResourceManager.GetString("OtherAboutUs.ComponentLibrary.OpenSource.Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to RMCL 使用了 OverrideLauncher.Core 作为游戏启动核心.
+        /// </summary>
+        public static string OtherAboutUs_ComponentLibrary_OverrideLauncherCore {
+            get {
+                return ResourceManager.GetString("OtherAboutUs.ComponentLibrary.OverrideLauncherCore", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 开发者.
+        /// </summary>
+        public static string OtherAboutUs_Developer {
+            get {
+                return ResourceManager.GetString("OtherAboutUs.Developer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to RMCL 本体：Dime.
+        /// </summary>
+        public static string OtherAboutUs_Developer_Body {
+            get {
+                return ResourceManager.GetString("OtherAboutUs.Developer.Body", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to RMCL 启动核心：Dime.
+        /// </summary>
+        public static string OtherAboutUs_Developer_LaunchCore {
+            get {
+                return ResourceManager.GetString("OtherAboutUs.Developer.LaunchCore", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 用户交互体验指导：DrMing.
+        /// </summary>
+        public static string OtherAboutUs_Developer_UserInteractionExperienceGuidance {
+            get {
+                return ResourceManager.GetString("OtherAboutUs.Developer.UserInteractionExperienceGuidance", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 灵感.
+        /// </summary>
+        public static string OtherAboutUs_Inspiration {
+            get {
+                return ResourceManager.GetString("OtherAboutUs.Inspiration", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to RMCL 内部分设计风格、动画参考 LauncherX.
+        /// </summary>
+        public static string OtherAboutUs_Inspiration_LauncherX {
+            get {
+                return ResourceManager.GetString("OtherAboutUs.Inspiration.LauncherX", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to RMCL 内部分页面设计、功能参考 WonderLab、BakaXL.
+        /// </summary>
+        public static string OtherAboutUs_Inspiration_WonderLabBakaXL {
+            get {
+                return ResourceManager.GetString("OtherAboutUs.Inspiration.WonderLabBakaXL", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 背景.
+        /// </summary>
+        public static string OtherAboutUs_Style_Background {
+            get {
+                return ResourceManager.GetString("OtherAboutUs.Style.Background", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 启动器窗口背景.
+        /// </summary>
+        public static string OtherAboutUs_Style_Background_Description {
+            get {
+                return ResourceManager.GetString("OtherAboutUs.Style.Background.Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 颜色.
+        /// </summary>
+        public static string OtherAboutUs_Style_Color {
+            get {
+                return ResourceManager.GetString("OtherAboutUs.Style.Color", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 强调色与深浅模式.
+        /// </summary>
+        public static string OtherAboutUs_Style_Color_Description {
+            get {
+                return ResourceManager.GetString("OtherAboutUs.Style.Color.Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 语言.
+        /// </summary>
+        public static string OtherAboutUs_Style_Language {
+            get {
+                return ResourceManager.GetString("OtherAboutUs.Style.Language", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 语言 / Language.
+        /// </summary>
+        public static string OtherAboutUs_Style_Language_Description {
+            get {
+                return ResourceManager.GetString("OtherAboutUs.Style.Language.Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 音乐.
+        /// </summary>
+        public static string OtherAboutUs_Style_Music {
+            get {
+                return ResourceManager.GetString("OtherAboutUs.Style.Music", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 背景音乐设置.
+        /// </summary>
+        public static string OtherAboutUs_Style_Music_Description {
+            get {
+                return ResourceManager.GetString("OtherAboutUs.Style.Music.Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 主题包制作.
+        /// </summary>
+        public static string OtherAboutUs_Style_ThemePackProduction {
+            get {
+                return ResourceManager.GetString("OtherAboutUs.Style.ThemePackProduction", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 制作 [Round Studio] 通用格式主题包.
+        /// </summary>
+        public static string OtherAboutUs_Style_ThemePackProduction_Description {
+            get {
+                return ResourceManager.GetString("OtherAboutUs.Style.ThemePackProduction.Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 内部版本.
+        /// </summary>
+        public static string OtherAboutUs_Version {
+            get {
+                return ResourceManager.GetString("OtherAboutUs.Version", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 关于.
         /// </summary>
         public static string Settings_About {

@@ -28,6 +28,27 @@
                     </Image.RenderTransform>
                 </Image>
                 
+                <Border Width="20" Height="6"
+                        Background="White"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Top"
+                        CornerRadius="3"
+                        Margin="8"></Border>
+                
+                <Border Width="20" Height="6"
+                        Background="White"
+                        HorizontalAlignment="Right"
+                        VerticalAlignment="Bottom"
+                        CornerRadius="3"
+                        Margin="8,8,8,12"></Border>
+                
+                <Border Width="40" Height="12"
+                        Background="White"
+                        HorizontalAlignment="Right"
+                        VerticalAlignment="Bottom"
+                        CornerRadius="3"
+                        Margin="8,8,8,24"></Border>
+                
                 <Grid VerticalAlignment="Bottom">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*"></ColumnDefinition>

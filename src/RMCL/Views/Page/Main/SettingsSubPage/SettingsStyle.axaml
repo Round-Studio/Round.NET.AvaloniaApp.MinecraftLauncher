@@ -15,9 +15,9 @@
                               HorizontalAlignment="Left">
             </control:StyleBox>
             
-            <onePointControls:SettingCard Header="语言"
+            <onePointControls:SettingCard Header="{x:Static properties:Resource.OtherAboutUs_Style_Language}"
                                           Margin="5,5,5,10"
-                                          Description="语言 / Language"
+                                          Description="{x:Static properties:Resource.OtherAboutUs_Style_Language_Description}"
                                           Glyph="&#xF2B7;">
                 <ComboBox Width="200"
                           Name="ChooseLanguage"
@@ -27,30 +27,30 @@
                 </ComboBox>
             </onePointControls:SettingCard>
             
-            <onePointControls:SettingCard Header="背景"
+            <onePointControls:SettingCard Header="{x:Static properties:Resource.OtherAboutUs_Style_Background}"
                                           Margin="5,5,5,10"
-                                          Description="启动器窗口背景"
+                                          Description="{x:Static properties:Resource.OtherAboutUs_Style_Background_Description}"
                                           Glyph="&#xE91B;"
                                           IsClickable="True">
             </onePointControls:SettingCard>
             
-            <onePointControls:SettingCard Header="颜色"
+            <onePointControls:SettingCard Header="{x:Static properties:Resource.OtherAboutUs_Style_Color}"
                                           Margin="5,5,5,10"
-                                          Description="强调色与深浅模式"
+                                          Description="{x:Static properties:Resource.OtherAboutUs_Style_Color_Description}"
                                           Glyph="&#xE790;"
                                           IsClickable="True">
             </onePointControls:SettingCard>
             
-            <onePointControls:SettingCard Header="音乐"
+            <onePointControls:SettingCard Header="{x:Static properties:Resource.OtherAboutUs_Style_Music}"
                                           Margin="5,5,5,10"
-                                          Description="背景音乐设置"
+                                          Description="{x:Static properties:Resource.OtherAboutUs_Style_Music_Description}"
                                           Glyph="&#xE8D6;"
                                           IsClickable="True">
             </onePointControls:SettingCard>
             
-            <onePointControls:SettingCard Header="主题包制作"
+            <onePointControls:SettingCard Header="{x:Static properties:Resource.OtherAboutUs_Style_ThemePackProduction}"
                                           Margin="5,5,5,10"
-                                          Description="制作 [Round Studio] 通用格式主题包"
+                                          Description="{x:Static properties:Resource.OtherAboutUs_Style_ThemePackProduction_Description}"
                                           Glyph="&#xE835;"
                                           IsClickable="True">
             </onePointControls:SettingCard>

@@ -62,4 +62,79 @@
     <data name="Settings.Style.Description" xml:space="preserve">
         <value>Launcher personalization settings.</value>
     </data>
+    <data name="OtherAboutUs.Developer" xml:space="preserve">
+        <value>Developer</value>
+    </data>
+    <data name="OtherAboutUs.Acknowledgement" xml:space="preserve">
+        <value>Acknowledgments</value>
+    </data>
+    <data name="OtherAboutUs.Acknowledgement.BMCLAPI" xml:space="preserve">
+        <value>RMCL uses BMCLAPI provided by bangbang93 as a part of the Minecraft resource download sources.</value>
+    </data>
+    <data name="OtherAboutUs.ComponentLibrary.OnePoint" xml:space="preserve">
+        <value>RMCL uses OnePoint UI as the user interaction style</value>
+    </data>
+    <data name="OtherAboutUs.ComponentLibrary.OpenSource" xml:space="preserve">
+        <value>Third-party component library</value>
+    </data>
+    <data name="OtherAboutUs.ComponentLibrary.OverrideLauncherCore" xml:space="preserve">
+        <value>RMCL uses OverrideLauncher.Core as the core for game launching</value>
+    </data>
+    <data name="OtherAboutUs.ComponentLibrary.OpenSource.Description" xml:space="preserve">
+        <value>Third-party open-source libraries used by RMCL</value>
+    </data>
+    <data name="OtherAboutUs.Developer.Body" xml:space="preserve">
+        <value>RMCL Ontology: Dime</value>
+    </data>
+    <data name="OtherAboutUs.Developer.LaunchCore" xml:space="preserve">
+        <value>RMCL Startup Core: Dime</value>
+    </data>
+    <data name="OtherAboutUs.Developer.UserInteractionExperienceGuidance" xml:space="preserve">
+        <value>User Interaction Experience Guide: DrMing</value>
+    </data>
+    <data name="OtherAboutUs.Inspiration" xml:space="preserve">
+        <value>Inspiration</value>
+    </data>
+    <data name="OtherAboutUs.Inspiration.LauncherX" xml:space="preserve">
+        <value>Internal design style of RMCL, animation reference: LauncherX</value>
+    </data>
+    <data name="OtherAboutUs.Inspiration.WonderLabBakaXL" xml:space="preserve">
+        <value>RMCL internal page design and features refer to WonderLab and BakaXL</value>
+    </data>
+    <data name="OtherAboutUs.Version" xml:space="preserve">
+        <value>Internal version</value>
+    </data>
+    <data name="OtherAboutUs.ComponentLibrary" xml:space="preserve">
+        <value>Component Library</value>
+    </data>
+    <data name="OtherAboutUs.Style.Background" xml:space="preserve">
+        <value>Background</value>
+    </data>
+    <data name="OtherAboutUs.Style.Background.Description" xml:space="preserve">
+        <value>Launcher window background</value>
+    </data>
+    <data name="OtherAboutUs.Style.Color" xml:space="preserve">
+        <value>Color</value>
+    </data>
+    <data name="OtherAboutUs.Style.Color.Description" xml:space="preserve">
+        <value>Accent color and light/dark mode</value>
+    </data>
+    <data name="OtherAboutUs.Style.Language" xml:space="preserve">
+        <value>Language</value>
+    </data>
+    <data name="OtherAboutUs.Style.Language.Description" xml:space="preserve">
+        <value>语言 / Language</value>
+    </data>
+    <data name="OtherAboutUs.Style.Music" xml:space="preserve">
+        <value>Music</value>
+    </data>
+    <data name="OtherAboutUs.Style.Music.Description" xml:space="preserve">
+        <value>Background music settings</value>
+    </data>
+    <data name="OtherAboutUs.Style.ThemePackProduction" xml:space="preserve">
+        <value>Theme Package Production</value>
+    </data>
+    <data name="OtherAboutUs.Style.ThemePackProduction.Description" xml:space="preserve">
+        <value>Create a [Round Studio] universal format theme pack</value>
+    </data>
 </root>

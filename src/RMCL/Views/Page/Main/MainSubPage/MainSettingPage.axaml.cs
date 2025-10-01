@@ -49,7 +49,7 @@ public partial class MainSettingPage : UserControl
 
     private void BackBtn_OnClick(object? sender, RoutedEventArgs e)
     {
-        NavigationTo(BackPage);
+        NavigationTo(Activator.CreateInstance(BackPage.GetType()));
     }
 
     private void RestartBtn_OnClick(object? sender, RoutedEventArgs e)

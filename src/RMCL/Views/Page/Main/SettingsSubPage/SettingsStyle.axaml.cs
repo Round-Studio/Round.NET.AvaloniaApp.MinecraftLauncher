@@ -1,4 +1,5 @@
-﻿using Avalonia;
+﻿using System.Threading;
+using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
 using HarfBuzzSharp;
@@ -27,6 +28,8 @@ public partial class SettingsStyle : UserControl
             GlobalModels.Config.Save();
             
             MainSettingPage.Page.SetReStart();
+            Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo(LanguageHelper.GetStringName(GlobalModels.Config.Data.Language));
+            InvalidateVisual();
         }
     }
 }

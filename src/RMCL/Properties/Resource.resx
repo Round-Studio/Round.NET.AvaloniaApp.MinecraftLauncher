@@ -168,4 +168,82 @@
   <data name="Settings.About.Description" xml:space="preserve">
     <value>关于我们</value>
   </data>
+  
+  <data name="OtherAboutUs.Developer" xml:space="preserve">
+    <value>开发者</value>
+  </data>
+  <data name="OtherAboutUs.Developer.Body" xml:space="preserve">
+    <value>RMCL 本体：Dime</value>
+  </data>
+  <data name="OtherAboutUs.Developer.LaunchCore" xml:space="preserve">
+    <value>RMCL 启动核心：Dime</value>
+  </data>
+  <data name="OtherAboutUs.Developer.UserInteractionExperienceGuidance" xml:space="preserve">
+    <value>用户交互体验指导：DrMing</value>
+  </data>
+  <data name="OtherAboutUs.Acknowledgement" xml:space="preserve">
+    <value>鸣谢</value>
+  </data>
+  <data name="OtherAboutUs.Acknowledgement.BMCLAPI" xml:space="preserve">
+    <value>RMCL 使用了来自 bangbang93 提供的 BMCLAPI 作为部分 Minecraft 资源下载源。</value>
+  </data>
+  <data name="OtherAboutUs.Inspiration" xml:space="preserve">
+    <value>灵感</value>
+  </data>
+  <data name="OtherAboutUs.Inspiration.LauncherX" xml:space="preserve">
+    <value>RMCL 内部分设计风格、动画参考 LauncherX</value>
+  </data>
+  <data name="OtherAboutUs.Inspiration.WonderLabBakaXL" xml:space="preserve">
+    <value>RMCL 内部分页面设计、功能参考 WonderLab、BakaXL</value>
+  </data>
+  <data name="OtherAboutUs.ComponentLibrary" xml:space="preserve">
+    <value>组件库</value>
+  </data>
+  <data name="OtherAboutUs.ComponentLibrary.OnePoint" xml:space="preserve">
+    <value>RMCL 使用了 OnePoint UI 作为用户交互风格</value>
+  </data>
+  <data name="OtherAboutUs.ComponentLibrary.OverrideLauncherCore" xml:space="preserve">
+    <value>RMCL 使用了 OverrideLauncher.Core 作为游戏启动核心</value>
+  </data>
+  <data name="OtherAboutUs.ComponentLibrary.OpenSource" xml:space="preserve">
+    <value>第三方组件库</value>
+  </data>
+  <data name="OtherAboutUs.ComponentLibrary.OpenSource.Description" xml:space="preserve">
+    <value>RMCL 使用的第三方开源库</value>
+  </data>
+  <data name="OtherAboutUs.Version" xml:space="preserve">
+    <value>内部版本</value>
+  </data>
+  
+  
+  <data name="OtherAboutUs.Style.Language" xml:space="preserve">
+    <value>语言</value>
+  </data>
+  <data name="OtherAboutUs.Style.Language.Description" xml:space="preserve">
+    <value>语言 / Language</value>
+  </data>
+  <data name="OtherAboutUs.Style.Background" xml:space="preserve">
+    <value>背景</value>
+  </data>
+  <data name="OtherAboutUs.Style.Background.Description" xml:space="preserve">
+    <value>启动器窗口背景</value>
+  </data>
+  <data name="OtherAboutUs.Style.Color" xml:space="preserve">
+    <value>颜色</value>
+  </data>
+  <data name="OtherAboutUs.Style.Color.Description" xml:space="preserve">
+    <value>强调色与深浅模式</value>
+  </data>
+  <data name="OtherAboutUs.Style.Music" xml:space="preserve">
+    <value>音乐</value>
+  </data>
+  <data name="OtherAboutUs.Style.Music.Description" xml:space="preserve">
+    <value>背景音乐设置</value>
+  </data>
+  <data name="OtherAboutUs.Style.ThemePackProduction" xml:space="preserve">
+    <value>主题包制作</value>
+  </data>
+  <data name="OtherAboutUs.Style.ThemePackProduction.Description" xml:space="preserve">
+    <value>制作 [Round Studio] 通用格式主题包</value>
+  </data>
 </root>

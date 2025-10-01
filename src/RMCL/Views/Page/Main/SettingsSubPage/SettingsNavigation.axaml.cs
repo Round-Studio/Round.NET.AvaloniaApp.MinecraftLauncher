@@ -9,6 +9,7 @@ namespace RMCL.Views.Page.Main.SettingsSubPage;
 
 public partial class SettingsNavigation : UserControl
 {
+    public SettingsStyle SettingsStyle = new SettingsStyle();
     public SettingsNavigation()
     {
         InitializeComponent();
@@ -16,7 +17,7 @@ public partial class SettingsNavigation : UserControl
 
     private void StyleSetting_OnClick(object? sender, RoutedEventArgs e)
     {
-        MainSettingPage.Page.NavigationTo(new SettingsStyle());
+        MainSettingPage.Page.NavigationTo(SettingsStyle);
     }
 
     private void AboutUs_OnClick(object? sender, RoutedEventArgs e)

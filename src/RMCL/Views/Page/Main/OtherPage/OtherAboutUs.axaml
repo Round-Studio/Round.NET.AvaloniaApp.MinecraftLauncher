@@ -2,7 +2,76 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:onePointControls="clr-namespace:OnePointUI.Avalonia.Styling.Controls.OnePointControls;assembly=OnePointUI.Avalonia"
+             xmlns:properties="clr-namespace:RMCL.Properties"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="RMCL.Views.Page.Main.OtherPage.OtherAboutUs">
-    Welcome to Avalonia!
+    <ScrollViewer>
+        <StackPanel Margin="15">
+            <Grid>
+                <StackPanel Orientation="Horizontal"
+                            Margin="0,0,0,20">
+                    <Image Source="../../../../Assets/Icon/logo.png"
+                           Width="64"
+                           Height="64"
+                           HorizontalAlignment="Left"></Image>
+                
+                    <onePointControls:LineTextBlock Text="R M C L"
+                                                    Margin="12,8,0,8"/>
+                </StackPanel>
+            </Grid>
+            
+            <TextBlock Margin="5,0,0,0"
+                       FontSize="16"
+                       Text="{x:Static properties:Resource.OtherAboutUs_Developer}"></TextBlock>
+            
+            <TextBlock Margin="20,1" Text="{x:Static properties:Resource.OtherAboutUs_Developer_Body}"></TextBlock>
+            <TextBlock Margin="20,1" Text="{x:Static properties:Resource.OtherAboutUs_Developer_LaunchCore}"></TextBlock>
+            <TextBlock Margin="20,1" Text="{x:Static properties:Resource.OtherAboutUs_Developer_UserInteractionExperienceGuidance}"></TextBlock>
+            
+            <TextBlock Margin="5,20,0,0"
+                       FontSize="16"
+                       Text="{x:Static properties:Resource.OtherAboutUs_Acknowledgement}"></TextBlock>
+            
+            <TextBlock Margin="20,1" Text="{x:Static properties:Resource.OtherAboutUs_Acknowledgement_BMCLAPI}"></TextBlock>
+            <TextBlock Margin="20,1">(https://bmclapidoc.bangbang93.com/)</TextBlock>
+            
+            <TextBlock Margin="5,20,0,0"
+                       FontSize="16"
+                       Text="{x:Static properties:Resource.OtherAboutUs_Inspiration}"></TextBlock>
+            
+            <TextBlock Margin="20,1"  Text="{x:Static properties:Resource.OtherAboutUs_Inspiration_LauncherX}">></TextBlock>
+            <TextBlock Margin="20,1">(https://corona.studio/lx)</TextBlock>
+            <TextBlock Margin="20,1" Text="{x:Static properties:Resource.OtherAboutUs_Inspiration_WonderLabBakaXL}"></TextBlock>
+            <TextBlock Margin="20,1">(https://lunova.studio/)</TextBlock>
+            <TextBlock Margin="20,1">(https://bakaxl.com/)</TextBlock>
+            
+            <TextBlock Margin="5,20,0,0"
+                       FontSize="16"
+                       Text="{x:Static properties:Resource.OtherAboutUs_ComponentLibrary}"></TextBlock>
+            
+            <TextBlock Margin="20,1" Text="{x:Static properties:Resource.OtherAboutUs_ComponentLibrary_OnePoint}"></TextBlock>
+            <TextBlock Margin="20,1">(https://github.com/Round-Studio/OnePointUI.Avalonia/)</TextBlock>
+            
+            <TextBlock Margin="20,1" Text="{x:Static properties:Resource.OtherAboutUs_ComponentLibrary_OverrideLauncherCore}"></TextBlock>
+            <TextBlock Margin="20,1">(https://github.com/Round-Studio/OverrideLauncher.Core/)</TextBlock>
+            
+            <onePointControls:SettingCard Margin="5,20,5,5"
+                                          Glyph="&#xE909;"
+                                          Header="{x:Static properties:Resource.OtherAboutUs_ComponentLibrary_OpenSource}"
+                                          Description="{x:Static properties:Resource.OtherAboutUs_ComponentLibrary_OpenSource_Description}"
+                                          Name="OpenSourceBtn"
+                                          Click="OpenSourceBtn_OnClick"
+                                          IsClickable="True">
+            </onePointControls:SettingCard>
+            
+            <onePointControls:SettingCard Margin="5"
+                                          Glyph="&#xE7E3;"
+                                          Header="{x:Static properties:Resource.OtherAboutUs_Version}"
+                                          Description="1.0.0.0">
+                <Button Padding="8"
+                        IsEnabled="False">检查更新</Button>
+            </onePointControls:SettingCard>
+        </StackPanel>
+    </ScrollViewer>
 </UserControl>
