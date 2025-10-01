@@ -1,0 +1,24 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:onePointControls="clr-namespace:OnePointUI.Avalonia.Styling.Controls.OnePointControls;assembly=OnePointUI.Avalonia"
+             xmlns:properties="clr-namespace:RMCL.Properties"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="RMCL.Views.Page.Main.SettingsSubPage.StyleSubPage.StyleBackground">
+    <ScrollViewer>
+        <StackPanel Margin="15">
+            <onePointControls:SettingCard Header="材质"
+                                          Margin="5,5,5,10"
+                                          Description="启动器背景材质"
+                                          Glyph="&#xF742;">
+                <ComboBox Width="200"
+                          Name="ChooseBackMaterial"
+                          SelectionChanged="ChooseBackMaterial_OnSelectionChanged">
+                    <ComboBoxItem>电路板</ComboBoxItem>
+                    <ComboBoxItem>蜂窝</ComboBoxItem>
+                </ComboBox>
+            </onePointControls:SettingCard>
+        </StackPanel>
+    </ScrollViewer>
+</UserControl>

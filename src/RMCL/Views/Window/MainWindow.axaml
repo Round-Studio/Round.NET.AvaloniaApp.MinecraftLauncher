@@ -30,21 +30,36 @@
     </Design.DataContext>
 
     <Grid>
-        <Image Source="../../Assets/Image/电路图,Backround.png"
+        <Image Source="../../Assets/Image/蜂窝.Background.png"
                Width="322.5" Height="165"
                HorizontalAlignment="Right"
                VerticalAlignment="Top"
-               Opacity="0.3"></Image>
+               Name="RightImage"
+               Opacity="0.3">
+            <Image.Transitions>
+                <Transitions>
+                    <DoubleTransition Property="Opacity"
+                                      Duration="0:0:0.18"></DoubleTransition>
+                </Transitions>
+            </Image.Transitions>
+        </Image>
         
-        <Image Source="../../Assets/Image/电路图,Backround.png"
+        <Image Source="../../Assets/Image/蜂窝.Background.png"
                Width="322.5" Height="165"
                HorizontalAlignment="Left"
                VerticalAlignment="Bottom"
+               Name="LeftImage"
                Margin="0,0,0,48"
                Opacity="0.3">
             <Image.RenderTransform>
                 <RotateTransform Angle="180"/>
             </Image.RenderTransform>
+            <Image.Transitions>
+                <Transitions>
+                    <DoubleTransition Property="Opacity"
+                                      Duration="0:0:0.18"></DoubleTransition>
+                </Transitions>
+            </Image.Transitions>
         </Image>
         
         <Grid Margin="0,64,0,0">

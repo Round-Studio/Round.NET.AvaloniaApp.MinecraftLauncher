@@ -96,6 +96,15 @@ namespace RMCL.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 未固定游戏.
+        /// </summary>
+        public static string MainPage_Home_NoPin {
+            get {
+                return ResourceManager.GetString("MainPage.Home.NoPin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 启动游戏.
         /// </summary>
         public static string MainPage_Launch {

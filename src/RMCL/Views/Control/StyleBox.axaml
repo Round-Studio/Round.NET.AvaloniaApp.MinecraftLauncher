@@ -10,17 +10,19 @@
             Margin="5">
         <Border ClipToBounds="True">
             <Grid>
-                <Image Source="../../Assets/Image/电路图,Backround.png"
+                <Image Source="../../Assets/Image/电路板.Background.png"
                        Width="86.8" Height="32"
                        HorizontalAlignment="Right"
                        VerticalAlignment="Top"
+                       Name="RightImage"
                        Margin="0,0,0,0"
                        Opacity="0.3"></Image>
         
-                <Image Source="../../Assets/Image/电路图,Backround.png"
+                <Image Source="../../Assets/Image/电路板.Background.png"
                        Width="86.8" Height="32"
                        HorizontalAlignment="Left"
                        VerticalAlignment="Bottom"
+                       Name="LeftImage"
                        Margin="0,0,0,6"
                        Opacity="0.3">
                     <Image.RenderTransform>

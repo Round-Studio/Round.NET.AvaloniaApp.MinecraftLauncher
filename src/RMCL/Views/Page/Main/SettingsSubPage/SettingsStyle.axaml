@@ -31,6 +31,8 @@
                                           Margin="5,5,5,10"
                                           Description="{x:Static properties:Resource.OtherAboutUs_Style_Background_Description}"
                                           Glyph="&#xE91B;"
+                                          Name="BackgroundBtn"
+                                          Click="BackgroundBtn_OnClick"
                                           IsClickable="True">
             </onePointControls:SettingCard>
             

@@ -1,11 +1,14 @@
 using System;
+using System.Threading.Tasks;
 using Avalonia.Controls;
 using Avalonia.Input;
 using Avalonia.Interactivity;
 using Avalonia.Media;
 using Avalonia.Media.Imaging;
+using Avalonia.Platform;
 using RMCL.Base.Entry.Notice;
 using RMCL.Base.Enum.Notice;
+using RMCL.Models;
 using RMCL.Models.Global;
 using RMCL.Views.Page.Main;
 using RMCL.Views.Page.Main.MainSubPage;
@@ -16,6 +19,8 @@ public partial class MainWindow : Window
 {
     public MainWindow()
     {
+        GlobalModels.MainWindow = this;
+        
         InitializeComponent();
 
         RenderOptions.SetTextRenderingMode(this, TextRenderingMode.SubpixelAntialias); // 字体渲染模式
@@ -33,6 +38,32 @@ public partial class MainWindow : Window
         });
 
         if (TaskPanel.GetOpenState()) TaskPanel.ToggleOpen();
+
+        UpdateBack();
+    }
+
+    public async Task UpdateBack()
+    {
+        var uri = new Uri($"avares://RMCL/Assets/Image/{BackMaterialHelper.GetStringName(GlobalModels.Config.Data.BackMaterialType)}");
+
+        // 2. 使用 AssetLoader.Open 获取流
+        using (var stream = AssetLoader.Open(uri))
+        {
+            // 3. 将流解码为 Bitmap
+            var bitmap = new Bitmap(stream);
+    
+            // 4. 现在你可以将 bitmap 赋值给 Image 控件的 Source 属性
+            RightImage.Opacity = 0;
+            LeftImage.Opacity = 0;
+
+            await Task.Delay(180);
+            
+            RightImage.Source = bitmap;
+            LeftImage.Source = bitmap;
+            
+            RightImage.Opacity = 0.3;
+            LeftImage.Opacity = 0.3;
+        }
     }
 
     private void InputElement_OnPointerPressed(object? sender, PointerPressedEventArgs e)

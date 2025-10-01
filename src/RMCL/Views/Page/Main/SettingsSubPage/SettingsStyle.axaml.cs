@@ -1,11 +1,13 @@
 ﻿using System.Threading;
 using Avalonia;
 using Avalonia.Controls;
+using Avalonia.Interactivity;
 using Avalonia.Markup.Xaml;
 using HarfBuzzSharp;
 using RMCL.Models;
 using RMCL.Models.Global;
 using RMCL.Views.Page.Main.MainSubPage;
+using RMCL.Views.Page.Main.SettingsSubPage.StyleSubPage;
 
 namespace RMCL.Views.Page.Main.SettingsSubPage;
 
@@ -15,6 +17,7 @@ public partial class SettingsStyle : UserControl
     public SettingsStyle()
     {
         InitializeComponent();
+        MainSettingPage.BackPage = new SettingsNavigation();
         ChooseLanguage.SelectedIndex = (int)GlobalModels.Config.Data.Language;
 
         IsEditMode = true;
@@ -29,7 +32,12 @@ public partial class SettingsStyle : UserControl
             
             MainSettingPage.Page.SetReStart();
             Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo(LanguageHelper.GetStringName(GlobalModels.Config.Data.Language));
-            InvalidateVisual();
         }
+    }
+
+    private void BackgroundBtn_OnClick(object? sender, RoutedEventArgs e)
+    {
+        MainSettingPage.BackPage = new SettingsStyle();
+        MainSettingPage.Page.NavigationTo(new StyleBackground());
     }
 }

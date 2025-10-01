@@ -246,4 +246,7 @@
   <data name="OtherAboutUs.Style.ThemePackProduction.Description" xml:space="preserve">
     <value>制作 [Round Studio] 通用格式主题包</value>
   </data>
+  <data name="MainPage.Home.NoPin" xml:space="preserve">
+    <value>未固定游戏</value>
+  </data>
 </root>

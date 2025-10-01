@@ -137,4 +137,7 @@
     <data name="OtherAboutUs.Style.ThemePackProduction.Description" xml:space="preserve">
         <value>Create a [Round Studio] universal format theme pack</value>
     </data>
+    <data name="MainPage.Home.NoPin" xml:space="preserve">
+        <value>Unpinned game</value>
+    </data>
 </root>

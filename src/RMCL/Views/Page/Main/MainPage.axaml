@@ -40,10 +40,10 @@
                                                    HorizontalAlignment="Center"/>
                     </Button>
                     
-                    <onePointControls:ProgressRing VerticalAlignment="Center"
+                    <!--<onePointControls:ProgressRing VerticalAlignment="Center"
                                                    HorizontalAlignment="Left"
                                                    Margin="5,0"
-                                                   RingWidth="3"></onePointControls:ProgressRing>
+                                                   RingWidth="3"></onePointControls:ProgressRing>-->
                 </StackPanel>
                 
                 <navigation:BottomBar HorizontalAlignment="Right"
