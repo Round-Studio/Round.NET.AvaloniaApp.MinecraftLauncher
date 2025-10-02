@@ -37,6 +37,11 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
       
+      - name: Sub-Module
+        run: |
+          git pull
+          git submodule update --init --recursive --remote
+
       - name: Build (x86)
         run: |
           cd ./src/RMCL
@@ -64,6 +69,12 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
+      
+      - name: Sub-Module
+        run: |
+          git pull
+          git submodule update --init --recursive --remote
+          
       
       - name: Build (x64)
         run: |
@@ -93,6 +104,12 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
       
+      - name: Sub-Module
+        run: |
+          git pull
+          git submodule update --init --recursive --remote
+          
+      
       - name: Build (ARM64)
         run: |
           cd ./src/RMCL
@@ -121,6 +138,12 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
+      
+      - name: Sub-Module
+        run: |
+          git pull
+          git submodule update --init --recursive --remote
+          
       
       - name: Build (Linux x64)
         run: |
@@ -152,6 +175,12 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
       
+      - name: Sub-Module
+        run: |
+          git pull
+          git submodule update --init --recursive --remote
+          
+      
       - name: Build (Linux ARM)
         run: |
           cd ./src/RMCL
@@ -181,6 +210,12 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
+      
+      - name: Sub-Module
+        run: |
+          git pull
+          git submodule update --init --recursive --remote
+          
       
       - name: Build (Linux ARM64)
         run: |
@@ -213,6 +248,12 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
       
+      - name: Sub-Module
+        run: |
+          git pull
+          git submodule update --init --recursive --remote
+          
+      
       - name: Build (macOS x64)
         run: |
           cd ./src/RMCL
@@ -242,6 +283,12 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
+      
+      - name: Sub-Module
+        run: |
+          git pull
+          git submodule update --init --recursive --remote
+          
        
       - name: Build (macOS ARM64)
         run: |
