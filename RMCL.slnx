@@ -5,5 +5,6 @@
     <Project Path="src\OnePointUI.Avalonia\src\OnePointUI.Avalonia\OnePointUI.Avalonia.csproj" Type="Classic C#" />
   </Folder>
   <Project Path="src\RMCL.Config\RMCL.Config.csproj" Type="Classic C#" />
+  <Project Path="src\RMCL.Logger\RMCL.Logger.csproj" Type="Classic C#" />
   <Project Path="src\RMCL\RMCL.csproj" Type="Classic C#" />
 </Solution>

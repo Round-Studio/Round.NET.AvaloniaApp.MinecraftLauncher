@@ -18,12 +18,15 @@ sealed class Program
     public static void Main(string[] args)
     {
         GlobalModels.Config = new Config<ConfigEntry>(PathsList.ConfigPath);
+
+        if (args.Length <= 0)
+        {
+            // Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("zh-hans"); // 简体中文
+            Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo(LanguageHelper.GetStringName(GlobalModels.Config.Data.Language));
         
-        // Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("zh-hans"); // 简体中文
-        Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo(LanguageHelper.GetStringName(GlobalModels.Config.Data.Language));
-        
-        BuildAvaloniaApp()
-            .StartWithClassicDesktopLifetime(args);
+            BuildAvaloniaApp()
+                .StartWithClassicDesktopLifetime(args);
+        }
     }
 
     // Avalonia configuration, don't remove; also used by visual designer.
