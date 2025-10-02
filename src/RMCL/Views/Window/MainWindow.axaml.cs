@@ -38,12 +38,12 @@ public partial class MainWindow : Window
         GlobalModels.NoticePanel = NoticePanel;
         GlobalModels.TaskPanel = TaskPanel;
         
-        GlobalModels.NoticePanel.AddNotice(new NoticeInfo()
+        /*GlobalModels.NoticePanel.AddNotice(new NoticeInfo()
         {
             Message = "欢迎使用 RMCL",
             Title = "Welcome to RMCL",
             NoticeType = NoticeType.Info
-        });
+        });*/
 
         if (TaskPanel.GetOpenState()) TaskPanel.ToggleOpen();
 
@@ -130,7 +130,7 @@ public partial class MainWindow : Window
 
     private void Control_OnLoaded(object? sender, RoutedEventArgs e)
     {
-        DialogHost.Show(new DialogInfo()
+        /*DialogHost.Show(new DialogInfo()
         {
             Title = "预览版警告",
             Content = "当前版本仅为 RMCL 4 预览版，\n" +
@@ -138,6 +138,6 @@ public partial class MainWindow : Window
                       "请勿将此版本的 RMCL 加入整合包内发布！",
             CloseButtonText = "我知道了",
             AccountButton = DialogButtons.CloseButton
-        });
+        });*/
     }
 }
