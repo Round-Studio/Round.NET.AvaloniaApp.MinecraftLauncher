@@ -7,6 +7,7 @@ using OnePointUI.Avalonia.Base.Entry;
 using OnePointUI.Avalonia.Style.Core;
 using RMCL.Base.Enum.Style;
 using RMCL.Models.Global;
+using RMCL.Properties;
 using RMCL.Views.Page.Main.MainSubPage;
 
 namespace RMCL.Views.Page.Main.SettingsSubPage.StyleSubPage;
@@ -22,7 +23,7 @@ public partial class StyleColor : UserControl
         {
             new BreadcrumbItemInfo()
             {
-                ItemName = "个性化",
+                ItemName = Resource.Settings_Style,
                 ItemClickAction = (e) =>
                 {
                     MainSettingPage.Page.NavigationTo(new SettingsStyle());
@@ -30,7 +31,7 @@ public partial class StyleColor : UserControl
             },
             new BreadcrumbItemInfo()
             {
-                ItemName = "颜色",
+                ItemName = Resource.Settings_Style_Color,
                 ItemClickAction = (e) =>
                 {
                     MainSettingPage.Page.NavigationTo(new StyleColor());

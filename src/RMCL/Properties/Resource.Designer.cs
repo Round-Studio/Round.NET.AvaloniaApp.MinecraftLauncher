@@ -294,6 +294,24 @@ namespace RMCL.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 彳亍为.
+        /// </summary>
+        public static string Settings_Behavior {
+            get {
+                return ResourceManager.GetString("Settings.Behavior", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 启动器与游戏行为.
+        /// </summary>
+        public static string Settings_Behavior_Description {
+            get {
+                return ResourceManager.GetString("Settings.Behavior.Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 帮助.
         /// </summary>
         public static string Settings_Help {
@@ -344,24 +362,6 @@ namespace RMCL.Properties {
         public static string Settings_Language_ShowLanguage_Description {
             get {
                 return ResourceManager.GetString("Settings.Language.ShowLanguage.Description", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 启动.
-        /// </summary>
-        public static string Settings_Launch {
-            get {
-                return ResourceManager.GetString("Settings.Launch", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 启动器与游戏启动行为.
-        /// </summary>
-        public static string Settings_Launch_Description {
-            get {
-                return ResourceManager.GetString("Settings.Launch.Description", resourceCulture);
             }
         }
         

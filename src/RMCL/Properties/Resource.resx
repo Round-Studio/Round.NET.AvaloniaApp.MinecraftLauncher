@@ -144,11 +144,11 @@
   <data name="Settings.Restart" xml:space="preserve">
     <value>立即重启</value>
   </data>
-  <data name="Settings.Launch" xml:space="preserve">
-    <value>启动</value>
+  <data name="Settings.Behavior" xml:space="preserve">
+    <value>彳亍为</value>
   </data>
-  <data name="Settings.Launch.Description" xml:space="preserve">
-    <value>启动器与游戏启动行为</value>
+  <data name="Settings.Behavior.Description" xml:space="preserve">
+    <value>启动器与游戏行为</value>
   </data>
   <data name="Settings.Account" xml:space="preserve">
     <value>账户</value>

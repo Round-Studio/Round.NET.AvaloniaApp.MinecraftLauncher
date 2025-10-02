@@ -6,6 +6,7 @@ using Avalonia.Markup.Xaml;
 using OnePointUI.Avalonia.Base.Entry;
 using RMCL.Models;
 using RMCL.Models.Global;
+using RMCL.Properties;
 using RMCL.Views.Page.Main.MainSubPage;
 
 namespace RMCL.Views.Page.Main.SettingsSubPage;
@@ -20,7 +21,7 @@ public partial class SettingsLanguage : UserControl
         {
             new BreadcrumbItemInfo()
             {
-                ItemName = "语言 / Language",
+                ItemName = Resource.Settings_Language,
                 ItemClickAction = (e) =>
                 {
                     MainSettingPage.Page.NavigationTo(new SettingsLanguage());

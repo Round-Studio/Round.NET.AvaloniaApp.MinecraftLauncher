@@ -47,11 +47,11 @@
     <data name="Settings.Help.Description" xml:space="preserve">
         <value>Assistance and assistance.</value>
     </data>
-    <data name="Settings.Launch" xml:space="preserve">
-        <value>Start</value>
+    <data name="Settings.Behavior" xml:space="preserve">
+        <value>Behavior</value>
     </data>
-    <data name="Settings.Launch.Description" xml:space="preserve">
-        <value>Launcher and game launch behavior.</value>
+    <data name="Settings.Behavior.Description" xml:space="preserve">
+        <value>Launcher and Game Behavior.</value>
     </data>
     <data name="Settings.Restart" xml:space="preserve">
         <value>Restart</value>

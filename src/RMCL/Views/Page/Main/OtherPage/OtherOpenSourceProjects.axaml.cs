@@ -4,6 +4,7 @@ using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
 using OnePointUI.Avalonia.Base.Entry;
+using RMCL.Properties;
 using RMCL.Views.Page.Main.MainSubPage;
 
 namespace RMCL.Views.Page.Main.OtherPage;
@@ -17,7 +18,7 @@ public partial class OtherOpenSourceProjects : UserControl
         {
             new BreadcrumbItemInfo()
             {
-                ItemName = "关于",
+                ItemName = Resource.Settings_About,
                 ItemClickAction = (e) =>
                 {
                     MainSettingPage.Page.NavigationTo(new OtherAboutUs());
@@ -25,7 +26,7 @@ public partial class OtherOpenSourceProjects : UserControl
             },
             new BreadcrumbItemInfo()
             {
-                ItemName = "第三方组件库",
+                ItemName = Resource.OtherAboutUs_ComponentLibrary_OpenSource,
                 ItemClickAction = (e) =>
                 {
                     MainSettingPage.Page.NavigationTo(new OtherOpenSourceProjects());

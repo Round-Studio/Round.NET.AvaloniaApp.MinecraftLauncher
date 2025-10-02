@@ -4,6 +4,7 @@ using Avalonia.Controls;
 using Avalonia.Interactivity;
 using Avalonia.Markup.Xaml;
 using OnePointUI.Avalonia.Base.Entry;
+using RMCL.Properties;
 using RMCL.Views.Page.Main.MainSubPage;
 using RMCL.Views.Page.Main.SettingsSubPage;
 
@@ -19,7 +20,7 @@ public partial class OtherAboutUs : UserControl
         {
             new BreadcrumbItemInfo()
             {
-                ItemName = "关于",
+                ItemName = Resource.Settings_About,
                 ItemClickAction = (e) =>
                 {
                     MainSettingPage.Page.NavigationTo(new OtherAboutUs());

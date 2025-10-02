@@ -8,6 +8,7 @@ using HarfBuzzSharp;
 using OnePointUI.Avalonia.Base.Entry;
 using RMCL.Models;
 using RMCL.Models.Global;
+using RMCL.Properties;
 using RMCL.Views.Page.Main.MainSubPage;
 using RMCL.Views.Page.Main.SettingsSubPage.StyleSubPage;
 
@@ -25,7 +26,7 @@ public partial class SettingsStyle : UserControl
         {
             new BreadcrumbItemInfo()
             {
-                ItemName = "个性化",
+                ItemName = Resource.Settings_Style,
                 ItemClickAction = (e) =>
                 {
                     MainSettingPage.Page.NavigationTo(new SettingsStyle());
