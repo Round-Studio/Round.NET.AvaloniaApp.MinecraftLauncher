@@ -18,7 +18,7 @@ public partial class NoticeBox : UserControl
         InitializeComponent();
 
         NoticeTitle.Text = noticeInfo.Title;
-        NoticeContent.Content = noticeInfo.Message;
+        NoticeContent.Text = noticeInfo.Message;
 
         // 使用DispatcherTimer替代Thread.Sleep
         var closeTimer = new DispatcherTimer();

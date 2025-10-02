@@ -1,9 +1,11 @@
-﻿using System.Threading;
+﻿using System.Collections.Generic;
+using System.Threading;
 using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Interactivity;
 using Avalonia.Markup.Xaml;
 using HarfBuzzSharp;
+using OnePointUI.Avalonia.Base.Entry;
 using RMCL.Models;
 using RMCL.Models.Global;
 using RMCL.Views.Page.Main.MainSubPage;
@@ -18,21 +20,20 @@ public partial class SettingsStyle : UserControl
     {
         InitializeComponent();
         MainSettingPage.BackPage = new SettingsNavigation();
-        ChooseLanguage.SelectedIndex = (int)GlobalModels.Config.Data.Language;
+        
+        MainSettingPage.Page.BreadcrumbBar.SetItems(new List<BreadcrumbItemInfo>()
+        {
+            new BreadcrumbItemInfo()
+            {
+                ItemName = "个性化",
+                ItemClickAction = (e) =>
+                {
+                    MainSettingPage.Page.NavigationTo(new SettingsStyle());
+                }
+            }
+        });
 
         IsEditMode = true;
-    }
-
-    private void ChooseLanguage_OnSelectionChanged(object? sender, SelectionChangedEventArgs e)
-    {
-        if (IsEditMode)
-        {
-            GlobalModels.Config.Data.Language = (LanguageHelper.LanguageType)ChooseLanguage.SelectedIndex;
-            GlobalModels.Config.Save();
-            
-            MainSettingPage.Page.SetReStart();
-            Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo(LanguageHelper.GetStringName(GlobalModels.Config.Data.Language));
-        }
     }
 
     private void BackgroundBtn_OnClick(object? sender, RoutedEventArgs e)

@@ -8,7 +8,10 @@ using Avalonia.Media;
 using Avalonia.Media.Imaging;
 using Avalonia.Platform;
 using Avalonia.Styling;
+using OnePointUI.Avalonia.Base.Entry;
+using OnePointUI.Avalonia.Base.Enum;
 using OnePointUI.Avalonia.Style.Core;
+using OnePointUI.Avalonia.Styling.Controls.OnePointControls.Dialog;
 using RMCL.Base.Entry.Config;
 using RMCL.Base.Entry.Notice;
 using RMCL.Base.Enum.Notice;
@@ -123,5 +126,18 @@ public partial class MainWindow : Window
         };
         
         GlobalModels.Config.Save();
+    }
+
+    private void Control_OnLoaded(object? sender, RoutedEventArgs e)
+    {
+        DialogHost.Show(new DialogInfo()
+        {
+            Title = "预览版警告",
+            Content = "当前版本仅为 RMCL 4 预览版，\n" +
+                      "仅作为 UI/UX 测试发布。\n" +
+                      "请勿将此版本的 RMCL 加入整合包内发布！",
+            CloseButtonText = "我知道了",
+            AccountButton = DialogButtons.CloseButton
+        });
     }
 }

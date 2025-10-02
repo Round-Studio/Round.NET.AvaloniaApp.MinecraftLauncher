@@ -16,6 +16,14 @@
                                               Click="StyleSetting_OnClick"
                                               IsClickable="True"/>
                 
+                <onePointControls:SettingCard Header="{x:Static properties:Resource.Settings_Language}"
+                                              Margin="5,5,5,10"
+                                              Description="{x:Static properties:Resource.Settings_Language_Description}"
+                                              Glyph="&#xE909;"
+                                              Name="LanguageBtn"
+                                              Click="LanguageBtn_OnClick"
+                                              IsClickable="True"/>
+                
                 <onePointControls:SettingCard Header="{x:Static properties:Resource.Settings_Launch}"
                                               Margin="5,5,5,10"
                                               Description="{x:Static properties:Resource.Settings_Launch_Description}"
@@ -25,6 +33,8 @@
                 <onePointControls:SettingCard Header="{x:Static properties:Resource.Settings_Account}"
                                               Margin="5,5,5,10"
                                               Description="{x:Static properties:Resource.Settings_Account_Description}"
+                                              Name="AccountBtn"
+                                              Click="AccountBtn_OnClick"
                                               Glyph="&#xE716;"
                                               IsClickable="True"/>
                 

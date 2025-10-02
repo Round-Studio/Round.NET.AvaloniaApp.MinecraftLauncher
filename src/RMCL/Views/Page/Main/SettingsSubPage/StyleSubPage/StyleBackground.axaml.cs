@@ -1,8 +1,11 @@
-﻿using Avalonia;
+﻿using System.Collections.Generic;
+using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
+using OnePointUI.Avalonia.Base.Entry;
 using RMCL.Models;
 using RMCL.Models.Global;
+using RMCL.Views.Page.Main.MainSubPage;
 
 namespace RMCL.Views.Page.Main.SettingsSubPage.StyleSubPage;
 
@@ -13,6 +16,25 @@ public partial class StyleBackground : UserControl
     {
         InitializeComponent();
         ChooseBackMaterial.SelectedIndex = (int)GlobalModels.Config.Data.BackMaterialType;
+        MainSettingPage.Page.BreadcrumbBar.SetItems(new List<BreadcrumbItemInfo>()
+        {
+            new BreadcrumbItemInfo()
+            {
+                ItemName = "个性化",
+                ItemClickAction = (e) =>
+                {
+                    MainSettingPage.Page.NavigationTo(new SettingsStyle());
+                }
+            },
+            new BreadcrumbItemInfo()
+            {
+                ItemName = "背景",
+                ItemClickAction = (e) =>
+                {
+                    MainSettingPage.Page.NavigationTo(new StyleBackground());
+                }
+            }
+        });
 
         IsEditMode = true;
     }

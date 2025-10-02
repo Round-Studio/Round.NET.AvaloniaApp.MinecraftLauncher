@@ -1,7 +1,10 @@
-﻿using Avalonia;
+﻿using System.Collections.Generic;
+using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Interactivity;
 using Avalonia.Markup.Xaml;
+using OnePointUI.Avalonia.Base.Entry;
+using RMCL.Views.Page.Main.AccountPage;
 using RMCL.Views.Page.Main.MainSubPage;
 using RMCL.Views.Page.Main.OtherPage;
 
@@ -12,6 +15,7 @@ public partial class SettingsNavigation : UserControl
     public SettingsNavigation()
     {
         InitializeComponent();
+        // MainSettingPage.Page.BreadcrumbBar.SetItems(new List<BreadcrumbItemInfo>() {});
     }
 
     private void StyleSetting_OnClick(object? sender, RoutedEventArgs e)
@@ -22,5 +26,15 @@ public partial class SettingsNavigation : UserControl
     private void AboutUs_OnClick(object? sender, RoutedEventArgs e)
     {
         MainSettingPage.Page.NavigationTo(new OtherAboutUs());
+    }
+
+    private void LanguageBtn_OnClick(object? sender, RoutedEventArgs e)
+    {
+        MainSettingPage.Page.NavigationTo(new SettingsLanguage());
+    }
+
+    private void AccountBtn_OnClick(object? sender, RoutedEventArgs e)
+    {
+        MainSettingPage.Page.NavigationTo(new SettingsAccount());
     }
 }

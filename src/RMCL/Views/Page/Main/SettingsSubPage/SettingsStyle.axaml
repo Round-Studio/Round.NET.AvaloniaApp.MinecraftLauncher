@@ -15,18 +15,6 @@
                               HorizontalAlignment="Left">
             </control:StyleBox>
             
-            <onePointControls:SettingCard Header="{x:Static properties:Resource.OtherAboutUs_Style_Language}"
-                                          Margin="5,5,5,10"
-                                          Description="{x:Static properties:Resource.OtherAboutUs_Style_Language_Description}"
-                                          Glyph="&#xF2B7;">
-                <ComboBox Width="200"
-                          Name="ChooseLanguage"
-                          SelectionChanged="ChooseLanguage_OnSelectionChanged">
-                    <ComboBoxItem>简体中文</ComboBoxItem>
-                    <ComboBoxItem>English</ComboBoxItem>
-                </ComboBox>
-            </onePointControls:SettingCard>
-            
             <onePointControls:SettingCard Header="主题模式"
                                           Margin="5,5,5,10"
                                           Description="决定启动器的主题模式为自定义 or 主题包"
@@ -37,34 +25,34 @@
                 </ComboBox>
             </onePointControls:SettingCard>
             
-            <onePointControls:SettingCard Header="{x:Static properties:Resource.OtherAboutUs_Style_Background}"
+            <onePointControls:SettingCard Header="{x:Static properties:Resource.Settings_Style_Background}"
                                           Margin="5,5,5,10"
-                                          Description="{x:Static properties:Resource.OtherAboutUs_Style_Background_Description}"
+                                          Description="{x:Static properties:Resource.Settings_Style_Background_Description}"
                                           Glyph="&#xE91B;"
                                           Name="BackgroundBtn"
                                           Click="BackgroundBtn_OnClick"
                                           IsClickable="True">
             </onePointControls:SettingCard>
             
-            <onePointControls:SettingCard Header="{x:Static properties:Resource.OtherAboutUs_Style_Color}"
+            <onePointControls:SettingCard Header="{x:Static properties:Resource.Settings_Style_Color}"
                                           Margin="5,5,5,10"
-                                          Description="{x:Static properties:Resource.OtherAboutUs_Style_Color_Description}"
+                                          Description="{x:Static properties:Resource.Settings_Style_Color_Description}"
                                           Glyph="&#xE790;"
                                           Name="ColorBtn"
                                           Click="ColorBtn_OnClick"
                                           IsClickable="True">
             </onePointControls:SettingCard>
             
-            <onePointControls:SettingCard Header="{x:Static properties:Resource.OtherAboutUs_Style_Music}"
+            <onePointControls:SettingCard Header="{x:Static properties:Resource.Settings_Style_Music}"
                                           Margin="5,5,5,10"
-                                          Description="{x:Static properties:Resource.OtherAboutUs_Style_Music_Description}"
+                                          Description="{x:Static properties:Resource.Settings_Style_Music_Description}"
                                           Glyph="&#xE8D6;"
                                           IsClickable="True">
             </onePointControls:SettingCard>
             
-            <onePointControls:SettingCard Header="{x:Static properties:Resource.OtherAboutUs_Style_ThemePackProduction}"
+            <onePointControls:SettingCard Header="{x:Static properties:Resource.Settings_Style_ThemePackProduction}"
                                           Margin="5,5,5,10"
-                                          Description="{x:Static properties:Resource.OtherAboutUs_Style_ThemePackProduction_Description}"
+                                          Description="{x:Static properties:Resource.Settings_Style_ThemePackProduction_Description}"
                                           Glyph="&#xE835;"
                                           IsClickable="True">
             </onePointControls:SettingCard>

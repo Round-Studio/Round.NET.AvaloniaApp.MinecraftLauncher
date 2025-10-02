@@ -214,40 +214,40 @@
   <data name="OtherAboutUs.Version" xml:space="preserve">
     <value>内部版本</value>
   </data>
-  
-  
-  <data name="OtherAboutUs.Style.Language" xml:space="preserve">
-    <value>语言</value>
-  </data>
-  <data name="OtherAboutUs.Style.Language.Description" xml:space="preserve">
-    <value>语言 / Language</value>
-  </data>
-  <data name="OtherAboutUs.Style.Background" xml:space="preserve">
-    <value>背景</value>
-  </data>
-  <data name="OtherAboutUs.Style.Background.Description" xml:space="preserve">
-    <value>启动器窗口背景</value>
-  </data>
-  <data name="OtherAboutUs.Style.Color" xml:space="preserve">
-    <value>颜色</value>
-  </data>
-  <data name="OtherAboutUs.Style.Color.Description" xml:space="preserve">
-    <value>强调色与深浅模式</value>
-  </data>
-  <data name="OtherAboutUs.Style.Music" xml:space="preserve">
-    <value>音乐</value>
-  </data>
-  <data name="OtherAboutUs.Style.Music.Description" xml:space="preserve">
-    <value>背景音乐设置</value>
-  </data>
-  <data name="OtherAboutUs.Style.ThemePackProduction" xml:space="preserve">
-    <value>主题包制作</value>
-  </data>
-  <data name="OtherAboutUs.Style.ThemePackProduction.Description" xml:space="preserve">
-    <value>制作 [Round Studio] 通用格式主题包</value>
-  </data>
   <data name="MainPage.Home.NoPin" xml:space="preserve">
     <value>未固定游戏</value>
+  </data>
+  
+  
+  <data name="Settings.Language" xml:space="preserve">
+    <value>语言</value>
+  </data>
+  <data name="Settings.Language.Description" xml:space="preserve">
+    <value>语言 / Language</value>
+  </data>
+  <data name="Settings.Style.Background" xml:space="preserve">
+    <value>背景</value>
+  </data>
+  <data name="Settings.Style.Background.Description" xml:space="preserve">
+    <value>启动器窗口背景</value>
+  </data>
+  <data name="Settings.Style.Color" xml:space="preserve">
+    <value>颜色</value>
+  </data>
+  <data name="Settings.Style.Color.Description" xml:space="preserve">
+    <value>强调色与深浅模式</value>
+  </data>
+  <data name="Settings.Style.Music" xml:space="preserve">
+    <value>音乐</value>
+  </data>
+  <data name="Settings.Style.Music.Description" xml:space="preserve">
+    <value>背景音乐设置</value>
+  </data>
+  <data name="Settings.Style.ThemePackProduction" xml:space="preserve">
+    <value>主题包制作</value>
+  </data>
+  <data name="Settings.Style.ThemePackProduction.Description" xml:space="preserve">
+    <value>制作 [Round Studio] 通用格式主题包</value>
   </data>
   <data name="Settings.Style.Background.Material" xml:space="preserve">
     <value>材质</value>
@@ -269,5 +269,12 @@
   </data>
   <data name="Settings.Style.Background.BackgroundModel.Description" xml:space="preserve">
     <value>启动器背景样式</value>
+  </data>
+  
+  <data name="Settings.Language.ShowLanguage" xml:space="preserve">
+    <value>显示的语言</value>
+  </data>
+  <data name="Settings.Language.ShowLanguage.Description" xml:space="preserve">
+    <value>启动器窗口显示的语言</value>
   </data>
 </root>

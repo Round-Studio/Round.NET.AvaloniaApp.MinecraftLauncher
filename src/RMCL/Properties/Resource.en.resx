@@ -107,34 +107,34 @@
     <data name="OtherAboutUs.ComponentLibrary" xml:space="preserve">
         <value>Component Library</value>
     </data>
-    <data name="OtherAboutUs.Style.Background" xml:space="preserve">
+    <data name="Settings.Style.Background" xml:space="preserve">
         <value>Background</value>
     </data>
-    <data name="OtherAboutUs.Style.Background.Description" xml:space="preserve">
+    <data name="Settings.Style.Background.Description" xml:space="preserve">
         <value>Launcher window background</value>
     </data>
-    <data name="OtherAboutUs.Style.Color" xml:space="preserve">
+    <data name="Settings.Style.Color" xml:space="preserve">
         <value>Color</value>
     </data>
-    <data name="OtherAboutUs.Style.Color.Description" xml:space="preserve">
+    <data name="Settings.Style.Color.Description" xml:space="preserve">
         <value>Accent color and light/dark mode</value>
     </data>
-    <data name="OtherAboutUs.Style.Language" xml:space="preserve">
+    <data name="Settings.Language" xml:space="preserve">
         <value>Language</value>
     </data>
-    <data name="OtherAboutUs.Style.Language.Description" xml:space="preserve">
+    <data name="Settings.Language.Description" xml:space="preserve">
         <value>Language / 语言</value>
     </data>
-    <data name="OtherAboutUs.Style.Music" xml:space="preserve">
+    <data name="Settings.Style.Music" xml:space="preserve">
         <value>Music</value>
     </data>
-    <data name="OtherAboutUs.Style.Music.Description" xml:space="preserve">
+    <data name="Settings.Style.Music.Description" xml:space="preserve">
         <value>Background music settings</value>
     </data>
-    <data name="OtherAboutUs.Style.ThemePackProduction" xml:space="preserve">
+    <data name="Settings.Style.ThemePackProduction" xml:space="preserve">
         <value>Theme Package Production</value>
     </data>
-    <data name="OtherAboutUs.Style.ThemePackProduction.Description" xml:space="preserve">
+    <data name="Settings.Style.ThemePackProduction.Description" xml:space="preserve">
         <value>Create a [Round Studio] universal format theme pack</value>
     </data>
     <data name="MainPage.Home.NoPin" xml:space="preserve">
@@ -160,5 +160,11 @@
     </data>
     <data name="Settings.Style.Background.BackgroundModel.Description" xml:space="preserve">
         <value>Launcher background style.</value>
+    </data>
+    <data name="Settings.Language.ShowLanguage" xml:space="preserve">
+        <value>Show Language</value>
+    </data>
+    <data name="Settings.Language.ShowLanguage.Description" xml:space="preserve">
+        <value>The launcher showed language.</value>
     </data>
 </root>

@@ -249,96 +249,6 @@ namespace RMCL.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 背景.
-        /// </summary>
-        public static string OtherAboutUs_Style_Background {
-            get {
-                return ResourceManager.GetString("OtherAboutUs.Style.Background", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 启动器窗口背景.
-        /// </summary>
-        public static string OtherAboutUs_Style_Background_Description {
-            get {
-                return ResourceManager.GetString("OtherAboutUs.Style.Background.Description", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 颜色.
-        /// </summary>
-        public static string OtherAboutUs_Style_Color {
-            get {
-                return ResourceManager.GetString("OtherAboutUs.Style.Color", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 强调色与深浅模式.
-        /// </summary>
-        public static string OtherAboutUs_Style_Color_Description {
-            get {
-                return ResourceManager.GetString("OtherAboutUs.Style.Color.Description", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 语言.
-        /// </summary>
-        public static string OtherAboutUs_Style_Language {
-            get {
-                return ResourceManager.GetString("OtherAboutUs.Style.Language", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 语言 / Language.
-        /// </summary>
-        public static string OtherAboutUs_Style_Language_Description {
-            get {
-                return ResourceManager.GetString("OtherAboutUs.Style.Language.Description", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 音乐.
-        /// </summary>
-        public static string OtherAboutUs_Style_Music {
-            get {
-                return ResourceManager.GetString("OtherAboutUs.Style.Music", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 背景音乐设置.
-        /// </summary>
-        public static string OtherAboutUs_Style_Music_Description {
-            get {
-                return ResourceManager.GetString("OtherAboutUs.Style.Music.Description", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 主题包制作.
-        /// </summary>
-        public static string OtherAboutUs_Style_ThemePackProduction {
-            get {
-                return ResourceManager.GetString("OtherAboutUs.Style.ThemePackProduction", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 制作 [Round Studio] 通用格式主题包.
-        /// </summary>
-        public static string OtherAboutUs_Style_ThemePackProduction_Description {
-            get {
-                return ResourceManager.GetString("OtherAboutUs.Style.ThemePackProduction.Description", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to 内部版本.
         /// </summary>
         public static string OtherAboutUs_Version {
@@ -402,6 +312,42 @@ namespace RMCL.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 语言.
+        /// </summary>
+        public static string Settings_Language {
+            get {
+                return ResourceManager.GetString("Settings.Language", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 语言 / Language.
+        /// </summary>
+        public static string Settings_Language_Description {
+            get {
+                return ResourceManager.GetString("Settings.Language.Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 显示的语言.
+        /// </summary>
+        public static string Settings_Language_ShowLanguage {
+            get {
+                return ResourceManager.GetString("Settings.Language.ShowLanguage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 启动器窗口显示的语言.
+        /// </summary>
+        public static string Settings_Language_ShowLanguage_Description {
+            get {
+                return ResourceManager.GetString("Settings.Language.ShowLanguage.Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 启动.
         /// </summary>
         public static string Settings_Launch {
@@ -438,6 +384,15 @@ namespace RMCL.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 背景.
+        /// </summary>
+        public static string Settings_Style_Background {
+            get {
+                return ResourceManager.GetString("Settings.Style.Background", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 背景样式.
         /// </summary>
         public static string Settings_Style_Background_BackgroundModel {
@@ -452,6 +407,15 @@ namespace RMCL.Properties {
         public static string Settings_Style_Background_BackgroundModel_Description {
             get {
                 return ResourceManager.GetString("Settings.Style.Background.BackgroundModel.Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 启动器窗口背景.
+        /// </summary>
+        public static string Settings_Style_Background_Description {
+            get {
+                return ResourceManager.GetString("Settings.Style.Background.Description", resourceCulture);
             }
         }
         
@@ -501,11 +465,65 @@ namespace RMCL.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 颜色.
+        /// </summary>
+        public static string Settings_Style_Color {
+            get {
+                return ResourceManager.GetString("Settings.Style.Color", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 强调色与深浅模式.
+        /// </summary>
+        public static string Settings_Style_Color_Description {
+            get {
+                return ResourceManager.GetString("Settings.Style.Color.Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 启动器个性化设置.
         /// </summary>
         public static string Settings_Style_Description {
             get {
                 return ResourceManager.GetString("Settings.Style.Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 音乐.
+        /// </summary>
+        public static string Settings_Style_Music {
+            get {
+                return ResourceManager.GetString("Settings.Style.Music", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 背景音乐设置.
+        /// </summary>
+        public static string Settings_Style_Music_Description {
+            get {
+                return ResourceManager.GetString("Settings.Style.Music.Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 主题包制作.
+        /// </summary>
+        public static string Settings_Style_ThemePackProduction {
+            get {
+                return ResourceManager.GetString("Settings.Style.ThemePackProduction", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 制作 [Round Studio] 通用格式主题包.
+        /// </summary>
+        public static string Settings_Style_ThemePackProduction_Description {
+            get {
+                return ResourceManager.GetString("Settings.Style.ThemePackProduction.Description", resourceCulture);
             }
         }
     }

@@ -102,12 +102,13 @@
                     </Button>
                 </Grid>
                 
-                <ContentControl Grid.Row="1"
+                <TextBlock Grid.Row="1"
                                 FontSize="11"
-                                Content="Notice Message"
+                                Text="Notice Message"
+                                TextWrapping="Wrap"
                                 Name="NoticeContent">
-                    <ContentControl.Styles>
-                        <Style Selector="ContentControl#NoticeContent">
+                    <TextBlock.Styles>
+                        <Style Selector="TextBlock#NoticeContent">
                             <Style.Animations>
                                 <Animation Duration="0:0:1"
                                            Easing="ExponentialEaseOut">
@@ -126,8 +127,8 @@
                                 </Animation>
                             </Style.Animations>
                         </Style>
-                    </ContentControl.Styles>
-                </ContentControl>
+                    </TextBlock.Styles>
+                </TextBlock>
             </Grid>
         </Border>
     </Border>

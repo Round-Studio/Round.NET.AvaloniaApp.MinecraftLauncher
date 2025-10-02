@@ -43,6 +43,7 @@
         <Generator>PublicResXFileCodeGenerator</Generator>
         <LastGenOutput>Resource.Designer.cs</LastGenOutput>
       </EmbeddedResource>
+      <None Remove="Properties\Resource.ru.xml" />
     </ItemGroup>
 
     <ItemGroup>
