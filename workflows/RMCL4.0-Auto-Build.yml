@@ -3,7 +3,7 @@ name: RMCL 自动构建
 on:
   workflow_dispatch:
   push:
-    branches: ["4.0"]
+#    branches: ["4.0"]
 
 jobs:
   version:
