@@ -1,9 +1,9 @@
-name: Publish
+name: RMCL 自动构建
 
 on:
   workflow_dispatch:
   push:
-    branches: ["neo"]
+    branches: ["4.0"]
 
 jobs:
   time:
@@ -36,10 +36,6 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
-      
-      - name: Set version info
-        run: |
-          echo "${{ needs.time.outputs.v }}" > ./src/RMCL/RMCL.Core/DateTime.txt
       
       - name: Build (x86)
         run: |
