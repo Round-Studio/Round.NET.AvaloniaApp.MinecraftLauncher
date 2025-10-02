@@ -438,6 +438,42 @@ namespace RMCL.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 材质.
+        /// </summary>
+        public static string Settings_Style_Background_Material {
+            get {
+                return ResourceManager.GetString("Settings.Style.Background.Material", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 电路板.
+        /// </summary>
+        public static string Settings_Style_Background_Material_CircuitBoard {
+            get {
+                return ResourceManager.GetString("Settings.Style.Background.Material.CircuitBoard", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 启动器背景材质.
+        /// </summary>
+        public static string Settings_Style_Background_Material_Description {
+            get {
+                return ResourceManager.GetString("Settings.Style.Background.Material.Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 蜂窝.
+        /// </summary>
+        public static string Settings_Style_Background_Material_Honeycomb {
+            get {
+                return ResourceManager.GetString("Settings.Style.Background.Material.Honeycomb", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 启动器个性化设置.
         /// </summary>
         public static string Settings_Style_Description {

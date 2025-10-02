@@ -40,4 +40,10 @@ public partial class SettingsStyle : UserControl
         MainSettingPage.BackPage = new SettingsStyle();
         MainSettingPage.Page.NavigationTo(new StyleBackground());
     }
+
+    private void ColorBtn_OnClick(object? sender, RoutedEventArgs e)
+    {
+        MainSettingPage.BackPage = new SettingsStyle();
+        MainSettingPage.Page.NavigationTo(new StyleColor());
+    }
 }

@@ -8,15 +8,27 @@
              x:Class="RMCL.Views.Page.Main.SettingsSubPage.StyleSubPage.StyleBackground">
     <ScrollViewer>
         <StackPanel Margin="15">
-            <onePointControls:SettingCard Header="材质"
+            <onePointControls:SettingCard Header="{x:Static properties:Resource.Settings_Style_Background_Material}"
                                           Margin="5,5,5,10"
-                                          Description="启动器背景材质"
+                                          Description="{x:Static properties:Resource.Settings_Style_Background_Material_Description}"
                                           Glyph="&#xF742;">
                 <ComboBox Width="200"
                           Name="ChooseBackMaterial"
                           SelectionChanged="ChooseBackMaterial_OnSelectionChanged">
-                    <ComboBoxItem>电路板</ComboBoxItem>
-                    <ComboBoxItem>蜂窝</ComboBoxItem>
+                    <ComboBoxItem Content="{x:Static properties:Resource.Settings_Style_Background_Material_CircuitBoard}"></ComboBoxItem>
+                    <ComboBoxItem Content="{x:Static properties:Resource.Settings_Style_Background_Material_Honeycomb}"></ComboBoxItem>
+                </ComboBox>
+            </onePointControls:SettingCard>
+            
+            <onePointControls:SettingCard Header="背景"
+                                          Margin="5,5,5,10"
+                                          Description="启动器背景"
+                                          Glyph="&#xEC26;">
+                <ComboBox Width="200">
+                    <ComboBoxItem>None</ComboBoxItem>
+                    <ComboBoxItem>Mica (Win11+)</ComboBoxItem>
+                    <ComboBoxItem>Blur</ComboBoxItem>
+                    <ComboBoxItem>Image</ComboBoxItem>
                 </ComboBox>
             </onePointControls:SettingCard>
         </StackPanel>

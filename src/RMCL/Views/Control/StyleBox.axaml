@@ -31,21 +31,21 @@
                 </Image>
                 
                 <Border Width="20" Height="6"
-                        Background="White"
+                        Background="{DynamicResource PrimaryForegroundBrush}"
                         HorizontalAlignment="Left"
                         VerticalAlignment="Top"
                         CornerRadius="3"
                         Margin="8"></Border>
                 
                 <Border Width="20" Height="6"
-                        Background="White"
+                        Background="{DynamicResource PrimaryForegroundBrush}"
                         HorizontalAlignment="Right"
                         VerticalAlignment="Bottom"
                         CornerRadius="3"
                         Margin="8,8,8,12"></Border>
                 
                 <Border Width="40" Height="12"
-                        Background="White"
+                        Background="{DynamicResource PrimaryForegroundBrush}"
                         HorizontalAlignment="Right"
                         VerticalAlignment="Bottom"
                         CornerRadius="3"

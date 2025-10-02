@@ -5,6 +5,7 @@ using Avalonia.Markup.Xaml;
 using RMCL.Base.Entry.Notice;
 using RMCL.Base.Enum.Notice;
 using RMCL.Models.Global;
+using RMCL.Views.Control;
 
 namespace RMCL.Views.Page.Main.MainSubPage;
 

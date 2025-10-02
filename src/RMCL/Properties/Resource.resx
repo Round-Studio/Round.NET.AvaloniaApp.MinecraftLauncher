@@ -249,4 +249,16 @@
   <data name="MainPage.Home.NoPin" xml:space="preserve">
     <value>未固定游戏</value>
   </data>
+  <data name="Settings.Style.Background.Material" xml:space="preserve">
+    <value>材质</value>
+  </data>
+  <data name="Settings.Style.Background.Material.Description" xml:space="preserve">
+    <value>启动器背景材质</value>
+  </data>
+  <data name="Settings.Style.Background.Material.Honeycomb" xml:space="preserve">
+    <value>蜂窝</value>
+  </data>
+  <data name="Settings.Style.Background.Material.CircuitBoard" xml:space="preserve">
+    <value>电路板</value>
+  </data>
 </root>

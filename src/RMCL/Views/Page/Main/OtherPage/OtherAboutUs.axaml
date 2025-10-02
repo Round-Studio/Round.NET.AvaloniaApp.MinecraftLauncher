@@ -21,7 +21,7 @@
                 </StackPanel>
             </Grid>
             
-            <TextBlock Margin="5,0,0,0"
+            <TextBlock Margin="5,0,0,8"
                        FontSize="16"
                        Text="{x:Static properties:Resource.OtherAboutUs_Developer}"></TextBlock>
             
@@ -29,14 +29,14 @@
             <TextBlock Margin="20,1" Text="{x:Static properties:Resource.OtherAboutUs_Developer_LaunchCore}"></TextBlock>
             <TextBlock Margin="20,1" Text="{x:Static properties:Resource.OtherAboutUs_Developer_UserInteractionExperienceGuidance}"></TextBlock>
             
-            <TextBlock Margin="5,20,0,0"
+            <TextBlock Margin="5,20,0,08"
                        FontSize="16"
                        Text="{x:Static properties:Resource.OtherAboutUs_Acknowledgement}"></TextBlock>
             
             <TextBlock Margin="20,1" Text="{x:Static properties:Resource.OtherAboutUs_Acknowledgement_BMCLAPI}"></TextBlock>
             <TextBlock Margin="20,1">(https://bmclapidoc.bangbang93.com/)</TextBlock>
             
-            <TextBlock Margin="5,20,0,0"
+            <TextBlock Margin="5,20,0,8"
                        FontSize="16"
                        Text="{x:Static properties:Resource.OtherAboutUs_Inspiration}"></TextBlock>
             
@@ -46,7 +46,7 @@
             <TextBlock Margin="20,1">(https://lunova.studio/)</TextBlock>
             <TextBlock Margin="20,1">(https://bakaxl.com/)</TextBlock>
             
-            <TextBlock Margin="5,20,0,0"
+            <TextBlock Margin="5,20,0,8"
                        FontSize="16"
                        Text="{x:Static properties:Resource.OtherAboutUs_ComponentLibrary}"></TextBlock>
             

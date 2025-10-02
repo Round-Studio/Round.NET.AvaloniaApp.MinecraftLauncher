@@ -27,6 +27,16 @@
                 </ComboBox>
             </onePointControls:SettingCard>
             
+            <onePointControls:SettingCard Header="主题模式"
+                                          Margin="5,5,5,10"
+                                          Description="决定启动器的主题模式为自定义 or 主题包"
+                                          Glyph="&#xF133;">
+                <ComboBox Width="200">
+                    <ComboBoxItem>自定义</ComboBoxItem>
+                    <ComboBoxItem>主题包</ComboBoxItem>
+                </ComboBox>
+            </onePointControls:SettingCard>
+            
             <onePointControls:SettingCard Header="{x:Static properties:Resource.OtherAboutUs_Style_Background}"
                                           Margin="5,5,5,10"
                                           Description="{x:Static properties:Resource.OtherAboutUs_Style_Background_Description}"
@@ -40,6 +50,8 @@
                                           Margin="5,5,5,10"
                                           Description="{x:Static properties:Resource.OtherAboutUs_Style_Color_Description}"
                                           Glyph="&#xE790;"
+                                          Name="ColorBtn"
+                                          Click="ColorBtn_OnClick"
                                           IsClickable="True">
             </onePointControls:SettingCard>
             

@@ -6,8 +6,11 @@ using Avalonia.Interactivity;
 using Avalonia.Media;
 using Avalonia.Media.Imaging;
 using Avalonia.Platform;
+using Avalonia.Styling;
+using OnePointUI.Avalonia.Style.Core;
 using RMCL.Base.Entry.Notice;
 using RMCL.Base.Enum.Notice;
+using RMCL.Base.Enum.Style;
 using RMCL.Models;
 using RMCL.Models.Global;
 using RMCL.Views.Page.Main;
@@ -39,6 +42,7 @@ public partial class MainWindow : Window
 
         if (TaskPanel.GetOpenState()) TaskPanel.ToggleOpen();
 
+        ThemeManager.Instance.SetThemeModel(GlobalModels.Config.Data.ThemeType == ThemeModelEnum.Light ? ThemeVariant.Light : ThemeVariant.Dark);
         UpdateBack();
     }
 
