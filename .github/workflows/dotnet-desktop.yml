@@ -85,7 +85,7 @@ jobs:
             /p:IncludeNativeLibrariesForSelfExtract=true `
             /p:SelfContained=true `
             /p:Version=${{ needs.time.outputs.v }} `
-            -o "../../../publish/win-x64" -p:DebugType=none -p:DebugSymbols=false
+            -o "../../publish/win-x64" -p:DebugType=none -p:DebugSymbols=false
       
       - name: Create ZIP (x64)
         run: |
@@ -119,7 +119,7 @@ jobs:
             /p:IncludeNativeLibrariesForSelfExtract=true `
             /p:SelfContained=true `
             /p:Version=${{ needs.time.outputs.v }} `
-            -o "../../../publish/win-arm64" -p:DebugType=none -p:DebugSymbols=false
+            -o "../../publish/win-arm64" -p:DebugType=none -p:DebugSymbols=false
       
       - name: Create ZIP (ARM64)
         run: |
@@ -154,7 +154,7 @@ jobs:
             /p:IncludeNativeLibrariesForSelfExtract=true \
             /p:SelfContained=true \
             /p:Version=${{ needs.time.outputs.v }} \
-            -o "../../../publish/linux-x64" -p:DebugType=none -p:DebugSymbols=false
+            -o "../../publish/linux-x64" -p:DebugType=none -p:DebugSymbols=false
       
       - name: Create ZIP (Linux x64)
         run: |
@@ -190,7 +190,7 @@ jobs:
             /p:IncludeNativeLibrariesForSelfExtract=true \
             /p:SelfContained=true \
             /p:Version=${{ needs.time.outputs.v }} \
-            -o "../../../publish/linux-arm" -p:DebugType=none -p:DebugSymbols=false
+            -o "../../publish/linux-arm" -p:DebugType=none -p:DebugSymbols=false
       
       - name: Create ZIP (Linux ARM)
         run: |
@@ -226,7 +226,7 @@ jobs:
             /p:IncludeNativeLibrariesForSelfExtract=true \
             /p:SelfContained=true \
             /p:Version=${{ needs.time.outputs.v }} \
-            -o "../../../publish/linux-arm64" -p:DebugType=none -p:DebugSymbols=false
+            -o "../../publish/linux-arm64" -p:DebugType=none -p:DebugSymbols=false
       
       - name: Create ZIP (Linux ARM64)
         run: |
@@ -263,7 +263,7 @@ jobs:
             /p:IncludeNativeLibrariesForSelfExtract=true \
             /p:SelfContained=true \
             /p:Version=${{ needs.time.outputs.v }} \
-            -o "../../../publish/osx-x64" -p:DebugType=none -p:DebugSymbols=false
+            -o "../../publish/osx-x64" -p:DebugType=none -p:DebugSymbols=false
       
       - name: Create ZIP (macOS x64)
         run: |
@@ -299,7 +299,7 @@ jobs:
             /p:IncludeNativeLibrariesForSelfExtract=true \
             /p:SelfContained=true \
             /p:Version=${{ needs.time.outputs.v }} \
-            -o "../../../publish/osx-arm64" -p:DebugType=none -p:DebugSymbols=false
+            -o "../../publish/osx-arm64" -p:DebugType=none -p:DebugSymbols=false
         
       - name: Create ZIP (macOS ARM64)
         run: |
