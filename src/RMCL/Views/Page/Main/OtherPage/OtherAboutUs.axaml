@@ -16,7 +16,7 @@
                            Height="64"
                            HorizontalAlignment="Left"></Image>
                 
-                    <onePointControls:LineTextBlock Text="R M C L"
+                    <onePointControls:LineTextBlock Text="RMCL"
                                                     Margin="12,8,0,8"/>
                 </StackPanel>
             </Grid>
@@ -40,7 +40,7 @@
                        FontSize="16"
                        Text="{x:Static properties:Resource.OtherAboutUs_Inspiration}"></TextBlock>
             
-            <TextBlock Margin="20,1"  Text="{x:Static properties:Resource.OtherAboutUs_Inspiration_LauncherX}">></TextBlock>
+            <TextBlock Margin="20,1"  Text="{x:Static properties:Resource.OtherAboutUs_Inspiration_LauncherX}"></TextBlock>
             <TextBlock Margin="20,1">(https://corona.studio/lx)</TextBlock>
             <TextBlock Margin="20,1" Text="{x:Static properties:Resource.OtherAboutUs_Inspiration_WonderLabBakaXL}"></TextBlock>
             <TextBlock Margin="20,1">(https://lunova.studio/)</TextBlock>

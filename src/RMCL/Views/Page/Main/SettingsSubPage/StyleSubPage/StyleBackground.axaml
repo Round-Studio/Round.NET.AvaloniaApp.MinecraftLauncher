@@ -17,6 +17,7 @@
                           SelectionChanged="ChooseBackMaterial_OnSelectionChanged">
                     <ComboBoxItem Content="{x:Static properties:Resource.Settings_Style_Background_Material_CircuitBoard}"></ComboBoxItem>
                     <ComboBoxItem Content="{x:Static properties:Resource.Settings_Style_Background_Material_Honeycomb}"></ComboBoxItem>
+                    <ComboBoxItem Content="{x:Static properties:Resource.Settings_Style_Background_Material_Skull}"></ComboBoxItem>
                 </ComboBox>
             </onePointControls:SettingCard>
             

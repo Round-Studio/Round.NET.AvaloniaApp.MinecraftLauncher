@@ -261,4 +261,7 @@
   <data name="Settings.Style.Background.Material.CircuitBoard" xml:space="preserve">
     <value>电路板</value>
   </data>
+  <data name="Settings.Style.Background.Material.Skull" xml:space="preserve">
+    <value>骷髅</value>
+  </data>
 </root>

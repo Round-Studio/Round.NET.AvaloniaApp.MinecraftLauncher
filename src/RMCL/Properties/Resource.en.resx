@@ -152,4 +152,7 @@
     <data name="Settings.Style.Background.Material.CircuitBoard" xml:space="preserve">
         <value>Circuit board</value>
     </data>
+    <data name="Settings.Style.Background.Material.Skull" xml:space="preserve">
+        <value>Skull</value>
+    </data>
 </root>

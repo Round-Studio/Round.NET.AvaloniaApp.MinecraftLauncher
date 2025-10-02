@@ -474,6 +474,15 @@ namespace RMCL.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 骷髅.
+        /// </summary>
+        public static string Settings_Style_Background_Material_Skull {
+            get {
+                return ResourceManager.GetString("Settings.Style.Background.Material.Skull", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 启动器个性化设置.
         /// </summary>
         public static string Settings_Style_Description {

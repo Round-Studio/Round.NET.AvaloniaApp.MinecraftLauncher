@@ -9,7 +9,7 @@
           <TextBlock FontSize="16"
                      FontWeight="Bold"
                      Margin="5,20,5,8">Avalonia</TextBlock>
-          <TextBlock Margin="5,5,0,0" Text="Version 11.3.6"></TextBlock>
+          <TextBlock Margin="5,5,0,0" Name="AvaloniaVersion"></TextBlock>
           <TextBlock Margin="5" Text="(https://github.com/AvaloniaUI/Avalonia)"></TextBlock>
           <TextBlock Margin="5" xml:space="preserve"
                      FontSize="9">The MIT License (MIT)
