@@ -6,10 +6,10 @@ on:
     branches: ["4.0"]
 
 jobs:
-  time:
+  version:
     runs-on: ubuntu-latest
     outputs:
-      v: ${{ steps.date.outputs.time }}
+      v: ${{ steps.date.outputs.version }}
       y: ${{ steps.date.outputs.y }}
       md: ${{ steps.date.outputs.md }}
       hm: ${{ steps.date.outputs.hm }}
@@ -20,18 +20,20 @@ jobs:
           fetch-depth: 0
       - name: Generate version
         id: date
+        # echo "version=$(date +'%Y.%m%d.%H.%M')" >> $GITHUB_OUTPUT
+        # 上面是旧的生成版本号
         run: |
-          echo "time=$(date +'%Y.%m%d.%H.%M')" >> $GITHUB_OUTPUT
+          echo "version=4.0.0.${{ github.run_number }}" >> $GITHUB_OUTPUT
           echo "y=$(date +'%Y')" >> $GITHUB_OUTPUT
           echo "md=$(date +'%m%d')" >> $GITHUB_OUTPUT
           echo "hm=$(date +'%H%M')" >> $GITHUB_OUTPUT
       - name: Show version
         run: |
-          echo "Build version: ${{ steps.date.outputs.time }}"
+          echo "Build version: ${{ steps.date.outputs.version }}"
 
   # Windows 平台构建
   win-x86:
-    needs: time
+    needs: version
     runs-on: windows-latest
     steps:
       - name: Checkout code
@@ -50,7 +52,7 @@ jobs:
             /p:PublishReadyToRun=true `
             /p:IncludeNativeLibrariesForSelfExtract=true `
             /p:SelfContained=true `
-            /p:Version=${{ needs.time.outputs.v }} `
+            /p:Version=${{ needs.version.outputs.v }} `
             -o "../../publish/win-x86" -p:DebugType=none -p:DebugSymbols=false
       
       - name: Create ZIP (x86)
@@ -64,7 +66,7 @@ jobs:
           path: ./RMCL.win-x86.zip
 
   win-x64:
-    needs: time
+    needs: version
     runs-on: windows-latest
     steps:
       - name: Checkout code
@@ -84,7 +86,7 @@ jobs:
             /p:PublishReadyToRun=true `
             /p:IncludeNativeLibrariesForSelfExtract=true `
             /p:SelfContained=true `
-            /p:Version=${{ needs.time.outputs.v }} `
+            /p:Version=${{ needs.version.outputs.v }} `
             -o "../../publish/win-x64" -p:DebugType=none -p:DebugSymbols=false
       
       - name: Create ZIP (x64)
@@ -98,7 +100,7 @@ jobs:
           path: ./RMCL.win-x64.zip
 
   win-arm64:
-    needs: time
+    needs: version
     runs-on: windows-latest
     steps:
       - name: Checkout code
@@ -118,7 +120,7 @@ jobs:
             /p:PublishReadyToRun=true `
             /p:IncludeNativeLibrariesForSelfExtract=true `
             /p:SelfContained=true `
-            /p:Version=${{ needs.time.outputs.v }} `
+            /p:Version=${{ needs.version.outputs.v }} `
             -o "../../publish/win-arm64" -p:DebugType=none -p:DebugSymbols=false
       
       - name: Create ZIP (ARM64)
@@ -133,7 +135,7 @@ jobs:
 
   # Linux 平台构建
   linux-x64:
-    needs: time
+    needs: version
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -153,7 +155,7 @@ jobs:
             /p:PublishReadyToRun=true \
             /p:IncludeNativeLibrariesForSelfExtract=true \
             /p:SelfContained=true \
-            /p:Version=${{ needs.time.outputs.v }} \
+            /p:Version=${{ needs.version.outputs.v }} \
             -o "../../publish/linux-x64" -p:DebugType=none -p:DebugSymbols=false
       
       - name: Create ZIP (Linux x64)
@@ -169,7 +171,7 @@ jobs:
           path: ./RMCL.linux-x64.zip
 
   linux-arm:
-    needs: time
+    needs: version
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -189,7 +191,7 @@ jobs:
             /p:PublishReadyToRun=true \
             /p:IncludeNativeLibrariesForSelfExtract=true \
             /p:SelfContained=true \
-            /p:Version=${{ needs.time.outputs.v }} \
+            /p:Version=${{ needs.version.outputs.v }} \
             -o "../../publish/linux-arm" -p:DebugType=none -p:DebugSymbols=false
       
       - name: Create ZIP (Linux ARM)
@@ -205,7 +207,7 @@ jobs:
           path: ./RMCL.linux-arm.zip
 
   linux-arm64:
-    needs: time
+    needs: version
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -225,7 +227,7 @@ jobs:
             /p:PublishReadyToRun=true \
             /p:IncludeNativeLibrariesForSelfExtract=true \
             /p:SelfContained=true \
-            /p:Version=${{ needs.time.outputs.v }} \
+            /p:Version=${{ needs.version.outputs.v }} \
             -o "../../publish/linux-arm64" -p:DebugType=none -p:DebugSymbols=false
       
       - name: Create ZIP (Linux ARM64)
@@ -242,7 +244,7 @@ jobs:
 
   # macOS 平台构建
   osx-x64:
-    needs: time
+    needs: version
     runs-on: macos-latest
     steps:
       - name: Checkout code
@@ -262,7 +264,7 @@ jobs:
             /p:PublishReadyToRun=true \
             /p:IncludeNativeLibrariesForSelfExtract=true \
             /p:SelfContained=true \
-            /p:Version=${{ needs.time.outputs.v }} \
+            /p:Version=${{ needs.version.outputs.v }} \
             -o "../../publish/osx-x64" -p:DebugType=none -p:DebugSymbols=false
       
       - name: Create ZIP (macOS x64)
@@ -278,7 +280,7 @@ jobs:
           path: ./RMCL.osx-x64.zip
 
   osx-arm64:
-    needs: time
+    needs: version
     runs-on: macos-latest
     steps:
       - name: Checkout code
@@ -298,7 +300,7 @@ jobs:
             /p:PublishReadyToRun=true \
             /p:IncludeNativeLibrariesForSelfExtract=true \
             /p:SelfContained=true \
-            /p:Version=${{ needs.time.outputs.v }} \
+            /p:Version=${{ needs.version.outputs.v }} \
             -o "../../publish/osx-arm64" -p:DebugType=none -p:DebugSymbols=false
         
       - name: Create ZIP (macOS ARM64)
@@ -316,7 +318,7 @@ jobs:
   # 发布阶段
   publish:
     needs: 
-      - time
+      - version
       - win-x86
       - win-x64
       - win-arm64
@@ -331,8 +333,8 @@ jobs:
         id: release
         run: |
           echo "date=$(date +'%Y-%m-%d.%H-%M-%S')" >> $GITHUB_OUTPUT
-          echo "title=v${{ needs.time.outputs.v }}" >> $GITHUB_OUTPUT
-          echo "tag=RMCL-${{ needs.time.outputs.v }}" >> $GITHUB_OUTPUT
+          echo "title=v${{ needs.version.outputs.v }}" >> $GITHUB_OUTPUT
+          echo "tag=RMCL-${{ needs.version.outputs.v }}" >> $GITHUB_OUTPUT
 
       - name: Download-RMCL.win-x86.zip
         uses: actions/download-artifact@v4
@@ -381,8 +383,8 @@ jobs:
         uses: marvinpinto/action-automatic-releases@latest
         with:
           repo_token: "${{ secrets.TOKEN }}"
-          title: "v${{ needs.time.outputs.v }}"
-          automatic_release_tag: "RMCL.Transcend-${{ needs.time.outputs.v }}"
+          title: "v${{ needs.version.outputs.v }}"
+          automatic_release_tag: "RMCL.Transcend-${{ needs.version.outputs.v }}"
           prerelease: false
           files: |
             ./artifacts/*.zip
