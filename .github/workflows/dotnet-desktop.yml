@@ -57,13 +57,13 @@ jobs:
       
       - name: Create ZIP (x86)
         run: |
-          Compress-Archive -Path "./publish/win-x86/*" -DestinationPath "./RMCL4.${{ needs.version.outputs.v }}.win-x86.zip" -Force
+          Compress-Archive -Path "./publish/win-x86/*" -DestinationPath "./RMCL4-${{ needs.version.outputs.v }}.win-x86.zip" -Force
       
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
           name: RMCL.win-x86.zip
-          path: "./RMCL4.${{ needs.version.outputs.v }}.win-x86.zip"
+          path: "./RMCL4-${{ needs.version.outputs.v }}.win-x86.zip"
 
   win-x64:
     needs: version
@@ -91,13 +91,13 @@ jobs:
       
       - name: Create ZIP (x64)
         run: |
-          Compress-Archive -Path "./publish/win-x64/*" -DestinationPath "./RMCL4.${{ needs.version.outputs.v }}.win-x64.zip" -Force
+          Compress-Archive -Path "./publish/win-x64/*" -DestinationPath "./RMCL4-${{ needs.version.outputs.v }}.win-x64.zip" -Force
       
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
           name: RMCL.win-x64.zip
-          path: "./RMCL4.${{ needs.version.outputs.v }}.win-x64.zip"
+          path: "./RMCL4-${{ needs.version.outputs.v }}.win-x64.zip"
 
   win-arm64:
     needs: version
@@ -125,13 +125,13 @@ jobs:
       
       - name: Create ZIP (ARM64)
         run: |
-          Compress-Archive -Path "./publish/win-arm64/*" -DestinationPath "./RMCL4.${{ needs.version.outputs.v }}.win-arm64.zip" -Force
+          Compress-Archive -Path "./publish/win-arm64/*" -DestinationPath "./RMCL4-${{ needs.version.outputs.v }}.win-arm64.zip" -Force
       
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
           name: RMCL.win-arm64.zip
-          path: "./RMCL4.${{ needs.version.outputs.v }}.win-arm64.zip"
+          path: "./RMCL4-${{ needs.version.outputs.v }}.win-arm64.zip"
 
   # Linux 平台构建
   linux-x64:
@@ -161,14 +161,14 @@ jobs:
       - name: Create ZIP (Linux x64)
         run: |
           cd ./publish/linux-x64
-          zip -r ../../RMCL4.${{ needs.version.outputs.v }}.linux-x64.zip *
+          zip -r ../../RMCL4-${{ needs.version.outputs.v }}.linux-x64.zip *
           cd ../..
       
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
           name: RMCL.linux-x64.zip
-          path: "./RMCL4.${{ needs.version.outputs.v }}.linux-x64.zip"
+          path: "./RMCL4-${{ needs.version.outputs.v }}.linux-x64.zip"
 
   linux-arm:
     needs: version
@@ -197,14 +197,14 @@ jobs:
       - name: Create ZIP (Linux ARM)
         run: |
           cd ./publish/linux-arm
-          zip -r ../../RMCL4.${{ needs.version.outputs.v }}.linux-arm.zip *
+          zip -r ../../RMCL4-${{ needs.version.outputs.v }}.linux-arm.zip *
           cd ../..
       
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
           name: RMCL.linux-arm.zip
-          path: "./RMCL4.${{ needs.version.outputs.v }}.linux-arm.zip"
+          path: "./RMCL4-${{ needs.version.outputs.v }}.linux-arm.zip"
 
   linux-arm64:
     needs: version
@@ -233,14 +233,14 @@ jobs:
       - name: Create ZIP (Linux ARM64)
         run: |
           cd ./publish/linux-arm64
-          zip -r ../../RMCL4.${{ needs.version.outputs.v }}.linux-arm64.zip *
+          zip -r ../../RMCL4-${{ needs.version.outputs.v }}.linux-arm64.zip *
           cd ../..
       
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
           name: RMCL.linux-arm64.zip
-          path: "./RMCL4.${{ needs.version.outputs.v }}.linux-arm64.zip"
+          path: "./RMCL4-${{ needs.version.outputs.v }}.linux-arm64.zip"
 
   # macOS 平台构建
   osx-x64:
@@ -270,14 +270,14 @@ jobs:
       - name: Create ZIP (macOS x64)
         run: |
           cd ./publish/osx-x64
-          zip -r ../../RMCL4.${{ needs.version.outputs.v }}.osx-x64.zip *
+          zip -r ../../RMCL4-${{ needs.version.outputs.v }}.osx-x64.zip *
           cd ../..
       
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
           name: RMCL.osx-x64.zip
-          path: "./RMCL4.${{ needs.version.outputs.v }}.osx-x64.zip"
+          path: "./RMCL4-${{ needs.version.outputs.v }}.osx-x64.zip"
 
   osx-arm64:
     needs: version
@@ -306,14 +306,14 @@ jobs:
       - name: Create ZIP (macOS ARM64)
         run: |
           cd ./publish/osx-arm64
-          zip -r ../../RMCL4.${{ needs.version.outputs.v }}.osx-arm64.zip *
+          zip -r ../../RMCL4-${{ needs.version.outputs.v }}.osx-arm64.zip *
           cd ../..
         
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
           name: RMCL.osx-arm64.zip
-          path: "./RMCL4.${{ needs.version.outputs.v }}.osx-arm64.zip"
+          path: "./RMCL4-${{ needs.version.outputs.v }}.osx-arm64.zip"
 
   # 发布阶段
   publish:
