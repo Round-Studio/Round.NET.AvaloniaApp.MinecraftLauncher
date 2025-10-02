@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:onePointControls1="clr-namespace:OnePointUI.Avalonia.Styling.Controls.OnePointControls;assembly=OnePointUI.Avalonia"
              xmlns:res="clr-namespace:RMCL.Properties"
+             xmlns:notice="clr-namespace:OnePointUI.Avalonia.Styling.Controls.OnePointControls.Notice;assembly=OnePointUI.Avalonia"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="RMCL.Views.Page.Main.MainSubPage.MainHomePage">
     <Grid>
@@ -102,5 +103,12 @@
                            FontWeight="Bold"/>
             </StackPanel>
         </Button>
+        
+        <notice:InfoBar State="Warning"
+                        Title="预览版警告"
+                        Message="当前版本为 RMCL 4 的预览版，仅作为 UI/UX 预览，并不代表最终品质。"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Top"
+                        Margin="20"/>
     </Grid>
 </UserControl>
