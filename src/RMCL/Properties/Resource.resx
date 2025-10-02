@@ -264,4 +264,10 @@
   <data name="Settings.Style.Background.Material.Skull" xml:space="preserve">
     <value>骷髅</value>
   </data>
+  <data name="Settings.Style.Background.BackgroundModel" xml:space="preserve">
+    <value>背景样式</value>
+  </data>
+  <data name="Settings.Style.Background.BackgroundModel.Description" xml:space="preserve">
+    <value>启动器背景样式</value>
+  </data>
 </root>

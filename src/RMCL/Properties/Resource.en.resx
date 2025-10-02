@@ -155,4 +155,10 @@
     <data name="Settings.Style.Background.Material.Skull" xml:space="preserve">
         <value>Skull</value>
     </data>
+    <data name="Settings.Style.Background.BackgroundModel" xml:space="preserve">
+        <value>Background</value>
+    </data>
+    <data name="Settings.Style.Background.BackgroundModel.Description" xml:space="preserve">
+        <value>Launcher background style.</value>
+    </data>
 </root>

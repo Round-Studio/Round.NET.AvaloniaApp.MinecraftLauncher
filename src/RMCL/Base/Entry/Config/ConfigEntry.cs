@@ -14,4 +14,5 @@ public class ConfigEntry
         BackMaterialHelper.BackMaterialType.CircuitBoard;
 
     [JsonPropertyName("themeType")] public ThemeModelEnum ThemeType { get; set; } = ThemeModelEnum.Dark;
+    [JsonPropertyName("windowInfo")] public WindowPoint WindowInfo { get; set; } = new WindowPoint();
 }

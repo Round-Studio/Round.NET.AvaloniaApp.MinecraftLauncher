@@ -1,5 +1,6 @@
 using System;
 using System.Threading.Tasks;
+using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Input;
 using Avalonia.Interactivity;
@@ -8,6 +9,7 @@ using Avalonia.Media.Imaging;
 using Avalonia.Platform;
 using Avalonia.Styling;
 using OnePointUI.Avalonia.Style.Core;
+using RMCL.Base.Entry.Config;
 using RMCL.Base.Entry.Notice;
 using RMCL.Base.Enum.Notice;
 using RMCL.Base.Enum.Style;
@@ -44,6 +46,16 @@ public partial class MainWindow : Window
 
         ThemeManager.Instance.SetThemeModel(GlobalModels.Config.Data.ThemeType == ThemeModelEnum.Light ? ThemeVariant.Light : ThemeVariant.Dark);
         UpdateBack();
+
+        if (GlobalModels.Config.Data.WindowInfo.X != -1 && GlobalModels.Config.Data.WindowInfo.Y != -1)
+        {
+            this.WindowStartupLocation = WindowStartupLocation.Manual;
+            this.Position = new PixelPoint(x: GlobalModels.Config.Data.WindowInfo.X,
+                y: GlobalModels.Config.Data.WindowInfo.Y);
+
+            this.Width = GlobalModels.Config.Data.WindowInfo.Width;
+            this.Height = GlobalModels.Config.Data.WindowInfo.Height;
+        }
     }
 
     public async Task UpdateBack()
@@ -98,5 +110,18 @@ public partial class MainWindow : Window
         {
             TaskPanel.ToggleOpen();
         }else GlobalModels.MainPageContent.NavigateTo(new MainHomePage());
+    }
+
+    private void TopLevel_OnClosing(object? sender, WindowClosingEventArgs e)
+    {
+        GlobalModels.Config.Data.WindowInfo = new WindowPoint()
+        {
+            Width = this.Bounds.Width,
+            Height = this.Bounds.Height,
+            X = this.Position.X,
+            Y = this.Position.Y
+        };
+        
+        GlobalModels.Config.Save();
     }
 }

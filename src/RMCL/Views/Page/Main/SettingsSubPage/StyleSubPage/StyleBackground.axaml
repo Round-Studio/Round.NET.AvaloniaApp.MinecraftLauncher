@@ -21,9 +21,9 @@
                 </ComboBox>
             </onePointControls:SettingCard>
             
-            <onePointControls:SettingCard Header="背景"
+            <onePointControls:SettingCard Header="{x:Static properties:Resource.Settings_Style_Background_BackgroundModel}"
                                           Margin="5,5,5,10"
-                                          Description="启动器背景"
+                                          Description="{x:Static properties:Resource.Settings_Style_Background_BackgroundModel_Description}"
                                           Glyph="&#xEC26;">
                 <ComboBox Width="200">
                     <ComboBoxItem>None</ComboBoxItem>

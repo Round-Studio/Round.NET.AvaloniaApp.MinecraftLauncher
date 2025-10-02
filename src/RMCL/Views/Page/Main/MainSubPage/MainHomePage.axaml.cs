@@ -33,7 +33,8 @@ public partial class MainHomePage : UserControl
             Title = "Test Dialog",
             Content = "欢迎使用 RMCL\naa\naa",
             CloseButtonText = "OK",
-            AccountButton = DialogButtons.CloseButton
+            AccountButton = DialogButtons.CloseButton,
+            IsWindow = true
         });
     }
 }

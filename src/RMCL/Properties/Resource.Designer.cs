@@ -438,6 +438,24 @@ namespace RMCL.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 背景样式.
+        /// </summary>
+        public static string Settings_Style_Background_BackgroundModel {
+            get {
+                return ResourceManager.GetString("Settings.Style.Background.BackgroundModel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 启动器背景样式.
+        /// </summary>
+        public static string Settings_Style_Background_BackgroundModel_Description {
+            get {
+                return ResourceManager.GetString("Settings.Style.Background.BackgroundModel.Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 材质.
         /// </summary>
         public static string Settings_Style_Background_Material {

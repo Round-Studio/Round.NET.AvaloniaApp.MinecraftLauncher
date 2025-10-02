@@ -6,7 +6,7 @@
              x:Class="RMCL.Views.Page.Main.OtherPage.OtherOpenSourceProjects">
     <ScrollViewer>
         <StackPanel Margin="15">
-          <TextBlock FontSize="16"
+          <TextBlock FontSize="22"
                      FontWeight="Bold"
                      Margin="5,20,5,8">Avalonia</TextBlock>
           <TextBlock Margin="5,5,0,0" Name="AvaloniaVersion"></TextBlock>
@@ -36,7 +36,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.</TextBlock>
           
           
-          <TextBlock FontSize="16"
+          <TextBlock FontSize="22"
                      FontWeight="Bold"
                      Margin="5,20,5,8">OnePointUI.Avalonia</TextBlock>
             <TextBlock Margin="5" Text="(https://github.com/Round-Studio/OnePointUI.Avalonia)"></TextBlock>
@@ -64,7 +64,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.</TextBlock>
             
             
-            <TextBlock FontSize="16"
+            <TextBlock FontSize="22"
                        FontWeight="Bold"
                        Margin="5,20,5,8">OverrideLauncher.Core</TextBlock>
             <TextBlock Margin="5" Text="(https://github.com/Round-Studio/OverrideLauncher.Core)"></TextBlock>

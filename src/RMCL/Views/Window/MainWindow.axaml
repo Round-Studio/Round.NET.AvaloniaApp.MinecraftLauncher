@@ -22,6 +22,7 @@
         TransparencyLevelHint="Mica"
         Background="Transparent"
         PointerPressed="InputElement_OnPointerPressed"
+        Closing="TopLevel_OnClosing"
         Title="{Binding WindowTitle}">
 
     <Design.DataContext>
