@@ -8,6 +8,7 @@
         xmlns:res="clr-namespace:RMCL.Properties"
         xmlns:notice="clr-namespace:RMCL.Views.Control.Notice"
         xmlns:tasks="clr-namespace:RMCL.Views.Control.Tasks"
+        xmlns:dialog="clr-namespace:OnePointUI.Avalonia.Styling.Controls.OnePointControls.Dialog;assembly=OnePointUI.Avalonia"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="RMCL.Views.MainWindow"
         x:DataType="vm:MainWindowViewModel"
@@ -74,6 +75,8 @@
         <tasks:TaskPanel HorizontalAlignment="Stretch"
                         VerticalAlignment="Stretch"
                         Name="TaskPanel"/>
+        
+        <dialog:DialogHost/>
         
         <Grid HorizontalAlignment="Stretch"
               VerticalAlignment="Top"

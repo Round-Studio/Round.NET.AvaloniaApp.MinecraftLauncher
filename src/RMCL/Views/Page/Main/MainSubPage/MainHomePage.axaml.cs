@@ -2,6 +2,9 @@
 using Avalonia.Controls;
 using Avalonia.Interactivity;
 using Avalonia.Markup.Xaml;
+using OnePointUI.Avalonia.Base.Entry;
+using OnePointUI.Avalonia.Base.Enum;
+using OnePointUI.Avalonia.Styling.Controls.OnePointControls.Dialog;
 using RMCL.Base.Entry.Notice;
 using RMCL.Base.Enum.Notice;
 using RMCL.Models.Global;
@@ -23,6 +26,14 @@ public partial class MainHomePage : UserControl
             Message = "欢迎使用 RMCL\naa\naa",
             Title = "Welcome to RMCL",
             NoticeType = NoticeType.Info
+        });
+
+        DialogHost.Show(new DialogInfo()
+        {
+            Title = "Test Dialog",
+            Content = "欢迎使用 RMCL\naa\naa",
+            CloseButtonText = "OK",
+            AccountButton = DialogButtons.CloseButton
         });
     }
 }
