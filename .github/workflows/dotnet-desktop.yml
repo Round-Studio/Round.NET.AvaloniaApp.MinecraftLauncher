@@ -51,7 +51,7 @@ jobs:
             /p:IncludeNativeLibrariesForSelfExtract=true `
             /p:SelfContained=true `
             /p:Version=${{ needs.time.outputs.v }} `
-            -o "../../../publish/win-x86" -p:DebugType=none -p:DebugSymbols=false
+            -o "../../publish/win-x86" -p:DebugType=none -p:DebugSymbols=false
       
       - name: Create ZIP (x86)
         run: |
