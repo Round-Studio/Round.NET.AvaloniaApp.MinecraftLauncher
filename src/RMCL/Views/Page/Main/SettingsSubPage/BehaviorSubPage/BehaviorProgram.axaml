@@ -1,0 +1,27 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:onePointControls="clr-namespace:OnePointUI.Avalonia.Styling.Controls.OnePointControls;assembly=OnePointUI.Avalonia"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="RMCL.Views.Page.Main.SettingsSubPage.BehaviorSubPage.BehaviorProgram">
+    <ScrollViewer>
+        <StackPanel Margin="15">
+            <onePointControls:SettingCard Margin="5"
+                                          IsFontIcon="False"
+                                          Header="基岩版"
+                                          Description="把 BedrockBoot 集成到 RMCL 中使用"
+                                          ImageIcon="avares://RMCL/Assets/Icon/BedrockBoot.ico">
+                <ToggleSwitch></ToggleSwitch>
+            </onePointControls:SettingCard>
+            
+            <onePointControls:SettingCard Margin="5"
+                                          IsFontIcon="True"
+                                          Glyph="&#xF0B9;"
+                                          Header="多人联机"
+                                          Description="广域网联机服务，在 RMCL 内即可开启房间，邀请您的好友，力口 力口 力口 入！">
+                <ToggleSwitch></ToggleSwitch>
+            </onePointControls:SettingCard>
+        </StackPanel>
+    </ScrollViewer>
+</UserControl>

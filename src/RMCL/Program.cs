@@ -6,10 +6,10 @@ using System.Threading;
 using System.Threading.Tasks;
 using HarfBuzzSharp;
 using RMCL.Base.Entry.Config;
-using RMCL.Config;
-using RMCL.Logger;
 using RMCL.Models;
 using RMCL.Models.Global;
+using Round.SDK.Entity;
+using Round.SDK.Logger;
 
 namespace RMCL;
 
@@ -21,7 +21,7 @@ sealed class Program
     [STAThread]
     public static void Main(string[] args)
     {
-        GlobalModels.Config = new Config<ConfigEntry>(PathsList.ConfigPath);
+        GlobalModels.Config = new ConfigEntity<ConfigEntry>(PathsList.ConfigPath);
 
         if (args.Length <= 0)
         {

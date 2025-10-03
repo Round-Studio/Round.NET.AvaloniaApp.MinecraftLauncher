@@ -1,18 +1,17 @@
 ﻿using System.Collections.Generic;
 using Avalonia;
 using Avalonia.Controls;
-using Avalonia.Interactivity;
 using Avalonia.Markup.Xaml;
 using OnePointUI.Avalonia.Base.Entry;
 using RMCL.Properties;
 using RMCL.Views.Page.Main.MainSubPage;
-using RMCL.Views.Page.Main.SettingsSubPage.BehaviorSubPage;
+using RMCL.Views.Page.Main.SettingsSubPage.StyleSubPage;
 
-namespace RMCL.Views.Page.Main.SettingsSubPage;
+namespace RMCL.Views.Page.Main.SettingsSubPage.BehaviorSubPage;
 
-public partial class SettingsBehavior : UserControl
+public partial class BehaviorJava : UserControl
 {
-    public SettingsBehavior()
+    public BehaviorJava()
     {
         InitializeComponent();
         MainSettingPage.Page.BreadcrumbBar.SetItems(new List<BreadcrumbItemInfo>()
@@ -24,17 +23,16 @@ public partial class SettingsBehavior : UserControl
                 {
                     MainSettingPage.Page.NavigationTo(new SettingsBehavior());
                 }
+            },
+            new BreadcrumbItemInfo()
+            {
+                ItemName = "Java 虚拟机与内存",
+                ItemClickAction = (e) =>
+                {
+                    MainSettingPage.Page.NavigationTo(new BehaviorJava());
+                }
             }
         });
-    }
 
-    private void JavaBtn_OnClick(object? sender, RoutedEventArgs e)
-    {
-        MainSettingPage.Page.NavigationTo(new BehaviorJava());
-    }
-
-    private void ProgramBtn_OnClick(object? sender, RoutedEventArgs e)
-    {
-        MainSettingPage.Page.NavigationTo(new BehaviorProgram());
     }
 }

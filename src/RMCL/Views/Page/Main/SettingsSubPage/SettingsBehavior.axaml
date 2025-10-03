@@ -10,7 +10,23 @@
             <onePointControls:SettingCard Margin="5"
                                           Header="Java 虚拟机与内存"
                                           Description="Java 与内存的设置、管理 Java"
+                                          Name="JavaBtn"
+                                          Click="JavaBtn_OnClick"
                                           Glyph="&#xE945;"
+                                          IsClickable="True"/>
+            
+            <onePointControls:SettingCard Margin="5"
+                                          Header="程序和功能"
+                                          Description="官方拓展程序，不同于插件的是这些自带！"
+                                          Glyph="&#xF0E2;"
+                                          Name="ProgramBtn"
+                                          Click="ProgramBtn_OnClick"
+                                          IsClickable="True"/>
+            
+            <onePointControls:SettingCard Margin="5"
+                                          Header="插件与脚本"
+                                          Description="RMCL 插件与脚本管理"
+                                          Glyph="&#xEA86;"
                                           IsClickable="True"/>
         </StackPanel>
     </ScrollViewer>
