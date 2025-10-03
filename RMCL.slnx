@@ -4,6 +4,9 @@
     <Project Path="src\OnePointUI.Avalonia\src\OnePointUI.Avalonia.Test\OnePointUI.Avalonia.Test.csproj" Type="Classic C#" />
     <Project Path="src\OnePointUI.Avalonia\src\OnePointUI.Avalonia\OnePointUI.Avalonia.csproj" Type="Classic C#" />
   </Folder>
+  <Folder Name="/Plugin/">
+    <Project Path="src\TestPlugin\TestPlugin.csproj" Type="Classic C#" />
+  </Folder>
   <Folder Name="/SDK/">
     <Project Path="src\Round.SDK\Round.SDK\Round.SDK.csproj" Type="Classic C#" />
   </Folder>

@@ -3,17 +3,16 @@ using System.Collections.Generic;
 using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Layout;
-using Avalonia.Markup.Xaml;
 using Avalonia.Media;
 using OnePointUI.Avalonia.Styling.Controls.OnePointControls;
-using RMCL.Base.Entry.Navigation;
+using Round.SDK.Entry.RMCL;
 
 namespace RMCL.Views.Control.Navigation;
 
 public partial class BottomBar : UserControl
 {
     public List<ItemButton> Items { get; set; } = new ();
-    public Action<string> OnNavigation { get; set; }
+    public Action<Type>? OnNavigation { get; set; }
     public BottomBar()
     {
         InitializeComponent();
@@ -25,7 +24,8 @@ public partial class BottomBar : UserControl
         {
             ItemGlyph = info.ItemGlyph,
             ItemText = info.ItemText,
-            Tag = info.Tag
+            Tag = info.Tag,
+            PageType = info.PageType
         };
 
         var classesName = info.IsSelected ? "NoBorderAccent" : "NoBorder";
@@ -34,8 +34,8 @@ public partial class BottomBar : UserControl
         {
             Height = 32,
             Classes = { classesName },
-            CornerRadius = new  CornerRadius(16),
-            Tag = newi.Tag,
+            CornerRadius = new CornerRadius(16),
+            Tag = newi,
             Content = new StackPanel
             {
                 Orientation = Orientation.Horizontal,
@@ -62,18 +62,18 @@ public partial class BottomBar : UserControl
         };
         newi.Item.Click += (s, e) =>
         {
-            var tag = ((Button)s).Tag.ToString();
-            
+            var tag = (ItemButton)((Button)s).Tag;
+
             Items.ForEach(x =>
             {
                 var itemText = (TextBlock)((StackPanel)x.Item.Content).Children[1];
-                if (x.Tag == tag)
+                if (x.Tag == tag.Tag)
                 {
                     x.IsSelected = true;
-                    
+
                     x.Item.Classes.Clear();
-                    x.Item.Classes.Add("NoBorderAccent"); 
-                    
+                    x.Item.Classes.Add("NoBorderAccent");
+
                     itemText.Classes.Clear();
                     itemText.Classes.Add("Accent");
                 }
@@ -82,13 +82,13 @@ public partial class BottomBar : UserControl
                     x.IsSelected = false;
                     x.Item.Classes.Clear();
                     x.Item.Classes.Add("NoBorder");
-                    
+
                     itemText.Classes.Clear();
                 }
             });
-            OnNavigation.Invoke(tag);
+            OnNavigation.Invoke(tag.PageType);
         };
-        ItemsPanel.Children.Add(newi.Item);
+        ItemsPanel.Children.Insert(0, newi.Item);
         Items.Add(newi);
     }
 

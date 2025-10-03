@@ -31,7 +31,7 @@ public partial class NoticeBox : UserControl
         closeTimer.Start();
     }
 
-    public Action<NoticeBox> OnClose { get; set; }
+    public Action<NoticeBox> OnClose { get; set; } = null!;
 
     public async void CloseThis()
     {

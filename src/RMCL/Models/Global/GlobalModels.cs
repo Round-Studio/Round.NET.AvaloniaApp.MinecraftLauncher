@@ -11,9 +11,9 @@ namespace RMCL.Models.Global;
 
 public class GlobalModels
 {
-    public static ConfigEntity<ConfigEntry> Config { get; set; }
-    public static MainWindow MainWindow;
-    public static NavigationFrame MainPageContent;
-    public static NoticePanel NoticePanel;
-    public static TaskPanel TaskPanel;
+    public static ConfigEntity<ConfigEntry>? Config { get; set; }
+    public static MainWindow? MainWindow;
+    public static NavigationFrame? MainPageContent;
+    public static NoticePanel? NoticePanel;
+    public static TaskPanel? TaskPanel;
 }
