@@ -9,4 +9,5 @@ public class PathsList
         Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "RoundStudio", "RMCL4");
 
     public static readonly string ConfigPath = Path.Combine(RootConfigPath, "RMCL.Config", "Config.json");
+    public static readonly string LogPath = Path.Combine(RootConfigPath, "RMCL.Log");
 }

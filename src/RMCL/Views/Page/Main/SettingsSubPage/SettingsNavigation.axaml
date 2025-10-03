@@ -28,6 +28,8 @@
                                               Margin="5,5,5,10"
                                               Description="{x:Static properties:Resource.Settings_Behavior_Description}"
                                               Glyph="&#xE950;"
+                                              Name="BehaviorBtn"
+                                              Click="BehaviorBtn_OnClick"
                                               IsClickable="True"/>
                 
                 <onePointControls:SettingCard Header="{x:Static properties:Resource.Settings_Account}"

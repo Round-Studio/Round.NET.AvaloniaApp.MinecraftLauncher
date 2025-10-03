@@ -1,4 +1,5 @@
 using System;
+using System.Threading;
 using System.Threading.Tasks;
 using Avalonia;
 using Avalonia.Controls;
@@ -16,6 +17,7 @@ using RMCL.Base.Entry.Config;
 using RMCL.Base.Entry.Notice;
 using RMCL.Base.Enum.Notice;
 using RMCL.Base.Enum.Style;
+using RMCL.Logger;
 using RMCL.Models;
 using RMCL.Models.Global;
 using RMCL.Views.Page.Main;
@@ -27,28 +29,26 @@ public partial class MainWindow : Window
 {
     public MainWindow()
     {
+        ConsoleRedirector.RegisterThread(Thread.CurrentThread,"MainWindow");
+        Console.WriteLine("载入 MainWindow");
         GlobalModels.MainWindow = this;
         
         InitializeComponent();
+        Console.WriteLine("窗体初始化完成");
 
         RenderOptions.SetTextRenderingMode(this, TextRenderingMode.SubpixelAntialias); // 字体渲染模式
         RenderOptions.SetBitmapInterpolationMode(this, BitmapInterpolationMode.MediumQuality); // 图片渲染模式
         RenderOptions.SetEdgeMode(this, EdgeMode.Antialias); // 形状渲染模式
+        Console.WriteLine("渲染模式设置完毕");
 
         GlobalModels.NoticePanel = NoticePanel;
         GlobalModels.TaskPanel = TaskPanel;
-        
-        /*GlobalModels.NoticePanel.AddNotice(new NoticeInfo()
-        {
-            Message = "欢迎使用 RMCL",
-            Title = "Welcome to RMCL",
-            NoticeType = NoticeType.Info
-        });*/
 
         if (TaskPanel.GetOpenState()) TaskPanel.ToggleOpen();
 
         ThemeManager.Instance.SetThemeModel(GlobalModels.Config.Data.ThemeType == ThemeModelEnum.Light ? ThemeVariant.Light : ThemeVariant.Dark);
         UpdateBack();
+        Console.WriteLine("主题设置完毕");
 
         if (GlobalModels.Config.Data.WindowInfo.X != -1 && GlobalModels.Config.Data.WindowInfo.Y != -1)
         {
@@ -59,6 +59,7 @@ public partial class MainWindow : Window
             this.Width = GlobalModels.Config.Data.WindowInfo.Width;
             this.Height = GlobalModels.Config.Data.WindowInfo.Height;
         }
+        Console.WriteLine("窗体位置信息初始完毕");
     }
 
     public async Task UpdateBack()

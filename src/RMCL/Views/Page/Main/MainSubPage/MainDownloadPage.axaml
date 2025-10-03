@@ -4,6 +4,6 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="RMCL.Views.Page.Main.MainSubPage.MainDownloadPage"
-             Background="{DynamicResource PrimaryBackgroundOverBrush}">
+             Background="{DynamicResource BackgroundBrush}">
     Welcome to Avalonia!
 </UserControl>

@@ -12,6 +12,7 @@
     <ItemGroup>
         <AvaloniaResource Include="Assets\**" />
         <Folder Include="ViewModels\Page\" />
+        <Folder Include="Views\Page\Main\SettingsSubPage\BehaviorSubPage\" />
     </ItemGroup>
 
     <ItemGroup>
@@ -49,6 +50,7 @@
     <ItemGroup>
       <ProjectReference Include="..\OnePointUI.Avalonia\src\OnePointUI.Avalonia\OnePointUI.Avalonia.csproj" />
       <ProjectReference Include="..\RMCL.Config\RMCL.Config.csproj" />
+      <ProjectReference Include="..\RMCL.Logger\RMCL.Logger.csproj" />
     </ItemGroup>
 
     <ItemGroup>

@@ -37,4 +37,9 @@ public partial class SettingsNavigation : UserControl
     {
         MainSettingPage.Page.NavigationTo(new SettingsAccount());
     }
+
+    private void BehaviorBtn_OnClick(object? sender, RoutedEventArgs e)
+    {
+        MainSettingPage.Page.NavigationTo(new SettingsBehavior());
+    }
 }

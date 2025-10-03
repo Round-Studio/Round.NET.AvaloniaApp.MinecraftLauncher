@@ -29,12 +29,16 @@ public class ConsoleRedirector : IDisposable
         // 注册主线程名称
         RegisterThread(Thread.CurrentThread, "Main");
         
-        _writer = new StreamWriter(filePath)
+        // 创建 UTF-8 编码的 StreamWriter（不带 BOM）
+        _writer = new StreamWriter(filePath, false, new UTF8Encoding(false))
         {
             AutoFlush = true
         };
         
-        Console.SetOut(new ThreadAwareTextWriter(_writer,_originalOutput, _timestampFormat));
+        // 设置控制台输出编码为 UTF-8
+        Console.OutputEncoding = Encoding.UTF8;
+        
+        Console.SetOut(new ThreadAwareTextWriter(_writer, _originalOutput, _timestampFormat));
     }
 
     /// <summary>
@@ -49,6 +53,8 @@ public class ConsoleRedirector : IDisposable
     {
         Console.SetOut(_originalOutput);
         _writer?.Dispose();
+        // 恢复原来的控制台编码（可选）
+        // Console.OutputEncoding = Encoding.Default;
     }
 
     /// <summary>
@@ -61,14 +67,14 @@ public class ConsoleRedirector : IDisposable
         private readonly string _timestampFormat;
         private readonly StringBuilder _lineBuffer = new StringBuilder();
 
-        public ThreadAwareTextWriter(TextWriter innerWriter,TextWriter orgwriter, string timestampFormat)
+        public ThreadAwareTextWriter(TextWriter innerWriter, TextWriter orgwriter, string timestampFormat)
         {
             _innerWriter = innerWriter;
             _orgwriter = orgwriter;
             _timestampFormat = timestampFormat;
         }
 
-        public override Encoding Encoding => _innerWriter.Encoding;
+        public override Encoding Encoding => Encoding.UTF8; // 改为返回 UTF-8 编码
 
         public override void Write(char value)
         {
@@ -95,7 +101,7 @@ public class ConsoleRedirector : IDisposable
             }
             
             // 自动为未命名的线程生成名称
-            string newName = $"Undefinded Thread-{threadId}";
+            string newName = $"Undefined Thread-{threadId}";
             _threadNames.TryAdd(threadId, newName);
             return newName;
         }
