@@ -4,3 +4,9 @@
 [submodule "src/Round.SDK"]
 	path = src/Round.SDK
 	url = https://github.com/Round-Studio/Round.SDK.git
+[submodule "src/RMCL/src/LiteSkinViewer"]
+	path = src/RMCL/src/LiteSkinViewer
+	url = https://github.com/YangSpring429/LiteSkinViewer.git
+[submodule "src/LiteSkinViewer"]
+	path = src/LiteSkinViewer
+	url = https://github.com/YangSpring429/LiteSkinViewer.git

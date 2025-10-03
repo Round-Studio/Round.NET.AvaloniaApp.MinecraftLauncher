@@ -67,7 +67,7 @@ public partial class MainWindow : Window
         
         var pluginLoader = new PlugLoader(typeof(IPluginRMCL));
 
-        var file = @"D:\User File\Desktop\RMCL4\RMCL\src\Plugin.BedrockBoot\bin\Debug\net9.0-windows10.0.19041.0\Plugin.BedrockBoot.dll";
+        /*var file = @"***\RMCL\src\Plugin.BedrockBoot\bin\Debug\net9.0-windows10.0.19041.0\Plugin.BedrockBoot.dll";
         // 从DLL文件加载并初始化
         pluginLoader.LoadAndInitialize(file);
         
@@ -78,7 +78,7 @@ public partial class MainWindow : Window
             Console.WriteLine($"版本: {pluginInfo.Version}");
             Console.WriteLine($"作者: {pluginInfo.Author}");
             Console.WriteLine($"描述: {pluginInfo.Description}");
-        }
+        }*/
     }
 
     public async Task UpdateBack()

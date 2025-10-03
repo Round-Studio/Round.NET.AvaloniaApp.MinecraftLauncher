@@ -18,7 +18,9 @@
                                           Margin="5,5,5,10"
                                           Glyph="&#xE902;">
                 <StackPanel Orientation="Horizontal">
-                    <Button Padding="12,8">新增账户</Button>
+                    <Button Padding="12,8"
+                            Name="AddUserBtn"
+                            Click="AddUserBtn_OnClick">新增账户</Button>
                 </StackPanel>
             </onePointControls:SettingCard>
         </StackPanel>
