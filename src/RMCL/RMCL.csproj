@@ -6,7 +6,7 @@
         <BuiltInComInteropSupport>true</BuiltInComInteropSupport>
         <ApplicationManifest>app.manifest</ApplicationManifest>
         <AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
-        <ApplicationIcon>Assets\Icon\logo.ico</ApplicationIcon>
+        <ApplicationIcon>Assets\Icon\RMCL4.Logo.Big.ico</ApplicationIcon>
     </PropertyGroup>
 
     <ItemGroup>

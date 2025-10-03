@@ -28,13 +28,16 @@ public partial class MainPage : UserControl
         };
 
         RegisterService.API.RegisterBottomBarItem = info => BottomBar.RegisterItems(info);
+        
+        
         RegisterService.RegisterBottomBarItem(new BottomBarItemInfo()
         {
-            ItemGlyph = "\uE713",
-            ItemText = Resource.MainPage_Setting,
-            Tag = "Setting",
-            PageType = typeof(MainSettingPage)
-        }); 
+            ItemGlyph = "\uE80F",
+            ItemText = Resource.MainPage_Home,
+            Tag = "Home",
+            IsSelected = true,
+            PageType = typeof(MainHomePage)
+        });
         RegisterService.RegisterBottomBarItem(new BottomBarItemInfo()
         {
             ItemGlyph = "\uE896",
@@ -44,12 +47,11 @@ public partial class MainPage : UserControl
         });
         RegisterService.RegisterBottomBarItem(new BottomBarItemInfo()
         {
-            ItemGlyph = "\uE80F",
-            ItemText = Resource.MainPage_Home,
-            Tag = "Home",
-            IsSelected = true,
-            PageType = typeof(MainHomePage)
-        });
+            ItemGlyph = "\uE713",
+            ItemText = Resource.MainPage_Setting,
+            Tag = "Setting",
+            PageType = typeof(MainSettingPage)
+        }); 
     }
 
     private void TaskBtn_OnClick(object? sender, RoutedEventArgs e)

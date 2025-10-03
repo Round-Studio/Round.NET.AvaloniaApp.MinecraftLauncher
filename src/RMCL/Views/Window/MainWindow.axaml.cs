@@ -64,6 +64,21 @@ public partial class MainWindow : Window
             this.Height = GlobalModels.Config.Data.WindowInfo.Height;
         }
         Console.WriteLine("窗体位置信息初始完毕");
+        
+        var pluginLoader = new PlugLoader(typeof(IPluginRMCL));
+
+        var file = @"D:\User File\Desktop\RMCL4\RMCL\src\Plugin.BedrockBoot\bin\Debug\net9.0-windows10.0.19041.0\Plugin.BedrockBoot.dll";
+        // 从DLL文件加载并初始化
+        pluginLoader.LoadAndInitialize(file);
+        
+        var pluginInfo = pluginLoader.GetPluginInfo(file);
+        if (pluginInfo != null)
+        {
+            Console.WriteLine($"插件名称: {pluginInfo.Name}");
+            Console.WriteLine($"版本: {pluginInfo.Version}");
+            Console.WriteLine($"作者: {pluginInfo.Author}");
+            Console.WriteLine($"描述: {pluginInfo.Description}");
+        }
     }
 
     public async Task UpdateBack()
