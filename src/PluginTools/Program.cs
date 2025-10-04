@@ -29,7 +29,8 @@ public class Program
 
         if (args.Contains("-c") || args.Contains("--creat"))
         {
-            Console.WriteLine("PluginTools 创建新插件包配置文件\n");
+            Console.WriteLine(@"PluginTools 创建新插件包配置文件
+");
 
             Console.Write("插件包名称：");
             var projectName = Console.ReadLine();
@@ -40,7 +41,7 @@ public class Program
             Config.Load();
             Config.Data.PackName = projectName;
             Config.Save();
-            Console.WriteLine($"配置文件已生成到：{Config.Path}");
+            Console.WriteLine($@"配置文件已生成到：{Config.Path}");
         }
 
         if (args.Contains("-b") || args.Contains("--build"))
@@ -103,7 +104,7 @@ public class Program
             
             Directory.Delete(Path.Combine(Config.Data.BuildOutputPath, "build"), true);
             
-            Console.WriteLine($"包已生成至：{Path.Combine(Config.Data.BuildOutputPath, "pack.rplck")}");
+            Console.WriteLine($@"包已生成至：{Path.Combine(Config.Data.BuildOutputPath, "pack.rplck")}");
         }
     }
 }

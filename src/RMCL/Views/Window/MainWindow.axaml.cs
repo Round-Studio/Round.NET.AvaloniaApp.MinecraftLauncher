@@ -19,6 +19,7 @@ using RMCL.Base.Enum.Notice;
 using RMCL.Base.Enum.Style;
 using RMCL.Models;
 using RMCL.Models.Global;
+using RMCL.Models.Plugin;
 using RMCL.Views.Control.Notice;
 using RMCL.Views.Control.Tasks;
 using RMCL.Views.Page.Main;
@@ -65,29 +66,8 @@ public partial class MainWindow : Window
         }
         Console.WriteLine("窗体位置信息初始完毕");
         
-        // var pluginLoader = new PlugLoader(typeof(IPluginRMCL));
-
-        /*var file = @"***\RMCL\src\Plugin.BedrockBoot\bin\Debug\net9.0-windows10.0.19041.0\Plugin.BedrockBoot.dll";
-        // 从DLL文件加载并初始化
-        pluginLoader.LoadAndInitialize(file);
         
-        var pluginInfo = pluginLoader.GetPluginInfo(file);
-        if (pluginInfo != null)
-        {
-            Console.WriteLine($"插件名称: {pluginInfo.Name}");
-            Console.WriteLine($"版本: {pluginInfo.Version}");
-            Console.WriteLine($"作者: {pluginInfo.Author}");
-            Console.WriteLine($"描述: {pluginInfo.Description}");
-        }*/
-        
-        // 加载插件包1
-        var loader1 = new PlugLoader(typeof(IPluginRMCL));
-        var plugin1 = loader1.Load(@"G:\RMCL4\build\Plugin.BedrockBoot\publish\pack.rplck");
-
-        var config1 = loader1.GetPackConfig();
-
-        // 执行方法
-        loader1.InitializePlugin();
+        LoadPlugins.LoadAll();
     }
 
     public async Task UpdateBack()

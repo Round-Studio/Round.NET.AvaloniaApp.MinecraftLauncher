@@ -27,20 +27,20 @@ sealed class Program
         {
             ConsoleRedirector consoleRedirector = new ConsoleRedirector(Path.Combine(PathsList.LogPath, "Client",
                 $"[RMCL.Logger] {DateTime.Now.ToString("yyyy.MM.dd HHmmss.fff")}.log"));
-            Console.WriteLine("RMCL 客户端启动");
+            Console.WriteLine(@"RMCL 客户端启动");
             ConsoleRedirector.RegisterThread(Thread.CurrentThread,"Program");
             
-            Console.WriteLine("Main 入口启动");
+            Console.WriteLine(@"Main 入口启动");
             
             // Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("zh-hans"); // 简体中文
             Thread.CurrentThread.CurrentUICulture =
                 new System.Globalization.CultureInfo(LanguageHelper.GetStringName(GlobalModels.Config.Data.Language));
-            Console.WriteLine($"语言配置完毕，当前语言：{LanguageHelper.GetStringName(GlobalModels.Config.Data.Language)}");
+            Console.WriteLine($@"语言配置完毕，当前语言：{LanguageHelper.GetStringName(GlobalModels.Config.Data.Language)}");
 
             Task.Run(() =>
             {
                 ConsoleRedirector.RegisterThread(Thread.CurrentThread,"Server");
-                Console.WriteLine("启动后台服务器...");
+                Console.WriteLine(@"启动后台服务器...");
                 // 获取当前应用程序的路径和文件名
                 string applicationPath = Process.GetCurrentProcess().MainModule.FileName;
 
@@ -51,14 +51,14 @@ sealed class Program
                     UseShellExecute = true,
                     ArgumentList = { "-server" }
                 };
-                Console.WriteLine("初始化后台程序");
+                Console.WriteLine(@"初始化后台程序");
 
                 // 启动新实例
                 Process.Start(startInfo);
-                Console.WriteLine("服务器启动完毕。");
+                Console.WriteLine(@"服务器启动完毕。");
             });
             
-            Console.WriteLine("Config 读取完毕，即将启动 Avalonia 桌面程序。");
+            Console.WriteLine(@"Config 读取完毕，即将启动 Avalonia 桌面程序。");
 
             BuildAvaloniaApp()
                 .StartWithClassicDesktopLifetime(args);
@@ -67,7 +67,7 @@ sealed class Program
         {
             ConsoleRedirector consoleRedirector = new ConsoleRedirector(Path.Combine(PathsList.LogPath, "Server",
                 $"[RMCL.Logger] {DateTime.Now.ToString("yyyy.MM.dd HHmmss.fff")}.log"));
-            Console.WriteLine("RMCL 服务端启动");
+            Console.WriteLine(@"RMCL 服务端启动");
             
             while(true) { }
         }

@@ -14,7 +14,7 @@ public class Plugin : IPluginRMCL
 
     public void Initialize()
     {
-        Console.WriteLine("欢迎使用由 Dime 开发的 BedrockBoot For RMCL 插件！");
+        Console.WriteLine(@"欢迎使用由 Dime 开发的 BedrockBoot For RMCL 插件！");
 
         if (OperatingSystem.IsWindows())
         {
@@ -28,7 +28,7 @@ public class Plugin : IPluginRMCL
         }
         else
         {
-            Console.WriteLine("当前非 Windows 系统无法使用 BedrockBoot 插件！");
+            Console.WriteLine(@"当前非 Windows 系统无法使用 BedrockBoot 插件！");
         }
     }
 }
