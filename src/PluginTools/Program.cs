@@ -1,6 +1,8 @@
 ﻿using System.Diagnostics;
+using System.Net;
 using PluginTools.Entry;
 using Round.SDK.Entity;
+using Round.SDK.Helper;
 using Round.SDK.Logger;
 
 namespace PluginTools;
@@ -13,7 +15,7 @@ public class Program
         {
             Console.WriteLine("请提供参数。\n" +
                               "可通过 -h 或 -help 命令查看参数列表及用法");
-            
+
             return;
         }
 
@@ -50,7 +52,7 @@ public class Program
             if (Directory.Exists(Config.Data.BuildOutputPath)) Directory.Delete(Config.Data.BuildOutputPath, true);
 
             var buildCommand =
-                $"publish \"{Config.Data.BuildProjectFilePath}\" -c Release -o \"{Path.Combine(Config.Data.BuildOutputPath, "files")}\"";
+                $"publish \"{Config.Data.BuildProjectFilePath}\" -c Release -o \"{Path.Combine(Config.Data.BuildOutputPath, "build", "files")}\"";
 
             var process = new Process()
             {
@@ -63,8 +65,45 @@ public class Program
             process.Start();
             process.WaitForExit();
 
-            Directory.CreateDirectory(Path.Combine(Config.Data.BuildOutputPath, "assets"));
-            Directory.CreateDirectory(Path.Combine(Config.Data.BuildOutputPath, "assets", "screenshots"));
+            Directory.CreateDirectory(Path.Combine(Config.Data.BuildOutputPath, "build", "assets"));
+            Directory.CreateDirectory(Path.Combine(Config.Data.BuildOutputPath, "build", "assets", "screenshots"));
+            Directory.CreateDirectory(Path.Combine(Config.Data.BuildOutputPath, "build", "assets", "icon"));
+
+            Config.Data.PackScreenshots.ForEach(x =>
+            {
+                var fileName = Path.GetFileName(x);
+                var filePath = Path.Combine(Config.Data.BuildOutputPath, "build", "assets", "screenshots", fileName);
+                File.Copy(x, filePath);
+            });
+
+            if (!string.IsNullOrEmpty(Config.Data.PackIconPath))
+                File.Copy(Config.Data.PackIconPath,
+                    Path.Combine(Config.Data.BuildOutputPath, "build", "assets", "icon",
+                        Path.GetFileName(Config.Data.PackIconPath)));
+
+            var packConfig = new PackConfig()
+            {
+                PackName = Config.Data.PackName,
+                PackDescription = Config.Data.PackDescription,
+                PackIconPath = Path.GetFileName(Config.Data.PackIconPath),
+                PackAuthor = Config.Data.PackAuthor,
+                PackLicense = Config.Data.PackLicense,
+                PackLicenseUrl = Config.Data.PackLicenseUrl,
+                PackVersion = Config.Data.PackVersion,
+                BodyFile = Config.Data.BodyFile
+            };
+
+            var packConfigBody =
+                new ConfigEntity<PackConfig>(Path.Combine(Config.Data.BuildOutputPath, "build", "pack.json"));
+            packConfigBody.Data = packConfig;
+            packConfigBody.Save();
+
+            ZipHelper.CreateZipFile(Path.Combine(Config.Data.BuildOutputPath, "build"),
+                Path.Combine(Config.Data.BuildOutputPath, "pack.rplck"));
+            
+            Directory.Delete(Path.Combine(Config.Data.BuildOutputPath, "build"), true);
+            
+            Console.WriteLine($"包已生成至：{Path.Combine(Config.Data.BuildOutputPath, "pack.rplck")}");
         }
     }
 }

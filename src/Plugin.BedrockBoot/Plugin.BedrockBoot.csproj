@@ -1,9 +1,10 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>net9.0</TargetFramework>
+        <TargetFramework>net9.0-windows10.0.19041.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+        <SupportedOSPlatformVersion>10.0.18362.0</SupportedOSPlatformVersion>
     </PropertyGroup>
 
     <ItemGroup>
@@ -12,6 +13,7 @@
 
     <ItemGroup>
       <PackageReference Include="Avalonia" Version="11.3.7" />
+      <PackageReference Include="BedrockLauncher.Core" Version="25.8.31.956" />
     </ItemGroup>
 
 </Project>

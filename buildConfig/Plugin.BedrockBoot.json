@@ -1,0 +1,13 @@
+{
+  "packName": "BedrockBoot",
+  "packIconPath": "G:\\Silk.NET.OpenGL.png",
+  "packVersion": "1.0.0",
+  "packAuthor": "Dime",
+  "packDescription": "在 RMCL 中使用 BedrockBoot 的功能",
+  "packLicense": "",
+  "packLicenseUrl": "",
+  "packScreenshots": [],
+  "buildProjectFilePath": "./src/Plugin.BedrockBoot/Plugin.BedrockBoot.csproj",
+  "buildOutputPath": "./build/Plugin.BedrockBoot/publish",
+  "bodyFile": "Plugin.BedrockBoot.dll"
+}

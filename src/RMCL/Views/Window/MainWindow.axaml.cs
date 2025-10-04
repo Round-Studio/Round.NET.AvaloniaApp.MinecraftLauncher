@@ -65,7 +65,7 @@ public partial class MainWindow : Window
         }
         Console.WriteLine("窗体位置信息初始完毕");
         
-        var pluginLoader = new PlugLoader(typeof(IPluginRMCL));
+        // var pluginLoader = new PlugLoader(typeof(IPluginRMCL));
 
         /*var file = @"***\RMCL\src\Plugin.BedrockBoot\bin\Debug\net9.0-windows10.0.19041.0\Plugin.BedrockBoot.dll";
         // 从DLL文件加载并初始化
@@ -79,6 +79,22 @@ public partial class MainWindow : Window
             Console.WriteLine($"作者: {pluginInfo.Author}");
             Console.WriteLine($"描述: {pluginInfo.Description}");
         }*/
+        
+        // 创建插件加载器
+        var pluginLoader = new PlugLoader(typeof(IPluginRMCL))
+        {
+            ExtractPath = @"G:/Plugin/temp" // 可选：设置自定义解压路径
+        };
+
+        // 加载插件包
+        var plugin = pluginLoader.Load(@"G:\RMCL4\build\Plugin.BedrockBoot\publish\pack.rplck");
+    
+        // 获取插件信息
+        // var info = pluginLoader.GetPluginInfo(@"G:\RMCL4\build\Plugin.BedrockBoot\publish\pack.rplck");
+        // Console.WriteLine($"插件名称: {info.Name}, 版本: {info.Version}");
+    
+        // 初始化插件
+        pluginLoader.InitializePlugin(plugin);
     }
 
     public async Task UpdateBack()
