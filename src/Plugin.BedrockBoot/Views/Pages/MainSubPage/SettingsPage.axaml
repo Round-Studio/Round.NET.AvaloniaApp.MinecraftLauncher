@@ -11,19 +11,7 @@
                                           Header="下载"
                                           Description="BedrockBoot 下载时的行为"
                                           Glyph="&#xE896;"
-                                          IsClickable="True">
-                <ComboBox Margin="5,0"
-                          VerticalAlignment="Center"
-                          Height="32"
-                          Name="ComboBox"
-                          HorizontalAlignment="Stretch">
-                    <ComboBox.Items>
-                        <ComboBoxItem Content="正式版"></ComboBoxItem>
-                        <ComboBoxItem Content="预览版"></ComboBoxItem>
-                        <ComboBoxItem Content="Beta 版"></ComboBoxItem>
-                    </ComboBox.Items>
-                </ComboBox>
-            </onePointControls:SettingCard>
+                                          IsClickable="True"/>
             
             <onePointControls:SettingCard Margin="5,5,5,10"
                                           Header="目录与存储"
