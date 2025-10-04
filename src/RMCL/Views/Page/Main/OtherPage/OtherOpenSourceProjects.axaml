@@ -747,6 +747,7 @@ Public License instead of this License.  But first, please read
                      FontWeight="Bold"
                      Margin="5,20,5,8">LiteSkinViewer</TextBlock>
           <TextBlock Margin="5" Text="(https://github.com/YangSpring429/LiteSkinViewer)"></TextBlock>
+          <TextBlock Margin="5" Text="(https://github.com/Round-Studio/LiteSkinViewer)"></TextBlock>
           <TextBlock Margin="5" xml:space="preserve"
                      FontSize="9">MIT License
 
