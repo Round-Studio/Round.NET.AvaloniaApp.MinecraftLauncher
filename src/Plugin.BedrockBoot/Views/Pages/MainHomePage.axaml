@@ -31,7 +31,7 @@
                         ClipToBounds="True"
                         HorizontalAlignment="Right"
                         VerticalAlignment="Center"
-                        Margin="0,0,12,0">
+                        Margin="0,0,20,0">
                     <notice:InfoBar Height="32"
                                     Title="技术警告"
                                     Message="出于技术原因，暂时不提供下载 GDK 版本的 Minecraft Bedrock"
