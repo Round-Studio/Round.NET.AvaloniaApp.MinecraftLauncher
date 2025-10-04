@@ -1,0 +1,11 @@
+{
+  "packName": "基岩版插件",
+  "packIconPath": "",
+  "packVersion": "1.0.0",
+  "packAuthor": "Dime",
+  "packDescription": "Plugin Description",
+  "packLicense": "",
+  "packLicenseUrl": "",
+  "buildProjectFilePath": "D:\\User File\\Desktop\\RMCL4\\RMCL\\src\\Plugin.BedrockBoot\\Plugin.BedrockBoot.csproj",
+  "buildOutputPath": "D:\\User File\\Desktop\\RMCL4\\RMCL\\src\\Plugin.BedrockBoot\\publish"
+}
