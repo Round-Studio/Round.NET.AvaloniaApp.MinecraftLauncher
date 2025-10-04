@@ -8,6 +8,7 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\OnePointUI.Avalonia\src\OnePointUI.Avalonia\OnePointUI.Avalonia.csproj" />
       <ProjectReference Include="..\Round.SDK\Round.SDK\Round.SDK.csproj" />
     </ItemGroup>
 

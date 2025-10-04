@@ -80,21 +80,14 @@ public partial class MainWindow : Window
             Console.WriteLine($"描述: {pluginInfo.Description}");
         }*/
         
-        // 创建插件加载器
-        var pluginLoader = new PlugLoader(typeof(IPluginRMCL))
-        {
-            ExtractPath = @"G:/Plugin/temp" // 可选：设置自定义解压路径
-        };
+        // 加载插件包1
+        var loader1 = new PlugLoader(typeof(IPluginRMCL));
+        var plugin1 = loader1.Load(@"G:\RMCL4\build\Plugin.BedrockBoot\publish\pack.rplck");
 
-        // 加载插件包
-        var plugin = pluginLoader.Load(@"G:\RMCL4\build\Plugin.BedrockBoot\publish\pack.rplck");
-    
-        // 获取插件信息
-        // var info = pluginLoader.GetPluginInfo(@"G:\RMCL4\build\Plugin.BedrockBoot\publish\pack.rplck");
-        // Console.WriteLine($"插件名称: {info.Name}, 版本: {info.Version}");
-    
-        // 初始化插件
-        pluginLoader.InitializePlugin(plugin);
+        var config1 = loader1.GetPackConfig();
+
+        // 执行方法
+        loader1.InitializePlugin();
     }
 
     public async Task UpdateBack()
