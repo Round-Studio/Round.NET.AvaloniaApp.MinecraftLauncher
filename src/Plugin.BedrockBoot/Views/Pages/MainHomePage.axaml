@@ -3,6 +3,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:onePointControls="clr-namespace:OnePointUI.Avalonia.Styling.Controls.OnePointControls;assembly=OnePointUI.Avalonia"
+             xmlns:navigation="clr-namespace:OnePointUI.Avalonia.Styling.Controls.OnePointControls.Navigation;assembly=OnePointUI.Avalonia"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="Plugin.BedrockBoot.Views.Pages.MainHomePage"
              Background="{DynamicResource BackgroundBrush}">
@@ -12,10 +13,12 @@
                 Height="48">
             <Grid>
                 <TabControl Margin="8,0,0,0"
-                            VerticalAlignment="Center">
-                    <TabItem Header="管理实例"></TabItem>
-                    <TabItem Header="下载实例"></TabItem>
-                    <TabItem Header="插件设置"></TabItem>
+                            VerticalAlignment="Center"
+                            Name="Naviga"
+                            SelectionChanged="SelectingItemsControl_OnSelectionChanged">
+                    <TabItem Header="管理实例" Tag="Manager"></TabItem>
+                    <TabItem Header="下载实例" Tag="Download"></TabItem>
+                    <TabItem Header="插件设置" Tag="Settings"></TabItem>
                 </TabControl>
                 
                 <onePointControls:LabelBox Text="BedrockBoot"
@@ -24,5 +27,8 @@
                                            Margin="0,0,12,0"/>
             </Grid>
         </Border>
+        
+        <navigation:NavigationFrame Name="Frame"
+                                    Margin="0,48,0,0"/>  
     </Grid>
 </UserControl>
