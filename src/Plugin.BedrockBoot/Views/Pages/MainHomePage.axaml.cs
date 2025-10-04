@@ -12,6 +12,7 @@ public partial class MainHomePage : UserControl
     public MainHomePage()
     {
         InitializeComponent();
+        this.Frame.NavigateTo(new ManagerPage());
 
         IsEdit = true;
     }
@@ -24,6 +25,12 @@ public partial class MainHomePage : UserControl
 
             switch (tag)
             {
+                case 0:
+                    this.Frame.NavigateTo(new ManagerPage());
+                    break;
+                case 1:
+                    this.Frame.NavigateTo(new DownloadPage());
+                    break;
                 case 2:
                     this.Frame.NavigateTo(new SettingsPage());
                     break;

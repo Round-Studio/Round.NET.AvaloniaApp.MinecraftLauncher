@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:onePointControls="clr-namespace:OnePointUI.Avalonia.Styling.Controls.OnePointControls;assembly=OnePointUI.Avalonia"
              xmlns:navigation="clr-namespace:OnePointUI.Avalonia.Styling.Controls.OnePointControls.Navigation;assembly=OnePointUI.Avalonia"
+             xmlns:notice="clr-namespace:OnePointUI.Avalonia.Styling.Controls.OnePointControls.Notice;assembly=OnePointUI.Avalonia"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="Plugin.BedrockBoot.Views.Pages.MainHomePage"
              Background="{DynamicResource BackgroundBrush}">
@@ -21,10 +22,21 @@
                     <TabItem Header="插件设置" Tag="Settings"></TabItem>
                 </TabControl>
                 
-                <onePointControls:LabelBox Text="BedrockBoot"
+                <!--<onePointControls:LabelBox Text="BedrockBoot"
                                            HorizontalAlignment="Right"
                                            VerticalAlignment="Center"
-                                           Margin="0,0,12,0"/>
+                                           Margin="0,0,12,0"/>-->
+                
+                <Border CornerRadius="6"
+                        ClipToBounds="True"
+                        HorizontalAlignment="Right"
+                        VerticalAlignment="Center"
+                        Margin="0,0,12,0">
+                    <notice:InfoBar Height="32"
+                                    Title="技术警告"
+                                    Message="出于技术原因，暂时不提供下载 GDK 版本的 Minecraft Bedrock"
+                                    State="Warning"/>
+                </Border>
             </Grid>
         </Border>
         

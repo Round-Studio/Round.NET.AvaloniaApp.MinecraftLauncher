@@ -6,8 +6,12 @@
              xmlns:res="clr-namespace:RMCL.Properties"
              xmlns:notice="clr-namespace:OnePointUI.Avalonia.Styling.Controls.OnePointControls.Notice;assembly=OnePointUI.Avalonia"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             PointerPressed="InputElement_OnPointerPressed"
              x:Class="RMCL.Views.Page.Main.MainSubPage.MainHomePage">
     <Grid>
+        <Grid Background="#01000000"
+              Opacity="0.0000001"></Grid>
+        
         <!-- 固定按钮 -->
         <Button Classes="NoBorder"
                 HorizontalAlignment="Right"

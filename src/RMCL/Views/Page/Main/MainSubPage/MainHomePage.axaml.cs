@@ -1,5 +1,6 @@
 ﻿using Avalonia;
 using Avalonia.Controls;
+using Avalonia.Input;
 using Avalonia.Interactivity;
 using Avalonia.Markup.Xaml;
 using OnePointUI.Avalonia.Base.Entry;
@@ -36,5 +37,10 @@ public partial class MainHomePage : UserControl
             AccountButton = DialogButtons.CloseButton,
             IsWindow = true
         });
+    }
+
+    private void InputElement_OnPointerPressed(object? sender, PointerPressedEventArgs e)
+    {
+        GlobalModels.MainWindow?.BeginMoveDrag(e);
     }
 }
