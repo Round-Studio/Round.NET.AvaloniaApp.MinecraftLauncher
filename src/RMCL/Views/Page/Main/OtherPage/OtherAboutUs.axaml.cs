@@ -4,6 +4,8 @@ using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Interactivity;
 using Avalonia.Markup.Xaml;
+using Avalonia.Media;
+using Avalonia.Media.Imaging;
 using OnePointUI.Avalonia.Base.Entry;
 using RMCL.Properties;
 using RMCL.Views.Page.Main.MainSubPage;
