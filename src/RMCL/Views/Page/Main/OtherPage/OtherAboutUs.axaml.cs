@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Reflection;
 using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Interactivity;
@@ -27,6 +28,8 @@ public partial class OtherAboutUs : UserControl
                 }
             }
         });
+        var version = Assembly.GetEntryAssembly()?.GetName().Version;
+        VersionCard.Description = version.ToString();
     }
 
     private void OpenSourceBtn_OnClick(object? sender, RoutedEventArgs e)

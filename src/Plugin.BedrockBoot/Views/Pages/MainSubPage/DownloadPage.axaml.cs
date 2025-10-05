@@ -29,6 +29,16 @@ public partial class DownloadPage : UserControl
             foreach (var item in lst)
             {
                 if (string.IsNullOrEmpty(item.ID)) continue;
+                if (item.Variations.Count <= 0) continue;
+
+                bool isCon = false;
+
+                foreach (var v in item.Variations)
+                {
+                    if(v.UpdateIds.Count <= 0) isCon = true;
+                }
+
+                if (isCon) continue;
         
                 Version? version = null;
                 try
@@ -65,7 +75,7 @@ public partial class DownloadPage : UserControl
             Console.WriteLine("序列化完成");
             if (lst != null && lst.Count > 0)
             {
-                Dispatcher.UIThread.Invoke(() =>
+                Dispatcher.UIThread.InvokeAsync(async () =>
                 {
                     Console.WriteLine("开始动态修改 UI");
                     lst.ForEach(x =>

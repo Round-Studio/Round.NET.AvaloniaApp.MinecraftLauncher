@@ -67,6 +67,7 @@
             
             <onePointControls:SettingCard Margin="5"
                                           Glyph="&#xE7E3;"
+                                          Name="VersionCard"
                                           Header="{x:Static properties:Resource.OtherAboutUs_Version}"
                                           Description="1.0.0.0">
                 <Button Padding="8"
