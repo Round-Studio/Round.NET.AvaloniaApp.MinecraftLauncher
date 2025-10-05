@@ -1,4 +1,5 @@
 ﻿using System.Text.Json.Serialization;
+using RMCL.Base.Entry.Style;
 using RMCL.Base.Enum.Style;
 using RMCL.Models;
 
@@ -9,10 +10,7 @@ public class ConfigEntry
     [JsonPropertyName("language")]
     public LanguageHelper.LanguageType Language { get; set; } = LanguageHelper.LanguageType.Chinese;
 
-    [JsonPropertyName("backMaterialType")]
-    public BackMaterialHelper.BackMaterialType BackMaterialType { get; set; } =
-        BackMaterialHelper.BackMaterialType.CircuitBoard;
-
-    [JsonPropertyName("themeType")] public ThemeModelEnum ThemeType { get; set; } = ThemeModelEnum.Dark;
     [JsonPropertyName("windowInfo")] public WindowPoint WindowInfo { get; set; } = new WindowPoint();
+    
+    [JsonPropertyName("styleConfig")] public StyleConfig StyleConfig { get; set; } = new StyleConfig();
 }

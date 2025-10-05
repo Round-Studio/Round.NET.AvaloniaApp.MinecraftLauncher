@@ -26,10 +26,10 @@
                                           Description="{x:Static properties:Resource.Settings_Style_Background_BackgroundModel_Description}"
                                           Glyph="&#xEC26;">
                 <ComboBox Width="200">
-                    <ComboBoxItem>None</ComboBoxItem>
                     <ComboBoxItem>Mica (Win11+)</ComboBoxItem>
-                    <ComboBoxItem>Blur</ComboBoxItem>
+                    <ComboBoxItem>Blur (Win10+)</ComboBoxItem>
                     <ComboBoxItem>Image</ComboBoxItem>
+                    <ComboBoxItem>Accent Color</ComboBoxItem>
                 </ComboBox>
             </onePointControls:SettingCard>
         </StackPanel>

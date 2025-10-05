@@ -16,7 +16,7 @@ public partial class StyleBackground : UserControl
     public StyleBackground()
     {
         InitializeComponent();
-        ChooseBackMaterial.SelectedIndex = (int)GlobalModels.Config.Data.BackMaterialType;
+        ChooseBackMaterial.SelectedIndex = (int)GlobalModels.Config.Data.StyleConfig.BackMaterialType;
         MainSettingPage.Page.BreadcrumbBar.SetItems(new List<BreadcrumbItemInfo>()
         {
             new BreadcrumbItemInfo()
@@ -44,7 +44,7 @@ public partial class StyleBackground : UserControl
     {
         if (IsEditMode)
         {
-            GlobalModels.Config.Data.BackMaterialType = (BackMaterialHelper.BackMaterialType)ChooseBackMaterial.SelectedIndex;
+            GlobalModels.Config.Data.StyleConfig.BackMaterialType = (BackMaterialHelper.BackMaterialType)ChooseBackMaterial.SelectedIndex;
             GlobalModels.Config.Save();
             
             GlobalModels.MainWindow.UpdateBack();

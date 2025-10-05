@@ -19,8 +19,7 @@
         WindowStartupLocation="CenterScreen"
         Width="1000" MinWidth="1000"
         Height="560" MinHeight="560"
-        TransparencyLevelHint="Mica"
-        Background="Transparent"
+        Background="{DynamicResource AccentBackgroundBrush}"
         Closing="TopLevel_OnClosing"
         Loaded="Control_OnLoaded"
         Title="{Binding WindowTitle}">

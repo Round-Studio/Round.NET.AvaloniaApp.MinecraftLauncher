@@ -14,16 +14,7 @@ public partial class StyleBox : UserControl
     public StyleBox()
     {
         InitializeComponent();
-        UpdateBack();
-    }
-
-    public void UpdateBack()
-    {
-        if (GlobalModels.Config != null)
-        {
-            var uri = new Uri($"avares://RMCL/Assets/Image/{BackMaterialHelper.GetStringName(GlobalModels.Config.Data.BackMaterialType)}");
-
-            // 2. 使用 AssetLoader.Open 获取流
+        UpdatD
             using (var stream = AssetLoader.Open(uri))
             {
                 // 3. 将流解码为 Bitmap

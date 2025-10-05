@@ -51,7 +51,7 @@ public partial class MainWindow : Window
 
         if (TaskPanel.GetOpenState()) TaskPanel.ToggleOpen();
 
-        ThemeManager.Instance.SetThemeModel(GlobalModels.Config.Data.ThemeType == ThemeModelEnum.Light ? ThemeVariant.Light : ThemeVariant.Dark);
+        ThemeManager.Instance.SetThemeModel(GlobalModels.Config.Data.StyleConfig.ThemeType == ThemeModelEnum.Light ? ThemeVariant.Light : ThemeVariant.Dark);
         UpdateBack();
         Console.WriteLine("主题设置完毕");
 
@@ -72,7 +72,7 @@ public partial class MainWindow : Window
 
     public async Task UpdateBack()
     {
-        var uri = new Uri($"avares://RMCL/Assets/Image/{BackMaterialHelper.GetStringName(GlobalModels.Config.Data.BackMaterialType)}");
+        var uri = new Uri($"avares://RMCL/Assets/Image/{BackMaterialHelper.GetStringName(GlobalModels.Config.Data.StyleConfig.BackMaterialType)}");
 
         // 2. 使用 AssetLoader.Open 获取流
         using (var stream = AssetLoader.Open(uri))
