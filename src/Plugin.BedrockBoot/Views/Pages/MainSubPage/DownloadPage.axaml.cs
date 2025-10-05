@@ -1,6 +1,9 @@
 using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
+using Avalonia.Media;
+using Avalonia.Media.Imaging;
+using Avalonia.Platform;
 using Avalonia.Threading;
 using BedrockLauncher.Core.JsonHandle;
 using BedrockLauncher.Core.Network;
@@ -14,6 +17,23 @@ public partial class DownloadPage : UserControl
     {
         InitializeComponent();
 
+        UpdateUI();
+
+        IsEdit = true;
+    }
+
+    private string _type = "Release";
+    private string _key = "*";
+    public bool IsEdit { get; set; } = false;
+
+    public void UpdateUI(string type = "Release",string key = "*")
+    {
+        LoadingRing.IsVisible = true;
+        ScrollViewer.IsVisible = false;
+        NoneBox.IsVisible = false;
+        ItemsPanel.Children.Clear();
+        
+        Console.WriteLine($"Version Type: {type} | Key World: {key}");
         Task.Run(() =>
         {
             Console.WriteLine("正在加载基岩版版本列表...");
@@ -45,11 +65,20 @@ public partial class DownloadPage : UserControl
                 {
                     version = new Version(item.ID);
                 }
-                catch
+                catch { }
+
+                if (item.Type == type)
                 {
-                    // 忽略无效的版本号
+                    if (key != "*")
+                    {
+                        if(item.ID.Contains(key))
+                            versionCache.Add((item, version));
+                    }
+                    else
+                    {
+                        versionCache.Add((item, version));
+                    }
                 }
-                versionCache.Add((item, version));
             }
 
             // 使用缓存的 Version 对象进行排序
@@ -73,36 +102,71 @@ public partial class DownloadPage : UserControl
             lst = versionCache.Select(x => x.item).ToList();
             
             Console.WriteLine("序列化完成");
-            if (lst != null && lst.Count > 0)
+            Dispatcher.UIThread.InvokeAsync(async () =>
             {
-                Dispatcher.UIThread.InvokeAsync(async () =>
+                Console.WriteLine("开始动态修改 UI");
+                lst.ForEach(x =>
                 {
-                    Console.WriteLine("开始动态修改 UI");
-                    lst.ForEach(x =>
+                    var item = new SettingCard()
                     {
-                        if (!string.IsNullOrEmpty(x.ID) && x.Type == "Release")
+                        Header = x.ID,
+                        Description = string.Join(", ",new string?[]
                         {
-                            var item = new SettingCard()
-                            {
-                                Header = x.ID,
-                                Description = string.Join(", ",new string?[]
-                                {
-                                    x.Type,
-                                    x.Date
-                                }),
-                                IsClickable = true,
-                                Margin = new Thickness(5,0,5,15),
-                            };
+                            x.Type,
+                            x.Date
+                        }),
+                        IsClickable = true,
+                        Margin = new Thickness(5,0,5,15),
+                        IsFontIcon = false,
+                        ImageIcon = GetImage("avares://RMCL/Assets/Icon/Minecraft/草方块.png")
+                    };
                             
-                            ItemsPanel.Children.Add(item);
-                        }
-                    });
-
-                    LoadingRing.IsVisible = false;
-                    ItemsPanel.IsVisible = true;
-                    Console.WriteLine("UI 修改完毕");
+                    ItemsPanel.Children.Add(item);
                 });
-            }
+
+                LoadingRing.IsVisible = false;
+                ScrollViewer.IsVisible = true;
+            
+                if (lst.Count <= 0)
+                {
+                    LoadingRing.IsVisible = false;
+                    ScrollViewer.IsVisible = false;
+                    NoneBox.IsVisible = true;
+                }
+                    
+                Console.WriteLine("UI 修改完毕");
+            });
         });
+    }
+    public Bitmap GetImage(string url)
+    {
+        var uri = new Uri(url);
+
+        // 2. 使用 AssetLoader.Open 获取流
+        using (var stream = AssetLoader.Open(uri))
+        {
+            // 3. 将流解码为 Bitmap
+            return new Bitmap(stream);
+        }
+    }
+
+    private void ComboBox_OnSelectionChanged(object? sender, SelectionChangedEventArgs e)
+    {
+        if (IsEdit)
+        {
+            _type = new string[] { "Release", "Preview", "Beta" }[ComboBox.SelectedIndex];
+
+            UpdateUI(_type, _key);
+        }
+    }
+
+    private void TextBox_OnTextChanged(object? sender, TextChangedEventArgs e)
+    {
+        if (IsEdit)
+        {
+            _key = TextBox.Text;
+        
+            UpdateUI(_type, _key);
+        }
     }
 }

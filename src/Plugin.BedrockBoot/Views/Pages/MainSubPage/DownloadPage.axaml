@@ -30,6 +30,8 @@
                 <TextBox Margin="5,0"
                          VerticalAlignment="Center"
                          Height="32"
+                         Name="TextBox"
+                         TextChanged="TextBox_OnTextChanged"
                          HorizontalAlignment="Stretch"></TextBox>
             </DockPanel>
             
@@ -40,6 +42,7 @@
                       Height="32"
                       SelectedIndex="0"
                       Name="ComboBox"
+                      SelectionChanged="ComboBox_OnSelectionChanged"
                       VerticalContentAlignment="Center"
                       HorizontalAlignment="Stretch">
                 <ComboBox.Items>
@@ -57,9 +60,21 @@
                                            Name="LoadingRing"
                                            Width="48" Height="48"></onePointControls:ProgressRing>
             
-            <ScrollViewer>
+            <StackPanel VerticalAlignment="Center"
+                        HorizontalAlignment="Center"
+                        Name="NoneBox">
+                <onePointControls:FontIcon Glyph="&#xF133;"
+                                           HorizontalAlignment="Center"
+                                           Foreground="{DynamicResource PrimaryForegroundBrush}"
+                                           FontSize="28"></onePointControls:FontIcon>
+                
+                <onePointControls:LineTextBlock FontSize="22"
+                                                Text="没有这个选项哦"
+                                                Margin="15"></onePointControls:LineTextBlock>
+            </StackPanel>
+            
+            <ScrollViewer Name="ScrollViewer">
                 <StackPanel Name="ItemsPanel"
-                            IsVisible="False"
                             Margin="15,0,15,15"></StackPanel>
             </ScrollViewer>
         </Grid>
