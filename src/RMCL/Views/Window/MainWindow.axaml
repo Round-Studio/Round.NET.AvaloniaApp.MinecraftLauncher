@@ -64,6 +64,15 @@
             </Image.Transitions>
         </Image>
         
+        
+        <Grid Background="#01000000"
+              PointerPressed="InputElement_OnPointerPressed"
+              Opacity="0.0000001"
+              Height="64"
+              HorizontalAlignment="Stretch"
+              VerticalAlignment="Top"
+              Margin="0,10"></Grid>
+        
         <Grid Margin="0,64,0,0">
             <page:MainView/>
         </Grid>
@@ -94,10 +103,7 @@
         
         <Grid HorizontalAlignment="Stretch"
               VerticalAlignment="Top"
-              PointerPressed="InputElement_OnPointerPressed"
               Margin="0,10">
-            <Grid Background="#01000000"
-                  Opacity="0.0000001"></Grid>
             <StackPanel Orientation="Horizontal"
                         HorizontalAlignment="Right"
                         Margin="0,0,15,0">

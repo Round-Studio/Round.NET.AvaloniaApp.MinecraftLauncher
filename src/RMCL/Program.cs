@@ -2,6 +2,7 @@
 using System;
 using System.Diagnostics;
 using System.IO;
+using System.Reflection;
 using System.Threading;
 using System.Threading.Tasks;
 using HarfBuzzSharp;
@@ -22,12 +23,15 @@ sealed class Program
     public static void Main(string[] args)
     {
         GlobalModels.Config = new ConfigEntity<ConfigEntry>(PathsList.ConfigPath);
+        
+        var version = Assembly.GetEntryAssembly().GetName().Version;
 
         if (args.Length <= 0)
         {
             ConsoleRedirector consoleRedirector = new ConsoleRedirector(Path.Combine(PathsList.LogPath, "Client",
                 $"[RMCL.Logger] {DateTime.Now.ToString("yyyy.MM.dd HHmmss.fff")}.log"));
             Console.WriteLine(@"RMCL 客户端启动");
+            Console.WriteLine($"当前程序版本：{version}");
             ConsoleRedirector.RegisterThread(Thread.CurrentThread,"Program");
             
             Console.WriteLine(@"Main 入口启动");
@@ -68,6 +72,7 @@ sealed class Program
             ConsoleRedirector consoleRedirector = new ConsoleRedirector(Path.Combine(PathsList.LogPath, "Server",
                 $"[RMCL.Logger] {DateTime.Now.ToString("yyyy.MM.dd HHmmss.fff")}.log"));
             Console.WriteLine(@"RMCL 服务端启动");
+            Console.WriteLine($"当前程序版本：{version}");
             
             while(true) { }
         }
