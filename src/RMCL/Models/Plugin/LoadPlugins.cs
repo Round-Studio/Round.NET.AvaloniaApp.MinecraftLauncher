@@ -21,17 +21,20 @@ public class LoadPlugins
         var files = Directory.GetFiles(PathsList.PluginPath);
         foreach (var file in files)
         {
-            var loader = new PlugLoader(typeof(IPluginRMCL))
+            try
             {
-                ExtractPath = PathsList.PluginTempPath
-            };
-            var plugin = loader.Load(file);
+                var loader = new PlugLoader(typeof(IPluginRMCL))
+                {
+                    ExtractPath = PathsList.PluginTempPath
+                };
+                var plugin = loader.Load(file);
 
-            var config = loader.GetPackConfig();
-            Plugins.Add(config);
+                var config = loader.GetPackConfig();
+                Plugins.Add(config);
 
-            // 执行方法
-            loader.InitializePlugin();
+                // 执行方法
+                loader.InitializePlugin();
+            }catch{ }
         }
     }
 }

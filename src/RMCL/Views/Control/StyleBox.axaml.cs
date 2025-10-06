@@ -24,6 +24,7 @@ public partial class StyleBox : UserControl
         RightImage.IsVisible = false;
         LeftImage.IsVisible = false;
         BackgroundBox.IsVisible = false;
+        AccentBackgroundBox.IsVisible = false;
         
         var name = BackMaterialHelper.GetStringName(GlobalModels.Config.Data.StyleConfig.BackMaterialType);
 
@@ -67,6 +68,11 @@ public partial class StyleBox : UserControl
                     Source = resizedBitmap
                 };
             }
+        }
+
+        if (GlobalModels.Config.Data.StyleConfig.StyleType == StyleType.AccentColor)
+        {
+            AccentBackgroundBox.IsVisible = true;
         }
     }
 }

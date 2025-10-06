@@ -13,6 +13,11 @@
                 <Border Name="BackgroundBox"
                         CornerRadius="6,6,6,6"></Border>
                 
+                <Border Name="AccentBackgroundBox"
+                        CornerRadius="6,6,6,6"
+                        Background="{DynamicResource AccentBackgroundBrush}"
+                        IsVisible="False"></Border>
+                
                 <Image Source="../../Assets/Image/电路板.Background.png"
                        Width="86.8" Height="32"
                        HorizontalAlignment="Right"

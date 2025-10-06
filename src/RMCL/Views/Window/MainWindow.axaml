@@ -31,6 +31,10 @@
     </Design.DataContext>
 
     <Grid>
+        <Grid Name="AccentBackgroundBox"
+              Background="{DynamicResource AccentBackgroundBrush}"
+              IsVisible="False"></Grid>
+        
         <Grid Name="BackgroundBox"
               IsVisible="False">
             <Grid Name="BackgroundImage"></Grid>

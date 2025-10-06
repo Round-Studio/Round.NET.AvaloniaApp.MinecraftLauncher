@@ -12,20 +12,30 @@
                                           Margin="5,5,5,10"
                                           Description="浅色 or 深色"
                                           Glyph="&#xE793;">
-                <ComboBox Width="200"
-                          Name="ChooseTheme"
-                          SelectedIndex="0"
-                          SelectionChanged="ChooseTheme_OnSelectionChanged">
-                    <ComboBoxItem Content="深色"></ComboBoxItem>
-                    <ComboBoxItem Content="浅色"></ComboBoxItem>
-                </ComboBox>
+                <ListBox Name="ChooseTheme"
+                         Classes="Segmented"
+                         SelectedIndex="0"
+                         SelectionChanged="ChooseTheme_OnSelectionChanged">
+                    <ListBoxItem Content="深色"
+                                 Classes="Segmented"></ListBoxItem>
+                    
+                    <ListBoxItem Content="浅色"
+                                 Classes="Segmented"></ListBoxItem>
+                </ListBox>
             </onePointControls:SettingCard>
             
             <onePointControls:SettingCard Header="主色调"
                                           Margin="5,5,5,10"
                                           Description="启动器强调色"
                                           Glyph="&#xE790;">
-                
+                <ListBox Classes="Segmented"
+                         SelectedIndex="0">
+                    <ListBoxItem Content="选择颜色"
+                                 Classes="Segmented"></ListBoxItem>
+                    
+                    <ListBoxItem Content="背景图片主题"
+                                 Classes="Segmented"></ListBoxItem>
+                </ListBox>
             </onePointControls:SettingCard>
         </StackPanel>
     </ScrollViewer>

@@ -4,6 +4,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Avalonia;
 using Avalonia.Controls;
+using Avalonia.Controls.Primitives.Converters;
 using Avalonia.Input;
 using Avalonia.Interactivity;
 using Avalonia.Media;
@@ -106,6 +107,7 @@ public partial class MainWindow : Window
 
         this.TransparencyLevelHint = new List<WindowTransparencyLevel>() { WindowTransparencyLevel.Transparent };
         BackgroundBox.IsVisible = false;
+        AccentBackgroundBox.IsVisible = false;
         if (GlobalModels.Config.Data.StyleConfig.StyleType == StyleType.Mica)
         {
             this.TransparencyLevelHint = new List<WindowTransparencyLevel>() { WindowTransparencyLevel.Mica };
@@ -130,6 +132,9 @@ public partial class MainWindow : Window
                 }
             }
 
+        }else if (GlobalModels.Config.Data.StyleConfig.StyleType == StyleType.AccentColor)
+        {
+            AccentBackgroundBox.IsVisible = true;
         }
 
         #endregion
