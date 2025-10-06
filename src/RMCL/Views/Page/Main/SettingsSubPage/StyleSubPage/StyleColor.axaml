@@ -21,12 +21,12 @@
                 </ComboBox>
             </onePointControls:SettingCard>
             
-            <!--<onePointControls:SettingCard Header="主色调"
+            <onePointControls:SettingCard Header="主色调"
                                           Margin="5,5,5,10"
                                           Description="启动器强调色"
                                           Glyph="&#xE790;">
                 
-            </onePointControls:SettingCard>-->
+            </onePointControls:SettingCard>
         </StackPanel>
     </ScrollViewer>
 </UserControl>
