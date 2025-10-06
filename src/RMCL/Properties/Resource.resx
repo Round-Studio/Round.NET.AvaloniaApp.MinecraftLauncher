@@ -277,4 +277,7 @@
   <data name="Settings.Language.ShowLanguage.Description" xml:space="preserve">
     <value>启动器窗口显示的语言</value>
   </data>
+  <data name="Settings.Style.Background.Material.None" xml:space="preserve">
+    <value>无</value>
+  </data>
 </root>

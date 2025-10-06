@@ -19,19 +19,24 @@ public partial class StyleBox : UserControl
 
     public void UpdateBack()
     {
-        if (GlobalModels.Config != null)
-        {
-            var uri = new Uri($"avares://RMCL/Assets/Image/{BackMaterialHelper.GetStringName(GlobalModels.Config.Data.StyleConfig.BackMaterialType)}");
+        var name = BackMaterialHelper.GetStringName(GlobalModels.Config.Data.StyleConfig.BackMaterialType);
 
-            // 2. 使用 AssetLoader.Open 获取流
-            using (var stream = AssetLoader.Open(uri))
+        if (!string.IsNullOrEmpty(name))
+        {
+            if (GlobalModels.Config != null)
             {
-                // 3. 将流解码为 Bitmap
-                var bitmap = new Bitmap(stream);
+                var uri = new Uri($"avares://RMCL/Assets/Image/{name}");
+
+                // 2. 使用 AssetLoader.Open 获取流
+                using (var stream = AssetLoader.Open(uri))
+                {
+                    // 3. 将流解码为 Bitmap
+                    var bitmap = new Bitmap(stream);
     
-                // 4. 现在你可以将 bitmap 赋值给 Image 控件的 Source 属性
-                RightImage.Source = bitmap;
-                LeftImage.Source = bitmap;
+                    // 4. 现在你可以将 bitmap 赋值给 Image 控件的 Source 属性
+                    RightImage.Source = bitmap;
+                    LeftImage.Source = bitmap;
+                }
             }
         }
     }

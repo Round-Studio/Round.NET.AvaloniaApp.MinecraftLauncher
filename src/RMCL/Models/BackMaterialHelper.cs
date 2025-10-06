@@ -6,6 +6,7 @@ public class BackMaterialHelper
 {
     public enum BackMaterialType
     {
+        None,
         CircuitBoard,
         Cellular,
         Skull

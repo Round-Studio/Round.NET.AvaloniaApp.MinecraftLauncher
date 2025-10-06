@@ -167,4 +167,7 @@
     <data name="Settings.Language.ShowLanguage.Description" xml:space="preserve">
         <value>The launcher showed language.</value>
     </data>
+    <data name="Settings.Style.Background.Material.None" xml:space="preserve">
+        <value>None</value>
+    </data>
 </root>

@@ -71,37 +71,65 @@ public partial class MainWindow : Window
     public async Task UpdateBack()
     {
         # region 更新材质
-        var uri = new Uri($"avares://RMCL/Assets/Image/{BackMaterialHelper.GetStringName(GlobalModels.Config.Data.StyleConfig.BackMaterialType)}");
-
-        // 2. 使用 AssetLoader.Open 获取流
-        using (var stream = AssetLoader.Open(uri))
+        var name = BackMaterialHelper.GetStringName(GlobalModels.Config.Data.StyleConfig.BackMaterialType);
+        if (!string.IsNullOrEmpty(name))
         {
-            // 3. 将流解码为 Bitmap
-            var bitmap = new Bitmap(stream);
+            var uri = new Uri($"avares://RMCL/Assets/Image/{name}");
+
+            // 2. 使用 AssetLoader.Open 获取流
+            using (var stream = AssetLoader.Open(uri))
+            {
+                // 3. 将流解码为 Bitmap
+                var bitmap = new Bitmap(stream);
     
-            // 4. 现在你可以将 bitmap 赋值给 Image 控件的 Source 属性
+                // 4. 现在你可以将 bitmap 赋值给 Image 控件的 Source 属性
+                RightImage.Opacity = 0;
+                LeftImage.Opacity = 0;
+
+                await Task.Delay(180);
+            
+                RightImage.Source = bitmap;
+                LeftImage.Source = bitmap;
+            
+                RightImage.Opacity = 0.9;
+                LeftImage.Opacity = 0.9;
+            }
+        }
+        else
+        {
             RightImage.Opacity = 0;
             LeftImage.Opacity = 0;
-
-            await Task.Delay(180);
-            
-            RightImage.Source = bitmap;
-            LeftImage.Source = bitmap;
-            
-            RightImage.Opacity = 0.5;
-            LeftImage.Opacity = 0.5;
         }
         # endregion
 
         #region 更新背景
 
         this.TransparencyLevelHint = new List<WindowTransparencyLevel>() { WindowTransparencyLevel.Transparent };
+        BackgroundBox.IsVisible = false;
         if (GlobalModels.Config.Data.StyleConfig.StyleType == StyleType.Mica)
         {
             this.TransparencyLevelHint = new List<WindowTransparencyLevel>() { WindowTransparencyLevel.Mica };
         }else if (GlobalModels.Config.Data.StyleConfig.StyleType == StyleType.Blur)
         {
             this.TransparencyLevelHint = new List<WindowTransparencyLevel>() { WindowTransparencyLevel.AcrylicBlur };
+        }else if (GlobalModels.Config.Data.StyleConfig.StyleType == StyleType.Image)
+        {
+            var index = GlobalModels.Config.Data.StyleConfig.BackgroundImageSelectedIndex;
+            if (index != -1)
+            {
+                if (GlobalModels.Config.Data.StyleConfig.BackgroundImages.Count >= 0)
+                {
+                    BackgroundBox.IsVisible = true;
+                    BackgroundBox.Background = new ImageBrush()
+                    {
+                        Stretch = Stretch.UniformToFill,
+                        Source = new Bitmap(
+                            GlobalModels.Config.Data.StyleConfig.BackgroundImages[
+                                GlobalModels.Config.Data.StyleConfig.BackgroundImageSelectedIndex])
+                    };
+                }
+            }
+
         }
 
         #endregion

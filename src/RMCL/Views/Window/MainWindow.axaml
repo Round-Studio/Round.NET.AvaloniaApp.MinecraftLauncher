@@ -31,19 +31,25 @@
     </Design.DataContext>
 
     <Grid>
+        <Grid Name="BackgroundBox"
+              IsVisible="False">
+            <Grid Name="BackgroundImage"></Grid>
+            <Grid Name="BackgroundImageOpacity"></Grid>
+        </Grid>
+        
         <notice1:InfoBar State="Warning"
-                        Title="预览版警告"
-                        Message="当前版本为 RMCL 4 的预览版，仅作为 UI/UX 预览，并不代表最终品质。"
-                        HorizontalAlignment="Center"
-                        VerticalAlignment="Top"
-                        Margin="13"/>
+                         Title="预览版警告"
+                         Message="当前版本为 RMCL 4 的预览版，仅作为 UI/UX 预览，并不代表最终品质。"
+                         HorizontalAlignment="Center"
+                         VerticalAlignment="Top"
+                         Margin="13"/>
         
         <Image Source="../../Assets/Image/蜂窝.Background.png"
                Width="322.5" Height="165"
                HorizontalAlignment="Right"
                VerticalAlignment="Top"
                Name="RightImage"
-               Opacity="0.5">
+               Opacity="0.9">
             <Image.Transitions>
                 <Transitions>
                     <DoubleTransition Property="Opacity"
@@ -58,7 +64,7 @@
                VerticalAlignment="Bottom"
                Name="LeftImage"
                Margin="0,0,0,48"
-               Opacity="0.5">
+               Opacity="0.9">
             <Image.RenderTransform>
                 <RotateTransform Angle="180"/>
             </Image.RenderTransform>
