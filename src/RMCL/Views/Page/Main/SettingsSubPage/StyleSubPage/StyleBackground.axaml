@@ -39,12 +39,29 @@
             <StackPanel Name="BackgroundImageBox">
                 <onePointControls:SettingCard Header="选择壁纸"
                                               Description="选择你需要的壁纸"
+                                              Glyph="&#xE8B0;"
                                               Margin="5,5,5,10"
                                               IsClickable="False">
                     <Button Padding="24,0"
                             Height="32"
                             Name="ImportBackgroundBtn"
                             Click="ImportBackgroundBtn_OnClick">浏览</Button>
+                </onePointControls:SettingCard>
+                
+                <onePointControls:SettingCard Header="壁纸轮播"
+                                              Description="是否轮播壁纸"
+                                              Glyph="&#xE8EE;"
+                                              Margin="5,5,5,10"
+                                              IsClickable="False">
+                    <ToggleSwitch></ToggleSwitch>
+                </onePointControls:SettingCard>
+                
+                <onePointControls:SettingCard Header="壁纸透明度"
+                                              Description="壁纸的透明度设置"
+                                              Glyph="&#xE81E;"
+                                              Margin="5,5,5,10"
+                                              IsClickable="False">
+                    <Slider Width="200"></Slider>
                 </onePointControls:SettingCard>
                 
                 <ListBox Name="BackgroundsList"

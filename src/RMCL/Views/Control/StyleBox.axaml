@@ -10,6 +10,9 @@
             Margin="5">
         <Border ClipToBounds="True">
             <Grid>
+                <Border Name="BackgroundBox"
+                        CornerRadius="6,6,6,6"></Border>
+                
                 <Image Source="../../Assets/Image/电路板.Background.png"
                        Width="86.8" Height="32"
                        HorizontalAlignment="Right"
