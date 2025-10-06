@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 using Avalonia;
@@ -51,7 +52,7 @@ public partial class MainWindow : Window
 
         if (TaskPanel.GetOpenState()) TaskPanel.ToggleOpen();
 
-        ThemeManager.Instance.SetThemeModel(GlobalModels.Config.Data.StyleConfig.ThemeType == ThemeModelEnum.Light ? ThemeVariant.Light : ThemeVariant.Dark);
+        ThemeManager.Instance.SetThemeModel(GlobalModels.Config.Data.StyleConfig.LightThemeType == ThemeModelEnum.Light ? ThemeVariant.Light : ThemeVariant.Dark);
         UpdateBack();
         Console.WriteLine("主题设置完毕");
 
@@ -65,13 +66,11 @@ public partial class MainWindow : Window
             this.Height = GlobalModels.Config.Data.WindowInfo.Height;
         }
         Console.WriteLine("窗体位置信息初始完毕");
-        
-        
-        LoadPlugins.LoadAll();
     }
 
     public async Task UpdateBack()
     {
+        # region 更新材质
         var uri = new Uri($"avares://RMCL/Assets/Image/{BackMaterialHelper.GetStringName(GlobalModels.Config.Data.StyleConfig.BackMaterialType)}");
 
         // 2. 使用 AssetLoader.Open 获取流
@@ -89,9 +88,23 @@ public partial class MainWindow : Window
             RightImage.Source = bitmap;
             LeftImage.Source = bitmap;
             
-            RightImage.Opacity = 0.3;
-            LeftImage.Opacity = 0.3;
+            RightImage.Opacity = 0.5;
+            LeftImage.Opacity = 0.5;
         }
+        # endregion
+
+        #region 更新背景
+
+        this.TransparencyLevelHint = new List<WindowTransparencyLevel>() { WindowTransparencyLevel.Transparent };
+        if (GlobalModels.Config.Data.StyleConfig.StyleType == StyleType.Mica)
+        {
+            this.TransparencyLevelHint = new List<WindowTransparencyLevel>() { WindowTransparencyLevel.Mica };
+        }else if (GlobalModels.Config.Data.StyleConfig.StyleType == StyleType.Blur)
+        {
+            this.TransparencyLevelHint = new List<WindowTransparencyLevel>() { WindowTransparencyLevel.AcrylicBlur };
+        }
+
+        #endregion
     }
 
     private void InputElement_OnPointerPressed(object? sender, PointerPressedEventArgs e)
@@ -135,18 +148,5 @@ public partial class MainWindow : Window
         };
         
         GlobalModels.Config.Save();
-    }
-
-    private void Control_OnLoaded(object? sender, RoutedEventArgs e)
-    {
-        /*DialogHost.Show(new DialogInfo()
-        {
-            Title = "预览版警告",
-            Content = "当前版本仅为 RMCL 4 预览版，\n" +
-                      "仅作为 UI/UX 测试发布。\n" +
-                      "请勿将此版本的 RMCL 加入整合包内发布！",
-            CloseButtonText = "我知道了",
-            AccountButton = DialogButtons.CloseButton
-        });*/
     }
 }

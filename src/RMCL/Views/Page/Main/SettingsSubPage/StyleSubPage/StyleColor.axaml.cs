@@ -18,7 +18,7 @@ public partial class StyleColor : UserControl
     public StyleColor()
     {
         InitializeComponent();
-        ChooseTheme.SelectedIndex = (int)GlobalModels.Config.Data.StyleConfig.ThemeType;
+        ChooseTheme.SelectedIndex = (int)GlobalModels.Config.Data.StyleConfig.LightThemeType;
         MainSettingPage.Page.BreadcrumbBar.SetItems(new List<BreadcrumbItemInfo>()
         {
             new BreadcrumbItemInfo()
@@ -46,10 +46,10 @@ public partial class StyleColor : UserControl
     {
         if (IsEditMode)
         {
-            GlobalModels.Config.Data.StyleConfig.ThemeType = (ThemeModelEnum)ChooseTheme.SelectedIndex;
+            GlobalModels.Config.Data.StyleConfig.LightThemeType = (ThemeModelEnum)ChooseTheme.SelectedIndex;
             GlobalModels.Config.Save();
             
-            ThemeManager.Instance.SetThemeModel(GlobalModels.Config.Data.StyleConfig.ThemeType == ThemeModelEnum.Light ? ThemeVariant.Light : ThemeVariant.Dark);
+            ThemeManager.Instance.SetThemeModel(GlobalModels.Config.Data.StyleConfig.LightThemeType == ThemeModelEnum.Light ? ThemeVariant.Light : ThemeVariant.Dark);
         }
     }
 }

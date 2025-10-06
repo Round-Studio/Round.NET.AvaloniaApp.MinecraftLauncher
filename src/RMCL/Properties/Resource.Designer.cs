@@ -393,7 +393,7 @@ namespace RMCL.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 背景样式.
+        ///   Looks up a localized string similar to 背景类型.
         /// </summary>
         public static string Settings_Style_Background_BackgroundModel {
             get {
@@ -402,7 +402,7 @@ namespace RMCL.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 启动器背景样式.
+        ///   Looks up a localized string similar to 启动器背景类型.
         /// </summary>
         public static string Settings_Style_Background_BackgroundModel_Description {
             get {

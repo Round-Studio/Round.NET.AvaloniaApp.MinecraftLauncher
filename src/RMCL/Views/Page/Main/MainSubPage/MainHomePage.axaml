@@ -107,12 +107,5 @@
                            FontWeight="Bold"/>
             </StackPanel>
         </Button>
-        
-        <notice:InfoBar State="Warning"
-                        Title="预览版警告"
-                        Message="当前版本为 RMCL 4 的预览版，仅作为 UI/UX 预览，并不代表最终品质。"
-                        HorizontalAlignment="Left"
-                        VerticalAlignment="Top"
-                        Margin="20"/>
     </Grid>
 </UserControl>

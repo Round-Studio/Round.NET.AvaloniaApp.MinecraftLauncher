@@ -25,13 +25,35 @@
                                           Margin="5,5,5,10"
                                           Description="{x:Static properties:Resource.Settings_Style_Background_BackgroundModel_Description}"
                                           Glyph="&#xEC26;">
-                <ComboBox Width="200">
-                    <ComboBoxItem>Mica (Win11+)</ComboBoxItem>
-                    <ComboBoxItem>Blur (Win10+)</ComboBoxItem>
+                <ComboBox Width="200"
+                          Name="BackgroundTypeBox"
+                          SelectionChanged="BackgroundTypeBox_OnSelectionChanged">
+                    <ComboBoxItem Name="MicaModel">Mica (Win11+)</ComboBoxItem>
+                    <ComboBoxItem Name="BlurModel">Blur (Win10+)</ComboBoxItem>
                     <ComboBoxItem>Image</ComboBoxItem>
                     <ComboBoxItem>Accent Color</ComboBoxItem>
                 </ComboBox>
             </onePointControls:SettingCard>
+            
+            <StackPanel Name="BackgroundImageBox">
+                <onePointControls:SettingCard Header="选择壁纸"
+                                              Description="选择你需要的壁纸"
+                                              Margin="5,5,5,10"
+                                              IsClickable="False">
+                    <Button Padding="24,0"
+                            Height="32">浏览</Button>
+                </onePointControls:SettingCard>
+                
+                <ListBox Name="BackgroundsList"
+                         Margin="5,5,5,10">
+                    <ListBoxItem>111</ListBoxItem>
+                    <ListBoxItem>111</ListBoxItem>
+                    <ListBoxItem>111</ListBoxItem>
+                    <ListBoxItem>111</ListBoxItem>
+                    <ListBoxItem>111</ListBoxItem>
+                    <ListBoxItem>111</ListBoxItem>
+                </ListBox>
+            </StackPanel>
         </StackPanel>
     </ScrollViewer>
 </UserControl>

@@ -13,7 +13,7 @@
     <Application.Styles>
         <!--<core:OnePointTheme AccentColor="#1EA5FF" ThemeVariant="Dark"/>-->
         
-        <core:OnePointTheme AccentColor="Orange" ThemeVariant="Dark"/>
+        <core:OnePointTheme AccentColor="#1EA5FF" ThemeVariant="Dark"/>
     </Application.Styles>
              
     <Application.Resources>

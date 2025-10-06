@@ -1,8 +1,11 @@
 ﻿using System;
+using System.Threading.Tasks;
 using Avalonia.Controls;
 using Avalonia.Interactivity;
+using Avalonia.Threading;
 using Round.SDK.Entry.RMCL;
 using RMCL.Models.Global;
+using RMCL.Models.Plugin;
 using RMCL.Properties;
 using RMCL.Views.Page.Main.MainSubPage;
 using Round.SDK.Plugin.RMCL.Register;
@@ -27,7 +30,8 @@ public partial class MainPage : UserControl
             MainPageContent.NavigateTo(page);
         };
 
-        RegisterService.API.RegisterBottomBarItem = info => BottomBar.RegisterItems(info);
+        RegisterService.API.RegisterBottomBarItem =
+            info => Dispatcher.UIThread.InvokeAsync(() => BottomBar.RegisterItems(info));
         
         
         RegisterService.RegisterBottomBarItem(new BottomBarItemInfo()
@@ -57,5 +61,14 @@ public partial class MainPage : UserControl
     private void TaskBtn_OnClick(object? sender, RoutedEventArgs e)
     {
         _ = GlobalModels.TaskPanel.ToggleOpen();
+    }
+
+    private void Control_OnLoaded(object? sender, RoutedEventArgs e)
+    {
+        Task.Run(() =>
+        {
+            LoadPlugins.LoadAll();
+            Dispatcher.UIThread.InvokeAsync(() => LoadRing.IsVisible = false);
+        });
     }
 }

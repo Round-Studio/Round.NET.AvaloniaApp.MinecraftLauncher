@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Text.Json.Serialization;
 using RMCL.Base.Enum.Style;
 using RMCL.Models;
@@ -10,5 +11,9 @@ public class StyleConfig
     public BackMaterialHelper.BackMaterialType BackMaterialType { get; set; } =
         BackMaterialHelper.BackMaterialType.CircuitBoard;
 
-    [JsonPropertyName("themeType")] public ThemeModelEnum ThemeType { get; set; } = ThemeModelEnum.Dark;
+    [JsonPropertyName("lightThemeType")] public ThemeModelEnum LightThemeType { get; set; } = ThemeModelEnum.Dark;
+    
+    [JsonPropertyName("backgroundImages")] public List<string> BackgroundImages { get; set; } = new List<string>();
+    [JsonPropertyName("backgroundImageSelectedIndex")] public int BackgroundImageSelectedIndex { get; set; } = -1;
+    [JsonPropertyName("styleType")] public StyleType StyleType { get; set; } = StyleType.AccentColor;
 }

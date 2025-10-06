@@ -9,6 +9,7 @@
         xmlns:notice="clr-namespace:RMCL.Views.Control.Notice"
         xmlns:tasks="clr-namespace:RMCL.Views.Control.Tasks"
         xmlns:dialog="clr-namespace:OnePointUI.Avalonia.Styling.Controls.OnePointControls.Dialog;assembly=OnePointUI.Avalonia"
+        xmlns:notice1="clr-namespace:OnePointUI.Avalonia.Styling.Controls.OnePointControls.Notice;assembly=OnePointUI.Avalonia"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="RMCL.Views.MainWindow"
         x:DataType="vm:MainWindowViewModel"
@@ -19,9 +20,8 @@
         WindowStartupLocation="CenterScreen"
         Width="1000" MinWidth="1000"
         Height="560" MinHeight="560"
-        Background="{DynamicResource AccentBackgroundBrush}"
+        Background="Transparent"
         Closing="TopLevel_OnClosing"
-        Loaded="Control_OnLoaded"
         Title="{Binding WindowTitle}">
 
     <Design.DataContext>
@@ -31,12 +31,19 @@
     </Design.DataContext>
 
     <Grid>
+        <notice1:InfoBar State="Warning"
+                        Title="预览版警告"
+                        Message="当前版本为 RMCL 4 的预览版，仅作为 UI/UX 预览，并不代表最终品质。"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Top"
+                        Margin="13"/>
+        
         <Image Source="../../Assets/Image/蜂窝.Background.png"
                Width="322.5" Height="165"
                HorizontalAlignment="Right"
                VerticalAlignment="Top"
                Name="RightImage"
-               Opacity="0.3">
+               Opacity="0.5">
             <Image.Transitions>
                 <Transitions>
                     <DoubleTransition Property="Opacity"
@@ -51,7 +58,7 @@
                VerticalAlignment="Bottom"
                Name="LeftImage"
                Margin="0,0,0,48"
-               Opacity="0.3">
+               Opacity="0.5">
             <Image.RenderTransform>
                 <RotateTransform Angle="180"/>
             </Image.RenderTransform>
@@ -76,7 +83,7 @@
             <page:MainView/>
         </Grid>
         
-        <Button Margin="15,14,0,0"
+        <Button Margin="15,16,0,0"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Top"
                 Height="32"
@@ -102,7 +109,7 @@
         
         <Grid HorizontalAlignment="Stretch"
               VerticalAlignment="Top"
-              Margin="0,10">
+              Margin="0,11">
             <StackPanel Orientation="Horizontal"
                         HorizontalAlignment="Right"
                         Margin="0,0,15,0">

@@ -265,10 +265,10 @@
     <value>骷髅</value>
   </data>
   <data name="Settings.Style.Background.BackgroundModel" xml:space="preserve">
-    <value>背景样式</value>
+    <value>背景类型</value>
   </data>
   <data name="Settings.Style.Background.BackgroundModel.Description" xml:space="preserve">
-    <value>启动器背景样式</value>
+    <value>启动器背景类型</value>
   </data>
   
   <data name="Settings.Language.ShowLanguage" xml:space="preserve">

@@ -10,6 +10,7 @@
              mc:Ignorable="d" 
              d:DesignWidth="800" 
              d:DesignHeight="450"
+             Loaded="Control_OnLoaded"
              x:Class="RMCL.Views.Page.Main.MainPage">
     
     <Grid RowDefinitions="*,Auto">
@@ -40,10 +41,11 @@
                                                    HorizontalAlignment="Center"/>
                     </Button>
                     
-                    <!--<onePointControls:ProgressRing VerticalAlignment="Center"
+                    <onePointControls:ProgressRing VerticalAlignment="Center"
                                                    HorizontalAlignment="Left"
                                                    Margin="5,0"
-                                                   RingWidth="3"></onePointControls:ProgressRing>-->
+                                                   Name="LoadRing"
+                                                   RingWidth="3"></onePointControls:ProgressRing>
                 </StackPanel>
                 
                 <navigation:BottomBar HorizontalAlignment="Right"
