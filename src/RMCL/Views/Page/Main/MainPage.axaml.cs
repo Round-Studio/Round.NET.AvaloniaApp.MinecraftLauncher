@@ -51,6 +51,13 @@ public partial class MainPage : UserControl
         });
         RegisterService.RegisterBottomBarItem(new BottomBarItemInfo()
         {
+            ItemGlyph = "\uE716",
+            ItemText = Resource.MainPage_Account,
+            Tag = "Account",
+            PageType = typeof(MainAccountPage)
+        });
+        RegisterService.RegisterBottomBarItem(new BottomBarItemInfo()
+        {
             ItemGlyph = "\uE713",
             ItemText = Resource.MainPage_Setting,
             Tag = "Setting",

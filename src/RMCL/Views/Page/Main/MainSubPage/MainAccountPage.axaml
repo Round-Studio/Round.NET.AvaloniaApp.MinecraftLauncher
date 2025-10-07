@@ -1,0 +1,32 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:breadcrumb="clr-namespace:OnePointUI.Avalonia.Styling.Controls.OnePointControls.Navigation.Breadcrumb;assembly=OnePointUI.Avalonia"
+             xmlns:onePointControls="clr-namespace:OnePointUI.Avalonia.Styling.Controls.OnePointControls;assembly=OnePointUI.Avalonia"
+             xmlns:navigation="clr-namespace:OnePointUI.Avalonia.Styling.Controls.OnePointControls.Navigation;assembly=OnePointUI.Avalonia"
+             xmlns:properties="clr-namespace:RMCL.Properties"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="RMCL.Views.Page.Main.MainSubPage.MainAccountPage">
+    <Grid>
+        <Grid Background="{DynamicResource BackgroundBrush}"
+              Opacity="0.6"></Grid>
+        
+        <breadcrumb:BreadcrumbBar HorizontalAlignment="Left"
+                                  VerticalAlignment="Top"
+                                  RootItem="{x:Static properties:Resource.MainPage_Account}"
+                                  Name="BreadcrumbBar"
+                                  Margin="20">
+            <breadcrumb:BreadcrumbBar.Transitions>
+                <Transitions>
+                    <ThicknessTransition Property="Margin"
+                                         Duration="0:0:0.38"
+                                         Easing="QuinticEaseOut"></ThicknessTransition>
+                </Transitions>
+            </breadcrumb:BreadcrumbBar.Transitions>
+        </breadcrumb:BreadcrumbBar>
+        
+        <navigation:NavigationFrame Name="AccountNavigation"
+                                    Margin="0,64,0,0"/>
+    </Grid>
+</UserControl>

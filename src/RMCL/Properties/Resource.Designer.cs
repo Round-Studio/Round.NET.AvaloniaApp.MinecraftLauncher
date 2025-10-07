@@ -69,6 +69,15 @@ namespace RMCL.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 账户.
+        /// </summary>
+        public static string MainPage_Account {
+            get {
+                return ResourceManager.GetString("MainPage.Account", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 下载.
         /// </summary>
         public static string MainPage_Download {

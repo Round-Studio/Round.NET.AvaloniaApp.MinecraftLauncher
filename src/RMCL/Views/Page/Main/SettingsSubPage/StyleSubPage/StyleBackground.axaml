@@ -61,7 +61,23 @@
                                               Glyph="&#xE81E;"
                                               Margin="5,5,5,10"
                                               IsClickable="False">
-                    <Slider Width="200"></Slider>
+                    <Slider Width="200"
+                            Minimum="0"
+                            Maximum="100"
+                            Name="OptBar"
+                            ValueChanged="OptBar_OnValueChanged"></Slider>
+                </onePointControls:SettingCard>
+                
+                <onePointControls:SettingCard Header="壁纸模糊"
+                                              Description="壁纸的模糊效果"
+                                              Glyph="&#xF5EF;"
+                                              Margin="5,5,5,10"
+                                              IsClickable="False">
+                    <Slider Width="200"
+                            Minimum="0"
+                            Maximum="100"
+                            Name="BlurBar"
+                            ValueChanged="OptBar_OnValueChanged"></Slider>
                 </onePointControls:SettingCard>
                 
                 <ListBox Name="BackgroundsList"

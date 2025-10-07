@@ -32,13 +32,13 @@ public partial class SettingsAccount : UserControl
 
     private void AddUserBtn_OnClick(object? sender, RoutedEventArgs e)
     {
-        DialogHost.Show(new DialogInfo()
+        /*DialogHost.Show(new DialogInfo()
         {
             Title = "新增账户",
             Content = new DialogContentAccountAdd(),
             CloseButtonText = "新增",
             PrimaryButtonText = "取消",
             AccountButton = DialogButtons.CloseButton
-        });
+        });*/
     }
 }

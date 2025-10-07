@@ -6,9 +6,11 @@
              xmlns:properties="clr-namespace:RMCL.Properties"
              xmlns:onePointControls="clr-namespace:OnePointUI.Avalonia.Styling.Controls.OnePointControls;assembly=OnePointUI.Avalonia"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-             x:Class="RMCL.Views.Page.Main.MainSubPage.MainDownloadPage"
-             Background="{DynamicResource BackgroundBrush}">
+             x:Class="RMCL.Views.Page.Main.MainSubPage.MainDownloadPage">
     <Grid>
+        <Grid Background="{DynamicResource BackgroundBrush}"
+              Opacity="0.6"></Grid>
+        
         <Grid HorizontalAlignment="Stretch"
               VerticalAlignment="Top"
               RowDefinitions="82,*">

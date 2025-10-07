@@ -170,4 +170,7 @@
     <data name="Settings.Style.Background.Material.None" xml:space="preserve">
         <value>None</value>
     </data>
+    <data name="MainPage.Account" xml:space="preserve">
+        <value>Account</value>
+    </data>
 </root>

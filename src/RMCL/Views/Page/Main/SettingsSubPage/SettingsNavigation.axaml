@@ -32,13 +32,13 @@
                                               Click="BehaviorBtn_OnClick"
                                               IsClickable="True"/>
                 
-                <onePointControls:SettingCard Header="{x:Static properties:Resource.Settings_Account}"
+                <!--<onePointControls:SettingCard Header="{x:Static properties:Resource.Settings_Account}"
                                               Margin="5,5,5,10"
                                               Description="{x:Static properties:Resource.Settings_Account_Description}"
                                               Name="AccountBtn"
                                               Click="AccountBtn_OnClick"
                                               Glyph="&#xE716;"
-                                              IsClickable="True"/>
+                                              IsClickable="True"/>-->
                 
                 <onePointControls:SettingCard Header="{x:Static properties:Resource.Settings_Help}"
                                               Margin="5,5,5,10"

@@ -1,0 +1,69 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:onePointControls="clr-namespace:OnePointUI.Avalonia.Styling.Controls.OnePointControls;assembly=OnePointUI.Avalonia"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="RMCL.Views.Page.Main.AccountPage.AccountView">
+    <Grid RowDefinitions="60,*">
+        <ListBox Classes="Segmented"
+                 HorizontalAlignment="Left"
+                 VerticalAlignment="Top"
+                 SelectedIndex="0"
+                 Height="40"
+                 Margin="20,20,0,0">
+            <ListBoxItem Classes="Segmented">
+                <StackPanel Orientation="Horizontal">
+                    <onePointControls:FontIcon Glyph="&#xE71D;"
+                                               VerticalAlignment="Center"
+                                               Margin="0,0,8,0"/>
+                    <TextBlock>所有类型</TextBlock>
+                </StackPanel>
+            </ListBoxItem>
+            
+            <ListBoxItem Classes="Segmented">
+                <StackPanel Orientation="Horizontal">
+                    <onePointControls:FontIcon Glyph="&#xF0E2;"
+                                               VerticalAlignment="Center"
+                                               Margin="0,0,8,0"/>
+                    <TextBlock>正版账户</TextBlock>
+                </StackPanel>
+            </ListBoxItem>
+            
+            <ListBoxItem Classes="Segmented">
+                <StackPanel Orientation="Horizontal">
+                    <onePointControls:FontIcon Glyph="&#xECAF;"
+                                               VerticalAlignment="Center"
+                                               Margin="0,0,8,0"/>
+                    <TextBlock>离线账户</TextBlock>
+                </StackPanel>
+            </ListBoxItem>
+            
+            <ListBoxItem Classes="Segmented"
+                         IsEnabled="False">
+                <StackPanel Orientation="Horizontal">
+                    <onePointControls:FontIcon Glyph="&#xEBDA;"
+                                               VerticalAlignment="Center"
+                                               Margin="0,0,8,0"/>
+                    <TextBlock>第三方验证</TextBlock>
+                </StackPanel>
+            </ListBoxItem>
+        </ListBox>
+        
+        <Button Grid.Row="0"
+                Height="40"
+                Width="100"
+                HorizontalAlignment="Right"
+                Classes="NoBorder"
+                Name="AddAccount"
+                Click="AddAccount_OnClick"
+                Margin="0,20,20,0">
+            <StackPanel Orientation="Horizontal">
+                <onePointControls:FontIcon Glyph="&#xE710;"
+                                           Margin="0,0,8,0"
+                                           VerticalAlignment="Center"></onePointControls:FontIcon>
+                <TextBlock VerticalAlignment="Center">新增账户</TextBlock>
+            </StackPanel>
+        </Button>
+    </Grid>
+</UserControl>

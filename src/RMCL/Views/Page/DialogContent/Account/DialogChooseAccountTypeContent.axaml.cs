@@ -1,13 +1,12 @@
-﻿using Avalonia;
+using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
-using DialogHostAvalonia;
 
 namespace RMCL.Views.Page.DialogContent.Account;
 
-public partial class DialogContentAccountAdd : UserControl
+public partial class DialogChooseAccountTypeContent : UserControl
 {
-    public DialogContentAccountAdd()
+    public DialogChooseAccountTypeContent()
     {
         InitializeComponent();
     }

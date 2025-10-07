@@ -10,6 +10,7 @@
         xmlns:tasks="clr-namespace:RMCL.Views.Control.Tasks"
         xmlns:dialog="clr-namespace:OnePointUI.Avalonia.Styling.Controls.OnePointControls.Dialog;assembly=OnePointUI.Avalonia"
         xmlns:notice1="clr-namespace:OnePointUI.Avalonia.Styling.Controls.OnePointControls.Notice;assembly=OnePointUI.Avalonia"
+        xmlns:dialogHostAvalonia="clr-namespace:DialogHostAvalonia;assembly=DialogHost.Avalonia"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="RMCL.Views.MainWindow"
         x:DataType="vm:MainWindowViewModel"
@@ -37,21 +38,20 @@
         
         <Grid Name="BackgroundBox"
               IsVisible="False">
+            <Grid.Effect>
+                <BlurEffect Radius="0"></BlurEffect>
+            </Grid.Effect>
             <Grid Name="BackgroundImage"></Grid>
-            <Grid Name="BackgroundImageOpacity"></Grid>
+            <Grid Name="BackgroundImageOpacity"
+                  Opacity="0"
+                  Background="{DynamicResource BackgroundBrush}"></Grid>
         </Grid>
-        
-        <notice1:InfoBar State="Warning"
-                         Title="预览版警告"
-                         Message="当前版本为 RMCL 4 的预览版，仅作为 UI/UX 预览，并不代表最终品质。"
-                         HorizontalAlignment="Center"
-                         VerticalAlignment="Top"
-                         Margin="13"/>
         
         <Image Source="../../Assets/Image/蜂窝.Background.png"
                Width="322.5" Height="165"
                HorizontalAlignment="Right"
                VerticalAlignment="Top"
+               Margin="0,32,0,0"
                Name="RightImage"
                Opacity="0.9">
             <Image.Transitions>
@@ -80,31 +80,9 @@
             </Image.Transitions>
         </Image>
         
-        
-        <Grid Background="#01000000"
-              PointerPressed="InputElement_OnPointerPressed"
-              Opacity="0.0000001"
-              Height="64"
-              HorizontalAlignment="Stretch"
-              VerticalAlignment="Top"
-              Margin="0,10"></Grid>
-        
-        <Grid Margin="0,64,0,0">
+        <Grid Margin="0,32,0,0">
             <page:MainView/>
         </Grid>
-        
-        <Button Margin="15,16,0,0"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Top"
-                Height="32"
-                Name="TitleBtn"
-                Click="TitleBtn_OnClick"
-                Padding="8,0"
-                FontFamily="{DynamicResource DinPro}"
-                Classes="NoBorder">
-            <TextBlock FontSize="16"
-                       Text="{x:Static res:Resource.App_WindowTitle}"></TextBlock>
-        </Button>
             
         <notice:NoticePanel HorizontalAlignment="Left"
                             VerticalAlignment="Bottom"
@@ -115,33 +93,62 @@
                         VerticalAlignment="Stretch"
                         Name="TaskPanel"/>
         
-        <dialog:DialogHost/>
+        <!--<dialog:DialogHost/>-->
+        <!--上面的事我们自己的那一坨，用都不想用-->
+        
+        <dialogHostAvalonia:DialogHost CloseOnClickAway="False">
+            <dialogHostAvalonia:DialogHost.DialogContent>
+                <!-- put your dialog content here-->
+            </dialogHostAvalonia:DialogHost.DialogContent>
+        </dialogHostAvalonia:DialogHost>
         
         <Grid HorizontalAlignment="Stretch"
               VerticalAlignment="Top"
-              Margin="0,11">
+              PointerPressed="InputElement_OnPointerPressed"
+              Background="{DynamicResource PrimaryBackgroundBrush}"
+              Height="32">
             <StackPanel Orientation="Horizontal"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Left"
+                        Margin="15,0,0,0">
+                <TextBlock FontSize="16">RMCL</TextBlock>
+            </StackPanel>
+        
+            <Border HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Height="22"
+                    ClipToBounds="True"
+                    CornerRadius="6">
+                <notice1:InfoBar State="Warning"
+                                 VerticalAlignment="Center"
+                                 Title="预览版警告"
+                                 Message="当前版本为 RMCL 4 的预览版，仅作为 UI/UX 预览，并不代表最终品质。"
+                                 Margin="0"/>
+            </Border>
+            
+            <StackPanel Orientation="Horizontal"
+                        VerticalAlignment="Center"
                         HorizontalAlignment="Right"
                         Margin="0,0,15,0">
                 <Button Classes="NoBorder"
-                        Width="32" Height="32"
+                        Width="22" Height="22"
                         Name="MinBtn"
                         Click="MinBtn_OnClick"
-                        Margin="5,5,0,5">
+                        Margin="5,0,0,0">
                     <onePointControls:FontIcon Glyph="&#xE921;"/>
                 </Button>
                 <Button Classes="NoBorder"
-                        Width="32" Height="32"
+                        Width="22" Height="22"
                         Name="MaxBtn"
                         Click="MaxBtn_OnClick"
-                        Margin="5,5,0,5">
+                        Margin="5,0,0,0">
                     <onePointControls:FontIcon Glyph="&#xE922;"/>
                 </Button>
                 <Button Classes="NoBorder"
-                        Width="32" Height="32"
+                        Width="22" Height="22"
                         Name="CloseBtn"
                         Click="CloseBtn_OnClick"
-                        Margin="5,5,0,5">
+                        Margin="5,0,0,0">
                     <onePointControls:FontIcon Glyph="&#xE8BB;"/>
                 </Button>
             </StackPanel>

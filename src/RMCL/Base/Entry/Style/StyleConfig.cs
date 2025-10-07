@@ -15,5 +15,7 @@ public class StyleConfig
     
     [JsonPropertyName("backgroundImages")] public List<string> BackgroundImages { get; set; } = new List<string>();
     [JsonPropertyName("backgroundImageSelectedIndex")] public int BackgroundImageSelectedIndex { get; set; } = -1;
+    [JsonPropertyName("backgroundImageOpacity")] public int BackgroundImageOpacity { get; set; } = 100;
+    [JsonPropertyName("backgroundImageBlur")] public int BackgroundImageBlur { get; set; } = 0;
     [JsonPropertyName("styleType")] public StyleType StyleType { get; set; } = StyleType.AccentColor;
 }

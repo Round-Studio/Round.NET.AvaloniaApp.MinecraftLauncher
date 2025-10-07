@@ -280,4 +280,7 @@
   <data name="Settings.Style.Background.Material.None" xml:space="preserve">
     <value>无</value>
   </data>
+  <data name="MainPage.Account" xml:space="preserve">
+    <value>账户</value>
+  </data>
 </root>

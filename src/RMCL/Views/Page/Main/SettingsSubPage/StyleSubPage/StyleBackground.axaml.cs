@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using Avalonia;
 using Avalonia.Controls;
+using Avalonia.Controls.Primitives;
+using Avalonia.Input;
 using Avalonia.Interactivity;
 using Avalonia.Markup.Xaml;
 using Avalonia.Platform.Storage;
@@ -23,6 +25,8 @@ public partial class StyleBackground : UserControl
         InitializeComponent();
         ChooseBackMaterial.SelectedIndex = (int)GlobalModels.Config.Data.StyleConfig.BackMaterialType;
         BackgroundTypeBox.SelectedIndex = (int)GlobalModels.Config.Data.StyleConfig.StyleType;
+        OptBar.Value = GlobalModels.Config.Data.StyleConfig.BackgroundImageOpacity;
+        BlurBar.Value = GlobalModels.Config.Data.StyleConfig.BackgroundImageBlur;
         UpdateUI();
 
         if (OperatingSystem.IsWindows())
@@ -168,6 +172,18 @@ public partial class StyleBackground : UserControl
         {
             // 用户取消了选择
             Console.WriteLine("未选择文件。");
+        }
+    }
+
+    private void OptBar_OnValueChanged(object? sender, RangeBaseValueChangedEventArgs e)
+    {
+        if (IsEditMode)
+        {
+            GlobalModels.Config.Data.StyleConfig.BackgroundImageOpacity = (int)OptBar.Value;
+            GlobalModels.Config.Data.StyleConfig.BackgroundImageBlur = (int)BlurBar.Value;
+        
+            GlobalModels.Config.Save();
+            GlobalModels.MainWindow.UpdateBack();
         }
     }
 }

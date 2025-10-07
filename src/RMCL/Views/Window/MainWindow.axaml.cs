@@ -116,13 +116,21 @@ public partial class MainWindow : Window
             this.TransparencyLevelHint = new List<WindowTransparencyLevel>() { WindowTransparencyLevel.AcrylicBlur };
         }else if (GlobalModels.Config.Data.StyleConfig.StyleType == StyleType.Image)
         {
+            BackgroundImageOpacity.Opacity = (100 - GlobalModels.Config.Data.StyleConfig.BackgroundImageOpacity) * 0.01;
+            
             var index = GlobalModels.Config.Data.StyleConfig.BackgroundImageSelectedIndex;
             if (index != -1)
             {
                 if (GlobalModels.Config.Data.StyleConfig.BackgroundImages.Count >= 0)
                 {
                     BackgroundBox.IsVisible = true;
-                    BackgroundBox.Background = new ImageBrush()
+                    BackgroundBox.Effect = new BlurEffect()
+                    {
+                        Radius = GlobalModels.Config.Data.StyleConfig.BackgroundImageBlur
+                    };
+                    BackgroundBox.Margin = new Thickness(-GlobalModels.Config.Data.StyleConfig.BackgroundImageBlur);
+                    
+                    BackgroundImage.Background = new ImageBrush()
                     {
                         Stretch = Stretch.UniformToFill,
                         Source = new Bitmap(

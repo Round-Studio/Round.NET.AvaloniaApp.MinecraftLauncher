@@ -7,9 +7,11 @@
              xmlns:navigation="clr-namespace:OnePointUI.Avalonia.Styling.Controls.OnePointControls.Navigation;assembly=OnePointUI.Avalonia"
              xmlns:breadcrumb="clr-namespace:OnePointUI.Avalonia.Styling.Controls.OnePointControls.Navigation.Breadcrumb;assembly=OnePointUI.Avalonia"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-             x:Class="RMCL.Views.Page.Main.MainSubPage.MainSettingPage"
-             Background="{DynamicResource BackgroundBrush}">
+             x:Class="RMCL.Views.Page.Main.MainSubPage.MainSettingPage">
     <Grid>
+        <Grid Background="{DynamicResource BackgroundBrush}"
+              Opacity="0.6"></Grid>
+        
         <Button Classes="NoBorder"
                 Width="32"
                 Height="32"

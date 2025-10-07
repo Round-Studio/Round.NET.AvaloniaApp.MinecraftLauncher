@@ -3,6 +3,7 @@
              x:Class="RMCL.App"
              xmlns:local="using:RMCL"
              xmlns:core="clr-namespace:OnePointUI.Avalonia.Style.Core;assembly=OnePointUI.Avalonia"
+             xmlns:dialogHostAvalonia="clr-namespace:DialogHostAvalonia;assembly=DialogHost.Avalonia"
              RequestedThemeVariant="Default">
              <!-- "Default" ThemeVariant follows system theme variant. "Dark" or "Light" are other available options. -->
 
@@ -14,6 +15,7 @@
         <!--<core:OnePointTheme AccentColor="#1EA5FF" ThemeVariant="Dark"/>-->
         
         <core:OnePointTheme AccentColor="#1EA5FF" ThemeVariant="Dark"/>
+        <dialogHostAvalonia:DialogHostStyles />
     </Application.Styles>
              
     <Application.Resources>
