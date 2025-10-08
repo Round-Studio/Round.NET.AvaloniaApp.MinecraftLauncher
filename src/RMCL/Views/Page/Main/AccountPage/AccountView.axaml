@@ -3,6 +3,8 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:onePointControls="clr-namespace:OnePointUI.Avalonia.Styling.Controls.OnePointControls;assembly=OnePointUI.Avalonia"
+             xmlns:view="clr-namespace:OnePointUI.Avalonia.Styling.Controls.OnePointControls.View;assembly=OnePointUI.Avalonia"
+             xmlns:notice="clr-namespace:OnePointUI.Avalonia.Styling.Controls.OnePointControls.Notice;assembly=OnePointUI.Avalonia"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="RMCL.Views.Page.Main.AccountPage.AccountView">
     <Grid RowDefinitions="60,*">
@@ -55,6 +57,7 @@
                 Width="100"
                 HorizontalAlignment="Right"
                 Classes="NoBorder"
+                IsVisible="True"
                 Name="AddAccount"
                 Click="AddAccount_OnClick"
                 Margin="0,20,20,0">
@@ -65,5 +68,15 @@
                 <TextBlock VerticalAlignment="Center">新增账户</TextBlock>
             </StackPanel>
         </Button>
+        
+        <Grid Grid.Row="1"
+              Margin="10">
+            <view:ItemView Name="AccountsView"/>
+            <notice:IconNotice Glyph="&#xF133;"
+                               Message="当前无账户"
+                               Name="NoneBox"
+                               HorizontalAlignment="Center"
+                               VerticalAlignment="Center"/>
+        </Grid>
     </Grid>
 </UserControl>

@@ -7,3 +7,6 @@
 [submodule "src/LiteSkinViewer"]
 	path = src/LiteSkinViewer
 	url = https://github.com/Round-Studio/LiteSkinViewer.git
+[submodule "src/OverrideLauncher.Core"]
+	path = src/OverrideLauncher.Core
+	url = https://github.com/Round-Studio/OverrideLauncher.Core.git

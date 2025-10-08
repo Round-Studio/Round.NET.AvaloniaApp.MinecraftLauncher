@@ -25,7 +25,6 @@
         </PackageReference>
         <PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.0" />
         <PackageReference Include="DialogHost.Avalonia" Version="0.9.3" />
-        <PackageReference Include="OverrideLauncher.Core" Version="25.9.20.1731" />
     </ItemGroup>
 
     <ItemGroup>
@@ -49,7 +48,9 @@
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\LiteSkinViewer\LiteSkinViewer.2D\LiteSkinViewer.2D.csproj" />
       <ProjectReference Include="..\OnePointUI.Avalonia\src\OnePointUI.Avalonia\OnePointUI.Avalonia.csproj" />
+      <ProjectReference Include="..\OverrideLauncher.Core\src\OverrideLauncher.Core\OverrideLauncher.Core.csproj" />
       <ProjectReference Include="..\Round.SDK\Round.SDK\Round.SDK.csproj" />
     </ItemGroup>
 

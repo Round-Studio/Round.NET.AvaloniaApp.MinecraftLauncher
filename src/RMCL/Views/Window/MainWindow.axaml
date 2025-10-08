@@ -93,14 +93,14 @@
                         VerticalAlignment="Stretch"
                         Name="TaskPanel"/>
         
-        <!--<dialog:DialogHost/>-->
+        <dialog:DialogHost/>
         <!--上面的事我们自己的那一坨，用都不想用-->
         
-        <dialogHostAvalonia:DialogHost CloseOnClickAway="False">
+        <!--<dialogHostAvalonia:DialogHost CloseOnClickAway="False">
             <dialogHostAvalonia:DialogHost.DialogContent>
-                <!-- put your dialog content here-->
+                ~1~ put your dialog content here@1@
             </dialogHostAvalonia:DialogHost.DialogContent>
-        </dialogHostAvalonia:DialogHost>
+        </dialogHostAvalonia:DialogHost>-->
         
         <Grid HorizontalAlignment="Stretch"
               VerticalAlignment="Top"
@@ -135,21 +135,30 @@
                         Name="MinBtn"
                         Click="MinBtn_OnClick"
                         Margin="5,0,0,0">
-                    <onePointControls:FontIcon Glyph="&#xE921;"/>
+                    <onePointControls:FontIcon Glyph="&#xE921;"
+                                               FontSize="8"
+                                               HorizontalAlignment="Center"
+                                               VerticalAlignment="Center"/>
                 </Button>
                 <Button Classes="NoBorder"
                         Width="22" Height="22"
                         Name="MaxBtn"
                         Click="MaxBtn_OnClick"
                         Margin="5,0,0,0">
-                    <onePointControls:FontIcon Glyph="&#xE922;"/>
+                    <onePointControls:FontIcon Glyph="&#xE922;"
+                                               FontSize="8"
+                                               HorizontalAlignment="Center"
+                                               VerticalAlignment="Center"/>
                 </Button>
                 <Button Classes="NoBorder"
                         Width="22" Height="22"
                         Name="CloseBtn"
                         Click="CloseBtn_OnClick"
                         Margin="5,0,0,0">
-                    <onePointControls:FontIcon Glyph="&#xE8BB;"/>
+                    <onePointControls:FontIcon Glyph="&#xE8BB;"
+                                               FontSize="8"
+                                               HorizontalAlignment="Center"
+                                               VerticalAlignment="Center"/>
                 </Button>
             </StackPanel>
         </Grid>

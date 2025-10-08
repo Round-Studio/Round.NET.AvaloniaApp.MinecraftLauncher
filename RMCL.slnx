@@ -1,5 +1,6 @@
 <Solution>
   <Folder Name="/LiteSkinViewer/">
+    <Project Path="src\LiteSkinViewer\LiteSkinViewer.2D.Simple\LiteSkinViewer.2D.Simple.csproj" Type="Classic C#" />
     <Project Path="src\LiteSkinViewer\LiteSkinViewer.2D\LiteSkinViewer.2D.csproj" Type="Classic C#" />
     <Project Path="src\LiteSkinViewer\LiteSkinViewer.3D\LiteSkinViewer.3D.csproj" Type="Classic C#" />
     <Project Path="src\LiteSkinViewer\LiteSkinViewer.Shared\LiteSkinViewer.Shared.csproj" Type="Classic C#" />
@@ -8,6 +9,10 @@
     <Project Path="src\OnePointUI.Avalonia\src\CompositionScroll\CompositionScroll.csproj" Type="Classic C#" />
     <Project Path="src\OnePointUI.Avalonia\src\OnePointUI.Avalonia.Test\OnePointUI.Avalonia.Test.csproj" Type="Classic C#" />
     <Project Path="src\OnePointUI.Avalonia\src\OnePointUI.Avalonia\OnePointUI.Avalonia.csproj" Type="Classic C#" />
+  </Folder>
+  <Folder Name="/OverrideLauncher.Core/">
+    <Project Path="src\OverrideLauncher.Core\src\OverrideLauncher.Core.Example\OverrideLauncher.Core.Example.csproj" Type="Classic C#" />
+    <Project Path="src\OverrideLauncher.Core\src\OverrideLauncher.Core\OverrideLauncher.Core.csproj" Type="Classic C#" />
   </Folder>
   <Folder Name="/Plugin/">
     <Project Path="src\Plugin.BedrockBoot\Plugin.BedrockBoot.csproj" Type="Classic C#" />
