@@ -9,6 +9,7 @@ using LiteSkinViewer2D;
 using LiteSkinViewer2D.Extensions;
 using OverrideLauncher.Core.Base.Entry.Account;
 using OverrideLauncher.Core.Base.Enum.Account;
+using RMCL.Properties;
 using SkiaSharp;
 
 namespace RMCL.Views.Control.Item;
@@ -24,8 +25,8 @@ public partial class AccountChooseItem : UserControl
         AccountName.Text = account.UserName;
         AccountTypeBox.Text = account.AccountType switch
         { 
-            AccountType.Microsoft => "微软正版",
-            AccountType.Offline => "离线账户"
+            AccountType.Microsoft => Resource.Account_Microsoft,
+            AccountType.Offline => Resource.Account_Offline
         };
     }
 

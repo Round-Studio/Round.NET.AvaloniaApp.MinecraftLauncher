@@ -173,4 +173,53 @@
     <data name="MainPage.Account" xml:space="preserve">
         <value>Account</value>
     </data>
+    
+    
+  
+  
+    <data name="Account.AllType" xml:space="preserve">
+    <value>All types</value>
+  </data>
+    <data name="Account.Microsoft" xml:space="preserve">
+    <value>Microsoft account</value>
+  </data>
+    <data name="Account.Offline" xml:space="preserve">
+    <value>Offline accounts</value>
+  </data>
+    <data name="Account.ThirdPartyVerification" xml:space="preserve">
+    <value>Third-party verification</value>
+  </data>
+    <data name="Account.AddAccount" xml:space="preserve">
+    <value>Add an account</value>
+  </data>
+    <data name="Account.AddAccount.Title" xml:space="preserve">
+    <value>Select the account type</value>
+  </data>
+    <data name="Account.AddAccount.OK" xml:space="preserve">
+    <value>Sure</value>
+  </data>
+    <data name="Account.AddAccount.Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+    <data name="Account.AddAccount.Offline.Title" xml:space="preserve">
+    <value>Add an offline account</value>
+  </data>
+    <data name="Account.AddAccount.Offline.UserName" xml:space="preserve">
+    <value>Player Name:</value>
+  </data>
+    <data name="Account.AddAccount.Offline.Warning" xml:space="preserve">
+    <value>In accordance with relevant laws, offline accounts are not available in some regions. Please always support the genuine version.</value>
+  </data>
+    <data name="Account.AddAccount.Offline.Warning.Title" xml:space="preserve">
+    <value>Warning</value>
+  </data>
+    <data name="Account.AddAccount.Offline.Add" xml:space="preserve">
+    <value>Add this</value>
+  </data>
+    <data name="Account.AddAccount.Offline.Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+    <data name="Account.None" xml:space="preserve">
+    <value>None</value>
+  </data>
 </root>

@@ -9,6 +9,7 @@ using OnePointUI.Avalonia.Styling.Controls.OnePointControls.Dialog;
 using OnePointUI.Avalonia.Styling.Controls.OnePointControls.View;
 using OverrideLauncher.Core.Base.Enum.Account;
 using RMCL.Models.Global;
+using RMCL.Properties;
 using RMCL.Views.Control.Item;
 using RMCL.Views.Page.DialogContent.Account;
 
@@ -50,9 +51,9 @@ public partial class AccountView : UserControl
         var dialoginfo = new DialogInfo()
         {
             Content = dialog,
-            Title = "选择账户类型",
-            CloseButtonText = "确定",
-            PrimaryButtonText = "取消",
+            Title = Resource.Account_AddAccount_Title,
+            CloseButtonText = Resource.Account_AddAccount_OK,
+            PrimaryButtonText = Resource.Account_AddAccount_Cancel,
             AccountButton = DialogButtons.CloseButton,
             CloseAction = () =>
             {

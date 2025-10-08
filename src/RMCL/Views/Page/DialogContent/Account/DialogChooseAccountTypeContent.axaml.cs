@@ -8,6 +8,7 @@ using OnePointUI.Avalonia.Styling.Controls.OnePointControls.Dialog;
 using OverrideLauncher.Core.Base.Enum.Account;
 using OverrideLauncher.Core.Classes.Account;
 using RMCL.Models.Global;
+using RMCL.Properties;
 
 namespace RMCL.Views.Page.DialogContent.Account;
 
@@ -39,9 +40,9 @@ public partial class DialogChooseAccountTypeContent : UserControl
         DialogHost.Show(new DialogInfo()
         {
             Content = dialog,
-            Title = "新增离线账户",
-            CloseButtonText = "新增此",
-            PrimaryButtonText = "取消",
+            Title = Resource.Account_AddAccount_Offline_Title,
+            CloseButtonText = Resource.Account_AddAccount_Offline_Add,
+            PrimaryButtonText = Resource.Account_AddAccount_Offline_Cancel,
             AccountButton = DialogButtons.CloseButton,
             CloseAction = () =>
             {

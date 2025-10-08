@@ -4,6 +4,7 @@
     <mapping directory="" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/src/LiteSkinViewer" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/src/OnePointUI.Avalonia" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/OverrideLauncher.Core" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/src/Round.SDK" vcs="Git" />
   </component>
 </project>

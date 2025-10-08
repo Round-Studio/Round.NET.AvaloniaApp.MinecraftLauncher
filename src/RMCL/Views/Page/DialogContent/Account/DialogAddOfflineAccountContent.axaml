@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:onePointControls="clr-namespace:OnePointUI.Avalonia.Styling.Controls.OnePointControls;assembly=OnePointUI.Avalonia"
              xmlns:notice="clr-namespace:OnePointUI.Avalonia.Styling.Controls.OnePointControls.Notice;assembly=OnePointUI.Avalonia"
+             xmlns:properties="clr-namespace:RMCL.Properties"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="RMCL.Views.Page.DialogContent.Account.DialogAddOfflineAccountContent">
     <StackPanel>
@@ -15,15 +16,17 @@
                                        Margin="0,0,5,0"/>
             
             <TextBlock VerticalAlignment="Center"
-                       Margin="5">玩家名称：</TextBlock>
+                       Margin="5"
+                       Text="{x:Static properties:Resource.Account_AddAccount_Offline_UserName}">
+            </TextBlock>
         </StackPanel>
         
         <TextBox Margin="0,5,0,5"
                  Name="AccountNameBox"></TextBox>
         
         <notice:InfoBar State="Warning"
-                        Title="警告"
+                        Title="{x:Static properties:Resource.Account_AddAccount_Offline_Warning_Title}"
                         Margin="0,5,0,5"
-                        Message="根据相关法律规定，离线账户在部分地区无法使用，请始终支持正版"/>
+                        Message="{x:Static properties:Resource.Account_AddAccount_Offline_Warning}"/>
     </StackPanel>
 </UserControl>

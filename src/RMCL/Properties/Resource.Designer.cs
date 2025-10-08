@@ -60,6 +60,141 @@ namespace RMCL.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 新增账户.
+        /// </summary>
+        public static string Account_AddAccount {
+            get {
+                return ResourceManager.GetString("Account.AddAccount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 取消.
+        /// </summary>
+        public static string Account_AddAccount_Cancel {
+            get {
+                return ResourceManager.GetString("Account.AddAccount.Cancel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 新增此.
+        /// </summary>
+        public static string Account_AddAccount_Offline_Add {
+            get {
+                return ResourceManager.GetString("Account.AddAccount.Offline.Add", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 取消.
+        /// </summary>
+        public static string Account_AddAccount_Offline_Cancel {
+            get {
+                return ResourceManager.GetString("Account.AddAccount.Offline.Cancel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 新增离线账户.
+        /// </summary>
+        public static string Account_AddAccount_Offline_Title {
+            get {
+                return ResourceManager.GetString("Account.AddAccount.Offline.Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 玩家名称：.
+        /// </summary>
+        public static string Account_AddAccount_Offline_UserName {
+            get {
+                return ResourceManager.GetString("Account.AddAccount.Offline.UserName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 根据相关法律规定，离线账户在部分地区不可用。请始终支持正版。.
+        /// </summary>
+        public static string Account_AddAccount_Offline_Warning {
+            get {
+                return ResourceManager.GetString("Account.AddAccount.Offline.Warning", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 警告.
+        /// </summary>
+        public static string Account_AddAccount_Offline_Warning_Title {
+            get {
+                return ResourceManager.GetString("Account.AddAccount.Offline.Warning.Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 确定.
+        /// </summary>
+        public static string Account_AddAccount_OK {
+            get {
+                return ResourceManager.GetString("Account.AddAccount.OK", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 选择账户类型.
+        /// </summary>
+        public static string Account_AddAccount_Title {
+            get {
+                return ResourceManager.GetString("Account.AddAccount.Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 所有类型.
+        /// </summary>
+        public static string Account_AllType {
+            get {
+                return ResourceManager.GetString("Account.AllType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 正版账户.
+        /// </summary>
+        public static string Account_Microsoft {
+            get {
+                return ResourceManager.GetString("Account.Microsoft", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 当前无账户.
+        /// </summary>
+        public static string Account_None {
+            get {
+                return ResourceManager.GetString("Account.None", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 离线账户.
+        /// </summary>
+        public static string Account_Offline {
+            get {
+                return ResourceManager.GetString("Account.Offline", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 第三方验证.
+        /// </summary>
+        public static string Account_ThirdPartyVerification {
+            get {
+                return ResourceManager.GetString("Account.ThirdPartyVerification", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to RMCL.
         /// </summary>
         public static string App_WindowTitle {

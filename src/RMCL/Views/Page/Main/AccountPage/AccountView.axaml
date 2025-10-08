@@ -5,6 +5,7 @@
              xmlns:onePointControls="clr-namespace:OnePointUI.Avalonia.Styling.Controls.OnePointControls;assembly=OnePointUI.Avalonia"
              xmlns:view="clr-namespace:OnePointUI.Avalonia.Styling.Controls.OnePointControls.View;assembly=OnePointUI.Avalonia"
              xmlns:notice="clr-namespace:OnePointUI.Avalonia.Styling.Controls.OnePointControls.Notice;assembly=OnePointUI.Avalonia"
+             xmlns:properties="clr-namespace:RMCL.Properties"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="RMCL.Views.Page.Main.AccountPage.AccountView">
     <Grid RowDefinitions="60,*">
@@ -19,7 +20,7 @@
                     <onePointControls:FontIcon Glyph="&#xE71D;"
                                                VerticalAlignment="Center"
                                                Margin="0,0,8,0"/>
-                    <TextBlock>所有类型</TextBlock>
+                    <TextBlock Text="{x:Static properties:Resource.Account_AllType}"></TextBlock>
                 </StackPanel>
             </ListBoxItem>
             
@@ -28,7 +29,7 @@
                     <onePointControls:FontIcon Glyph="&#xF0E2;"
                                                VerticalAlignment="Center"
                                                Margin="0,0,8,0"/>
-                    <TextBlock>正版账户</TextBlock>
+                    <TextBlock Text="{x:Static properties:Resource.Account_Microsoft}"></TextBlock>
                 </StackPanel>
             </ListBoxItem>
             
@@ -37,7 +38,7 @@
                     <onePointControls:FontIcon Glyph="&#xECAF;"
                                                VerticalAlignment="Center"
                                                Margin="0,0,8,0"/>
-                    <TextBlock>离线账户</TextBlock>
+                    <TextBlock Text="{x:Static properties:Resource.Account_Offline}"></TextBlock>
                 </StackPanel>
             </ListBoxItem>
             
@@ -47,25 +48,25 @@
                     <onePointControls:FontIcon Glyph="&#xEBDA;"
                                                VerticalAlignment="Center"
                                                Margin="0,0,8,0"/>
-                    <TextBlock>第三方验证</TextBlock>
+                    <TextBlock Text="{x:Static properties:Resource.Account_ThirdPartyVerification}"></TextBlock>
                 </StackPanel>
             </ListBoxItem>
         </ListBox>
         
         <Button Grid.Row="0"
                 Height="40"
-                Width="100"
                 HorizontalAlignment="Right"
                 Classes="NoBorder"
                 IsVisible="True"
                 Name="AddAccount"
                 Click="AddAccount_OnClick"
+                Padding="24,0"
                 Margin="0,20,20,0">
             <StackPanel Orientation="Horizontal">
                 <onePointControls:FontIcon Glyph="&#xE710;"
                                            Margin="0,0,8,0"
                                            VerticalAlignment="Center"></onePointControls:FontIcon>
-                <TextBlock VerticalAlignment="Center">新增账户</TextBlock>
+                <TextBlock VerticalAlignment="Center" Text="{x:Static properties:Resource.Account_AddAccount}"></TextBlock>
             </StackPanel>
         </Button>
         
@@ -73,7 +74,7 @@
               Margin="10">
             <view:ItemView Name="AccountsView"/>
             <notice:IconNotice Glyph="&#xF133;"
-                               Message="当前无账户"
+                               Message="{x:Static properties:Resource.Account_None}"
                                Name="NoneBox"
                                HorizontalAlignment="Center"
                                VerticalAlignment="Center"/>

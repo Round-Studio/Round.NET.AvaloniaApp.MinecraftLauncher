@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:onePointControls="clr-namespace:OnePointUI.Avalonia.Styling.Controls.OnePointControls;assembly=OnePointUI.Avalonia"
              xmlns:notice="clr-namespace:OnePointUI.Avalonia.Styling.Controls.OnePointControls.Notice;assembly=OnePointUI.Avalonia"
+             xmlns:properties="clr-namespace:RMCL.Properties"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="RMCL.Views.Page.DialogContent.Account.DialogChooseAccountTypeContent">
     <Grid>
@@ -20,7 +21,7 @@
                     
                     <TextBlock Margin="5"
                                VerticalAlignment="Center"
-                               FontSize="16">正版账户</TextBlock>
+                               FontSize="16" Text="{x:Static properties:Resource.Account_Microsoft}"></TextBlock>
                 </StackPanel>
             </ListBoxItem>
             <ListBoxItem>
@@ -33,7 +34,7 @@
                     
                     <TextBlock Margin="5"
                                VerticalAlignment="Center"
-                               FontSize="16">离线账户</TextBlock>
+                               FontSize="16" Text="{x:Static properties:Resource.Account_Offline}"></TextBlock>
                 </StackPanel>
             </ListBoxItem>
             <ListBoxItem IsEnabled="False">
@@ -46,7 +47,7 @@
                     
                     <TextBlock Margin="5"
                                VerticalAlignment="Center"
-                               FontSize="16">第三方验证</TextBlock>
+                               FontSize="16" Text="{x:Static properties:Resource.Account_ThirdPartyVerification}"></TextBlock>
                 </StackPanel>
             </ListBoxItem>
         </ListBox>

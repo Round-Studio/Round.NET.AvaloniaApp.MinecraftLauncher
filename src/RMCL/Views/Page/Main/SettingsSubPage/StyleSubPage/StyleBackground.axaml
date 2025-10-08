@@ -48,14 +48,6 @@
                             Click="ImportBackgroundBtn_OnClick">浏览</Button>
                 </onePointControls:SettingCard>
                 
-                <onePointControls:SettingCard Header="壁纸轮播"
-                                              Description="是否轮播壁纸"
-                                              Glyph="&#xE8EE;"
-                                              Margin="5,5,5,10"
-                                              IsClickable="False">
-                    <ToggleSwitch></ToggleSwitch>
-                </onePointControls:SettingCard>
-                
                 <onePointControls:SettingCard Header="壁纸透明度"
                                               Description="壁纸的透明度设置"
                                               Glyph="&#xE81E;"

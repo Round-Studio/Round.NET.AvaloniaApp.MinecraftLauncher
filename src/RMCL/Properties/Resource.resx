@@ -283,4 +283,51 @@
   <data name="MainPage.Account" xml:space="preserve">
     <value>账户</value>
   </data>
+  
+  
+  <data name="Account.AllType" xml:space="preserve">
+    <value>所有类型</value>
+  </data>
+  <data name="Account.Microsoft" xml:space="preserve">
+    <value>正版账户</value>
+  </data>
+  <data name="Account.Offline" xml:space="preserve">
+    <value>离线账户</value>
+  </data>
+  <data name="Account.ThirdPartyVerification" xml:space="preserve">
+    <value>第三方验证</value>
+  </data>
+  <data name="Account.AddAccount" xml:space="preserve">
+    <value>新增账户</value>
+  </data>
+  <data name="Account.AddAccount.Title" xml:space="preserve">
+    <value>选择账户类型</value>
+  </data>
+  <data name="Account.AddAccount.OK" xml:space="preserve">
+    <value>确定</value>
+  </data>
+  <data name="Account.AddAccount.Cancel" xml:space="preserve">
+    <value>取消</value>
+  </data>
+  <data name="Account.AddAccount.Offline.Title" xml:space="preserve">
+    <value>新增离线账户</value>
+  </data>
+  <data name="Account.AddAccount.Offline.UserName" xml:space="preserve">
+    <value>玩家名称：</value>
+  </data>
+  <data name="Account.AddAccount.Offline.Warning" xml:space="preserve">
+    <value>根据相关法律规定，离线账户在部分地区不可用。请始终支持正版。</value>
+  </data>
+  <data name="Account.AddAccount.Offline.Warning.Title" xml:space="preserve">
+    <value>警告</value>
+  </data>
+  <data name="Account.AddAccount.Offline.Add" xml:space="preserve">
+    <value>新增此</value>
+  </data>
+  <data name="Account.AddAccount.Offline.Cancel" xml:space="preserve">
+    <value>取消</value>
+  </data>
+  <data name="Account.None" xml:space="preserve">
+    <value>当前无账户</value>
+  </data>
 </root>
