@@ -50,7 +50,7 @@
                                                    RingWidth="3"></onePointControls:ProgressRing>
                 </StackPanel>
                 
-                <navigation:BottomBar HorizontalAlignment="Right"
+                <navigation:BottomBar HorizontalAlignment="Center"
                                       Name="BottomBar"/>
             </Grid>
         </Border>

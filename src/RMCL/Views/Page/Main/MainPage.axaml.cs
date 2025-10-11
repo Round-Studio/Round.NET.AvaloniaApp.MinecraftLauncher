@@ -58,6 +58,13 @@ public partial class MainPage : UserControl
         });
         RegisterService.RegisterBottomBarItem(new BottomBarItemInfo()
         {
+            ItemGlyph = "\uF0B9",
+            ItemText = "领域",
+            Tag = "Online",
+            PageType = typeof(MainOnlinePage)
+        });
+        RegisterService.RegisterBottomBarItem(new BottomBarItemInfo()
+        {
             ItemGlyph = "\uE713",
             ItemText = Resource.MainPage_Setting,
             Tag = "Setting",

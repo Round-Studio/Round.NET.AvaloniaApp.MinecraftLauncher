@@ -8,6 +8,7 @@
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="RMCL.Views.Control.Navigation.BottomBar">
     <selectBar:SelectBar VerticalAlignment="Center"
+                         HorizontalAlignment="Center"
                          Margin="15,0"
                          SelectionChanged="ItemsPanel_OnSelectionChanged"
                          Name="ItemsPanel">

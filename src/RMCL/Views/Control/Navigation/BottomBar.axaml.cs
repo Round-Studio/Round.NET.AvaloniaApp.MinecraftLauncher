@@ -32,7 +32,8 @@ public partial class BottomBar : UserControl
             Tag = info.Tag
         };
         
-        ItemsPanel.Items.Insert(0, item);
+        // ItemsPanel.Items.Insert(0, item);
+        ItemsPanel.Items.Add(item);
 
         if (info.IsSelected)
         {
