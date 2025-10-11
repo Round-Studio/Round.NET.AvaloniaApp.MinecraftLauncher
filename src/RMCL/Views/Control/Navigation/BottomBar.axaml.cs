@@ -5,14 +5,16 @@ using Avalonia.Controls;
 using Avalonia.Layout;
 using Avalonia.Media;
 using OnePointUI.Avalonia.Styling.Controls.OnePointControls;
+using OnePointUI.Avalonia.Styling.Controls.OnePointControls.Navigation.SelectBar;
 using Round.SDK.Entry.RMCL;
 
 namespace RMCL.Views.Control.Navigation;
 
 public partial class BottomBar : UserControl
 {
-    public List<ItemButton> Items { get; set; } = new ();
+    private List<BottomBarItemInfo> Items { get; set; } = new List<BottomBarItemInfo>();
     public Action<Type>? OnNavigation { get; set; }
+    private bool IsEditing { get; set; } = false;
     public BottomBar()
     {
         InitializeComponent();
@@ -20,80 +22,33 @@ public partial class BottomBar : UserControl
 
     public void RegisterItems(BottomBarItemInfo info)
     {
-        var newi = new ItemButton()
+        Items.Add(info);
+        IsEditing = false;
+
+        var item = new SelectBarItem()
         {
-            ItemGlyph = info.ItemGlyph,
+            Glyph = info.ItemGlyph,
             ItemText = info.ItemText,
-            Tag = info.Tag,
-            PageType = info.PageType
+            Tag = info.Tag
         };
+        
+        ItemsPanel.Items.Insert(0, item);
 
-        var classesName = info.IsSelected ? "NoBorderAccent" : "NoBorder";
-        var classesNameText = info.IsSelected ? "Accent" : "";
-        newi.Item = new Button()
+        if (info.IsSelected)
         {
-            Height = 32,
-            Classes = { classesName },
-            CornerRadius = new CornerRadius(16),
-            Tag = newi,
-            Content = new StackPanel
-            {
-                Orientation = Orientation.Horizontal,
-                Margin = new Thickness(12, 0),
-                Children =
-                {
-                    new FontIcon()
-                    {
-                        Glyph = newi.ItemGlyph,
-                        FontSize = 14,
-                        VerticalAlignment = VerticalAlignment.Center,
-                        Margin = new Thickness(0, 0, 8, 0)
-                    },
-                    new TextBlock()
-                    {
-                        Text = newi.ItemText,
-                        FontWeight = FontWeight.Medium,
-                        VerticalAlignment = VerticalAlignment.Center,
-                        Classes = { classesNameText },
-                        Name = "ItemText"
-                    }
-                }
-            }
-        };
-        newi.Item.Click += (s, e) =>
-        {
-            var tag = (ItemButton)((Button)s).Tag;
-
-            Items.ForEach(x =>
-            {
-                var itemText = (TextBlock)((StackPanel)x.Item.Content).Children[1];
-                if (x.Tag == tag.Tag)
-                {
-                    x.IsSelected = true;
-
-                    x.Item.Classes.Clear();
-                    x.Item.Classes.Add("NoBorderAccent");
-
-                    itemText.Classes.Clear();
-                    itemText.Classes.Add("Accent");
-                }
-                else
-                {
-                    x.IsSelected = false;
-                    x.Item.Classes.Clear();
-                    x.Item.Classes.Add("NoBorder");
-
-                    itemText.Classes.Clear();
-                }
-            });
-            OnNavigation.Invoke(tag.PageType);
-        };
-        ItemsPanel.Children.Insert(0, newi.Item);
-        Items.Add(newi);
+            ItemsPanel.SelectedItem = item;
+        }
+        
+        IsEditing = true;
     }
 
-    public class ItemButton : BottomBarItemInfo
+    private void ItemsPanel_OnSelectionChanged(object? sender, SelectionChangedEventArgs e)
     {
-        public Button Item { get; set; }
+        if (IsEditing)
+        {
+            var tag = ((SelectBarItem)ItemsPanel.SelectedItem).Tag.ToString();
+
+            OnNavigation?.Invoke(Items.Find(x => x.Tag == tag).PageType);
+        }
     }
 }

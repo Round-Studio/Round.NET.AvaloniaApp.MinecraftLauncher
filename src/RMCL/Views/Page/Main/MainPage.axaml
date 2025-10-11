@@ -20,9 +20,11 @@
         <Border Grid.Row="1"
                 HorizontalAlignment="Stretch"
                 VerticalAlignment="Bottom"
-                Height="48"
-                Background="{DynamicResource PrimaryBackgroundBrush}">
+                Height="48">
             <Grid>
+                <Grid Background="{DynamicResource PrimaryBackgroundBrush}"
+                      Opacity="0.85"></Grid>
+                
                 <StackPanel Orientation="Horizontal"
                             HorizontalAlignment="Left"
                             VerticalAlignment="Center"

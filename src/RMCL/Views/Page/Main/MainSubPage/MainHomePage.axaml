@@ -61,7 +61,7 @@
                 VerticalAlignment="Bottom"
                 CornerRadius="16"
                 Margin="15"
-                Background="{DynamicResource AccentBorderBrush}"
+                Background="{DynamicResource AccentBackgroundBrush}"
                 Height="32"
                 Click="Button_OnClick"
                 MinWidth="120">

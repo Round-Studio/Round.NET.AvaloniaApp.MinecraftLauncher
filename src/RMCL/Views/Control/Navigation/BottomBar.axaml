@@ -4,12 +4,12 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:onePointControls="clr-namespace:OnePointUI.Avalonia.Styling.Controls.OnePointControls;assembly=OnePointUI.Avalonia"
              xmlns:res="clr-namespace:RMCL.Properties"
+             xmlns:selectBar="clr-namespace:OnePointUI.Avalonia.Styling.Controls.OnePointControls.Navigation.SelectBar;assembly=OnePointUI.Avalonia"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="RMCL.Views.Control.Navigation.BottomBar">
-    <StackPanel Orientation="Horizontal"
-                VerticalAlignment="Center"
-                Margin="15,0"
-                Name="ItemsPanel"
-                Spacing="8">
-    </StackPanel>
+    <selectBar:SelectBar VerticalAlignment="Center"
+                         Margin="15,0"
+                         SelectionChanged="ItemsPanel_OnSelectionChanged"
+                         Name="ItemsPanel">
+    </selectBar:SelectBar>
 </UserControl>

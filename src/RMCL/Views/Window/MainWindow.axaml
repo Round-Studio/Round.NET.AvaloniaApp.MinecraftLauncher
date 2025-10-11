@@ -105,8 +105,10 @@
         <Grid HorizontalAlignment="Stretch"
               VerticalAlignment="Top"
               PointerPressed="InputElement_OnPointerPressed"
-              Background="{DynamicResource PrimaryBackgroundBrush}"
               Height="32">
+            <Grid Background="{DynamicResource PrimaryBackgroundBrush}"
+                  Opacity="0.85"></Grid>
+            
             <StackPanel Orientation="Horizontal"
                         VerticalAlignment="Center"
                         HorizontalAlignment="Left"
