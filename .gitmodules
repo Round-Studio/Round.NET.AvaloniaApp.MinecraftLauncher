@@ -10,3 +10,6 @@
 [submodule "src/OverrideLauncher.Core"]
 	path = src/OverrideLauncher.Core
 	url = https://github.com/Round-Studio/OverrideLauncher.Core.git
+[submodule "src/RemoteOnline"]
+	path = src/RemoteOnline
+	url = https://github.com/Round-Studio/RemoteOnline.git

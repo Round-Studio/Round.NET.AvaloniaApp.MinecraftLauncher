@@ -56,13 +56,16 @@ public partial class MainPage : UserControl
             Tag = "Account",
             PageType = typeof(MainAccountPage)
         });
-        RegisterService.RegisterBottomBarItem(new BottomBarItemInfo()
+        if (OperatingSystem.IsWindows())
         {
-            ItemGlyph = "\uF0B9",
-            ItemText = "领域",
-            Tag = "Online",
-            PageType = typeof(MainOnlinePage)
-        });
+            RegisterService.RegisterBottomBarItem(new BottomBarItemInfo()
+            {
+                ItemGlyph = "\uF0B9",
+                ItemText = "多人联机",
+                Tag = "Online",
+                PageType = typeof(MainOnlinePage)
+            });
+        }
         RegisterService.RegisterBottomBarItem(new BottomBarItemInfo()
         {
             ItemGlyph = "\uE713",

@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:breadcrumb="clr-namespace:OnePointUI.Avalonia.Styling.Controls.OnePointControls.Navigation.Breadcrumb;assembly=OnePointUI.Avalonia"
              xmlns:properties="clr-namespace:RMCL.Properties"
+             xmlns:navigation="clr-namespace:OnePointUI.Avalonia.Styling.Controls.OnePointControls.Navigation;assembly=OnePointUI.Avalonia"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="RMCL.Views.Page.Main.MainSubPage.MainOnlinePage">
     <Grid>
@@ -12,7 +13,7 @@
         
         <breadcrumb:BreadcrumbBar HorizontalAlignment="Left"
                                   VerticalAlignment="Top"
-                                  RootItem="领域"
+                                  RootItem="多人联机"
                                   Name="BreadcrumbBar"
                                   Margin="20">
             <breadcrumb:BreadcrumbBar.Transitions>
@@ -23,5 +24,8 @@
                 </Transitions>
             </breadcrumb:BreadcrumbBar.Transitions>
         </breadcrumb:BreadcrumbBar>
+        
+        <navigation:NavigationFrame Name="OnlineNavigation"
+                                    Margin="0,64,0,0"/>
     </Grid>
 </UserControl>
