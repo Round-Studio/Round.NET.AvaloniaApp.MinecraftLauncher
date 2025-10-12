@@ -18,6 +18,7 @@
         <ListBox Grid.Row="1"
                  VerticalAlignment="Stretch"
                  HorizontalAlignment="Stretch"
+                 SelectionChanged="SelGameBox_OnSelectionChanged"
                  Name="SelGameBox">
             
         </ListBox>
@@ -30,6 +31,7 @@
                 HorizontalAlignment="Left"
                 VerticalAlignment="Bottom"
                 Classes="NoBorder"
+                Click="RefBtn_OnClick"
                 Margin="5">
             <StackPanel Orientation="Horizontal">
                 <onePointControls:FontIcon Glyph="&#xE72C;"
@@ -49,6 +51,8 @@
             <Button Width="100"
                     Height="32"
                     Classes="NoBorder"
+                    Name="BackBtn"
+                    Click="BackBtn_OnClick"
                     Margin="5">
                 <StackPanel Orientation="Horizontal">
                     <onePointControls:FontIcon Glyph="&#xE72B;"
@@ -63,6 +67,8 @@
             <Button Width="100"
                     Height="32"
                     Classes="NoBorder"
+                    Name="CreateBtn"
+                    Click="CreateBtn_OnClick"
                     Background="{DynamicResource AccentBackgroundBrush}"
                     Margin="5">
                 <StackPanel Orientation="Horizontal">

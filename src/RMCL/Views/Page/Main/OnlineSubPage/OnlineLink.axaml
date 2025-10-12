@@ -4,7 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:onePointControls="clr-namespace:OnePointUI.Avalonia.Styling.Controls.OnePointControls;assembly=OnePointUI.Avalonia"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-             x:Class="RMCL.Views.Page.Main.OnlineSubPage.OnlineHost">
+             x:Class="RMCL.Views.Page.Main.OnlineSubPage.OnlineLink">
     <Grid>
         <ScrollViewer>
             <StackPanel Margin="15">
@@ -16,17 +16,17 @@
                 <DockPanel LastChildFill="True"
                            Margin="45,5,5,5">
                     <TextBlock Width="120"
-                               HorizontalAlignment="Left">存档名称：</TextBlock>
+                               HorizontalAlignment="Left">局域网端口：</TextBlock>
                     <TextBlock HorizontalAlignment="Stretch"
-                               Name="ClientName">Save Name</TextBlock>
+                               Name="ClientPort">Port</TextBlock>
                 </DockPanel>
                 
                 <DockPanel LastChildFill="True"
                            Margin="45,5,5,5">
                     <TextBlock Width="120"
-                               HorizontalAlignment="Left">局域网端口：</TextBlock>
+                               HorizontalAlignment="Left">房间地址：</TextBlock>
                     <TextBlock HorizontalAlignment="Stretch"
-                               Name="ClientPort">Port</TextBlock>
+                               Name="ClientIP">Port</TextBlock>
                 </DockPanel>
                 
                 <onePointControls:LineTextBlock HorizontalAlignment="Left"
@@ -53,16 +53,6 @@
                             Margin="45,5,5,5">
                     <TextBlock Width="120"
                                VerticalAlignment="Center"
-                               HorizontalAlignment="Left">分享：</TextBlock>
-                    <Button Width="120"
-                            Classes="NoBorder"
-                            Height="32">复制联机码</Button>
-                </StackPanel>
-                
-                <StackPanel Orientation="Horizontal"
-                            Margin="45,5,5,5">
-                    <TextBlock Width="120"
-                               VerticalAlignment="Center"
                                HorizontalAlignment="Left">房间：</TextBlock>
                     <Button Width="120"
                             Classes="NoBorder"
@@ -70,7 +60,7 @@
                             Click="CloseRoom_OnClick"
                             Background="DarkRed"
                             Height="32">
-                        <TextBlock Foreground="White">关闭房间</TextBlock>
+                        <TextBlock Foreground="White">退出房间</TextBlock>
                     </Button>
                 </StackPanel>
             </StackPanel>

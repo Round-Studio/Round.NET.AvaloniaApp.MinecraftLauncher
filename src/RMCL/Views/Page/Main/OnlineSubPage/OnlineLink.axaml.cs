@@ -8,23 +8,19 @@ using RMCL.Views.Page.Main.MainSubPage;
 
 namespace RMCL.Views.Page.Main.OnlineSubPage;
 
-public partial class OnlineHost : UserControl
+public partial class OnlineLink : UserControl
 {
     public static OnlineService OnlineService { get; set; } = null;
-    public OnlineHost(OnlineService service)
+    public OnlineLink(OnlineService service)
     {
         if(OnlineService == null) OnlineService = service;
-        
         InitializeComponent();
         
-        ClientName.Text = service.Name;
-        ClientPort.Text = service.LocalPort.ToString();
-        ClientCode.Text = service.OnlineCode;
+        ClientPort.Text = OnlineService.LocalPort.ToString();
+        ClientIP.Text = $"127.0.0.1:{OnlineService.LocalPort}";
+        ClientCode.Text = OnlineService.OnlineCode;
 
-        Task.Run(() =>
-        {
-            OnlineService.Run();
-        });
+        Task.Run(OnlineService.Run);
     }
 
     private void CloseRoom_OnClick(object? sender, RoutedEventArgs e)
