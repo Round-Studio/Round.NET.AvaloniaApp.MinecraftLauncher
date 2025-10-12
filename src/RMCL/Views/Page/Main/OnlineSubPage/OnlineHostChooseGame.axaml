@@ -9,15 +9,38 @@
           RowDefinitions="Auto,*,Auto">
         <StackPanel Grid.Row="0">
             <ProgressBar Margin="5"
+                         Name="LoadBar"
                          IsIndeterminate="True"></ProgressBar>
             
-            <TextBlock Margin="5">请在下方列表中选择一个已开启局域网游戏的 Minecraft，然后点击 "创建"</TextBlock>
+            <TextBlock Margin="5">请在下方列表中选择一个已开启局域网游戏的 Minecraft，然后点击 "创建"。如果没有您的实例，可点击左下角 "刷新" 以刷新列表。</TextBlock>
         </StackPanel>
         
         <ListBox Grid.Row="1"
+                 VerticalAlignment="Stretch"
+                 HorizontalAlignment="Stretch"
                  Name="SelGameBox">
             
         </ListBox>
+        
+        
+        <Button Grid.Row="2"
+                Width="100"
+                Height="32"
+                Name="RefBtn"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Bottom"
+                Classes="NoBorder"
+                Margin="5">
+            <StackPanel Orientation="Horizontal">
+                <onePointControls:FontIcon Glyph="&#xE72C;"
+                                           VerticalAlignment="Center"
+                                           FontSize="16"/>
+                    
+                <TextBlock FontSize="16"
+                           Margin="10,0"
+                           VerticalAlignment="Center">刷新</TextBlock>
+            </StackPanel>
+        </Button>
         
         <StackPanel Grid.Row="2"
                     HorizontalAlignment="Right"
