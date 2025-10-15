@@ -9,9 +9,22 @@
         <ApplicationIcon>Assets\Icon\RMCL4.Logo.Big.ico</ApplicationIcon>
     </PropertyGroup>
 
+    <PropertyGroup>
+      <BuildTimestamp>$([System.DateTime]::UtcNow.ToString("yyyy-MM-dd HH:mm:ss"))</BuildTimestamp>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <AssemblyAttribute Include="System.Reflection.AssemblyMetadata">
+        <_Parameter1>BuildTimestamp</_Parameter1>
+        <_Parameter2>$(BuildTimestamp)</_Parameter2>
+      </AssemblyAttribute>
+    </ItemGroup>
+
+
     <ItemGroup>
         <AvaloniaResource Include="Assets\**" />
         <Folder Include="ViewModels\Page\" />
+        <Folder Include="Views\Style\" />
     </ItemGroup>
 
     <ItemGroup>
@@ -24,7 +37,6 @@
             <PrivateAssets Condition="'$(Configuration)' != 'Debug'">All</PrivateAssets>
         </PackageReference>
         <PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.0" />
-        <PackageReference Include="DialogHost.Avalonia" Version="0.9.3" />
     </ItemGroup>
 
     <ItemGroup>

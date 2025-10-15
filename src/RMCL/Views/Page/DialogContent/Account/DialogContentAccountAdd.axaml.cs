@@ -1,7 +1,6 @@
 ﻿using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
-using DialogHostAvalonia;
 
 namespace RMCL.Views.Page.DialogContent.Account;
 
