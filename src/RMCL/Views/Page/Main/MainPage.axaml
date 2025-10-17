@@ -13,13 +13,21 @@
              Loaded="Control_OnLoaded"
              x:Class="RMCL.Views.Page.Main.MainPage">
     
-    <Grid RowDefinitions="*,Auto">
-        <navigation1:NavigationFrame Name="MainPageContent"></navigation1:NavigationFrame>
+    <Grid ColumnDefinitions="Auto,*">
+        <Border Grid.Column="0"
+                VerticalAlignment="Stretch"
+                HorizontalAlignment="Left">
+            <Grid>
+                <navigation:LeftBar HorizontalAlignment="Center"
+                                    Name="LeftBar"/>
+            </Grid>
+        </Border>
         
         <!-- 底部导航栏 -->
-        <Border Grid.Row="1"
+        <Border Grid.Column="0"
                 HorizontalAlignment="Stretch"
                 VerticalAlignment="Bottom"
+                IsVisible="False"
                 Height="48">
             <Grid>
                 <Grid Background="{DynamicResource PrimaryBackgroundBrush}"
@@ -54,5 +62,8 @@
                                       Name="BottomBar"/>
             </Grid>
         </Border>
+        
+        <navigation1:NavigationFrame Grid.Column="1" Name="MainPageContent"
+                                     NavigationFrameDirection="Right"></navigation1:NavigationFrame>
     </Grid>
 </UserControl>

@@ -23,6 +23,7 @@
 
     <ItemGroup>
         <AvaloniaResource Include="Assets\**" />
+        <Folder Include="Base\Entry\Manifest\" />
         <Folder Include="ViewModels\Page\" />
         <Folder Include="Views\Style\" />
     </ItemGroup>

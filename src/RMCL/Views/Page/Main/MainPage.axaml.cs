@@ -21,7 +21,7 @@ public partial class MainPage : UserControl
         GlobalModels.MainPageContent = this.MainPageContent;
         MainPageContent.NavigateTo(new MainHomePage());
 
-        BottomBar.OnNavigation = tag =>
+        this.LeftBar.OnNavigation = tag =>
         {
             if (tag == null) throw new ArgumentNullException(nameof(tag));
             object? page = Activator.CreateInstance(tag);
@@ -31,7 +31,7 @@ public partial class MainPage : UserControl
         };
 
         RegisterService.API.RegisterBottomBarItem =
-            info => Dispatcher.UIThread.InvokeAsync(() => BottomBar.RegisterItems(info));
+            info => Dispatcher.UIThread.InvokeAsync(() => this.LeftBar.RegisterItems(info));
         
         
         RegisterService.RegisterBottomBarItem(new BottomBarItemInfo()
