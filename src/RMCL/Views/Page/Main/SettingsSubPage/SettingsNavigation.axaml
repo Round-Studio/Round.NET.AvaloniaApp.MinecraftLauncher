@@ -7,52 +7,84 @@
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="RMCL.Views.Page.Main.SettingsSubPage.SettingsNavigation">
     <ScrollViewer Margin="0,0,0,0">
-            <StackPanel Margin="15">
-                <onePointControls:SettingCard Header="{x:Static properties:Resource.Settings_Style}"
-                                              Margin="5,5,5,10"
-                                              Description="{x:Static properties:Resource.Settings_Style_Description}"
-                                              Glyph="&#xEE56;"
-                                              Name="StyleSetting"
-                                              Click="StyleSetting_OnClick"
-                                              IsClickable="True"/>
+            <Grid ColumnDefinitions="7*,3*">
+                <StackPanel Grid.Column="0" Margin="15">
+                    <onePointControls:SettingCard Header="{x:Static properties:Resource.Settings_Style}"
+                                                  Margin="5,5,5,10"
+                                                  Description="{x:Static properties:Resource.Settings_Style_Description}"
+                                                  Glyph="&#xEE56;"
+                                                  Name="StyleSetting"
+                                                  Click="StyleSetting_OnClick"
+                                                  IsClickable="True"/>
+                        
+                    <onePointControls:SettingCard Header="{x:Static properties:Resource.Settings_Language}"
+                                                  Margin="5,5,5,10"
+                                                  Description="{x:Static properties:Resource.Settings_Language_Description}"
+                                                  Glyph="&#xE909;"
+                                                  Name="LanguageBtn"
+                                                  Click="LanguageBtn_OnClick"
+                                                  IsClickable="True"/>
+                        
+                    <onePointControls:SettingCard Header="{x:Static properties:Resource.Settings_Behavior}"
+                                                  Margin="5,5,5,10"
+                                                  Description="{x:Static properties:Resource.Settings_Behavior_Description}"
+                                                  Glyph="&#xE950;"
+                                                  Name="BehaviorBtn"
+                                                  Click="BehaviorBtn_OnClick"
+                                                  IsClickable="True"/>
+                        
+                        <!--<onePointControls:SettingCard Header="{x:Static properties:Resource.Settings_Account}"
+                                                      Margin="5,5,5,10"
+                                                      Description="{x:Static properties:Resource.Settings_Account_Description}"
+                                                      Name="AccountBtn"
+                                                      Click="AccountBtn_OnClick"
+                                                      Glyph="&#xE716;"
+                                                      IsClickable="True"/>-->
+                        
+                    <onePointControls:SettingCard Header="{x:Static properties:Resource.Settings_Help}"
+                                                  Margin="5,5,5,10"
+                                                  Description="{x:Static properties:Resource.Settings_Help_Description}"
+                                                  Glyph="&#xE776;"
+                                                  IsClickable="True"/>
+                        
+                    <onePointControls:SettingCard Header="{x:Static properties:Resource.Settings_About}"
+                                                  Margin="5,5,5,10"
+                                                  Description="{x:Static properties:Resource.Settings_About_Description}"
+                                                  Glyph="&#xE946;"
+                                                  Name="AboutUs"
+                                                  Click="AboutUs_OnClick"
+                                                  IsClickable="True"/>
+                </StackPanel>
                 
-                <onePointControls:SettingCard Header="{x:Static properties:Resource.Settings_Language}"
-                                              Margin="5,5,5,10"
-                                              Description="{x:Static properties:Resource.Settings_Language_Description}"
-                                              Glyph="&#xE909;"
-                                              Name="LanguageBtn"
-                                              Click="LanguageBtn_OnClick"
-                                              IsClickable="True"/>
-                
-                <onePointControls:SettingCard Header="{x:Static properties:Resource.Settings_Behavior}"
-                                              Margin="5,5,5,10"
-                                              Description="{x:Static properties:Resource.Settings_Behavior_Description}"
-                                              Glyph="&#xE950;"
-                                              Name="BehaviorBtn"
-                                              Click="BehaviorBtn_OnClick"
-                                              IsClickable="True"/>
-                
-                <!--<onePointControls:SettingCard Header="{x:Static properties:Resource.Settings_Account}"
-                                              Margin="5,5,5,10"
-                                              Description="{x:Static properties:Resource.Settings_Account_Description}"
-                                              Name="AccountBtn"
-                                              Click="AccountBtn_OnClick"
-                                              Glyph="&#xE716;"
-                                              IsClickable="True"/>-->
-                
-                <onePointControls:SettingCard Header="{x:Static properties:Resource.Settings_Help}"
-                                              Margin="5,5,5,10"
-                                              Description="{x:Static properties:Resource.Settings_Help_Description}"
-                                              Glyph="&#xE776;"
-                                              IsClickable="True"/>
-                
-                <onePointControls:SettingCard Header="{x:Static properties:Resource.Settings_About}"
-                                              Margin="5,5,5,10"
-                                              Description="{x:Static properties:Resource.Settings_About_Description}"
-                                              Glyph="&#xE946;"
-                                              Name="AboutUs"
-                                              Click="AboutUs_OnClick"
-                                              IsClickable="True"/>
-            </StackPanel>
-        </ScrollViewer>
+                <StackPanel Grid.Column="1" Margin="0,20,20,20">
+                    <TextBlock FontWeight="Bold"
+                               FontSize="13"
+                               Margin="0,0,0,5">个性化</TextBlock>
+                    
+                    <TextBlock TextWrapping="WrapWithOverflow"
+                               Margin="0,0,0,15">启动器的主题相关设置，包括窗口背景、主题颜色、背景音乐和制作主体包。</TextBlock>
+                    
+                    <TextBlock FontWeight="Bold"
+                               FontSize="13"
+                               Margin="0,0,0,5">语言</TextBlock>
+                    
+                    <TextBlock TextWrapping="WrapWithOverflow"
+                               Margin="0,0,0,15">启动器语言设置，异域计划项目的入口。</TextBlock>
+                    
+                    <TextBlock FontWeight="Bold"
+                               FontSize="13"
+                               Margin="0,0,0,5">行为</TextBlock>
+                    
+                    <TextBlock TextWrapping="WrapWithOverflow"
+                               Margin="0,0,0,15">游戏 Java 的配置，启动器插件管理。</TextBlock>
+                    
+                    <TextBlock FontWeight="Bold"
+                               FontSize="13"
+                               Margin="0,0,0,5">帮助</TextBlock>
+                    
+                    <TextBlock TextWrapping="WrapWithOverflow"
+                               Margin="0,0,0,15">启动器日志查看，导出帮助开发者修复的内容。</TextBlock>
+                </StackPanel>
+            </Grid>
+    </ScrollViewer>
 </UserControl>

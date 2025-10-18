@@ -1,5 +1,6 @@
 using System;
 using System.IO;
+using System.Threading.Tasks;
 using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
@@ -16,57 +17,123 @@ namespace RMCL.Views.Control.Item;
 
 public partial class AccountChooseItem : UserControl
 {
-    private Account _account;
-    public AccountChooseItem(Account account)
+    public static readonly StyledProperty<Account> AccountProperty =
+        AvaloniaProperty.Register<AccountChooseItem, Account>(nameof(Account));
+
+    public Account Account
     {
-        _account = account;
+        get => GetValue(AccountProperty);
+        set => SetValue(AccountProperty, value);
+    }
+
+    // 缓存默认头像，避免重复加载
+    private static Bitmap? _defaultHeadIcon;
+    private static readonly object _defaultHeadIconLock = new object();
+
+    public AccountChooseItem()
+    {
         InitializeComponent();
-        HeadIconImage.Source = GetHeadIcon(account.SkinData.SkinBase64);
-        AccountName.Text = account.UserName;
-        AccountTypeBox.Text = account.AccountType switch
+        AccountProperty.Changed.AddClassHandler<AccountChooseItem>((x, e) => x.OnAccountChanged());
+    }
+
+    public AccountChooseItem(Account account) : this()
+    {
+        Account = account;
+    }
+
+    private void OnAccountChanged()
+    {
+        if (Account == null) return;
+
+        // 异步更新头像，避免阻塞UI线程
+        UpdateHeadIconAsync();
+        
+        // 同步更新其他文本信息
+        AccountName.Text = Account.UserName;
+        AccountTypeBox.Text = Account.AccountType switch
         { 
             AccountType.Microsoft => Resource.Account_Microsoft,
             AccountType.Offline => Resource.Account_Offline
         };
     }
 
-    private Bitmap GetHeadIcon(string skinBase64 = null)
+    private async void UpdateHeadIconAsync()
+    {
+        try
+        {
+            var headIcon = await GetHeadIconAsync(Account.SkinData.SkinBase64);
+            if (headIcon != null)
+            {
+                HeadIconImage.Source = headIcon;
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"加载头像失败: {ex.Message}");
+            // 使用默认头像
+            HeadIconImage.Source = await GetDefaultHeadIconAsync();
+        }
+    }
+
+    private static async Task<Bitmap> GetHeadIconAsync(string? skinBase64 = null)
     {
         if (string.IsNullOrEmpty(skinBase64))
         {
-            var uri = new Uri("avares://RMCL/Assets/Image/Skin/Steve.png");
-
-            using (var stream = AssetLoader.Open(uri))
-            {
-                // 使用 SKBitmap.Decode 从流解码创建位图
-                var skBitmap = SKBitmap.Decode(stream);
-            
-                if (skBitmap == null)
-                {
-                    throw new InvalidOperationException("Failed to decode default skin image.");
-                }
-
-                // 现在你可以使用 skBitmap 了
-                return HeadCapturer.Default.Capture(skBitmap).ToBitmap();
-            }
+            return await GetDefaultHeadIconAsync();
         }
-        else
+
+        try
         {
-            // 修正：skinBase64 应该是 base64 字符串，需要从 base64 解码
-            byte[] imageBytes = Convert.FromBase64String(skinBase64);
-            using (var stream = new MemoryStream(imageBytes))
+            // 在后台线程处理图像解码
+            return await Task.Run(() =>
             {
+                byte[] imageBytes = Convert.FromBase64String(skinBase64);
+                using var stream = new MemoryStream(imageBytes);
                 var skBitmap = SKBitmap.Decode(stream);
             
                 if (skBitmap == null)
                 {
-                    Console.WriteLine($"Skin 用户选项加载失败，皮肤 Base64 无效！玩家 uuid：{_account.UUID}");
-
-                    return GetHeadIcon();
+                    Console.WriteLine("皮肤Base64数据解码失败，使用默认头像");
+                    return GetDefaultHeadIconSync();
                 }
 
                 return HeadCapturer.Default.Capture(skBitmap).ToBitmap();
+            });
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"处理自定义头像失败: {ex.Message}");
+            return await GetDefaultHeadIconAsync();
+        }
+    }
+
+    private static Task<Bitmap> GetDefaultHeadIconAsync()
+    {
+        return Task.Run(GetDefaultHeadIconSync);
+    }
+
+    private static Bitmap GetDefaultHeadIconSync()
+    {
+        // 双检锁确保线程安全
+        if (_defaultHeadIcon != null) 
+            return _defaultHeadIcon;
+
+        lock (_defaultHeadIconLock)
+        {
+            if (_defaultHeadIcon != null) 
+                return _defaultHeadIcon;
+
+            var uri = new Uri("avares://RMCL/Assets/Image/Skin/Steve.png");
+            using var stream = AssetLoader.Open(uri);
+            var skBitmap = SKBitmap.Decode(stream);
+            
+            if (skBitmap == null)
+            {
+                throw new InvalidOperationException("Failed to decode default skin image.");
             }
+
+            _defaultHeadIcon = HeadCapturer.Default.Capture(skBitmap).ToBitmap();
+            return _defaultHeadIcon;
         }
     }
 }

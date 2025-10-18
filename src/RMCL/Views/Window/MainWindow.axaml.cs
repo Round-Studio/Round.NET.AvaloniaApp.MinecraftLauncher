@@ -123,11 +123,7 @@ public partial class MainWindow : Window
                 if (GlobalModels.Config.Data.StyleConfig.BackgroundImages.Count >= 0)
                 {
                     BackgroundBox.IsVisible = true;
-                    BackgroundBox.Effect = new BlurEffect()
-                    {
-                        Radius = GlobalModels.Config.Data.StyleConfig.BackgroundImageBlur
-                    };
-                    BackgroundBox.Margin = new Thickness(-GlobalModels.Config.Data.StyleConfig.BackgroundImageBlur);
+                    SetBackgroundBlur(GlobalModels.Config.Data.StyleConfig.BackgroundImageBlur);
                     
                     BackgroundImage.Background = new ImageBrush()
                     {
@@ -150,6 +146,15 @@ public partial class MainWindow : Window
     private void InputElement_OnPointerPressed(object? sender, PointerPressedEventArgs e)
     {
         this.BeginMoveDrag(e);
+    }
+
+    public void SetBackgroundBlur(int num)
+    {
+        BackgroundBox.Effect = new BlurEffect()
+        {
+            Radius = num
+        };
+        BackgroundBox.Margin = new Thickness(-num);
     }
 
     private void MinBtn_OnClick(object? sender, RoutedEventArgs e)

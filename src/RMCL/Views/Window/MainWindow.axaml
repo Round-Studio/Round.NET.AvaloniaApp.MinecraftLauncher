@@ -85,20 +85,13 @@
         <notice:NoticePanel HorizontalAlignment="Left"
                             VerticalAlignment="Bottom"
                             Name="NoticePanel"
-                            Margin="0,0,0,59"/>
+                            Margin="0,0,0,15"/>
             
         <tasks:TaskPanel HorizontalAlignment="Stretch"
                         VerticalAlignment="Stretch"
                         Name="TaskPanel"/>
         
         <dialog:DialogHost/>
-        <!--上面的事我们自己的那一坨，用都不想用-->
-        
-        <!--<dialogHostAvalonia:DialogHost CloseOnClickAway="False">
-            <dialogHostAvalonia:DialogHost.DialogContent>
-                ~1~ put your dialog content here@1@
-            </dialogHostAvalonia:DialogHost.DialogContent>
-        </dialogHostAvalonia:DialogHost>-->
         
         <Grid HorizontalAlignment="Stretch"
               VerticalAlignment="Top"

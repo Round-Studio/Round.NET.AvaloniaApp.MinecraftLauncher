@@ -6,6 +6,7 @@
              xmlns:view="clr-namespace:OnePointUI.Avalonia.Styling.Controls.OnePointControls.View;assembly=OnePointUI.Avalonia"
              xmlns:notice="clr-namespace:OnePointUI.Avalonia.Styling.Controls.OnePointControls.Notice;assembly=OnePointUI.Avalonia"
              xmlns:properties="clr-namespace:RMCL.Properties"
+             xmlns:main="clr-namespace:RMCL.ViewModels.Page.Main"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="RMCL.Views.Page.Main.AccountPage.AccountView">
     <Grid RowDefinitions="60,*">

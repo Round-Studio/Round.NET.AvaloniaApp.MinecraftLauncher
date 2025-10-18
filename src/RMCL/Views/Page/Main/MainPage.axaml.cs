@@ -80,12 +80,12 @@ public partial class MainPage : UserControl
         _ = GlobalModels.TaskPanel.ToggleOpen();
     }
 
-    private void Control_OnLoaded(object? sender, RoutedEventArgs e)
+    /*private void Control_OnLoaded(object? sender, RoutedEventArgs e)
     {
         Task.Run(() =>
         {
             LoadPlugins.LoadAll();
             Dispatcher.UIThread.InvokeAsync(() => LoadRing.IsVisible = false);
         });
-    }
+    }*/
 }

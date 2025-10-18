@@ -2,18 +2,25 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             xmlns:res="clr-namespace:RMCL.Properties"
-             xmlns:onePointControls="clr-namespace:OnePointUI.Avalonia.Styling.Controls.OnePointControls;assembly=OnePointUI.Avalonia"
-             xmlns:mainSubPage="clr-namespace:RMCL.Views.Page.Main.MainSubPage"
              xmlns:navigation="clr-namespace:RMCL.Views.Control.Navigation"
              xmlns:navigation1="clr-namespace:OnePointUI.Avalonia.Styling.Controls.OnePointControls.Navigation;assembly=OnePointUI.Avalonia"
+             xmlns:vm="using:RMCL.ViewModels.Page.Main"
              mc:Ignorable="d" 
              d:DesignWidth="800" 
              d:DesignHeight="450"
-             Loaded="Control_OnLoaded"
+             x:DataType="vm:MainPageViewModel"
              x:Class="RMCL.Views.Page.Main.MainPage">
+
+    <Design.DataContext>
+        <vm:MainPageViewModel/>
+    </Design.DataContext>
+    
+    <UserControl.DataContext>
+        <vm:MainPageViewModel/>
+    </UserControl.DataContext>
     
     <Grid ColumnDefinitions="Auto,*">
+        <!-- 左侧导航栏-->
         <Border Grid.Column="0"
                 VerticalAlignment="Stretch"
                 HorizontalAlignment="Left">
@@ -23,8 +30,8 @@
             </Grid>
         </Border>
         
-        <!-- 底部导航栏 -->
-        <Border Grid.Column="0"
+        <!-- 底部导航栏 大抵是已经要废弃乐，因为太多人说像 lx 了...-->
+        <!--<Border Grid.Column="0"
                 HorizontalAlignment="Stretch"
                 VerticalAlignment="Bottom"
                 IsVisible="False"
@@ -61,7 +68,7 @@
                 <navigation:BottomBar HorizontalAlignment="Center"
                                       Name="BottomBar"/>
             </Grid>
-        </Border>
+        </Border>-->
         
         <navigation1:NavigationFrame Grid.Column="1" Name="MainPageContent"
                                      NavigationFrameDirection="Right"></navigation1:NavigationFrame>
