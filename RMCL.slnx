@@ -18,6 +18,7 @@
     <Project Path="src\Plugin.BedrockBoot\Plugin.BedrockBoot.csproj" Type="Classic C#" />
   </Folder>
   <Folder Name="/RemoteOnline/">
+    <Project Path="src\RemoteOnline\RemoteOnline.Console\RemoteOnline.Console.csproj" Type="Classic C#" />
     <Project Path="src\RemoteOnline\RemoteOnline\RemoteOnline.csproj" Type="Classic C#" />
   </Folder>
   <Folder Name="/SDK/">
