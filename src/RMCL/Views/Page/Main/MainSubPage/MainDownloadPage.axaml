@@ -5,6 +5,8 @@
              xmlns:breadcrumb="clr-namespace:OnePointUI.Avalonia.Styling.Controls.OnePointControls.Navigation.Breadcrumb;assembly=OnePointUI.Avalonia"
              xmlns:properties="clr-namespace:RMCL.Properties"
              xmlns:onePointControls="clr-namespace:OnePointUI.Avalonia.Styling.Controls.OnePointControls;assembly=OnePointUI.Avalonia"
+             xmlns:downloadPage="clr-namespace:RMCL.Views.Page.Main.DownloadPage"
+             xmlns:navigation="clr-namespace:OnePointUI.Avalonia.Styling.Controls.OnePointControls.Navigation;assembly=OnePointUI.Avalonia"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="RMCL.Views.Page.Main.MainSubPage.MainDownloadPage">
     <Grid>
@@ -12,8 +14,8 @@
               Opacity="0.6"></Grid>
         
         <Grid HorizontalAlignment="Stretch"
-              VerticalAlignment="Top"
-              RowDefinitions="82,*">
+              VerticalAlignment="Stretch"
+              RowDefinitions="82,Auto,*">
             <breadcrumb:BreadcrumbBar Grid.Row="0"
                                       RootItem="{x:Static properties:Resource.MainPage_Download}"
                                       Name="BreadcrumbBar"
@@ -27,6 +29,38 @@
                     </Transitions>
                 </breadcrumb:BreadcrumbBar.Transitions>
             </breadcrumb:BreadcrumbBar>
+            
+            <StackPanel Grid.Row="0"
+                        Margin="0,0,20,0"
+                        Orientation="Horizontal"
+                        HorizontalAlignment="Right"
+                        VerticalAlignment="Center">
+                <Button Padding="18,0"
+                        IsEnabled="False"
+                        Margin="0,0,12,0"
+                        Height="36"
+                        Classes="NoBorder"
+                        VerticalAlignment="Center">
+                    <StackPanel Orientation="Horizontal">
+                        <onePointControls:FontIcon Glyph="&#xE72C;"
+                                                   Margin="0,0,8,0"
+                                                   VerticalAlignment="Center"
+                                                   FontSize="16"></onePointControls:FontIcon>
+                        <TextBlock>刷新</TextBlock>
+                    </StackPanel>
+                </Button>
+                
+                <!--<TextBlock HorizontalAlignment="Right">搜索模型</TextBlock>-->
+                <ComboBox Height="36" Width="200"
+                          VerticalContentAlignment="Center"
+                          SelectedIndex="0">
+                    <ComboBoxItem>聚合搜索</ComboBoxItem>
+                    <ComboBoxItem>仅游戏</ComboBoxItem>
+                    <ComboBoxItem>仅资源 (资源的聚合搜索)</ComboBoxItem>
+                    <ComboBoxItem>仅 CurseForge 资源</ComboBoxItem>
+                    <ComboBoxItem>仅 Modrinth 资源</ComboBoxItem>
+                </ComboBox>
+            </StackPanel>
         
             <Grid Grid.Row="1"
                   ColumnDefinitions="64,*">
@@ -38,9 +72,14 @@
                                            Foreground="{DynamicResource PrimaryForegroundBrush}"/> 
                 
                 <TextBox Grid.Column="1"
+                         Watermark="键入关键词以搜索..."
                          HorizontalAlignment="Stretch"
                          Margin="0,0,20,0"
                          Height="36"></TextBox>
+            </Grid>
+            
+            <Grid Grid.Row="2">
+                <navigation:NavigationFrame Name="DownloadFrame"/>
             </Grid>
         </Grid>
     </Grid>
