@@ -65,6 +65,11 @@
                     <TextBlock Text="{x:Static properties:Resource.Settings_Restart}"></TextBlock>
                 </StackPanel>
             </Button>
+            
+            <StackPanel VerticalAlignment="Center">
+                <TextBlock HorizontalAlignment="Right">Version</TextBlock>
+                <TextBlock HorizontalAlignment="Right">Public Date</TextBlock>
+            </StackPanel>
         </StackPanel>
         
         <navigation:NavigationFrame Name="SettingsNavigation"
