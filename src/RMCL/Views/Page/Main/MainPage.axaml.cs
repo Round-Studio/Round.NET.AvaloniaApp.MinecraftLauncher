@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Threading.Tasks;
+using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Interactivity;
 using Avalonia.Threading;
@@ -26,6 +27,15 @@ public partial class MainPage : UserControl
             if (tag == null) throw new ArgumentNullException(nameof(tag));
             object? page = Activator.CreateInstance(tag);
             if(page == null) throw new NullReferenceException(nameof(page));
+
+            if (tag == typeof(MainHomePage))
+            {
+                CenterBorder.Margin = new Thickness(12);
+            }
+            else
+            {
+                CenterBorder.Margin = new Thickness(0);
+            }
             
             MainPageContent.NavigateTo(page);
         };

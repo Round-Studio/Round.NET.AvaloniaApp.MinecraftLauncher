@@ -29,6 +29,11 @@ public partial class DownloadClientPage : UserControl
 
         ClientName.Text = ManifestVersion.Id;
         ClientName.Watermark = ManifestVersion.Id;
+
+        if (ManifestVersion.Type == "snapshot")
+        {
+            OutherInstallItem.IsVisible = false;
+        }
     }
     
     public DownloadClientPage(ManifestMojang.ManifestVersion _m) : this()

@@ -69,7 +69,8 @@
             </Panel>
         </Border>
         
-        <ScrollViewer Grid.Row="1">
+        <ScrollViewer Grid.Row="1"
+                      Name="OutherInstallItem">
             <Grid>
                 <TextBlock FontSize="18"
                            FontWeight="Bold">可选组件</TextBlock>
