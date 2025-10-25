@@ -24,18 +24,9 @@ public partial class MainHomePage : UserControl
     {
         GlobalModels.NoticePanel.AddNotice(new NoticeInfo()
         {
-            Message = "欢迎使用 RMCL\naa\naa",
+            Message = "欢迎使用 RMCL",
             Title = "Welcome to RMCL",
             NoticeType = NoticeType.Info
-        });
-
-        DialogHost.Show(new DialogInfo()
-        {
-            Title = "Test Dialog",
-            Content = "欢迎使用 RMCL\naa\naa",
-            CloseButtonText = "OK",
-            AccountButton = DialogButtons.CloseButton,
-            IsWindow = true
         });
     }
 

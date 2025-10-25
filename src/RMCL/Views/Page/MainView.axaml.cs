@@ -7,6 +7,9 @@ using Avalonia.Markup.Xaml;
 using OnePointUI.Avalonia.Base.Entry;
 using OnePointUI.Avalonia.Base.Enum;
 using OnePointUI.Avalonia.Styling.Controls.OnePointControls.Dialog;
+using RMCL.Base.Entry.Notice;
+using RMCL.Base.Enum.Notice;
+using RMCL.Models.Global;
 using RMCL.Models.Helper;
 
 namespace RMCL.Views.Page;
@@ -20,6 +23,13 @@ public partial class MainView : UserControl
         this.Loaded += (sender, args) =>
         {
 #if DEBUG
+            GlobalModels.NoticePanel.AddNotice(new NoticeInfo()
+            {
+                Message = "当前模式为 Debug 模式，请勿用于发布。",
+                Title = "Debug Model",
+                NoticeType = NoticeType.Info
+            });
+            
             var date = CheckVersion.GetLinkerTimestamp();
             var zt = CheckVersion.CheckTimeAndExecute24Hour(date);
             Console.WriteLine(@$"当前模式：Debug 模式");
