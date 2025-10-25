@@ -17,9 +17,26 @@
             <Grid ColumnDefinitions="*">
                 <StackPanel Grid.Column="0"
                             Margin="20">
-                    <TextBlock FontSize="18"
-                               FontWeight="Bold"
-                               Margin="0,0,0,12">最新发布</TextBlock>
+                    <Grid Margin="0,0,0,12">
+                        <TextBlock FontSize="18"
+                                   FontWeight="Bold"
+                                   HorizontalAlignment="Left"
+                                   VerticalAlignment="Center">最新发布</TextBlock>
+                        
+                        <Button Padding="16,8"
+                                HorizontalAlignment="Right">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock HorizontalAlignment="Center"
+                                           Margin="0,0,8,0">所有版本</TextBlock>
+                                
+                                <onePointControls:FontIcon Glyph="&#xE72A;"
+                                                           FontSize="14"
+                                                           VerticalAlignment="Center"
+                                                           Margin="0,0,0,0"></onePointControls:FontIcon>
+                            </StackPanel>
+                        </Button>
+                    </Grid>
+                    
                     <onePointControls:SettingCard Header="1.21.10"
                                                   Description="最新正式版"
                                                   Name="VersionRelease"
