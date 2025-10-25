@@ -5,6 +5,8 @@ using Avalonia.Controls;
 using Avalonia.Interactivity;
 using Avalonia.Markup.Xaml;
 using Avalonia.Threading;
+using OnePointUI.Avalonia.Base.Entry;
+using OnePointUI.Avalonia.Styling.Controls.OnePointControls.Dialog;
 using OverrideLauncher.Core.Base.Entry.Download.Install.Manifest;
 using OverrideLauncher.Core.Classes.Install.Manifest;
 using RMCL.Views.Page.Main.MainSubPage;
@@ -28,16 +30,28 @@ public partial class DownloadRecommend : UserControl
         {
             Console.WriteLine("开始多线程异步加载推荐下载项 01 - 最新版本");
 
-            if(ManifestMojang == null) ManifestMojang = InstallHelper.GetVersionManifest().Result;
-            if (ManifestMojang != null)
+            try
             {
-                Dispatcher.UIThread.Invoke(() =>
+                if (ManifestMojang == null) ManifestMojang = InstallHelper.GetVersionManifest().Result;
+                if (ManifestMojang != null)
                 {
-                    VersionRelease.Header = ManifestMojang.Latest.Release;
-                    VersionPreview.Header = ManifestMojang.Latest.Snapshot;
+                    Dispatcher.UIThread.Invoke(() =>
+                    {
+                        VersionRelease.Header = ManifestMojang.Latest.Release;
+                        VersionPreview.Header = ManifestMojang.Latest.Snapshot;
 
-                    ResultBox.IsVisible = true;
-                    LoadRing.IsVisible = false;
+                        ResultBox.IsVisible = true;
+                        LoadRing.IsVisible = false;
+                    });
+                }
+            }
+            catch (Exception ex)
+            {
+                DialogHost.Show(new DialogInfo()
+                {
+                    Title = "网络错误",
+                    Content = $"请检查本机网络是否正常连接。\n\n错误信息：\n{ex}",
+                    CloseButtonText = "好"
                 });
             }
         });

@@ -38,7 +38,7 @@
                 <Button Padding="18,0"
                         IsEnabled="False"
                         Margin="0,0,12,0"
-                        Height="36"
+                        Height="32"
                         Classes="NoBorder"
                         VerticalAlignment="Center">
                     <StackPanel Orientation="Horizontal">
@@ -51,7 +51,7 @@
                 </Button>
                 
                 <!--<TextBlock HorizontalAlignment="Right">搜索模型</TextBlock>-->
-                <ComboBox Height="36" Width="200"
+                <ComboBox Height="32" Width="200"
                           VerticalContentAlignment="Center"
                           SelectedIndex="0">
                     <ComboBoxItem>聚合搜索</ComboBoxItem>
@@ -75,7 +75,7 @@
                          Watermark="键入关键词以搜索..."
                          HorizontalAlignment="Stretch"
                          Margin="0,0,20,0"
-                         Height="36"></TextBox>
+                         Height="32"></TextBox>
             </Grid>
             
             <Grid Grid.Row="2">

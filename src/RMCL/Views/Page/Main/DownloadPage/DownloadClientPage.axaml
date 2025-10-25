@@ -18,7 +18,7 @@
                 Margin="0,38,0,20"
                 CornerRadius="6"
                 Background="{DynamicResource PrimaryBackgroundBrush}"
-                BorderThickness="3"
+                BorderThickness="1"
                 BorderBrush="{DynamicResource PrimaryBorderBrush}">
             <Panel>
                 <StackPanel Margin="20,0"
