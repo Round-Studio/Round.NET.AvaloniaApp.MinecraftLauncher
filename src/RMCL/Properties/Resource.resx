@@ -145,7 +145,7 @@
     <value>立即重启</value>
   </data>
   <data name="Settings.Behavior" xml:space="preserve">
-    <value>彳亍为</value>
+    <value>行为</value>
   </data>
   <data name="Settings.Behavior.Description" xml:space="preserve">
     <value>启动器与游戏行为</value>

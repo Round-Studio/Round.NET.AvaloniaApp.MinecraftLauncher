@@ -29,7 +29,7 @@
                         HorizontalAlignment="Stretch"
                         CornerRadius="12"
                         ClipToBounds="True"
-                        Margin="8">
+                        Margin="12">
                     <Grid>
                         <Grid Background="{DynamicResource BackgroundBrush}"
                               VerticalAlignment="Stretch"

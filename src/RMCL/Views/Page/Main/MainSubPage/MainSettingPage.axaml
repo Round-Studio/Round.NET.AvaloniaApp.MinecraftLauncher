@@ -51,10 +51,17 @@
             <!--<onePointControls:LabelBox Text="需要重启"
                                        VerticalAlignment="Center"
                                        Margin="12,0"></onePointControls:LabelBox>-->
+            <StackPanel VerticalAlignment="Center">
+                <TextBlock HorizontalAlignment="Right"
+                           Name="TripVersion">Version</TextBlock>
+                <TextBlock HorizontalAlignment="Right"
+                           Name="TripBuildDate">Public Date</TextBlock>
+            </StackPanel>
             
             <Button Height="32"
                     Name="RestartBtn"
                     IsVisible="False"
+                    Margin="12,0,0,0"
                     Click="RestartBtn_OnClick"
                     Padding="12,0">
                 <StackPanel Orientation="Horizontal">
@@ -65,11 +72,6 @@
                     <TextBlock Text="{x:Static properties:Resource.Settings_Restart}"></TextBlock>
                 </StackPanel>
             </Button>
-            
-            <StackPanel VerticalAlignment="Center">
-                <TextBlock HorizontalAlignment="Right">Version</TextBlock>
-                <TextBlock HorizontalAlignment="Right">Public Date</TextBlock>
-            </StackPanel>
         </StackPanel>
         
         <navigation:NavigationFrame Name="SettingsNavigation"

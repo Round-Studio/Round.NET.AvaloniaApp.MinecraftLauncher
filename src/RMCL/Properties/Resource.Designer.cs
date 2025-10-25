@@ -438,7 +438,7 @@ namespace RMCL.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 彳亍为.
+        ///   Looks up a localized string similar to 行为.
         /// </summary>
         public static string Settings_Behavior {
             get {

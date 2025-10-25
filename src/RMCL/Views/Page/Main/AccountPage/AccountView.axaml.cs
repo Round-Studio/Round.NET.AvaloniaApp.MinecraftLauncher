@@ -1,4 +1,5 @@
 using System;
+using System.Threading.Tasks;
 using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Interactivity;
@@ -24,7 +25,7 @@ public partial class AccountView : UserControl
         UpdateUI();
     }
 
-    public void UpdateUI()
+    public async Task UpdateUI()
     {
         GlobalModels.Config.Data.AccountConfig.Accounts.ForEach(user =>
         {

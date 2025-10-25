@@ -24,37 +24,31 @@ public partial class DownloadRecommend : UserControl
         UpdateUI();
     }
 
-    public void UpdateUI()
+    public async Task UpdateUI()
     {
-        Task.Run(() =>
+        Console.WriteLine("开始多线程异步加载推荐下载项 01 - 最新版本");
+
+        try
         {
-            Console.WriteLine("开始多线程异步加载推荐下载项 01 - 最新版本");
-
-            try
+            if (ManifestMojang == null) ManifestMojang = await InstallHelper.GetVersionManifest();
+            if (ManifestMojang != null)
             {
-                if (ManifestMojang == null) ManifestMojang = InstallHelper.GetVersionManifest().Result;
-                if (ManifestMojang != null)
-                {
-                    Dispatcher.UIThread.Invoke(() =>
-                    {
-                        VersionRelease.Header = ManifestMojang.Latest.Release;
-                        VersionPreview.Header = ManifestMojang.Latest.Snapshot;
+                VersionRelease.Header = ManifestMojang.Latest.Release;
+                VersionPreview.Header = ManifestMojang.Latest.Snapshot;
 
-                        ResultBox.IsVisible = true;
-                        LoadRing.IsVisible = false;
-                    });
-                }
+                ResultBox.IsVisible = true;
+                LoadRing.IsVisible = false;
             }
-            catch (Exception ex)
+        }
+        catch (Exception ex)
+        {
+            DialogHost.Show(new DialogInfo()
             {
-                DialogHost.Show(new DialogInfo()
-                {
-                    Title = "网络错误",
-                    Content = $"请检查本机网络是否正常连接。\n\n错误信息：\n{ex}",
-                    CloseButtonText = "好"
-                });
-            }
-        });
+                Title = "网络错误",
+                Content = $"请检查本机网络是否正常连接。\n\n错误信息：\n{ex}",
+                CloseButtonText = "好"
+            });
+        }
     }
 
     private ManifestMojang.ManifestVersion? FindVersion(string id)

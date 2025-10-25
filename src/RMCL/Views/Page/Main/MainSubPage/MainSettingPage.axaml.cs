@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
+using System.Reflection;
 using System.Threading.Tasks;
 using Avalonia;
 using Avalonia.Controls;
@@ -9,6 +10,7 @@ using OnePointUI.Avalonia.Base.Entry;
 using OnePointUI.Avalonia.Styling.Controls.OnePointControls.Navigation;
 using RMCL.Base.Entry.Notice;
 using RMCL.Models.Global;
+using RMCL.Models.Helper;
 using RMCL.Views.Page.Main.SettingsSubPage;
 
 namespace RMCL.Views.Page.Main.MainSubPage;
@@ -27,6 +29,8 @@ public partial class MainSettingPage : UserControl
         SettingsNavigation.NavigateTo(new SettingsNavigation());
 
         BreadcrumbBar.RootItemClick = () => NavigationTo(new SettingsNavigation());
+        TripVersion.Text = $"{Assembly.GetEntryAssembly().GetName().Version}";
+        TripBuildDate.Text = $"{CheckVersion.GetLinkerTimestamp()}";
     }
 
     public void SetReStart()

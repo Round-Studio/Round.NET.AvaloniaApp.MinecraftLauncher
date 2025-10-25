@@ -10,7 +10,7 @@
     </PropertyGroup>
 
     <PropertyGroup>
-      <BuildTimestamp>$([System.DateTime]::UtcNow.ToString("yyyy-MM-dd HH:mm:ss"))</BuildTimestamp>
+      <BuildTimestamp>$([System.DateTime]::Now.ToString("yyyy-MM-dd HH:mm:ss"))</BuildTimestamp>
     </PropertyGroup>
 
     <ItemGroup>
