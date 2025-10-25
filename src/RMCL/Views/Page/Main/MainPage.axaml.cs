@@ -31,10 +31,14 @@ public partial class MainPage : UserControl
             if (tag == typeof(MainHomePage))
             {
                 CenterBorder.Margin = new Thickness(12);
+                LaunchBtn.Margin = new Thickness(12);
+                LaunchText.IsVisible = true;
             }
             else
             {
                 CenterBorder.Margin = new Thickness(0);
+                LaunchBtn.Margin = new Thickness(0,12);
+                LaunchText.IsVisible = false;
             }
             
             MainPageContent.NavigateTo(page);

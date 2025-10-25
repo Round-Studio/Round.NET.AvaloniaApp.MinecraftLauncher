@@ -63,7 +63,15 @@
                 VerticalAlignment="Bottom"
                 Margin="12"
                 CornerRadius="12"
+                Name="LaunchBtn"
                 ClipToBounds="True">
+            <Border.Transitions>
+                <Transitions>
+                    <ThicknessTransition Duration="0:0:0.26"
+                                         Easing="ExponentialEaseOut"
+                                         Property="Margin"></ThicknessTransition>
+                </Transitions>
+            </Border.Transitions>
             <Grid>
                 <Grid Background="{DynamicResource BackgroundBrush}"
                       VerticalAlignment="Stretch"
@@ -73,47 +81,23 @@
                 <!-- 启动按钮 -->
                 <Button Classes="NoBorder"
                         Background="{DynamicResource AccentBackgroundBrush}"
-                        Padding="24,16"
-                        Margin="10"
-                        MinWidth="120">
-                    <Button.Styles>
-                        <Style Selector="Button">
-                            <Style.Animations>
-                                <Animation Duration="0:0:1"
-                                           Easing="ExponentialEaseOut">
-                                    <KeyFrame Cue="0%">
-                                        <Setter Property="Margin"
-                                                Value="0,200,15,-200"></Setter>
-                                    </KeyFrame>
-                                    <KeyFrame Cue="90%">
-                                        <Setter Property="Margin"
-                                                Value="15"></Setter>
-                                    </KeyFrame>
-                                    <KeyFrame Cue="98%">
-                                        <Setter Property="ScaleTransform.ScaleX" Value="1.05"/>
-                                        <Setter Property="ScaleTransform.ScaleY" Value="1.05"/>
-                                    </KeyFrame>
-                                    <KeyFrame Cue="100%">
-                                        <Setter Property="Margin"
-                                                Value="15"></Setter>
-                                        <Setter Property="ScaleTransform.ScaleX" Value="1"/>
-                                        <Setter Property="ScaleTransform.ScaleY" Value="1"/>
-                                    </KeyFrame>
-                                </Animation>
-                            </Style.Animations>
-                        </Style>
-                    </Button.Styles>
+                        Padding="17,16"
+                        MinHeight="56"
+                        MaxHeight="56"
+                        Margin="10">
                     <StackPanel Orientation="Horizontal">
                         <onePointControls:FontIcon Glyph="&#xE768;"
                                                    FontSize="20"
                                                    FontWeight="Bold"
                                                    VerticalAlignment="Center"
                                                    Foreground="White"
-                                                   Margin="0,0,8,0"/>
+                                                   Margin="0,0,0,0"/>
                                     
                         <TextBlock Text="{x:Static res:Resource.MainPage_Launch}"
                                    Foreground="White"
                                    FontSize="18"
+                                   Name="LaunchText"
+                                   Margin="8,0,0,0"
                                    VerticalAlignment="Center"
                                    FontWeight="Bold"/>
                     </StackPanel>

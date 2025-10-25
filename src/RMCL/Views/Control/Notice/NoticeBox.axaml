@@ -20,7 +20,7 @@
                         <KeyFrame Cue="0%">
                             <Setter Property="ScaleTransform.ScaleX" Value="1.02"/>
                             <Setter Property="ScaleTransform.ScaleY" Value="1.02"/>
-                            <Setter Property="Margin" Value="-220,5,220,5"></Setter>
+                            <Setter Property="Margin" Value="220,5,-220,5"></Setter>
                         </KeyFrame>
                         <KeyFrame Cue="98%">
                             <Setter Property="ScaleTransform.ScaleX" Value="1.02"/>
@@ -50,11 +50,11 @@
                                                Easing="ExponentialEaseOut">
                                         <KeyFrame Cue="0%">
                                             <Setter Property="Margin"
-                                                    Value="-40,0,40,0"></Setter>
+                                                    Value="40,0,-40,0"></Setter>
                                         </KeyFrame>
                                         <KeyFrame Cue="60%">
                                             <Setter Property="Margin"
-                                                    Value="-40,0,40,0"></Setter>
+                                                    Value="40,0,-40,0"></Setter>
                                         </KeyFrame>
                                         <KeyFrame Cue="100%">
                                             <Setter Property="Margin"
@@ -77,11 +77,11 @@
                                                Easing="ExponentialEaseOut">
                                         <KeyFrame Cue="0%">
                                             <Setter Property="Margin"
-                                                    Value="-40,-2,40,0"></Setter>
+                                                    Value="40,-2,-40,0"></Setter>
                                         </KeyFrame>
                                         <KeyFrame Cue="60%">
                                             <Setter Property="Margin"
-                                                    Value="-40,-2,40,0"></Setter>
+                                                    Value="40,-2,-40,0"></Setter>
                                         </KeyFrame>
                                         <KeyFrame Cue="100%">
                                             <Setter Property="Margin"
@@ -114,11 +114,11 @@
                                            Easing="ExponentialEaseOut">
                                     <KeyFrame Cue="0%">
                                         <Setter Property="Margin"
-                                                Value="-40,0,40,0"></Setter>
+                                                Value="40,0,-40,0"></Setter>
                                     </KeyFrame>
                                     <KeyFrame Cue="70%">
                                         <Setter Property="Margin"
-                                                Value="-40,0,40,0"></Setter>
+                                                Value="40,0,-40,0"></Setter>
                                     </KeyFrame>
                                     <KeyFrame Cue="100%">
                                         <Setter Property="Margin"

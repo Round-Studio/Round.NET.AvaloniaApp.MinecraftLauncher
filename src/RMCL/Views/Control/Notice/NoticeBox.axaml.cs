@@ -55,7 +55,7 @@ public partial class NoticeBox : UserControl
                     Cue = new Cue(1),
                     Setters =
                     {
-                        new Setter(MarginProperty, new Thickness(-220, 5, 220, 5))
+                        new Setter(MarginProperty, new Thickness(220, 5, -220, 5))
                     }
                 }
             }

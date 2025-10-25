@@ -85,7 +85,7 @@
         <notice:NoticePanel HorizontalAlignment="Right"
                             VerticalAlignment="Top"
                             Name="NoticePanel"
-                            Margin="0,15,0,0"/>
+                            Margin="0,42,0,0"/>
             
         <tasks:TaskPanel HorizontalAlignment="Stretch"
                         VerticalAlignment="Stretch"
