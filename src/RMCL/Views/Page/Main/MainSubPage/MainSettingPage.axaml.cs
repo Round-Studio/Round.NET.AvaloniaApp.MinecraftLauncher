@@ -29,8 +29,8 @@ public partial class MainSettingPage : UserControl
         SettingsNavigation.NavigateTo(new SettingsNavigation());
 
         BreadcrumbBar.RootItemClick = () => NavigationTo(new SettingsNavigation());
-        TripVersion.Text = $"{Assembly.GetEntryAssembly().GetName().Version}";
-        TripBuildDate.Text = $"{CheckVersion.GetLinkerTimestamp()}";
+        TripVersion.Text = $"v{Assembly.GetEntryAssembly().GetName().Version}";
+        TripBuildDate.Text = $"Build.{CheckVersion.GetLinkerTimestamp().ToString("yyyy.MM.dd.hhmm")}";
     }
 
     public void SetReStart()

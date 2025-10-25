@@ -22,6 +22,15 @@
     </UserControl.DataContext>
     
     <Grid>
+        <Grid Width="74"
+              VerticalAlignment="Stretch"
+              HorizontalAlignment="Left">
+            <Grid Background="{DynamicResource BackgroundBrush}"
+                  VerticalAlignment="Stretch"
+                  HorizontalAlignment="Stretch"
+                  Opacity="0.6"></Grid>
+        </Grid>
+        
         <Grid ColumnDefinitions="Auto,*">
             <!-- 左侧导航栏-->
             <Grid Grid.Column="0"
@@ -63,6 +72,7 @@
                 VerticalAlignment="Bottom"
                 Margin="12"
                 CornerRadius="12"
+                Width="200"
                 Name="LaunchBtn"
                 ClipToBounds="True">
             <Border.Transitions>
@@ -70,6 +80,10 @@
                     <ThicknessTransition Duration="0:0:0.26"
                                          Easing="ExponentialEaseOut"
                                          Property="Margin"></ThicknessTransition>
+                    
+                    <DoubleTransition Duration="0:0:0.52"
+                                      Easing="ExponentialEaseOut"
+                                      Property="Width"></DoubleTransition>
                 </Transitions>
             </Border.Transitions>
             <Grid>

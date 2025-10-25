@@ -32,12 +32,14 @@ public partial class MainPage : UserControl
             {
                 CenterBorder.Margin = new Thickness(12);
                 LaunchBtn.Margin = new Thickness(12);
+                LaunchBtn.Width = 200;
                 LaunchText.IsVisible = true;
             }
             else
             {
                 CenterBorder.Margin = new Thickness(0);
                 LaunchBtn.Margin = new Thickness(0,12);
+                LaunchBtn.Width = 74;
                 LaunchText.IsVisible = false;
             }
             
