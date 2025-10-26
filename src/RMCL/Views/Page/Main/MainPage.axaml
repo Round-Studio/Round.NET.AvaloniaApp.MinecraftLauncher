@@ -22,9 +22,17 @@
     </UserControl.DataContext>
     
     <Grid>
-        <Grid Width="74"
+        <Grid Width="0"
+              Name="LeftBarBackground"
               VerticalAlignment="Stretch"
               HorizontalAlignment="Left">
+            <Grid.Transitions>
+                <Transitions>
+                    <DoubleTransition Duration="0:0:0.52"
+                                      Easing="ExponentialEaseOut"
+                                      Property="Width"></DoubleTransition>
+                </Transitions>
+            </Grid.Transitions>
             <Grid Background="{DynamicResource BackgroundBrush}"
                   VerticalAlignment="Stretch"
                   HorizontalAlignment="Stretch"
@@ -53,6 +61,7 @@
                         <Grid Background="{DynamicResource BackgroundBrush}"
                               VerticalAlignment="Stretch"
                               HorizontalAlignment="Stretch"
+                              Name="BarBackground"
                               Opacity="0.6"></Grid>
                         
                         <navigation:LeftBar VerticalAlignment="Stretch"
@@ -90,6 +99,7 @@
                 <Grid Background="{DynamicResource BackgroundBrush}"
                       VerticalAlignment="Stretch"
                       HorizontalAlignment="Stretch"
+                      Name="BtnBackground"
                       Opacity="0.6"></Grid>
                 
                 <!-- 启动按钮 -->

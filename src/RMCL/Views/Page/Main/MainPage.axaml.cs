@@ -34,6 +34,9 @@ public partial class MainPage : UserControl
                 LaunchBtn.Margin = new Thickness(12);
                 LaunchBtn.Width = 200;
                 LaunchText.IsVisible = true;
+                LeftBarBackground.Width = 0;
+                BarBackground.Opacity = 0.6;
+                BtnBackground.Opacity = 0.6;
             }
             else
             {
@@ -41,6 +44,9 @@ public partial class MainPage : UserControl
                 LaunchBtn.Margin = new Thickness(0,12);
                 LaunchBtn.Width = 74;
                 LaunchText.IsVisible = false;
+                LeftBarBackground.Width = 74;
+                BarBackground.Opacity = 0;
+                BtnBackground.Opacity = 0;
             }
             
             MainPageContent.NavigateTo(page);
