@@ -3,6 +3,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:onePointControls="clr-namespace:OnePointUI.Avalonia.Styling.Controls.OnePointControls;assembly=OnePointUI.Avalonia"
+             xmlns:notice="clr-namespace:OnePointUI.Avalonia.Styling.Controls.OnePointControls.Notice;assembly=OnePointUI.Avalonia"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="Plugin.BedrockBoot.Views.Pages.MainSubPage.DownloadPage">
     <Grid>
@@ -54,24 +55,18 @@
         </Grid>
         
         <Grid Grid.Row="1">
-            <onePointControls:ProgressRing HorizontalAlignment="Center"
-                                           VerticalAlignment="Center"
-                                           Background="Transparent"
-                                           Name="LoadingRing"
-                                           Width="48" Height="48"></onePointControls:ProgressRing>
+            <notice:LoadCard HorizontalAlignment="Center"
+                             VerticalAlignment="Center"
+                             BigTitle="收集电子中..."
+                             Message="全体电子，列队！"
+                             Name="LoadingRing"></notice:LoadCard>
             
-            <StackPanel VerticalAlignment="Center"
-                        HorizontalAlignment="Center"
-                        Name="NoneBox">
-                <onePointControls:FontIcon Glyph="&#xF133;"
-                                           HorizontalAlignment="Center"
-                                           Foreground="{DynamicResource PrimaryForegroundBrush}"
-                                           FontSize="28"></onePointControls:FontIcon>
-                
-                <onePointControls:LineTextBlock FontSize="22"
-                                                Text="没有这个选项哦"
-                                                Margin="15"></onePointControls:LineTextBlock>
-            </StackPanel>
+            <notice:InfoCard VerticalAlignment="Center"
+                             HorizontalAlignment="Center"
+                             Glyph="&#xE822;"
+                             BigTitle="请...诶？"
+                             Message="您所输入的关键词无效哦"
+                             Name="NoneBox"> </notice:InfoCard>
             
             <ScrollViewer Name="ScrollViewer">
                 <StackPanel Name="ItemsPanel"

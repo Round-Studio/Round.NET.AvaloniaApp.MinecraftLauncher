@@ -94,20 +94,13 @@ public partial class MainPage : UserControl
             ItemText = Resource.MainPage_Setting,
             Tag = "Setting",
             PageType = typeof(MainSettingPage)
-        }); 
+        });
+
+        Task.Run(() => LoadPlugins.LoadAll());
     }
 
     private void TaskBtn_OnClick(object? sender, RoutedEventArgs e)
     {
         _ = GlobalModels.TaskPanel.ToggleOpen();
     }
-
-    /*private void Control_OnLoaded(object? sender, RoutedEventArgs e)
-    {
-        Task.Run(() =>
-        {
-            LoadPlugins.LoadAll();
-            Dispatcher.UIThread.InvokeAsync(() => LoadRing.IsVisible = false);
-        });
-    }*/
 }
