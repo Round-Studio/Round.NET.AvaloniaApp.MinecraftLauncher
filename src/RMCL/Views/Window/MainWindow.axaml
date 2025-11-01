@@ -1,4 +1,4 @@
-<Window xmlns="https://github.com/avaloniaui"
+<windowFrame:OnePointWindow xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:vm="using:RMCL.ViewModels"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -9,19 +9,16 @@
         xmlns:tasks="clr-namespace:RMCL.Views.Control.Tasks"
         xmlns:dialog="clr-namespace:OnePointUI.Avalonia.Styling.Controls.OnePointControls.Dialog;assembly=OnePointUI.Avalonia"
         xmlns:notice1="clr-namespace:OnePointUI.Avalonia.Styling.Controls.OnePointControls.Notice;assembly=OnePointUI.Avalonia"
+        xmlns:windowFrame="clr-namespace:OnePointUI.Avalonia.Styling.Controls.OnePointControls.WindowFrame;assembly=OnePointUI.Avalonia"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="RMCL.Views.MainWindow"
         x:DataType="vm:MainWindowViewModel"
         Icon="/Assets/Icon/RMCL4.Logo.Big.ico"
-        ExtendClientAreaToDecorationsHint="True"
-        ExtendClientAreaTitleBarHeightHint="-1"
-        ExtendClientAreaChromeHints="NoChrome"
-        WindowStartupLocation="CenterScreen"
         Width="1000" MinWidth="1000"
         Height="560" MinHeight="560"
         Background="Transparent"
         Closing="TopLevel_OnClosing"
-        Title="{Binding WindowTitle}">
+        Title="RMCL">
 
     <Design.DataContext>
         <!-- This only sets the DataContext for the previewer in an IDE,
@@ -29,131 +26,66 @@
         <vm:MainWindowViewModel/>
     </Design.DataContext>
 
-    <Grid>
-        <Grid Name="AccentBackgroundBox"
-              Background="{DynamicResource AccentBackgroundBrush}"
-              IsVisible="False"></Grid>
-        
-        <Grid Name="BackgroundBox"
-              IsVisible="False">
-            <Grid.Effect>
-                <BlurEffect Radius="0"></BlurEffect>
-            </Grid.Effect>
-            <Grid Name="BackgroundImage"></Grid>
-            <Grid Name="BackgroundImageOpacity"
-                  Opacity="0"
-                  Background="{DynamicResource BackgroundBrush}"></Grid>
-        </Grid>
-        
-        <Image Source="../../Assets/Image/蜂窝.Background.png"
-               Width="322.5" Height="165"
-               HorizontalAlignment="Right"
-               VerticalAlignment="Top"
-               Margin="0,32,0,0"
-               Name="RightImage"
-               Opacity="0.9">
-            <Image.Transitions>
-                <Transitions>
-                    <DoubleTransition Property="Opacity"
-                                      Duration="0:0:0.18"></DoubleTransition>
-                </Transitions>
-            </Image.Transitions>
-        </Image>
-        
-        <Image Source="../../Assets/Image/蜂窝.Background.png"
-               Width="322.5" Height="165"
-               HorizontalAlignment="Left"
-               VerticalAlignment="Bottom"
-               Name="LeftImage"
-               Margin="0,0,0,0"
-               Opacity="0.9">
-            <Image.RenderTransform>
-                <RotateTransform Angle="180"/>
-            </Image.RenderTransform>
-            <Image.Transitions>
-                <Transitions>
-                    <DoubleTransition Property="Opacity"
-                                      Duration="0:0:0.18"></DoubleTransition>
-                </Transitions>
-            </Image.Transitions>
-        </Image>
-        
-        <Grid Margin="0,32,0,0">
+    <windowFrame:OnePointWindow.MainContent>
+        <Grid>
+            <Grid Name="AccentBackgroundBox"
+                  Background="{DynamicResource AccentBackgroundBrush}"
+                  IsVisible="False"></Grid>
+            
+            <Grid Name="BackgroundBox"
+                  IsVisible="False">
+                <Grid.Effect>
+                    <BlurEffect Radius="0"></BlurEffect>
+                </Grid.Effect>
+                <Grid Name="BackgroundImage"></Grid>
+                <Grid Name="BackgroundImageOpacity"
+                      Opacity="0"
+                      Background="{DynamicResource BackgroundBrush}"></Grid>
+            </Grid>
+            
+            <Image Source="../../Assets/Image/蜂窝.Background.png"
+                   Width="322.5" Height="165"
+                   HorizontalAlignment="Right"
+                   VerticalAlignment="Top"
+                   Margin="0,0,0,0"
+                   Name="RightImage"
+                   Opacity="0.9">
+                <Image.Transitions>
+                    <Transitions>
+                        <DoubleTransition Property="Opacity"
+                                          Duration="0:0:0.18"></DoubleTransition>
+                    </Transitions>
+                </Image.Transitions>
+            </Image>
+            
+            <Image Source="../../Assets/Image/蜂窝.Background.png"
+                   Width="322.5" Height="165"
+                   HorizontalAlignment="Left"
+                   VerticalAlignment="Bottom"
+                   Name="LeftImage"
+                   Margin="0,0,0,0"
+                   Opacity="0.9">
+                <Image.RenderTransform>
+                    <RotateTransform Angle="180"/>
+                </Image.RenderTransform>
+                <Image.Transitions>
+                    <Transitions>
+                        <DoubleTransition Property="Opacity"
+                                          Duration="0:0:0.18"></DoubleTransition>
+                    </Transitions>
+                </Image.Transitions>
+            </Image>
+            
             <page:MainView/>
+                
+            <notice:NoticePanel HorizontalAlignment="Right"
+                                VerticalAlignment="Top"
+                                Name="NoticePanel"
+                                Margin="0,10,0,0"/>
+                
+            <tasks:TaskPanel HorizontalAlignment="Stretch"
+                            VerticalAlignment="Stretch"
+                            Name="TaskPanel"/>
         </Grid>
-            
-        <notice:NoticePanel HorizontalAlignment="Right"
-                            VerticalAlignment="Top"
-                            Name="NoticePanel"
-                            Margin="0,42,0,0"/>
-            
-        <tasks:TaskPanel HorizontalAlignment="Stretch"
-                        VerticalAlignment="Stretch"
-                        Name="TaskPanel"/>
-        
-        <dialog:DialogHost/>
-        
-        <Grid HorizontalAlignment="Stretch"
-              VerticalAlignment="Top"
-              PointerPressed="InputElement_OnPointerPressed"
-              Height="32">
-            <Grid Background="{DynamicResource PrimaryBackgroundBrush}"
-                  Opacity="0.85"></Grid>
-            
-            <StackPanel Orientation="Horizontal"
-                        VerticalAlignment="Center"
-                        HorizontalAlignment="Left"
-                        Margin="15,0,0,0">
-                <TextBlock FontSize="16">RMCL</TextBlock>
-            </StackPanel>
-        
-            <Border HorizontalAlignment="Center"
-                    VerticalAlignment="Center"
-                    Height="22"
-                    ClipToBounds="True"
-                    CornerRadius="6">
-                <notice1:InfoBar State="Warning"
-                                 VerticalAlignment="Center"
-                                 Title="预览版警告"
-                                 Message="当前版本为 RMCL 4 的预览版，仅作为 UI/UX 预览，并不代表最终品质。"
-                                 Margin="0"/>
-            </Border>
-            
-            <StackPanel Orientation="Horizontal"
-                        VerticalAlignment="Center"
-                        HorizontalAlignment="Right"
-                        Margin="0,0,15,0">
-                <Button Classes="NoBorder"
-                        Width="22" Height="22"
-                        Name="MinBtn"
-                        Click="MinBtn_OnClick"
-                        Margin="5,0,0,0">
-                    <onePointControls:FontIcon Glyph="&#xE921;"
-                                               FontSize="8"
-                                               HorizontalAlignment="Center"
-                                               VerticalAlignment="Center"/>
-                </Button>
-                <Button Classes="NoBorder"
-                        Width="22" Height="22"
-                        Name="MaxBtn"
-                        Click="MaxBtn_OnClick"
-                        Margin="5,0,0,0">
-                    <onePointControls:FontIcon Glyph="&#xE922;"
-                                               FontSize="8"
-                                               HorizontalAlignment="Center"
-                                               VerticalAlignment="Center"/>
-                </Button>
-                <Button Classes="NoBorder"
-                        Width="22" Height="22"
-                        Name="CloseBtn"
-                        Click="CloseBtn_OnClick"
-                        Margin="5,0,0,0">
-                    <onePointControls:FontIcon Glyph="&#xE8BB;"
-                                               FontSize="8"
-                                               HorizontalAlignment="Center"
-                                               VerticalAlignment="Center"/>
-                </Button>
-            </StackPanel>
-        </Grid>
-    </Grid>
-</Window>
+    </windowFrame:OnePointWindow.MainContent>
+</windowFrame:OnePointWindow>

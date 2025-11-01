@@ -14,6 +14,7 @@ using OnePointUI.Avalonia.Base.Entry;
 using OnePointUI.Avalonia.Base.Enum;
 using OnePointUI.Avalonia.Style.Core;
 using OnePointUI.Avalonia.Styling.Controls.OnePointControls.Dialog;
+using OnePointUI.Avalonia.Styling.Controls.OnePointControls.WindowFrame;
 using RMCL.Base.Entry.Config;
 using RMCL.Base.Entry.Notice;
 using RMCL.Base.Enum.Notice;
@@ -31,7 +32,7 @@ using Round.SDK.Plugin.RMCL;
 
 namespace RMCL.Views;
 
-public partial class MainWindow : Window
+public partial class MainWindow : OnePointWindow
 {
     public MainWindow()
     {
@@ -143,11 +144,6 @@ public partial class MainWindow : Window
         #endregion
     }
 
-    private void InputElement_OnPointerPressed(object? sender, PointerPressedEventArgs e)
-    {
-        this.BeginMoveDrag(e);
-    }
-
     public void SetBackgroundBlur(int num)
     {
         BackgroundBox.Effect = new BlurEffect()
@@ -155,23 +151,6 @@ public partial class MainWindow : Window
             Radius = num
         };
         BackgroundBox.Margin = new Thickness(-num);
-    }
-
-    private void MinBtn_OnClick(object? sender, RoutedEventArgs e)
-    {
-        this.WindowState = WindowState.Minimized;
-    }
-
-    private void MaxBtn_OnClick(object? sender, RoutedEventArgs e)
-    {
-        this.WindowState = WindowState == WindowState.Maximized ?  WindowState.Normal : WindowState.Maximized;
-    }
-
-    private void CloseBtn_OnClick(object? sender, RoutedEventArgs e)
-    {
-        this.Close();
-        
-        Environment.Exit(0);
     }
 
     private void TitleBtn_OnClick(object? sender, RoutedEventArgs e)
