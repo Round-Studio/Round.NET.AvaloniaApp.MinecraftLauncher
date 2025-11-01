@@ -8,14 +8,17 @@
              x:Class="RMCL.Views.Page.Main.DownloadPage.DownloadClientPage">
     <Grid RowDefinitions="Auto,*"
           Margin="20">
-        <TextBlock Grid.Row="0"
-                   FontSize="18"
-                   FontWeight="Bold">版本概述</TextBlock>
+        <onePointControls:LineTextBlock Grid.Row="0"
+                                        VerticalAlignment="Top"
+                                        HorizontalAlignment="Left"
+                                        FontSize="22"
+                                        Margin="0,0,0,0"
+                                        Text="版本概述"></onePointControls:LineTextBlock>
         
         <Border Grid.Row="0"
                 Height="80"
                 HorizontalAlignment="Stretch"
-                Margin="0,38,0,20"
+                Margin="0,48,0,20"
                 CornerRadius="6"
                 Background="{DynamicResource PrimaryBackgroundBrush}"
                 BorderThickness="1"
@@ -72,10 +75,14 @@
         <ScrollViewer Grid.Row="1"
                       Name="OutherInstallItem">
             <Grid>
-                <TextBlock FontSize="18"
-                           FontWeight="Bold">可选组件</TextBlock>
+                <onePointControls:LineTextBlock Grid.Row="0"
+                                                VerticalAlignment="Top"
+                                                HorizontalAlignment="Left"
+                                                FontSize="22"
+                                                Margin="0,0,0,0"
+                                                Text="可选组件"></onePointControls:LineTextBlock>
             
-                <WrapPanel Margin="0,38">
+                <WrapPanel Margin="0,48,0,0">
                     <items:CardCheckBox Header="Fabric"
                                         Margin="0,0,10,10"
                                         Description="未选择"
