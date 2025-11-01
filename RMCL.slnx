@@ -6,7 +6,6 @@
     <Project Path="src\LiteSkinViewer\LiteSkinViewer.Shared\LiteSkinViewer.Shared.csproj" Type="Classic C#" />
   </Folder>
   <Folder Name="/OnePointUI.Avalonia/">
-    <Project Path="src\OnePointUI.Avalonia\src\CompositionScroll\CompositionScroll.csproj" Type="Classic C#" />
     <Project Path="src\OnePointUI.Avalonia\src\OnePointUI.Avalonia.Test\OnePointUI.Avalonia.Test.csproj" Type="Classic C#" />
     <Project Path="src\OnePointUI.Avalonia\src\OnePointUI.Avalonia\OnePointUI.Avalonia.csproj" Type="Classic C#" />
   </Folder>
