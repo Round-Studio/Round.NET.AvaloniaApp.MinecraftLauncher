@@ -1,0 +1,35 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:notice="clr-namespace:OnePointUI.Avalonia.Styling.Controls.OnePointControls.Notice;assembly=OnePointUI.Avalonia"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="RMCL.Views.Page.Main.SettingsSubPage.BehaviorSubPage.BehaviorPlugin">
+    <Grid>
+        <StackPanel HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    IsVisible="False"
+                    Name="NullBox">
+            <notice:InfoCard BigTitle="空的捏"
+                             Message="您还没有安装任何插件捏...&#x0a;单击下方按钮以导入插件"
+                             Margin="5"></notice:InfoCard>
+            
+            <Button Margin="5"
+                    Padding="12,8">导入插件</Button>
+        </StackPanel>
+        
+        <ScrollViewer IsVisible="False"
+                      Name="PluginViewer">
+            <StackPanel Margin="15">
+                <notice:InfoBar Margin="5"
+                                Name="EnableTip"
+                                IsVisible="False"
+                                State="Error"
+                                Title="警告"
+                                Message="要启用插件，请前往 设置>行为>程序和功能 中启用插件系统。"/>
+                
+                <StackPanel Name="PluginList"></StackPanel>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</UserControl>

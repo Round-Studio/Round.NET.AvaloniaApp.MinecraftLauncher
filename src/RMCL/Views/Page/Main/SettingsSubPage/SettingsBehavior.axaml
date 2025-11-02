@@ -27,6 +27,8 @@
                                           Header="插件与脚本"
                                           Description="RMCL 插件与脚本管理"
                                           Glyph="&#xEA86;"
+                                          Name="PluginBtn"
+                                          Click="PluginBtn_OnClick"
                                           IsClickable="True"/>
         </StackPanel>
     </ScrollViewer>

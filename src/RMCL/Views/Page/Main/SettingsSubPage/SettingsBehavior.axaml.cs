@@ -37,4 +37,9 @@ public partial class SettingsBehavior : UserControl
     {
         MainSettingPage.Page.NavigationTo(new BehaviorProgram());
     }
+
+    private void PluginBtn_OnClick(object? sender, RoutedEventArgs e)
+    {
+        MainSettingPage.Page.NavigationTo(new BehaviorPlugin());
+    }
 }

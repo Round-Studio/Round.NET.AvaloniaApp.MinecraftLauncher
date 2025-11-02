@@ -66,6 +66,13 @@ public partial class MainPage : UserControl
         });
         RegisterService.RegisterBottomBarItem(new BottomBarItemInfo()
         {
+            ItemGlyph = "\uE74C",
+            ItemText = "实例",
+            Tag = "Instance",
+            PageType = typeof(MainGameListPage)
+        });
+        RegisterService.RegisterBottomBarItem(new BottomBarItemInfo()
+        {
             ItemGlyph = "\uE896",
             ItemText = Resource.MainPage_Download,
             Tag = "Download",
@@ -78,7 +85,7 @@ public partial class MainPage : UserControl
             Tag = "Account",
             PageType = typeof(MainAccountPage)
         });
-        if (OperatingSystem.IsWindows())
+        if (OperatingSystem.IsWindows() && GlobalModels.Config.Data.ProgramConfig.ToggleOnline)
         {
             RegisterService.RegisterBottomBarItem(new BottomBarItemInfo()
             {
@@ -96,7 +103,7 @@ public partial class MainPage : UserControl
             PageType = typeof(MainSettingPage)
         });
 
-        Task.Run(() => LoadPlugins.LoadAll());
+        if(GlobalModels.Config.Data.ProgramConfig.TogglePlugin) Task.Run(() => LoadPlugins.LoadAll());
     }
 
     private void TaskBtn_OnClick(object? sender, RoutedEventArgs e)

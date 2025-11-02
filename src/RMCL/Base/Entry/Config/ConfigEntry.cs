@@ -12,4 +12,5 @@ public class ConfigEntry
     [JsonPropertyName("windowInfo")] public WindowPoint WindowInfo { get; set; } = new WindowPoint();
     [JsonPropertyName("styleConfig")] public StyleConfig StyleConfig { get; set; } = new StyleConfig();
     [JsonPropertyName("accountConfig")] public AccountConfig AccountConfig { get; set; } = new AccountConfig();
+    [JsonPropertyName("programConfig")] public ProgramConfig ProgramConfig { get; set; } = new ProgramConfig();
 }
