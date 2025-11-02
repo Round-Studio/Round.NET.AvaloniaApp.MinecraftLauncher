@@ -20,7 +20,7 @@ public class Plugin : IPluginRMCL
         {
             RegisterService.RegisterBottomBarItem(new BottomBarItemInfo()
             {
-                ItemGlyph = "\uE74C",
+                ItemGlyph = "\uE7FC",
                 Tag = "BedrockBoot",
                 ItemText = "BedrockBoot",
                 PageType = typeof(MainHomePage)

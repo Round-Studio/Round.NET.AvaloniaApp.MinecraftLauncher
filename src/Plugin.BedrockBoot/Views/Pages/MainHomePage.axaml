@@ -6,11 +6,14 @@
              xmlns:navigation="clr-namespace:OnePointUI.Avalonia.Styling.Controls.OnePointControls.Navigation;assembly=OnePointUI.Avalonia"
              xmlns:notice="clr-namespace:OnePointUI.Avalonia.Styling.Controls.OnePointControls.Notice;assembly=OnePointUI.Avalonia"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-             x:Class="Plugin.BedrockBoot.Views.Pages.MainHomePage"
-             Background="{DynamicResource BackgroundBrush}">
+             x:Class="Plugin.BedrockBoot.Views.Pages.MainHomePage">
     <Grid>
+        <Grid Background="{DynamicResource BackgroundBrush}"
+              Opacity="0.6"></Grid>
+        
         <Border Background="{DynamicResource PrimaryBackgroundBrush}"
                 VerticalAlignment="Top"
+                CornerRadius="0,0,12,12"
                 Height="48">
             <Grid>
                 <TabControl Margin="8,0,0,0"
