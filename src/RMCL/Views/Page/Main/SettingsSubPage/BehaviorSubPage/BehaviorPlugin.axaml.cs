@@ -1,13 +1,16 @@
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
+using HarfBuzzSharp;
 using OnePointUI.Avalonia.Base.Entry;
 using RMCL.Models.Global;
 using RMCL.Models.Plugin;
 using RMCL.Properties;
 using RMCL.Views.Page.Main.MainSubPage;
+using Round.SDK.Helper;
 
 namespace RMCL.Views.Page.Main.SettingsSubPage.BehaviorSubPage;
 
@@ -51,10 +54,21 @@ public partial class BehaviorPlugin : UserControl
                 }
             }
         });
+
+        UpdateList();
     }
 
     private async Task UpdateList()
     {
-        
+        var lst = System.IO.Directory.GetFiles(PathsList.PluginPath, "*.rplck").ToList();
+        lst.ForEach(file =>
+        {
+            var info = PluginFileInfoHelper.GetFileInfo(file);
+            
+            PluginList.Children.Add(new TextBlock()
+            {
+                Text = info.PackName,
+            });
+        });
     }
 }
