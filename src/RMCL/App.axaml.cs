@@ -5,7 +5,12 @@ using Avalonia.Data.Core.Plugins;
 using System.Linq;
 using System.Threading;
 using Avalonia.Markup.Xaml;
+using Avalonia.Media;
+using Avalonia.Media.Imaging;
 using OnePointUI.Avalonia.Style.Core;
+using RMCL.Base.Enum.Style;
+using RMCL.Models.Global;
+using RMCL.Models.Helper;
 using RMCL.ViewModels;
 using RMCL.Views;
 
@@ -17,6 +22,36 @@ public partial class App : Application
     {
         ThemeManager.Initialize(this);
         AvaloniaXamlLoader.Load(this);
+
+        LoadColor();
+    }
+    public static void LoadColor()
+    {
+        if (GlobalModels.Config.Data.StyleConfig.AccentColorType == AccentColorType.Choose)
+            ThemeManager.Instance.SetAccentColor(
+                Color.Parse(AccentColor.Colors[GlobalModels.Config.Data.StyleConfig.AccentColorIndex]));
+
+        else if (GlobalModels.Config.Data.StyleConfig.AccentColorType == AccentColorType.Image)
+            if (GlobalModels.Config.Data.StyleConfig.StyleType == StyleType.Image)
+            {
+                if (GlobalModels.Config.Data.StyleConfig.BackgroundImages.Count > 0)
+                    if (GlobalModels.Config.Data.StyleConfig.BackgroundImageSelectedIndex <=
+                        GlobalModels.Config.Data.StyleConfig.BackgroundImages.Count - 1)
+                    {
+                        var path = GlobalModels.Config.Data.StyleConfig.BackgroundImages[
+                            GlobalModels.Config.Data.StyleConfig.BackgroundImageSelectedIndex];
+                    
+                        var color = ImageColorAnalyzer.GetDominantColors(new Bitmap(path));
+                        ThemeManager.Instance.SetAccentColor(color[0]);
+                    }
+            }
+            else
+            {
+                GlobalModels.Config.Data.StyleConfig.AccentColorType = AccentColorType.Choose;
+                GlobalModels.Config.Save();
+                
+                LoadColor();
+            }
     }
 
     public override void OnFrameworkInitializationCompleted()

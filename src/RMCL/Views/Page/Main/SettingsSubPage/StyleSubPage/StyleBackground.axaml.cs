@@ -134,6 +134,7 @@ public partial class StyleBackground : UserControl
             GlobalModels.Config.Save();
             
             GlobalModels.MainWindow.UpdateBack();
+            App.LoadColor();
             UpdateUI();
         }
     }

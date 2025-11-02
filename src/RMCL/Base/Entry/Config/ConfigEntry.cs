@@ -9,9 +9,7 @@ public class ConfigEntry
 {
     [JsonPropertyName("language")]
     public LanguageHelper.LanguageType Language { get; set; } = LanguageHelper.LanguageType.Chinese;
-
     [JsonPropertyName("windowInfo")] public WindowPoint WindowInfo { get; set; } = new WindowPoint();
-    
     [JsonPropertyName("styleConfig")] public StyleConfig StyleConfig { get; set; } = new StyleConfig();
     [JsonPropertyName("accountConfig")] public AccountConfig AccountConfig { get; set; } = new AccountConfig();
 }

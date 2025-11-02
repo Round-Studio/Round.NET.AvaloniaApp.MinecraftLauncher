@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:onePointControls="clr-namespace:OnePointUI.Avalonia.Styling.Controls.OnePointControls;assembly=OnePointUI.Avalonia"
              xmlns:properties="clr-namespace:RMCL.Properties"
+             xmlns:view="clr-namespace:OnePointUI.Avalonia.Styling.Controls.OnePointControls.View;assembly=OnePointUI.Avalonia"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="RMCL.Views.Page.Main.SettingsSubPage.StyleSubPage.StyleColor">
     <ScrollViewer>
@@ -29,14 +30,23 @@
                                           Description="启动器强调色"
                                           Glyph="&#xE790;">
                 <ListBox Classes="Segmented"
+                         Name="ChooseColorType"
+                         SelectionChanged="ChooseColorType_OnSelectionChanged"
                          SelectedIndex="0">
                     <ListBoxItem Content="选择颜色"
                                  Classes="Segmented"></ListBoxItem>
                     
                     <ListBoxItem Content="背景图片主题"
+                                 Name="ImageType"
+                                 IsEnabled="False"
                                  Classes="Segmented"></ListBoxItem>
                 </ListBox>
             </onePointControls:SettingCard>
+            
+            <view:ItemView Name="ColorsView"
+                           MaxWidth="540"
+                           HorizontalAlignment="Left"
+                           SelectionChanged="ColorsView_OnSelectionChanged"/>
         </StackPanel>
     </ScrollViewer>
 </UserControl>
