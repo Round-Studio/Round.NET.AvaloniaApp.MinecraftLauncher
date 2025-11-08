@@ -42,7 +42,7 @@
                    Width="322.5" Height="165"
                    HorizontalAlignment="Right"
                    VerticalAlignment="Top"
-                   Margin="0,0,0,0"
+                   Margin="0,0,-2,0"
                    Name="RightImage"
                    Opacity="0.9">
                 <Image.Transitions>
@@ -58,7 +58,7 @@
                    HorizontalAlignment="Left"
                    VerticalAlignment="Bottom"
                    Name="LeftImage"
-                   Margin="0,0,0,0"
+                   Margin="-2,0,0,0"
                    Opacity="0.9">
                 <Image.RenderTransform>
                     <RotateTransform Angle="180"/>

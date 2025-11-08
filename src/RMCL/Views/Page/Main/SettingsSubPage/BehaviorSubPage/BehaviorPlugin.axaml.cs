@@ -68,6 +68,7 @@ public partial class BehaviorPlugin : UserControl
         lst.ForEach(file =>
         {
             var info = PluginFileInfoHelper.GetFileInfo(file);
+            info.PackFile = file;
 
             var item = new SettingCard()
             {

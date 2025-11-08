@@ -7,7 +7,7 @@
              x:Class="RMCL.Views.Page.DrawerContent.Setting.Behavior.DrawerBehaviorPluginInformationContent">
     <Grid RowDefinitions="Auto,*">
         <Grid Grid.Row="0"
-              ColumnDefinitions="Auto,*"
+              ColumnDefinitions="Auto,*,*"
               Margin="15">
             <Border Grid.Column="0" CornerRadius="8"
                     Margin="5"
@@ -33,8 +33,30 @@
                         Margin="5">
                 <onePointControls:LineTextBlock Text="Plugin Name"
                                                 Name="PluginName"
+                                                Height="40"
                                                 HorizontalAlignment="Left"
                                                 Margin="5,0,0,0"/>
+                
+                <TextBlock Margin="5,8,0,0"
+                           Name="PluginDescription"
+                           MaxHeight="93"
+                           TextWrapping="Wrap"
+                           TextTrimming="CharacterEllipsis"
+                           Text="还没有介绍呢..."></TextBlock>
+            </StackPanel>
+            
+            <StackPanel Grid.Column="2"
+                        Margin="5">
+                <TextBlock Margin="5,48,0,0"
+                           Name="PluginVersion"
+                           Text="Version：1.0.0.0"></TextBlock>
+                <TextBlock Margin="5,0,0,0"
+                           Name="PluginAuther"
+                           Text="Author：Round Studio"></TextBlock>
+                <TextBlock Margin="5,0,0,0"
+                           TextTrimming="CharacterEllipsis"
+                           Name="PluginFile"
+                           Text="File: ???????????????????????????????????????????????????????"></TextBlock>
             </StackPanel>
         </Grid>
     </Grid>
