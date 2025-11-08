@@ -7,11 +7,6 @@ namespace Plugin.BedrockBoot;
 
 public class Plugin : IPluginRMCL
 {
-    public string Name { get; set; } = "BedrockBoot Plugin";
-    public string Description { get; set; } = "BedrockBoot For RMCL";
-    public string Version { get; set; } = "1.0.0";
-    public string Author { get; set; } = "Dime";
-
     public void Initialize()
     {
         Console.WriteLine(@"欢迎使用由 Dime 开发的 BedrockBoot For RMCL 插件！");

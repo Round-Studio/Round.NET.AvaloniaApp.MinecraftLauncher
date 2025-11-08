@@ -1,0 +1,13 @@
+{
+  "packName": "BedrockBoot",
+  "packIconPath": "./buildConfig/icons/BedrockBoot.Icon.png",
+  "packVersion": "1.0.0",
+  "packAuthor": "Dime",
+  "packDescription": "在 RMCL 中无缝使用 Minecraft Bedrock。源于 BedrockBoot",
+  "packLicense": "",
+  "packLicenseUrl": "",
+  "packScreenshots": [],
+  "buildProjectFilePath": "./src/Plugin.BedrockBoot/Plugin.BedrockBoot.csproj",
+  "buildOutputPath": "./build/Plugin.BedrockBoot/publish",
+  "bodyFile": "Plugin.BedrockBoot.dll"
+}

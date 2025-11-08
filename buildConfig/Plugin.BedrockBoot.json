@@ -1,13 +1,13 @@
 {
-  "packName": "BedrockBoot",
-  "packIconPath": "./buildConfig/icons/BedrockBoot.Icon.png",
+  "packName": "MusicPlayer",
+  "packIconPath": "",
   "packVersion": "1.0.0",
   "packAuthor": "Dime",
-  "packDescription": "在 RMCL 中无缝使用 Minecraft Bedrock。源于 BedrockBoot",
+  "packDescription": "RMCL 中的音乐播放插件！",
   "packLicense": "",
   "packLicenseUrl": "",
   "packScreenshots": [],
-  "buildProjectFilePath": "./src/Plugin.BedrockBoot/Plugin.BedrockBoot.csproj",
-  "buildOutputPath": "./build/Plugin.BedrockBoot/publish",
-  "bodyFile": "Plugin.BedrockBoot.dll"
+  "buildProjectFilePath": "./src/Plugin.MusicPlayer/Plugin.MusicPlayer.csproj",
+  "buildOutputPath": "./build/Plugin.MusicPlayer/publish",
+  "bodyFile": "Plugin.MusicPlayer.dll"
 }
