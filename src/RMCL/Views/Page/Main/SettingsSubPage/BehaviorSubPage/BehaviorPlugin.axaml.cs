@@ -15,6 +15,7 @@ using RMCL.Views.Page.DrawerContent.Setting.Behavior;
 using RMCL.Views.Page.Main.MainSubPage;
 using Round.SDK.Helper;
 using System.IO;
+using System.Threading;
 using Avalonia.Threading;
 
 namespace RMCL.Views.Page.Main.SettingsSubPage.BehaviorSubPage;
@@ -148,6 +149,8 @@ public partial class BehaviorPlugin : UserControl
             }
             
             PluginList.Children.Add(item);
+
+            Thread.Sleep(10);
         });
     }
 
