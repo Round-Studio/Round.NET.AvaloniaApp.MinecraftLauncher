@@ -4,31 +4,19 @@ using System.Threading;
 using System.Threading.Tasks;
 using Avalonia;
 using Avalonia.Controls;
-using Avalonia.Input;
 using Avalonia.Interactivity;
 using Avalonia.Media;
 using Avalonia.Media.Imaging;
 using Avalonia.Platform;
 using Avalonia.Styling;
-using OnePointUI.Avalonia.Base.Entry;
-using OnePointUI.Avalonia.Base.Enum;
 using OnePointUI.Avalonia.Style.Core;
-using OnePointUI.Avalonia.Styling.Controls.OnePointControls.Dialog;
 using OnePointUI.Avalonia.Styling.Controls.OnePointControls.WindowFrame;
 using RMCL.Base.Entry.Config;
-using RMCL.Base.Entry.Notice;
-using RMCL.Base.Enum.Notice;
 using RMCL.Base.Enum.Style;
 using RMCL.Models;
 using RMCL.Models.Global;
-using RMCL.Models.Plugin;
-using RMCL.Views.Control.Notice;
-using RMCL.Views.Control.Tasks;
-using RMCL.Views.Page.Main;
 using RMCL.Views.Page.Main.MainSubPage;
 using Round.SDK.Logger;
-using Round.SDK.Plugin;
-using Round.SDK.Plugin.RMCL;
 
 namespace RMCL.Views;
 
@@ -48,7 +36,7 @@ public partial class MainWindow : OnePointWindow
         RenderOptions.SetEdgeMode(this, EdgeMode.Antialias); // 形状渲染模式
         Console.WriteLine("渲染模式设置完毕");
 
-        GlobalModels.NoticePanel = NoticePanel;
+        GlobalModels.NoticePanel = OnePointUI.Avalonia.Styling.Controls.OnePointControls.Notice.Info.NoticePanel.InstancePanel;
         GlobalModels.TaskPanel = TaskPanel;
 
         if (TaskPanel.GetOpenState()) TaskPanel.ToggleOpen();

@@ -4,13 +4,8 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:page="clr-namespace:RMCL.Views.Page"
-        xmlns:onePointControls="clr-namespace:OnePointUI.Avalonia.Styling.Controls.OnePointControls;assembly=OnePointUI.Avalonia"
-        xmlns:notice="clr-namespace:RMCL.Views.Control.Notice"
         xmlns:tasks="clr-namespace:RMCL.Views.Control.Tasks"
-        xmlns:dialog="clr-namespace:OnePointUI.Avalonia.Styling.Controls.OnePointControls.Dialog;assembly=OnePointUI.Avalonia"
-        xmlns:notice1="clr-namespace:OnePointUI.Avalonia.Styling.Controls.OnePointControls.Notice;assembly=OnePointUI.Avalonia"
         xmlns:windowFrame="clr-namespace:OnePointUI.Avalonia.Styling.Controls.OnePointControls.WindowFrame;assembly=OnePointUI.Avalonia"
-        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="RMCL.Views.MainWindow"
         x:DataType="vm:MainWindowViewModel"
         Icon="/Assets/Icon/RMCL4.Logo.Big.ico"
@@ -77,11 +72,6 @@
             </Image>
             
             <page:MainView/>
-                
-            <notice:NoticePanel HorizontalAlignment="Right"
-                                VerticalAlignment="Top"
-                                Name="NoticePanel"
-                                Margin="0,10,0,0"/>
                 
             <tasks:TaskPanel HorizontalAlignment="Stretch"
                             VerticalAlignment="Stretch"

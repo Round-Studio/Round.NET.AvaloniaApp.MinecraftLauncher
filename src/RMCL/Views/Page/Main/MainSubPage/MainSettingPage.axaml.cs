@@ -8,7 +8,6 @@ using Avalonia.Interactivity;
 using Avalonia.Markup.Xaml;
 using OnePointUI.Avalonia.Base.Entry;
 using OnePointUI.Avalonia.Styling.Controls.OnePointControls.Navigation;
-using RMCL.Base.Entry.Notice;
 using RMCL.Models.Global;
 using RMCL.Models.Helper;
 using RMCL.Views.Page.Main.SettingsSubPage;

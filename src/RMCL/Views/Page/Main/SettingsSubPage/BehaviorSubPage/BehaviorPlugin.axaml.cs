@@ -4,8 +4,10 @@ using System.Threading.Tasks;
 using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
+using Avalonia.Media.Imaging;
 using HarfBuzzSharp;
 using OnePointUI.Avalonia.Base.Entry;
+using OnePointUI.Avalonia.Styling.Controls.OnePointControls;
 using RMCL.Models.Global;
 using RMCL.Models.Plugin;
 using RMCL.Properties;
@@ -19,7 +21,8 @@ public partial class BehaviorPlugin : UserControl
     public BehaviorPlugin()
     {
         InitializeComponent();
-        if (LoadPlugins.Plugins.Count == 0)
+        var lst = System.IO.Directory.GetFiles(PathsList.PluginPath, "*.rplck").ToList();
+        if (lst.Count == 0)
         {
             NullBox.IsVisible = true;
             PluginViewer.IsVisible = false;
@@ -64,11 +67,23 @@ public partial class BehaviorPlugin : UserControl
         lst.ForEach(file =>
         {
             var info = PluginFileInfoHelper.GetFileInfo(file);
-            
-            PluginList.Children.Add(new TextBlock()
+
+            var item = new SettingCard()
             {
-                Text = info.PackName,
-            });
+                Header = info.PackName,
+                Description = $"{info.PackDescription}\n{info.PackAuthor} - {info.PackVersion}",
+                Margin = new Thickness(5),
+                Glyph = "\uEA86",
+                IsClickable = true
+            };
+
+            if (!string.IsNullOrEmpty(info.PackIconPath))
+            {
+                item.IsFontIcon = false;
+                item.ImageIcon = new Bitmap(info.PackIconPath);
+            }
+            
+            PluginList.Children.Add(item);
         });
     }
 }

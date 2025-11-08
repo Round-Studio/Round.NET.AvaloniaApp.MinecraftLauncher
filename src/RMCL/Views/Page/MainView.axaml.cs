@@ -7,8 +7,6 @@ using Avalonia.Markup.Xaml;
 using OnePointUI.Avalonia.Base.Entry;
 using OnePointUI.Avalonia.Base.Enum;
 using OnePointUI.Avalonia.Styling.Controls.OnePointControls.Dialog;
-using RMCL.Base.Entry.Notice;
-using RMCL.Base.Enum.Notice;
 using RMCL.Models.Global;
 using RMCL.Models.Helper;
 

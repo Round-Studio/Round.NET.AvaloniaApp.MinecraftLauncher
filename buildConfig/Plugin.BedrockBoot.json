@@ -1,9 +1,9 @@
 {
   "packName": "BedrockBoot",
-  "packIconPath": "",
+  "packIconPath": "./buildConfig/icons/BedrockBoot.Icon.png",
   "packVersion": "1.0.0",
   "packAuthor": "Dime",
-  "packDescription": "在 RMCL 中使用 BedrockBoot 的功能",
+  "packDescription": "在 RMCL 中无缝使用 Minecraft Bedrock。源于 BedrockBoot",
   "packLicense": "",
   "packLicenseUrl": "",
   "packScreenshots": [],

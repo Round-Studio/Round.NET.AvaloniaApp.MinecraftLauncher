@@ -1,9 +1,9 @@
 ﻿using Avalonia.Controls;
 using OnePointUI.Avalonia.Styling.Controls.OnePointControls.Navigation;
+using OnePointUI.Avalonia.Styling.Controls.OnePointControls.Notice.Info;
 using RMCL.Base.Entry.Config;
 using RMCL.Views;
 using RMCL.Views.Control.Navigation;
-using RMCL.Views.Control.Notice;
 using RMCL.Views.Control.Tasks;
 using Round.SDK.Entity;
 
