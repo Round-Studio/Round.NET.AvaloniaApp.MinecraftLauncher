@@ -37,11 +37,6 @@ sealed class Program
             ConsoleRedirector.RegisterThread(Thread.CurrentThread,"Program");
             
             Console.WriteLine(@"Main 入口启动");
-            
-            // Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("zh-hans"); // 简体中文
-            Thread.CurrentThread.CurrentUICulture =
-                new System.Globalization.CultureInfo(LanguageHelper.GetStringName(GlobalModels.Config.Data.Language));
-            Console.WriteLine($@"语言配置完毕，当前语言：{LanguageHelper.GetStringName(GlobalModels.Config.Data.Language)}");
 
             if (false)
             {

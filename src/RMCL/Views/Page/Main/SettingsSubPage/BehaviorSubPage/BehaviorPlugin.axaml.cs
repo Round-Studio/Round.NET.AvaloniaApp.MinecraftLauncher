@@ -11,6 +11,7 @@ using OnePointUI.Avalonia.Styling.Controls.OnePointControls;
 using RMCL.Models.Global;
 using RMCL.Models.Plugin;
 using RMCL.Properties;
+using RMCL.Views.Page.DrawerContent.Setting.Behavior;
 using RMCL.Views.Page.Main.MainSubPage;
 using Round.SDK.Helper;
 
@@ -85,7 +86,7 @@ public partial class BehaviorPlugin : UserControl
 
             item.Click += (sender, args) =>
             {
-                GlobalModels.MainWindow.OpenDraw("",$"插件详细信息：{info.PackName}");
+                GlobalModels.MainWindow.OpenDraw(new DrawerBehaviorPluginInformationContent(info),$"插件详细信息：{info.PackName}");
             };
             
             PluginList.Children.Add(item);
