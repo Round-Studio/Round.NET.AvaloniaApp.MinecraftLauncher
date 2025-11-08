@@ -14,25 +14,20 @@ using RMCL.Properties;
 using RMCL.Views.Page.DrawerContent.Setting.Behavior;
 using RMCL.Views.Page.Main.MainSubPage;
 using Round.SDK.Helper;
+using System.IO;
+using Avalonia.Threading;
 
 namespace RMCL.Views.Page.Main.SettingsSubPage.BehaviorSubPage;
 
 public partial class BehaviorPlugin : UserControl
 {
+    private FileSystemWatcher _fileSystemWatcher;
+
     public BehaviorPlugin()
     {
         InitializeComponent();
-        var lst = System.IO.Directory.GetFiles(PathsList.PluginPath, "*.rplck").ToList();
-        if (lst.Count == 0)
-        {
-            NullBox.IsVisible = true;
-            PluginViewer.IsVisible = false;
-        }
-        else
-        {
-            NullBox.IsVisible = false;
-            PluginViewer.IsVisible = true;
-        }
+        InitializeFileWatcher();
+        UpdateVisibility();
         
         if (!GlobalModels.Config.Data.ProgramConfig.TogglePlugin)
         {
@@ -62,9 +57,62 @@ public partial class BehaviorPlugin : UserControl
         UpdateList();
     }
 
+    private void InitializeFileWatcher()
+    {
+        _fileSystemWatcher = new FileSystemWatcher
+        {
+            Path = PathsList.PluginPath,
+            NotifyFilter = NotifyFilters.LastWrite | NotifyFilters.FileName | NotifyFilters.DirectoryName,
+            Filter = "*.*",
+            EnableRaisingEvents = true
+        };
+
+        // 监听文件变化事件
+        _fileSystemWatcher.Changed += OnPluginDirectoryChanged;
+        _fileSystemWatcher.Created += OnPluginDirectoryChanged;
+        _fileSystemWatcher.Deleted += OnPluginDirectoryChanged;
+        _fileSystemWatcher.Renamed += OnPluginDirectoryChanged;
+    }
+
+    private void OnPluginDirectoryChanged(object sender, FileSystemEventArgs e)
+    {
+        // 在UI线程上执行更新
+        Dispatcher.UIThread.Post(() =>
+        {
+            RefreshPluginList();
+        });
+    }
+
+    private void UpdateVisibility()
+    {
+        var lst = Directory.GetFiles(PathsList.PluginPath).ToList();
+        if (lst.Count == 0)
+        {
+            NullBox.IsVisible = true;
+            PluginViewer.IsVisible = false;
+        }
+        else
+        {
+            NullBox.IsVisible = false;
+            PluginViewer.IsVisible = true;
+        }
+    }
+
+    private void RefreshPluginList()
+    {
+        // 清空当前列表
+        PluginList.Children.Clear();
+        
+        // 更新可见性
+        UpdateVisibility();
+        
+        // 重新加载列表
+        UpdateList();
+    }
+
     private async Task UpdateList()
     {
-        var lst = System.IO.Directory.GetFiles(PathsList.PluginPath, "*.rplck").ToList();
+        var lst = Directory.GetFiles(PathsList.PluginPath).ToList();
         lst.ForEach(file =>
         {
             var info = PluginFileInfoHelper.GetFileInfo(file);
@@ -89,8 +137,23 @@ public partial class BehaviorPlugin : UserControl
             {
                 GlobalModels.MainWindow.OpenDraw(new DrawerBehaviorPluginInformationContent(info),$"插件详细信息：{info.PackName}");
             };
+
+            if (file.EndsWith(".disable"))
+            {
+                item.Content = new LabelBox()
+                {
+                    Text = "已禁用",
+                    FontSize = 13,
+                };
+            }
             
             PluginList.Children.Add(item);
         });
+    }
+
+    // 释放资源
+    public void Dispose()
+    {
+        _fileSystemWatcher?.Dispose();
     }
 }

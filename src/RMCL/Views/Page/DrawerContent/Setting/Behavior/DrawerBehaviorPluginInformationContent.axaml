@@ -8,7 +8,7 @@
     <Grid RowDefinitions="Auto,*">
         <Grid Grid.Row="0"
               ColumnDefinitions="Auto,*,*"
-              Margin="15">
+              Margin="15,15,15,0">
             <Border Grid.Column="0" CornerRadius="8"
                     Margin="5"
                     HorizontalAlignment="Left"
@@ -58,6 +58,20 @@
                            Name="PluginFile"
                            Text="File: ???????????????????????????????????????????????????????"></TextBlock>
             </StackPanel>
+        </Grid>
+        
+        <Grid Grid.Row="1">
+            <ScrollViewer>
+                <StackPanel Margin="15,10,15,15">
+                    <onePointControls:SettingCard Margin="5"
+                                                  Glyph="&#xE73E;"
+                                                  Header="启用"
+                                                  Description="是否启用该插件">
+                        <ToggleSwitch Name="PluginEnableSwitch"
+                                      IsCheckedChanged="PluginEnableSwitch_OnIsCheckedChanged"></ToggleSwitch>
+                    </onePointControls:SettingCard>
+                </StackPanel>
+            </ScrollViewer>
         </Grid>
     </Grid>
 </UserControl>

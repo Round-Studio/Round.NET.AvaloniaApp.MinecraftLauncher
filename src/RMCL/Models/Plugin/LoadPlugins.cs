@@ -12,13 +12,14 @@ namespace RMCL.Models.Plugin;
 public class LoadPlugins
 {
     public static List<PackConfig> Plugins { get; set; } = new List<PackConfig>();
+
     public static async Task LoadAll()
     {
         Console.WriteLine(@"开始加载插件。");
-        if(!Directory.Exists(PathsList.PluginPath)) Directory.CreateDirectory(PathsList.PluginPath);
+        if (!Directory.Exists(PathsList.PluginPath)) Directory.CreateDirectory(PathsList.PluginPath);
         Console.WriteLine($@"插件文件夹：{PathsList.PluginPath}");
-        
-        var files = Directory.GetFiles(PathsList.PluginPath);
+
+        var files = Directory.GetFiles(PathsList.PluginPath, "*.rplck");
         foreach (var file in files)
         {
             try
@@ -34,7 +35,10 @@ public class LoadPlugins
 
                 // 执行方法
                 loader.InitializePlugin();
-            }catch{ }
+            }
+            catch
+            {
+            }
         }
     }
 }
