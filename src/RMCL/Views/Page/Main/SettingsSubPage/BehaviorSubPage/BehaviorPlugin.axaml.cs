@@ -82,6 +82,11 @@ public partial class BehaviorPlugin : UserControl
                 item.IsFontIcon = false;
                 item.ImageIcon = new Bitmap(info.PackIconPath);
             }
+
+            item.Click += (sender, args) =>
+            {
+                GlobalModels.MainWindow.OpenDraw("",$"插件详细信息：{info.PackName}");
+            };
             
             PluginList.Children.Add(item);
         });
