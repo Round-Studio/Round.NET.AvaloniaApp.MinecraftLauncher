@@ -18,11 +18,18 @@ public partial class MainSettingPage : UserControl
 {
     public static MainSettingPage Page { get; set; }
     public static object BackPage { get; set; } = new SettingsNavigation();
+    private static bool IsReStart = false;
 
     public MainSettingPage()
     {
         InitializeComponent();
         BackPage = new SettingsNavigation();
+
+        if (IsReStart)
+        {
+            RestartBtn.IsVisible = true;
+        }
+        
         Page = this;
 
         SettingsNavigation.NavigateTo(new SettingsNavigation());
@@ -35,6 +42,7 @@ public partial class MainSettingPage : UserControl
     public void SetReStart()
     {
         RestartBtn.IsVisible = true;
+        IsReStart = true; 
         
         GlobalModels.NoticePanel.AddNotice(new NoticeInfo()
         {
