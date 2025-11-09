@@ -5,19 +5,10 @@
              xmlns:onePointControls="clr-namespace:OnePointUI.Avalonia.Styling.Controls.OnePointControls;assembly=OnePointUI.Avalonia"
              xmlns:main="clr-namespace:RMCL.Views.Page.Main"
              xmlns:res="clr-namespace:RMCL.Properties"
+             xmlns:navigation="clr-namespace:OnePointUI.Avalonia.Styling.Controls.OnePointControls.Navigation;assembly=OnePointUI.Avalonia"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="RMCL.Views.Page.MainView">
     <Grid>
-        <main:MainPage></main:MainPage>
-        
-        <!--<Border Width="60"
-                Height="60"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Top"
-                Background="{DynamicResource PrimaryBackgroundBrush}"
-                CornerRadius="6"
-                Margin="15" Padding="10">
-            <onePointControls:ProgressRing></onePointControls:ProgressRing>
-        </Border>-->
+        <navigation:NavigationFrame Name="MainContent"></navigation:NavigationFrame>
     </Grid>
 </UserControl>

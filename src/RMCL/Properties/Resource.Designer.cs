@@ -679,5 +679,257 @@ namespace RMCL.Properties {
                 return ResourceManager.GetString("Settings.Style.ThemePackProduction.Description", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 创建新账户.
+        /// </summary>
+        public static string SetupPage_Account_AddNewAccount {
+            get {
+                return ResourceManager.GetString("SetupPage.Account.AddNewAccount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 在此处创建属于您的游戏账户，也可以稍后在账号管理页面中设置。.
+        /// </summary>
+        public static string SetupPage_Account_SubTitle {
+            get {
+                return ResourceManager.GetString("SetupPage.Account.SubTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 创建用户.
+        /// </summary>
+        public static string SetupPage_Account_Title {
+            get {
+                return ResourceManager.GetString("SetupPage.Account.Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 开始使用.
+        /// </summary>
+        public static string SetupPage_Completed_Start {
+            get {
+                return ResourceManager.GetString("SetupPage.Completed.Start", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 您现在已经完成了 RMCL 的基础设置，单击下方 “开始使用” 按钮，尽情享受吧~.
+        /// </summary>
+        public static string SetupPage_Completed_SubTitle {
+            get {
+                return ResourceManager.GetString("SetupPage.Completed.SubTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 完成.
+        /// </summary>
+        public static string SetupPage_Completed_Title {
+            get {
+                return ResourceManager.GetString("SetupPage.Completed.Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 手动添加.
+        /// </summary>
+        public static string SetupPage_Game_AddJava {
+            get {
+                return ResourceManager.GetString("SetupPage.Game.AddJava", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 自动搜索 Java.
+        /// </summary>
+        public static string SetupPage_Game_SearchJava {
+            get {
+                return ResourceManager.GetString("SetupPage.Game.SearchJava", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 设置您的全局 Java，用于启动 Minecraft。您可以稍后前往 设置&gt;行为&gt;Java 虚拟机与内存 中修改更多设置项。.
+        /// </summary>
+        public static string SetupPage_Game_SubTitle {
+            get {
+                return ResourceManager.GetString("SetupPage.Game.SubTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 全局游戏.
+        /// </summary>
+        public static string SetupPage_Game_Title {
+            get {
+                return ResourceManager.GetString("SetupPage.Game.Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 多人联机 (Only Windows).
+        /// </summary>
+        public static string SetupPage_Program_Online {
+            get {
+                return ResourceManager.GetString("SetupPage.Program.Online", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 插件系统.
+        /// </summary>
+        public static string SetupPage_Program_Plugin {
+            get {
+                return ResourceManager.GetString("SetupPage.Program.Plugin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 在这里启用您需要的官方拓展功能，稍后您可前往 设置&gt;行为&gt;程序与功能 中修改更多设置项。.
+        /// </summary>
+        public static string SetupPage_Program_SubTitle {
+            get {
+                return ResourceManager.GetString("SetupPage.Program.SubTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 拓展功能.
+        /// </summary>
+        public static string SetupPage_Program_Title {
+            get {
+                return ResourceManager.GetString("SetupPage.Program.Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 您的下一代 Minecraft 启动器.
+        /// </summary>
+        public static string SetupPage_Root_LastLauncher {
+            get {
+                return ResourceManager.GetString("SetupPage.Root.LastLauncher", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 下一步.
+        /// </summary>
+        public static string SetupPage_Root_Next {
+            get {
+                return ResourceManager.GetString("SetupPage.Root.Next", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 上一步.
+        /// </summary>
+        public static string SetupPage_Root_Previous {
+            get {
+                return ResourceManager.GetString("SetupPage.Root.Previous", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to RMCL 启动器.
+        /// </summary>
+        public static string SetupPage_Root_RMCL {
+            get {
+                return ResourceManager.GetString("SetupPage.Root.RMCL", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 账户.
+        /// </summary>
+        public static string SetupPage_Root_Tag_Account {
+            get {
+                return ResourceManager.GetString("SetupPage.Root.Tag.Account", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 完成.
+        /// </summary>
+        public static string SetupPage_Root_Tag_Completed {
+            get {
+                return ResourceManager.GetString("SetupPage.Root.Tag.Completed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 游戏.
+        /// </summary>
+        public static string SetupPage_Root_Tag_Game {
+            get {
+                return ResourceManager.GetString("SetupPage.Root.Tag.Game", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 功能.
+        /// </summary>
+        public static string SetupPage_Root_Tag_Program {
+            get {
+                return ResourceManager.GetString("SetupPage.Root.Tag.Program", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 个性化.
+        /// </summary>
+        public static string SetupPage_Root_Tag_Theme {
+            get {
+                return ResourceManager.GetString("SetupPage.Root.Tag.Theme", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 欢迎.
+        /// </summary>
+        public static string SetupPage_Root_Tag_Welcome {
+            get {
+                return ResourceManager.GetString("SetupPage.Root.Tag.Welcome", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 稍后您可以前往 设置&gt;个性化&gt;背景 中修改更多外观设置。.
+        /// </summary>
+        public static string SetupPage_Theme_SubTitle {
+            get {
+                return ResourceManager.GetString("SetupPage.Theme.SubTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 选择一个您喜欢的外观.
+        /// </summary>
+        public static string SetupPage_Theme_Title {
+            get {
+                return ResourceManager.GetString("SetupPage.Theme.Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 请在此处设置一个您需要的语言，然后继续。.
+        /// </summary>
+        public static string SetupPage_Welcome_SubTitle {
+            get {
+                return ResourceManager.GetString("SetupPage.Welcome.SubTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 欢迎.
+        /// </summary>
+        public static string SetupPage_Welcome_Title {
+            get {
+                return ResourceManager.GetString("SetupPage.Welcome.Title", resourceCulture);
+            }
+        }
     }
 }
