@@ -34,7 +34,6 @@ public partial class SetupGame : ISetting
         this.IsEnabled = false;
         AutomaticSearch.Content = new ProgressRing()
         {
-            Foreground = Brushes.White,
             Background = Brushes.Transparent
         };
 

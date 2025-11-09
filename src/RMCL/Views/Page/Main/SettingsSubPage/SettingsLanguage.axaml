@@ -15,8 +15,9 @@
                 <ComboBox Width="200"
                           Name="ChooseLanguage"
                           SelectionChanged="ChooseLanguage_OnSelectionChanged">
-                    <ComboBoxItem>简体中文</ComboBoxItem>
-                    <ComboBoxItem>English</ComboBoxItem>
+                    <ComboBoxItem>Chinese / 简体中文</ComboBoxItem>
+                    <ComboBoxItem>English / 英语</ComboBoxItem>
+                    <ComboBoxItem>Japanese / 日语</ComboBoxItem>
                 </ComboBox>
             </onePointControls:SettingCard>
             
