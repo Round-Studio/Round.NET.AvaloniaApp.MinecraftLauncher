@@ -22,14 +22,18 @@ public partial class MainView : UserControl
     {
         MainContent.NavigateTo(new MainPage());
     }
+    public void GoToSetupPage()
+    {
+        MainContent.NavigateTo(new SetupRootPage());
+    }
 
     public MainView()
     {
         InitializeComponent();
         Instance = this;
 
-        if ((bool)GlobalModels.Config?.Data.FirstRun) MainContent.NavigateTo(new SetupRootPage());
-        else MainContent.NavigateTo(new MainPage());
+        if ((bool)GlobalModels.Config?.Data.FirstRun) GoToSetupPage();
+        else GoToMainPage();
 
         this.Loaded += (sender, args) =>
         {

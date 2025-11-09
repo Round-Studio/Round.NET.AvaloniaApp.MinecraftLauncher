@@ -11,6 +11,7 @@ using OverrideLauncher.Core.Base.Entry.Info.Java;
 using OverrideLauncher.Core.Classes.Utilities;
 using RMCL.Interface;
 using RMCL.Models.Global;
+using RMCL.Properties;
 
 namespace RMCL.Views.Page.Main.SetupPage;
 
@@ -34,8 +35,7 @@ public partial class SetupGame : ISetting
         AutomaticSearch.Content = new ProgressRing()
         {
             Foreground = Brushes.White,
-            Background = Brushes.Transparent,
-            RingWidth = 2
+            Background = Brushes.Transparent
         };
 
         try
@@ -64,7 +64,7 @@ public partial class SetupGame : ISetting
         {
             // 在UI线程中恢复UI状态
             this.IsEnabled = true;
-            AutomaticSearch.Content = "自动搜索 Java";
+            AutomaticSearch.Content = Resource.SetupPage_Game_SearchJava;
         }
     }
 }

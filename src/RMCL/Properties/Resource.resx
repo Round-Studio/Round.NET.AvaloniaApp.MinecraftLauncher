@@ -330,4 +330,90 @@
   <data name="Account.None" xml:space="preserve">
     <value>当前无账户</value>
   </data>
+
+
+  <data name="SetupPage.Root.Tag.Welcome" xml:space="preserve">
+    <value>欢迎</value>
+  </data>
+  <data name="SetupPage.Root.Tag.Theme" xml:space="preserve">
+    <value>个性化</value>
+  </data>
+  <data name="SetupPage.Root.Tag.Program" xml:space="preserve">
+    <value>功能</value>
+  </data>
+  <data name="SetupPage.Root.Tag.Account" xml:space="preserve">
+    <value>账户</value>
+  </data>
+  <data name="SetupPage.Root.Tag.Game" xml:space="preserve">
+    <value>游戏</value>
+  </data>
+  <data name="SetupPage.Root.Tag.Completed" xml:space="preserve">
+    <value>完成</value>
+  </data>
+  <data name="SetupPage.Root.RMCL" xml:space="preserve">
+    <value>RMCL 启动器</value>
+  </data>
+  <data name="SetupPage.Root.LastLauncher" xml:space="preserve">
+    <value>您的下一代 Minecraft 启动器</value>
+  </data>
+  <data name="SetupPage.Root.Next" xml:space="preserve">
+    <value>下一步</value>
+  </data>
+  <data name="SetupPage.Root.Previous" xml:space="preserve">
+    <value>上一步</value>
+  </data>
+  <data name="SetupPage.Welcome.Title" xml:space="preserve">
+    <value>欢迎</value>
+  </data>
+  <data name="SetupPage.Welcome.SubTitle" xml:space="preserve">
+    <value>请在此处设置一个您需要的语言，然后继续。</value>
+  </data>
+  <data name="SetupPage.Theme.Title" xml:space="preserve">
+    <value>选择一个您喜欢的外观</value>
+  </data>
+  <data name="SetupPage.Theme.SubTitle" xml:space="preserve">
+    <value>稍后您可以前往 设置>个性化>背景 中修改更多外观设置。</value>
+  </data>
+  <data name="SetupPage.Program.Title" xml:space="preserve">
+    <value>拓展功能</value>
+  </data>
+  <data name="SetupPage.Program.SubTitle" xml:space="preserve">
+    <value>在这里启用您需要的官方拓展功能，稍后您可前往 设置>行为>程序与功能 中修改更多设置项。</value>
+  </data>
+  <data name="SetupPage.Program.Plugin" xml:space="preserve">
+    <value>插件系统</value>
+  </data>
+  <data name="SetupPage.Program.Online" xml:space="preserve">
+    <value>多人联机 (Only Windows)</value>
+  </data>
+  <data name="SetupPage.Account.Title" xml:space="preserve">
+    <value>创建用户</value>
+  </data>
+  <data name="SetupPage.Account.SubTitle" xml:space="preserve">
+    <value>在此处创建属于您的游戏账户，也可以稍后在账号管理页面中设置。</value>
+  </data>
+  <data name="SetupPage.Account.AddNewAccount" xml:space="preserve">
+    <value>创建新账户</value>
+  </data>
+  <data name="SetupPage.Game.Title" xml:space="preserve">
+    <value>全局游戏</value>
+  </data>
+  <data name="SetupPage.Game.SubTitle" xml:space="preserve">
+    <value>设置您的全局 Java，用于启动 Minecraft。您可以稍后前往 设置>行为>Java 虚拟机与内存 中修改更多设置项。</value>
+  </data>
+  <data name="SetupPage.Game.SearchJava" xml:space="preserve">
+    <value>自动搜索 Java</value>
+  </data>
+  <data name="SetupPage.Game.AddJava" xml:space="preserve">
+    <value>手动添加</value>
+  </data>
+  <data name="SetupPage.Completed.Title" xml:space="preserve">
+    <value>完成</value>
+  </data>
+  <data name="SetupPage.Completed.SubTitle" xml:space="preserve">
+    <value>您现在已经完成了 RMCL 的基础设置，单击下方 “开始使用” 按钮，尽情享受吧~</value>
+  </data>
+  <data name="SetupPage.Completed.Start" xml:space="preserve">
+    <value>开始使用</value>
+  </data>
 </root>

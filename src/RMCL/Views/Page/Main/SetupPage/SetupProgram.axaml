@@ -3,6 +3,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:onePointControls="clr-namespace:OnePointUI.Avalonia.Styling.Controls.OnePointControls;assembly=OnePointUI.Avalonia"
+             xmlns:properties="clr-namespace:RMCL.Properties"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="RMCL.Views.Page.Main.SetupPage.SetupProgram">
     <StackPanel VerticalAlignment="Center"
@@ -14,8 +15,10 @@
                                        Glyph="&#xEA86;"
                                        Foreground="{DynamicResource PrimaryForegroundBrush}"/>
             <TextBlock FontSize="22"
-                       Margin="5,10,0,0">拓展功能</TextBlock>
-            <TextBlock Margin="5">在这里启用您需要的官方拓展功能，稍后您可前往 设置>行为>程序与功能 中修改更多设置项。</TextBlock>
+                       Margin="5,10,0,0"
+                       Text="{x:Static properties:Resource.SetupPage_Program_Title}"></TextBlock>
+            <TextBlock Margin="5"
+                       Text="{x:Static properties:Resource.SetupPage_Program_SubTitle}"></TextBlock>
         </StackPanel>
         
         <Grid Margin="0,10,0,0">
@@ -28,7 +31,8 @@
                                   IsCheckedChanged="TogglePlugin_OnIsCheckedChanged"
                                   IsChecked="True"></ToggleSwitch>
                     
-                    <TextBlock DockPanel.Dock="Left">插件系统</TextBlock>
+                    <TextBlock DockPanel.Dock="Left"
+                               Text="{x:Static properties:Resource.SetupPage_Program_Plugin}"></TextBlock>
                 </DockPanel>
                 
                 <DockPanel Margin="5"
@@ -37,7 +41,8 @@
                                   Name="ToggleOnline"
                                   IsCheckedChanged="ToggleOnline_OnIsCheckedChanged"></ToggleSwitch>
                     
-                    <TextBlock DockPanel.Dock="Left">多人联机 (Only Windows)</TextBlock>
+                    <TextBlock DockPanel.Dock="Left"
+                               Text="{x:Static properties:Resource.SetupPage_Program_Online}"></TextBlock>
                 </DockPanel>
             </StackPanel>
         </Grid>

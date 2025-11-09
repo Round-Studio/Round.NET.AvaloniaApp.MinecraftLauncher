@@ -4,6 +4,7 @@ using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Interactivity;
 using Avalonia.Markup.Xaml;
+using RMCL.Properties;
 
 namespace RMCL.Views.Page.Main.SetupPage;
 
@@ -11,12 +12,12 @@ public partial class SetupRootPage : UserControl
 {
     public Dictionary<string, object> PageDictionary = new Dictionary<string, object>()
     {
-        ["欢迎"] = new SetupWelcome(),
-        ["外观"] = new SetupTheme(),
-        ["功能"] = new SetupProgram(),
-        ["账户"] = new SetupAccount(),
-        ["游戏"] = new SetupGame(),
-        ["完成"] = new SetupCompleted()
+        [Resource.SetupPage_Root_Tag_Welcome] = new SetupWelcome(),
+        [Resource.SetupPage_Root_Tag_Theme] = new SetupTheme(),
+        [Resource.SetupPage_Root_Tag_Program] = new SetupProgram(),
+        [Resource.SetupPage_Root_Tag_Account] = new SetupAccount(),
+        [Resource.SetupPage_Root_Tag_Game] = new SetupGame(),
+        [Resource.SetupPage_Root_Tag_Completed] = new SetupCompleted()
     };
 
     public int StepIndex = 0;

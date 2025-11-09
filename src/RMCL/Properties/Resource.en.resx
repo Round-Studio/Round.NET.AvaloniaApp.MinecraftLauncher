@@ -222,4 +222,89 @@
     <data name="Account.None" xml:space="preserve">
     <value>None</value>
   </data>
+  
+  <data name="SetupPage.Root.Tag.Welcome" xml:space="preserve">
+    <value>Welcome</value>
+  </data>
+  <data name="SetupPage.Root.Tag.Theme" xml:space="preserve">
+    <value>Personalization</value>
+  </data>
+  <data name="SetupPage.Root.Tag.Program" xml:space="preserve">
+    <value>Features</value>
+  </data>
+  <data name="SetupPage.Root.Tag.Account" xml:space="preserve">
+    <value>Account</value>
+  </data>
+  <data name="SetupPage.Root.Tag.Game" xml:space="preserve">
+    <value>Game</value>
+  </data>
+  <data name="SetupPage.Root.Tag.Completed" xml:space="preserve">
+    <value>Completed</value>
+  </data>
+  <data name="SetupPage.Root.RMCL" xml:space="preserve">
+    <value>RMCL Launcher</value>
+  </data>
+  <data name="SetupPage.Root.LastLauncher" xml:space="preserve">
+    <value>Your Next-Generation Minecraft Launcher</value>
+  </data>
+  <data name="SetupPage.Root.Next" xml:space="preserve">
+    <value>Next</value>
+  </data>
+  <data name="SetupPage.Root.Previous" xml:space="preserve">
+    <value>Previous</value>
+  </data>
+  <data name="SetupPage.Welcome.Title" xml:space="preserve">
+    <value>Welcome</value>
+  </data>
+  <data name="SetupPage.Welcome.SubTitle" xml:space="preserve">
+    <value>Please set your preferred language here, then continue.</value>
+  </data>
+  <data name="SetupPage.Theme.Title" xml:space="preserve">
+    <value>Choose an Appearance You Like</value>
+  </data>
+  <data name="SetupPage.Theme.SubTitle" xml:space="preserve">
+    <value>You can modify more appearance settings later in Settings > Personalization > Background.</value>
+  </data>
+  <data name="SetupPage.Program.Title" xml:space="preserve">
+    <value>Extended Features</value>
+  </data>
+  <data name="SetupPage.Program.SubTitle" xml:space="preserve">
+    <value>Enable the official extended features you need here. You can modify more settings later in Settings > Behavior > Programs Features.</value>
+  </data>
+  <data name="SetupPage.Program.Plugin" xml:space="preserve">
+    <value>Plugin System</value>
+  </data>
+  <data name="SetupPage.Program.Online" xml:space="preserve">
+    <value>Online Multiplayer (Windows Only)</value>
+  </data>
+  <data name="SetupPage.Account.Title" xml:space="preserve">
+    <value>Create User</value>
+  </data>
+  <data name="SetupPage.Account.SubTitle" xml:space="preserve">
+    <value>Create your game account here, or you can set it up later in the Account Management page.</value>
+  </data>
+  <data name="SetupPage.Account.AddNewAccount" xml:space="preserve">
+    <value>Create New Account</value>
+  </data>
+  <data name="SetupPage.Game.Title" xml:space="preserve">
+    <value>Global Game</value>
+  </data>
+  <data name="SetupPage.Game.SubTitle" xml:space="preserve">
+    <value>Set your global Java for launching Minecraft. You can modify more settings later in Settings > Behavior > JVM Memory.</value>
+  </data>
+  <data name="SetupPage.Game.SearchJava" xml:space="preserve">
+    <value>Auto Search Java</value>
+  </data>
+  <data name="SetupPage.Game.AddJava" xml:space="preserve">
+    <value>Add Manually</value>
+  </data>
+  <data name="SetupPage.Completed.Title" xml:space="preserve">
+    <value>Completed</value>
+  </data>
+  <data name="SetupPage.Completed.SubTitle" xml:space="preserve">
+    <value>You have now completed the basic setup for RMCL. Click the "Get Started" button below and enjoy!</value>
+  </data>
+  <data name="SetupPage.Completed.Start" xml:space="preserve">
+    <value>Get Started</value>
+  </data>
 </root>

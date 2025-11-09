@@ -3,6 +3,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:onePointControls="clr-namespace:OnePointUI.Avalonia.Styling.Controls.OnePointControls;assembly=OnePointUI.Avalonia"
+             xmlns:properties="clr-namespace:RMCL.Properties"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="RMCL.Views.Page.Main.SetupPage.SetupGame">
     <StackPanel VerticalAlignment="Center"
@@ -14,28 +15,31 @@
                                        Glyph="&#xE7FC;"
                                        Foreground="{DynamicResource PrimaryForegroundBrush}"/>
             <TextBlock FontSize="22"
-                       Margin="5,10,0,0">全局游戏</TextBlock>
-            <TextBlock Margin="5">设置您的全局 Java，用于启动 Minecraft。您可以稍后前往 设置>行为>Java 虚拟机与内存 中修改更多设置项。</TextBlock>
+                       Margin="5,10,0,0"
+                       Text="{x:Static properties:Resource.SetupPage_Game_Title}"></TextBlock>
+            <TextBlock Margin="5"
+                       Text="{x:Static properties:Resource.SetupPage_Game_SubTitle}"></TextBlock>
         </StackPanel>
         
         <Grid Margin="0,10,0,0">
             <StackPanel>
                 <StackPanel Orientation="Horizontal">
-                    <Button Width="110"
-                            Height="36"
-                            HorizontalAlignment="Left"
-                            Margin="5"
-                            Classes="Accent"
-                            Name="AutomaticSearch"
-                            Click="AutomaticSearch_OnClick"
-                            Content="自动搜索 Java"></Button>
+                    <Button  Padding="12,0"
+                             Width="160"
+                             Height="36"
+                             HorizontalAlignment="Left"
+                             Margin="5"
+                             Classes="Accent"
+                             Name="AutomaticSearch"
+                             Click="AutomaticSearch_OnClick"
+                             Content="{x:Static properties:Resource.SetupPage_Game_SearchJava}"></Button>
                     
-                    <Button Width="90"
-                            Height="36"
-                            HorizontalAlignment="Left"
-                            Margin="5"
-                            IsEnabled="False"
-                            Content="手动添加"></Button>
+                    <Button  Padding="12,0"
+                             Height="36"
+                             HorizontalAlignment="Left"
+                             Margin="5"
+                             IsEnabled="False"
+                             Content="{x:Static properties:Resource.SetupPage_Game_AddJava}"></Button>
                 </StackPanel>
                 <ComboBox Margin="5"
                           Height="36"

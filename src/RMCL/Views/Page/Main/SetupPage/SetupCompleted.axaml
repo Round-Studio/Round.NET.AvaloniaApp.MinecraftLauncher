@@ -3,6 +3,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:onePointControls="clr-namespace:OnePointUI.Avalonia.Styling.Controls.OnePointControls;assembly=OnePointUI.Avalonia"
+             xmlns:properties="clr-namespace:RMCL.Properties"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="RMCL.Views.Page.Main.SetupPage.SetupCompleted">
     <StackPanel VerticalAlignment="Center"
@@ -14,8 +15,10 @@
                                        Glyph="&#xE73E;"
                                        Foreground="{DynamicResource PrimaryForegroundBrush}"/>
             <TextBlock FontSize="22"
-                       Margin="5,10,0,0">完成</TextBlock>
-            <TextBlock Margin="5">您现在已经完成了 RMCL 的基础设置，单击下方 “开始使用” 按钮，尽情享受吧~</TextBlock>
+                       Margin="5,10,0,0"
+                       Text="{x:Static properties:Resource.SetupPage_Completed_Title}"></TextBlock>
+            <TextBlock Margin="5"
+                       Text="{x:Static properties:Resource.SetupPage_Completed_SubTitle}"></TextBlock>
         </StackPanel>
         
         <Grid Margin="0,10,0,0">
@@ -26,7 +29,7 @@
                     Classes="Accent"
                     Name="Start"
                     Click="Start_OnClick"
-                    Content="开始使用"></Button>
+                    Content="{x:Static properties:Resource.SetupPage_Completed_Start}"></Button>
         </Grid>
     </StackPanel>
 </UserControl>

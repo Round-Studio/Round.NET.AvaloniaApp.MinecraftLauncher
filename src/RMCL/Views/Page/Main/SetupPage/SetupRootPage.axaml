@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:onePointControls="clr-namespace:OnePointUI.Avalonia.Styling.Controls.OnePointControls;assembly=OnePointUI.Avalonia"
              xmlns:navigation="clr-namespace:OnePointUI.Avalonia.Styling.Controls.OnePointControls.Navigation;assembly=OnePointUI.Avalonia"
+             xmlns:properties="clr-namespace:RMCL.Properties"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="RMCL.Views.Page.Main.SetupPage.SetupRootPage">
     <Grid RowDefinitions="Auto,*,Auto"
@@ -39,9 +40,11 @@
                     <StackPanel>
                         <TextBlock Margin="5"
                                    FontSize="14"
-                                   FontWeight="Bold">RMCL 启动器</TextBlock>
+                                   FontWeight="Bold"
+                                   Text="{x:Static properties:Resource.SetupPage_Root_RMCL}"></TextBlock>
                         <TextBlock Margin="5,0,0,0"
-                                   FontSize="11">您的下一代 Minecraft 启动器</TextBlock>
+                                   FontSize="11"
+                                   Text="{x:Static properties:Resource.SetupPage_Root_LastLauncher}"></TextBlock>
                     </StackPanel>
                 </StackPanel>
             </Grid>
@@ -60,7 +63,8 @@
                                                    Margin="0,1,0,0"
                                                    VerticalAlignment="Center"/>
                         <TextBlock VerticalAlignment="Center"
-                                   Margin="12,0,0,0">上一步</TextBlock>
+                                   Margin="12,0,0,0"
+                                   Text="{x:Static properties:Resource.SetupPage_Root_Previous}"></TextBlock>
                     </StackPanel>
                 </Button>
                 
@@ -72,7 +76,8 @@
                         Classes="NoBorder">
                     <StackPanel Orientation="Horizontal">
                         <TextBlock VerticalAlignment="Center"
-                                   Margin="0,0,12,0">下一步</TextBlock>
+                                   Margin="0,0,12,0"
+                                   Text="{x:Static properties:Resource.SetupPage_Root_Next}"></TextBlock>
                         <onePointControls:FontIcon Glyph="&#xE72A;"
                                                    Margin="0,1,0,0"
                                                    VerticalAlignment="Center"/>

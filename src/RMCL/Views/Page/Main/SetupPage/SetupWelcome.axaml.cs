@@ -27,6 +27,7 @@ public partial class SetupWelcome : ISetting
             GlobalModels.Config.Save();
             
             Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo(LanguageHelper.GetStringName(GlobalModels.Config.Data.Language));
+            MainView.Instance.GoToSetupPage();
         }
     }
 }

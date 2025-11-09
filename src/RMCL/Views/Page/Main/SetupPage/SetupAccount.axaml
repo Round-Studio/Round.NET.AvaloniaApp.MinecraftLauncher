@@ -3,6 +3,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:onePointControls="clr-namespace:OnePointUI.Avalonia.Styling.Controls.OnePointControls;assembly=OnePointUI.Avalonia"
+             xmlns:properties="clr-namespace:RMCL.Properties"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="RMCL.Views.Page.Main.SetupPage.SetupAccount">
     <StackPanel VerticalAlignment="Center"
@@ -14,18 +15,20 @@
                                        Glyph="&#xE716;"
                                        Foreground="{DynamicResource PrimaryForegroundBrush}"/>
             <TextBlock FontSize="22"
-                       Margin="5,10,0,0">创建用户</TextBlock>
-            <TextBlock Margin="5">在此处创建属于您的游戏账户，也可以稍后在账号管理页面中设置。</TextBlock>
+                       Margin="5,10,0,0"
+                       Text="{x:Static properties:Resource.SetupPage_Account_Title}"></TextBlock>
+            <TextBlock Margin="5"
+                       Text="{x:Static properties:Resource.SetupPage_Account_SubTitle}"></TextBlock>
         </StackPanel>
         
         <Grid Margin="0,10,0,0">
-            <Button Width="90"
+            <Button Padding="12,0"
                     Height="36"
                     HorizontalAlignment="Left"
                     Margin="5"
                     Name="AddNewAccount"
                     Click="AddNewAccount_OnClick"
-                    Content="创建新账户"></Button>
+                    Content="{x:Static properties:Resource.SetupPage_Account_AddNewAccount}"></Button>
         </Grid>
     </StackPanel>
 </UserControl>
