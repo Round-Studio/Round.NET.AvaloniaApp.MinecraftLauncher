@@ -9,6 +9,8 @@ using OnePointUI.Avalonia.Base.Enum;
 using OnePointUI.Avalonia.Styling.Controls.OnePointControls.Dialog;
 using RMCL.Models.Global;
 using RMCL.Models.Helper;
+using RMCL.Views.Page.Main;
+using RMCL.Views.Page.Main.SetupPage;
 
 namespace RMCL.Views.Page;
 
@@ -18,10 +20,13 @@ public partial class MainView : UserControl
     {
         InitializeComponent();
 
+        if ((bool)GlobalModels.Config?.Data.FirstRun) MainContent.Content = new SetupRootPage();
+        else MainContent.Content = new MainPage();
+
         this.Loaded += (sender, args) =>
         {
 #if DEBUG
-            GlobalModels.NoticePanel.AddNotice(new NoticeInfo()
+            GlobalModels.NoticePanel?.AddNotice(new NoticeInfo()
             {
                 Message = "当前模式为 Debug 模式，请勿用于发布。",
                 Title = "Debug Model",

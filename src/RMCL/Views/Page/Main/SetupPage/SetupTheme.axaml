@@ -1,0 +1,43 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:onePointControls="clr-namespace:OnePointUI.Avalonia.Styling.Controls.OnePointControls;assembly=OnePointUI.Avalonia"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="RMCL.Views.Page.Main.SetupPage.SetupTheme">
+    <StackPanel VerticalAlignment="Center"
+                Margin="45">
+        <StackPanel HorizontalAlignment="Left"
+                    VerticalAlignment="Top">
+            <onePointControls:FontIcon Margin="5"
+                                       FontSize="28"
+                                       Glyph="&#xE790;"
+                                       Foreground="{DynamicResource PrimaryForegroundBrush}"/>
+            <TextBlock FontSize="22"
+                       Margin="5,10,0,0">选择一个您喜欢的外观</TextBlock>
+            <TextBlock Margin="5">稍后您可以前往 设置>个性化>背景 中修改更多外观设置。</TextBlock>
+        </StackPanel>
+        
+        <Grid Margin="0,10,0,0">
+            <StackPanel Orientation="Horizontal">
+                <ComboBox Margin="5"
+                          Width="145"
+                          Height="36"
+                          SelectedIndex="0">
+                    <ComboBoxItem>暗色</ComboBoxItem>
+                    <ComboBoxItem>亮色</ComboBoxItem>
+                </ComboBox>
+                
+                <ComboBox Margin="5"
+                          Width="145"
+                          Height="36"
+                          SelectedIndex="0">
+                    <ComboBoxItem>无</ComboBoxItem>
+                    <ComboBoxItem>电路板</ComboBoxItem>
+                    <ComboBoxItem>蜂窝</ComboBoxItem>
+                    <ComboBoxItem>骷髅头</ComboBoxItem>
+                </ComboBox>
+            </StackPanel>
+        </Grid>
+    </StackPanel>
+</UserControl>

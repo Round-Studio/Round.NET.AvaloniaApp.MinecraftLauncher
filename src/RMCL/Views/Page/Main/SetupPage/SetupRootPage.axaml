@@ -1,0 +1,84 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:onePointControls="clr-namespace:OnePointUI.Avalonia.Styling.Controls.OnePointControls;assembly=OnePointUI.Avalonia"
+             xmlns:navigation="clr-namespace:OnePointUI.Avalonia.Styling.Controls.OnePointControls.Navigation;assembly=OnePointUI.Avalonia"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="RMCL.Views.Page.Main.SetupPage.SetupRootPage">
+    <Grid RowDefinitions="Auto,*,Auto"
+          Background="{DynamicResource BackgroundBrush}">
+        <Border Grid.Row="0"
+                Height="48"
+                Margin="10"
+                CornerRadius="8"
+                HorizontalAlignment="Center"
+                Padding="12,0"
+                Background="{DynamicResource PrimaryBackgroundOverBrush}">
+            <TabControl HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        IsEnabled="False"
+                        Name="TopProgressBar"
+                        Margin="0,2,0,0">
+            </TabControl>
+        </Border>
+        
+        <navigation:NavigationFrame Grid.Row="1"
+                                    Name="SetupFrame"/>
+        
+        <Grid Row="2">
+            <Grid HorizontalAlignment="Left"
+                  VerticalAlignment="Stretch"
+                  Margin="15">
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="avares://RMCL/Assets/Icon/logo.png"
+                           Width="42"
+                           Height="42"
+                           Margin="5"></Image>
+                    
+                    <StackPanel>
+                        <TextBlock Margin="5"
+                                   FontSize="14"
+                                   FontWeight="Bold">RMCL 启动器</TextBlock>
+                        <TextBlock Margin="5,0,0,0"
+                                   FontSize="11">您的下一代 Minecraft 启动器</TextBlock>
+                    </StackPanel>
+                </StackPanel>
+            </Grid>
+            
+            <DockPanel Margin="15"
+                       HorizontalAlignment="Right"
+                       LastChildFill="False">
+                <Button Padding="28,12"
+                        IsEnabled="False"
+                        Name="ButtonLast"
+                        Click="ButtonLast_OnClick"
+                        Margin="5"
+                        Classes="NoBorder">
+                    <StackPanel Orientation="Horizontal">
+                        <onePointControls:FontIcon Glyph="&#xE72B;"
+                                                   Margin="0,1,0,0"
+                                                   VerticalAlignment="Center"/>
+                        <TextBlock VerticalAlignment="Center"
+                                   Margin="12,0,0,0">上一步</TextBlock>
+                    </StackPanel>
+                </Button>
+                
+                <Button Padding="28,12"
+                        IsEnabled="False"
+                        Name="ButtonNext"
+                        Click="ButtonNext_OnClick"
+                        Margin="5"
+                        Classes="NoBorder">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock VerticalAlignment="Center"
+                                   Margin="0,0,12,0">下一步</TextBlock>
+                        <onePointControls:FontIcon Glyph="&#xE72A;"
+                                                   Margin="0,1,0,0"
+                                                   VerticalAlignment="Center"/>
+                    </StackPanel>
+                </Button>
+            </DockPanel>
+        </Grid>
+    </Grid>
+</UserControl>
