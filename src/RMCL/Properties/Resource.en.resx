@@ -208,8 +208,8 @@
     <value>Player Name:</value>
   </data>
     <data name="Account.AddAccount.Offline.Warning" xml:space="preserve">
-    <value>In accordance with relevant laws, offline accounts are not available in some regions. Please always support the genuine version.</value>
-  </data>
+        <value>Offline accounts are not available. Please use the official version.</value>
+    </data>
     <data name="Account.AddAccount.Offline.Warning.Title" xml:space="preserve">
     <value>Warning</value>
   </data>

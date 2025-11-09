@@ -24,6 +24,8 @@
                     HorizontalAlignment="Left"
                     Margin="5"
                     Classes="Accent"
+                    Name="Start"
+                    Click="Start_OnClick"
                     Content="开始使用"></Button>
         </Grid>
     </StackPanel>

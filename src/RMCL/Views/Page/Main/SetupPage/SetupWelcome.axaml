@@ -22,7 +22,9 @@
             <ComboBox Margin="5"
                       Width="300"
                       Height="36"
-                      SelectedIndex="0">
+                      SelectedIndex="0"
+                      Name="ChooseLanguageBox"
+                      SelectionChanged="ChooseLanguageBox_OnSelectionChanged">
                 <ComboBoxItem>简体中文</ComboBoxItem>
                 <ComboBoxItem>English</ComboBoxItem>
             </ComboBox>

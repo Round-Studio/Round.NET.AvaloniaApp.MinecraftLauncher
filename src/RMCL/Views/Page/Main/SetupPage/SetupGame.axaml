@@ -26,17 +26,22 @@
                             HorizontalAlignment="Left"
                             Margin="5"
                             Classes="Accent"
+                            Name="AutomaticSearch"
+                            Click="AutomaticSearch_OnClick"
                             Content="自动搜索 Java"></Button>
                     
                     <Button Width="90"
                             Height="36"
                             HorizontalAlignment="Left"
                             Margin="5"
+                            IsEnabled="False"
                             Content="手动添加"></Button>
                 </StackPanel>
                 <ComboBox Margin="5"
                           Height="36"
-                          Width="300"></ComboBox>
+                          Width="300"
+                          Name="ChooseJavaBox">
+                </ComboBox>
             </StackPanel>
         </Grid>
     </StackPanel>

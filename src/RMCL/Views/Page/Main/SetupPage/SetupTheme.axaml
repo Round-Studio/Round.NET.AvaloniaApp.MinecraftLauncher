@@ -23,6 +23,8 @@
                 <ComboBox Margin="5"
                           Width="145"
                           Height="36"
+                          Name="ChooseThemeBox"
+                          SelectionChanged="ChooseThemeBox_OnSelectionChanged"
                           SelectedIndex="0">
                     <ComboBoxItem>暗色</ComboBoxItem>
                     <ComboBoxItem>亮色</ComboBoxItem>
@@ -31,7 +33,9 @@
                 <ComboBox Margin="5"
                           Width="145"
                           Height="36"
-                          SelectedIndex="0">
+                          Name="ChooseMaterialBox"
+                          SelectionChanged="ChooseMaterialBox_OnSelectionChanged"
+                          SelectedIndex="1">
                     <ComboBoxItem>无</ComboBoxItem>
                     <ComboBoxItem>电路板</ComboBoxItem>
                     <ComboBoxItem>蜂窝</ComboBoxItem>

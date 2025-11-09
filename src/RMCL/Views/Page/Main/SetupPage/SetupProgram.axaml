@@ -24,6 +24,8 @@
                 <DockPanel Margin="5"
                            LastChildFill="True">
                     <ToggleSwitch DockPanel.Dock="Right"
+                                  Name="TogglePlugin"
+                                  IsCheckedChanged="TogglePlugin_OnIsCheckedChanged"
                                   IsChecked="True"></ToggleSwitch>
                     
                     <TextBlock DockPanel.Dock="Left">插件系统</TextBlock>
@@ -31,7 +33,9 @@
                 
                 <DockPanel Margin="5"
                            LastChildFill="True">
-                    <ToggleSwitch DockPanel.Dock="Right"></ToggleSwitch>
+                    <ToggleSwitch DockPanel.Dock="Right"
+                                  Name="ToggleOnline"
+                                  IsCheckedChanged="ToggleOnline_OnIsCheckedChanged"></ToggleSwitch>
                     
                     <TextBlock DockPanel.Dock="Left">多人联机 (Only Windows)</TextBlock>
                 </DockPanel>

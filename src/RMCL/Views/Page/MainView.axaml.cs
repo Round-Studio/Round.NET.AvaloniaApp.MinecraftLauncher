@@ -16,12 +16,20 @@ namespace RMCL.Views.Page;
 
 public partial class MainView : UserControl
 {
+    public static MainView? Instance { get; set; }
+
+    public void GoToMainPage()
+    {
+        MainContent.NavigateTo(new MainPage());
+    }
+
     public MainView()
     {
         InitializeComponent();
+        Instance = this;
 
-        if ((bool)GlobalModels.Config?.Data.FirstRun) MainContent.Content = new SetupRootPage();
-        else MainContent.Content = new MainPage();
+        if ((bool)GlobalModels.Config?.Data.FirstRun) MainContent.NavigateTo(new SetupRootPage());
+        else MainContent.NavigateTo(new MainPage());
 
         this.Loaded += (sender, args) =>
         {
@@ -32,7 +40,7 @@ public partial class MainView : UserControl
                 Title = "Debug Model",
                 NoticeType = NoticeType.Info
             });
-            
+
             var date = CheckVersion.GetLinkerTimestamp();
             var zt = CheckVersion.CheckTimeAndExecute24Hour(date);
             Console.WriteLine(@$"当前模式：Debug 模式");
@@ -58,10 +66,7 @@ public partial class MainView : UserControl
                         $"当前版本为预览版本，请勿添加到整合包中使用。\n当前版本仅作为测试部分功能，将于 24h 后失效，当前已失效。\n当前可用状态：{zt}",
                     Title = "版本模式提示",
                     CloseButtonText = "退出",
-                    CloseAction = () =>
-                    {
-                        Environment.Exit(0);
-                    },
+                    CloseAction = () => { Environment.Exit(0); },
                     AccountButton = DialogButtons.CloseButton
                 });
             }

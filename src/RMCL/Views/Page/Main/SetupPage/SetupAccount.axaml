@@ -23,6 +23,8 @@
                     Height="36"
                     HorizontalAlignment="Left"
                     Margin="5"
+                    Name="AddNewAccount"
+                    Click="AddNewAccount_OnClick"
                     Content="创建新账户"></Button>
         </Grid>
     </StackPanel>

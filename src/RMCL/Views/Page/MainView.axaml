@@ -5,9 +5,10 @@
              xmlns:onePointControls="clr-namespace:OnePointUI.Avalonia.Styling.Controls.OnePointControls;assembly=OnePointUI.Avalonia"
              xmlns:main="clr-namespace:RMCL.Views.Page.Main"
              xmlns:res="clr-namespace:RMCL.Properties"
+             xmlns:navigation="clr-namespace:OnePointUI.Avalonia.Styling.Controls.OnePointControls.Navigation;assembly=OnePointUI.Avalonia"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="RMCL.Views.Page.MainView">
     <Grid>
-        <ContentControl Name="MainContent"></ContentControl>
+        <navigation:NavigationFrame Name="MainContent"></navigation:NavigationFrame>
     </Grid>
 </UserControl>
