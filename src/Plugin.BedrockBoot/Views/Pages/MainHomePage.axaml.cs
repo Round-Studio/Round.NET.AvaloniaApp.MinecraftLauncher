@@ -26,12 +26,15 @@ public partial class MainHomePage : UserControl
             switch (tag)
             {
                 case 0:
-                    this.Frame.NavigateTo(new ManagerPage());
+                    this.Frame.NavigateTo(new HomePage());
                     break;
                 case 1:
-                    this.Frame.NavigateTo(new DownloadPage());
+                    this.Frame.NavigateTo(new ManagerPage());
                     break;
                 case 2:
+                    this.Frame.NavigateTo(new DownloadPage());
+                    break;
+                case 3:
                     this.Frame.NavigateTo(new SettingsPage());
                     break;
             }

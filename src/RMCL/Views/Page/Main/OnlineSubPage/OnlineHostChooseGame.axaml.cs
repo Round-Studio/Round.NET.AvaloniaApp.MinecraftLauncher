@@ -64,8 +64,9 @@ public partial class OnlineHostChooseGame : UserControl
             // 加入多播组
             _client.JoinMulticastGroup(IPAddress.Parse(multicastGroup));
 
-            Console.WriteLine($"正在监听多播组 {multicastGroup}:{multicastPort}");
-            Console.WriteLine("等待接收消息...\n");
+            Console.WriteLine($@"正在监听多播组 {multicastGroup}:{multicastPort}");
+            Console.WriteLine(@"等待接收消息...
+");
 
             // 开始异步监听
             _listenTask = ListenForBroadcastsAsync(_cts.Token);
@@ -79,7 +80,7 @@ public partial class OnlineHostChooseGame : UserControl
         }
         catch (Exception ex)
         {
-            Console.WriteLine($"启动监听时发生错误: {ex.Message}");
+            Console.WriteLine($@"启动监听时发生错误: {ex.Message}");
         }
         finally
         {
@@ -103,10 +104,10 @@ public partial class OnlineHostChooseGame : UserControl
                 DateTime receiveTime = DateTime.Now;
 
                 Console.WriteLine(
-                    $"[{receiveTime:HH:mm:ss}] 来自 {result.RemoteEndPoint.Address}:{result.RemoteEndPoint.Port}");
-                Console.WriteLine($"消息内容: {message}");
-                Console.WriteLine($"原始字节: {BitConverter.ToString(result.Buffer)}");
-                Console.WriteLine($"消息长度: {result.Buffer.Length} 字节");
+                    $@"[{receiveTime:HH:mm:ss}] 来自 {result.RemoteEndPoint.Address}:{result.RemoteEndPoint.Port}");
+                Console.WriteLine($@"消息内容: {message}");
+                Console.WriteLine($@"原始字节: {BitConverter.ToString(result.Buffer)}");
+                Console.WriteLine($@"消息长度: {result.Buffer.Length} 字节");
                 Console.WriteLine(new string('-', 50));
 
                 Avalonia.Threading.Dispatcher.UIThread.Post(() =>
@@ -125,7 +126,7 @@ public partial class OnlineHostChooseGame : UserControl
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"接收消息时出错: {ex.Message}");
+                Console.WriteLine($@"接收消息时出错: {ex.Message}");
                 // 继续监听，不退出循环
                 await Task.Delay(100, cancellationToken);
             }
@@ -138,7 +139,7 @@ public partial class OnlineHostChooseGame : UserControl
         var port = 0;
         try
         {
-            Console.WriteLine("解析消息内容:");
+            Console.WriteLine(@"解析消息内容:");
 
             // 解析 MOTD 部分
             int motdStart = message.IndexOf("[MOTD]") + 6;
@@ -146,7 +147,7 @@ public partial class OnlineHostChooseGame : UserControl
             if (motdStart >= 6 && motdEnd > motdStart)
             {
                 motd = message.Substring(motdStart, motdEnd - motdStart);
-                Console.WriteLine($"  MOTD: {motd}");
+                Console.WriteLine($@"  MOTD: {motd}");
             }
 
             // 解析 AD 部分（端口号）
@@ -157,7 +158,7 @@ public partial class OnlineHostChooseGame : UserControl
                 string portStr = message.Substring(adStart, adEnd - adStart);
                 if (int.TryParse(portStr, out port))
                 {
-                    Console.WriteLine($"  端口: {port}");
+                    Console.WriteLine($@"  端口: {port}");
                 }
             }
 
@@ -165,7 +166,7 @@ public partial class OnlineHostChooseGame : UserControl
         }
         catch (Exception ex)
         {
-            Console.WriteLine($"解析消息时出错: {ex.Message}");
+            Console.WriteLine($@"解析消息时出错: {ex.Message}");
         }
 
         return (port, motd);
@@ -187,7 +188,7 @@ public partial class OnlineHostChooseGame : UserControl
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"停止监听时出错: {ex.Message}");
+                Console.WriteLine($@"停止监听时出错: {ex.Message}");
             }
 
             _client = null;

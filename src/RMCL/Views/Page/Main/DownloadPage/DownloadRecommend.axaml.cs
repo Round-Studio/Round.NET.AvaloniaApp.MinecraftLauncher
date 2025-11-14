@@ -26,7 +26,7 @@ public partial class DownloadRecommend : UserControl
 
     public async Task UpdateUI()
     {
-        Console.WriteLine("开始多线程异步加载推荐下载项 01 - 最新版本");
+        Console.WriteLine(@"开始多线程异步加载推荐下载项 01 - 最新版本");
 
         try
         {

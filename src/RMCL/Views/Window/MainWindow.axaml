@@ -9,8 +9,8 @@
         x:Class="RMCL.Views.MainWindow"
         x:DataType="vm:MainWindowViewModel"
         Icon="/Assets/Icon/RMCL4.Logo.Big.ico"
-        Width="820" MinWidth="820"
-        Height="490" MinHeight="490"
+        Width="1010" MinWidth="1010"
+        Height="630" MinHeight="630"
         Background="Transparent"
         Closing="TopLevel_OnClosing"
         Title="RMCL">

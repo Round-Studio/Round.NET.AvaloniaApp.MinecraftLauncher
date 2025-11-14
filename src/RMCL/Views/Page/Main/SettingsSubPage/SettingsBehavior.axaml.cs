@@ -42,4 +42,9 @@ public partial class SettingsBehavior : UserControl
     {
         MainSettingPage.Page.NavigationTo(new BehaviorPlugin());
     }
+
+    private void DiskBtn_OnClick(object? sender, RoutedEventArgs e)
+    {
+        MainSettingPage.Page.NavigationTo(new BehaviorDisk());
+    }
 }

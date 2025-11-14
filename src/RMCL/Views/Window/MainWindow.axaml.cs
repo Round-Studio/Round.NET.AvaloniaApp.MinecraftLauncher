@@ -25,16 +25,16 @@ public partial class MainWindow : OnePointWindow
     public MainWindow()
     {
         ConsoleRedirector.RegisterThread(Thread.CurrentThread,"MainWindow");
-        Console.WriteLine("载入 MainWindow");
+        Console.WriteLine(@"载入 MainWindow");
         GlobalModels.MainWindow = this;
         
         InitializeComponent();
-        Console.WriteLine("窗体初始化完成");
+        Console.WriteLine(@"窗体初始化完成");
 
         RenderOptions.SetTextRenderingMode(this, TextRenderingMode.SubpixelAntialias); // 字体渲染模式
         RenderOptions.SetBitmapInterpolationMode(this, BitmapInterpolationMode.MediumQuality); // 图片渲染模式
         RenderOptions.SetEdgeMode(this, EdgeMode.Antialias); // 形状渲染模式
-        Console.WriteLine("渲染模式设置完毕");
+        Console.WriteLine(@"渲染模式设置完毕");
 
         GlobalModels.NoticePanel = OnePointUI.Avalonia.Styling.Controls.OnePointControls.Notice.Info.NoticePanel.InstancePanel;
         GlobalModels.TaskPanel = TaskPanel;
@@ -43,7 +43,7 @@ public partial class MainWindow : OnePointWindow
 
         ThemeManager.Instance.SetThemeModel(GlobalModels.Config.Data.StyleConfig.LightThemeType == ThemeModelEnum.Light ? ThemeVariant.Light : ThemeVariant.Dark);
         UpdateBack();
-        Console.WriteLine("主题设置完毕");
+        Console.WriteLine(@"主题设置完毕");
 
         if (GlobalModels.Config.Data.WindowInfo.X != -1 && GlobalModels.Config.Data.WindowInfo.Y != -1)
         {
@@ -53,8 +53,12 @@ public partial class MainWindow : OnePointWindow
 
             this.Width = GlobalModels.Config.Data.WindowInfo.Width;
             this.Height = GlobalModels.Config.Data.WindowInfo.Height;
+
+            Console.WriteLine(
+                $@"Main Window: Width {GlobalModels.Config.Data.WindowInfo.Width}, Height {GlobalModels.Config.Data.WindowInfo.Height}");
         }
-        Console.WriteLine("窗体位置信息初始完毕");
+
+        Console.WriteLine(@"窗体位置信息初始完毕");
     }
 
     public async Task UpdateBack()

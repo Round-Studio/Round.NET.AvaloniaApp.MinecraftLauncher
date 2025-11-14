@@ -50,7 +50,7 @@ public partial class DownloadPage : UserControl
         catch (Exception ex)
         {
             // 处理其他异常
-            Console.WriteLine($"加载版本列表时出错: {ex.Message}");
+            Console.WriteLine($@"加载版本列表时出错: {ex.Message}");
             await Dispatcher.UIThread.InvokeAsync(() =>
             {
                 LoadingRing.IsVisible = false;
@@ -62,19 +62,19 @@ public partial class DownloadPage : UserControl
 
     private async Task LoadVersionsAsync(string type, string key, CancellationToken cancellationToken)
     {
-        Console.WriteLine($"Version Type: {type} | Key Word: {key}");
+        Console.WriteLine($@"Version Type: {type} | Key Word: {key}");
 
         // 在后台线程执行耗时操作
         var (versions, hasItems) = await Task.Run(async () =>
         {
             try
             {
-                Console.WriteLine("正在加载基岩版版本列表...");
+                Console.WriteLine(@"正在加载基岩版版本列表...");
                 var lst = VersionHelper.GetVersions(
                     "https://raw.gitcode.com/gcw_lJgzYtGB/-MineCraft-Bedrock-Download-SU/raw/main/bedrock.json");
-                Console.WriteLine("基岩版版本列表加载完成");
+                Console.WriteLine(@"基岩版版本列表加载完成");
 
-                Console.WriteLine("开始序列化");
+                Console.WriteLine(@"开始序列化");
 
                 // 预处理：为每个项预先计算 Version 对象
                 var versionCache = new List<(VersionInformation item, Version? version)>();
@@ -136,13 +136,13 @@ public partial class DownloadPage : UserControl
 
                 // 提取排序后的结果
                 var sortedList = versionCache.Select(x => x.item).ToList();
-                Console.WriteLine("序列化完成");
+                Console.WriteLine(@"序列化完成");
 
                 return (sortedList, sortedList.Count > 0);
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"处理版本数据时出错: {ex.Message}");
+                Console.WriteLine($@"处理版本数据时出错: {ex.Message}");
                 return (new List<VersionInformation>(), false);
             }
         });
@@ -156,7 +156,7 @@ public partial class DownloadPage : UserControl
 
     private async Task UpdateUIAsync(List<VersionInformation> versions, bool hasItems)
     {
-        Console.WriteLine("开始动态修改 UI");
+        Console.WriteLine(@"开始动态修改 UI");
 
         // 清空现有项
         ItemsPanel.Children.Clear();
@@ -173,7 +173,7 @@ public partial class DownloadPage : UserControl
             await SetLoadingState(false, false, true);
         }
 
-        Console.WriteLine("UI 修改完毕");
+        Console.WriteLine(@"UI 修改完毕");
     }
 
     private async Task AddItemsBatchAsync(List<VersionInformation> versions)

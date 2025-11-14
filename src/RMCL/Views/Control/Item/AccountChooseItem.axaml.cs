@@ -69,7 +69,7 @@ public partial class AccountChooseItem : UserControl
         }
         catch (Exception ex)
         {
-            Console.WriteLine($"加载头像失败: {ex.Message}");
+            Console.WriteLine($@"加载头像失败: {ex.Message}");
             // 使用默认头像
             HeadIconImage.Source = await GetDefaultHeadIconAsync();
         }
@@ -93,7 +93,7 @@ public partial class AccountChooseItem : UserControl
             
                 if (skBitmap == null)
                 {
-                    Console.WriteLine("皮肤Base64数据解码失败，使用默认头像");
+                    Console.WriteLine(@"皮肤Base64数据解码失败，使用默认头像");
                     return GetDefaultHeadIconSync();
                 }
 
@@ -102,7 +102,7 @@ public partial class AccountChooseItem : UserControl
         }
         catch (Exception ex)
         {
-            Console.WriteLine($"处理自定义头像失败: {ex.Message}");
+            Console.WriteLine($@"处理自定义头像失败: {ex.Message}");
             return await GetDefaultHeadIconAsync();
         }
     }

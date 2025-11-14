@@ -25,10 +25,10 @@ public partial class DialogChooseAccountTypeContent : UserControl
         switch (accountType)
         {
             case AccountType.Microsoft:
-                Console.WriteLine("微软账户未启用");
+                Console.WriteLine(@"微软账户未启用");
                 break;
             case AccountType.Offline:
-                Console.WriteLine("开始添加离线账户");
+                Console.WriteLine(@"开始添加离线账户");
                 AddOfflineAccount();
                 break;
         }

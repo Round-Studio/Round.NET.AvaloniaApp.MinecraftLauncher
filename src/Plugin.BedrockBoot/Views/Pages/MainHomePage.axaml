@@ -11,39 +11,40 @@
         <Grid Background="{DynamicResource BackgroundBrush}"
               Opacity="0.6"></Grid>
         
-        <Border Background="{DynamicResource PrimaryBackgroundBrush}"
-                VerticalAlignment="Top"
-                CornerRadius="0,0,12,12"
-                Height="48">
-            <Grid>
-                <TabControl Margin="8,0,0,0"
+        <Grid RowDefinitions="Auto,*">
+            <Border Grid.Row="0" Background="{DynamicResource PrimaryBackgroundBrush}"
+                    VerticalAlignment="Top"
+                    CornerRadius="12"
+                    BorderThickness="1"
+                    BorderBrush="{DynamicResource PrimaryBorderBrush}"
+                    Margin="20,20,20,0"
+                    Height="48">
+                <Grid>
+                    <TabControl Margin="8,2,0,0"
+                                VerticalAlignment="Center"
+                                Name="Naviga"
+                                SelectionChanged="SelectingItemsControl_OnSelectionChanged">
+                        <TabItem Header="主页" Tag="Home"></TabItem>
+                        <TabItem Header="管理" Tag="Manager"></TabItem>
+                        <TabItem Header="下载" Tag="Download"></TabItem>
+                        <TabItem Header="插件设置" Tag="Settings"></TabItem>
+                    </TabControl>
+                
+                    <Border CornerRadius="6"
+                            ClipToBounds="True"
+                            HorizontalAlignment="Right"
                             VerticalAlignment="Center"
-                            Name="Naviga"
-                            SelectionChanged="SelectingItemsControl_OnSelectionChanged">
-                    <TabItem Header="管理实例" Tag="Manager"></TabItem>
-                    <TabItem Header="下载实例" Tag="Download"></TabItem>
-                    <TabItem Header="插件设置" Tag="Settings"></TabItem>
-                </TabControl>
-                
-                <!--<onePointControls:LabelBox Text="BedrockBoot"
-                                           HorizontalAlignment="Right"
-                                           VerticalAlignment="Center"
-                                           Margin="0,0,12,0"/>-->
-                
-                <Border CornerRadius="6"
-                        ClipToBounds="True"
-                        HorizontalAlignment="Right"
-                        VerticalAlignment="Center"
-                        Margin="0,0,20,0">
-                    <notice:InfoBar Height="32"
-                                    Title="技术警告"
-                                    Message="出于技术原因，暂时不提供下载 GDK 版本的 Minecraft Bedrock"
-                                    State="Warning"/>
-                </Border>
-            </Grid>
-        </Border>
+                            Margin="0,0,8,0">
+                        <notice:InfoBar Height="32"
+                                        Title="技术警告"
+                                        Message="出于技术原因，暂时不提供下载 GDK 版本的 Minecraft Bedrock"
+                                        State="Warning"/>
+                    </Border>
+                </Grid>
+            </Border>
         
-        <navigation:NavigationFrame Name="Frame"
-                                    Margin="0,48,0,0"/>  
+            <navigation:NavigationFrame Grid.Row="1" Name="Frame"
+                                        Margin="0,0,0,0"/>  
+        </Grid>
     </Grid>
 </UserControl>

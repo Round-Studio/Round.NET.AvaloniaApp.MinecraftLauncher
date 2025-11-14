@@ -30,6 +30,14 @@
                                           Name="PluginBtn"
                                           Click="PluginBtn_OnClick"
                                           IsClickable="True"/>
+            
+            <onePointControls:SettingCard Margin="5,5,5,10"
+                                          Header="存储感知"
+                                          Description="启动器内各种文件的储存占用情况"
+                                          Glyph="&#xEDA2;"
+                                          Name="DiskBtn"
+                                          Click="DiskBtn_OnClick"
+                                          IsClickable="True"/>
         </StackPanel>
     </ScrollViewer>
 </UserControl>

@@ -78,20 +78,6 @@ public partial class MainSettingPage : UserControl
 
     private void RestartBtn_OnClick(object? sender, RoutedEventArgs e)
     {
-        // 获取当前应用程序的路径和文件名
-        string applicationPath = Process.GetCurrentProcess().MainModule.FileName;
-            
-        // 启动新的应用程序实例
-        ProcessStartInfo startInfo = new ProcessStartInfo
-        {
-            FileName = applicationPath,
-            UseShellExecute = true
-        };
-            
-        // 启动新实例
-        Process.Start(startInfo);
-            
-        // 关闭当前应用程序
-        Environment.Exit(0);
+        MainView.Instance.GoToMainPage();
     }
 }

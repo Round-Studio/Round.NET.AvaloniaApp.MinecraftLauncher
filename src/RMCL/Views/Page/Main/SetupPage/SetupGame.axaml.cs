@@ -57,7 +57,7 @@ public partial class SetupGame : ISetting
         catch (Exception ex)
         {
             // 处理可能的异常
-            Console.WriteLine($"搜索Java时出错: {ex.Message}");
+            Console.WriteLine($@"搜索Java时出错: {ex.Message}");
         }
         finally
         {

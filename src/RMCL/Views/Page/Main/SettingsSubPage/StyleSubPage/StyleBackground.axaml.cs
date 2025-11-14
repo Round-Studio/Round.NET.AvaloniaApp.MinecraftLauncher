@@ -172,7 +172,7 @@ public partial class StyleBackground : UserControl
         else
         {
             // 用户取消了选择
-            Console.WriteLine("未选择文件。");
+            Console.WriteLine(@"未选择文件。");
         }
     }
 

@@ -31,7 +31,7 @@ public partial class SetupAccount : UserControl
             CloseAction = () =>
             {
                 var accountType = dialog.AccountType;
-                Console.WriteLine($"新增用户：{accountType}");
+                Console.WriteLine($@"新增用户：{accountType}");
                 dialog.AddAccount(accountType);
             }
         };
