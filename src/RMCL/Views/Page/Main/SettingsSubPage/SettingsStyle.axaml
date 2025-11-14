@@ -16,7 +16,7 @@
             </control:StyleBox>
             
             <onePointControls:SettingCard Header="主题模式"
-                                          Margin="5,5,5,10"
+                                          Margin="5"
                                           Description="决定启动器的主题模式为自定义 or 主题包"
                                           Glyph="&#xF133;">
                 <ComboBox Width="200">
@@ -26,7 +26,7 @@
             </onePointControls:SettingCard>
             
             <onePointControls:SettingCard Header="{x:Static properties:Resource.Settings_Style_Background}"
-                                          Margin="5,5,5,10"
+                                          Margin="5"
                                           Description="{x:Static properties:Resource.Settings_Style_Background_Description}"
                                           Glyph="&#xE91B;"
                                           Name="BackgroundBtn"
@@ -35,7 +35,7 @@
             </onePointControls:SettingCard>
             
             <onePointControls:SettingCard Header="{x:Static properties:Resource.Settings_Style_Color}"
-                                          Margin="5,5,5,10"
+                                          Margin="5"
                                           Description="{x:Static properties:Resource.Settings_Style_Color_Description}"
                                           Glyph="&#xE790;"
                                           Name="ColorBtn"
@@ -44,14 +44,14 @@
             </onePointControls:SettingCard>
             
             <onePointControls:SettingCard Header="{x:Static properties:Resource.Settings_Style_Music}"
-                                          Margin="5,5,5,10"
+                                          Margin="5"
                                           Description="{x:Static properties:Resource.Settings_Style_Music_Description}"
                                           Glyph="&#xE8D6;"
                                           IsClickable="True">
             </onePointControls:SettingCard>
             
             <onePointControls:SettingCard Header="{x:Static properties:Resource.Settings_Style_ThemePackProduction}"
-                                          Margin="5,5,5,10"
+                                          Margin="5"
                                           Description="{x:Static properties:Resource.Settings_Style_ThemePackProduction_Description}"
                                           Glyph="&#xE835;"
                                           IsClickable="True">

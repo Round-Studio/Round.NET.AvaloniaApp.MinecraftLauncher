@@ -9,7 +9,7 @@
     <ScrollViewer>
         <StackPanel Margin="15">
             <onePointControls:SettingCard Header="{x:Static properties:Resource.Settings_Style_Background_Material}"
-                                          Margin="5,5,5,10"
+                                          Margin="5"
                                           Description="{x:Static properties:Resource.Settings_Style_Background_Material_Description}"
                                           Glyph="&#xF742;">
                 <ComboBox Width="200"
@@ -23,7 +23,7 @@
             </onePointControls:SettingCard>
             
             <onePointControls:SettingCard Header="{x:Static properties:Resource.Settings_Style_Background_BackgroundModel}"
-                                          Margin="5,5,5,10"
+                                          Margin="5"
                                           Description="{x:Static properties:Resource.Settings_Style_Background_BackgroundModel_Description}"
                                           Glyph="&#xEC26;">
                 <ComboBox Width="200"
@@ -40,7 +40,7 @@
                 <onePointControls:SettingCard Header="选择壁纸"
                                               Description="选择你需要的壁纸"
                                               Glyph="&#xE8B0;"
-                                              Margin="5,5,5,10"
+                                              Margin="5"
                                               IsClickable="False">
                     <Button Padding="24,0"
                             Height="32"
@@ -51,7 +51,7 @@
                 <onePointControls:SettingCard Header="壁纸透明度"
                                               Description="壁纸的透明度设置"
                                               Glyph="&#xE81E;"
-                                              Margin="5,5,5,10"
+                                              Margin="5"
                                               IsClickable="False">
                     <Slider Width="200"
                             Minimum="0"
@@ -63,7 +63,7 @@
                 <onePointControls:SettingCard Header="壁纸模糊"
                                               Description="壁纸的模糊效果"
                                               Glyph="&#xF5EF;"
-                                              Margin="5,5,5,10"
+                                              Margin="5"
                                               IsClickable="False">
                     <Slider Width="200"
                             Minimum="0"
@@ -74,7 +74,7 @@
                 
                 <ListBox Name="BackgroundsList"
                          SelectionChanged="BackgroundsList_OnSelectionChanged"
-                         Margin="5,5,5,10">
+                         Margin="5">
                     
                 </ListBox>
             </StackPanel>

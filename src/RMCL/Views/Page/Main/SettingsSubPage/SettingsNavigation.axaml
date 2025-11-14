@@ -10,7 +10,7 @@
             <Grid ColumnDefinitions="7*,3*">
                 <StackPanel Grid.Column="0" Margin="15">
                     <onePointControls:SettingCard Header="{x:Static properties:Resource.Settings_Style}"
-                                                  Margin="5,5,5,10"
+                                                  Margin="5"
                                                   Description="{x:Static properties:Resource.Settings_Style_Description}"
                                                   Glyph="&#xEE56;"
                                                   Name="StyleSetting"
@@ -18,7 +18,7 @@
                                                   IsClickable="True"/>
                         
                     <onePointControls:SettingCard Header="{x:Static properties:Resource.Settings_Language}"
-                                                  Margin="5,5,5,10"
+                                                  Margin="5"
                                                   Description="{x:Static properties:Resource.Settings_Language_Description}"
                                                   Glyph="&#xE909;"
                                                   Name="LanguageBtn"
@@ -26,7 +26,7 @@
                                                   IsClickable="True"/>
                         
                     <onePointControls:SettingCard Header="{x:Static properties:Resource.Settings_Behavior}"
-                                                  Margin="5,5,5,10"
+                                                  Margin="5"
                                                   Description="{x:Static properties:Resource.Settings_Behavior_Description}"
                                                   Glyph="&#xE950;"
                                                   Name="BehaviorBtn"
@@ -34,7 +34,7 @@
                                                   IsClickable="True"/>
                         
                         <!--<onePointControls:SettingCard Header="{x:Static properties:Resource.Settings_Account}"
-                                                      Margin="5,5,5,10"
+                                                      Margin="5"
                                                       Description="{x:Static properties:Resource.Settings_Account_Description}"
                                                       Name="AccountBtn"
                                                       Click="AccountBtn_OnClick"
@@ -42,13 +42,13 @@
                                                       IsClickable="True"/>-->
                         
                     <onePointControls:SettingCard Header="{x:Static properties:Resource.Settings_Help}"
-                                                  Margin="5,5,5,10"
+                                                  Margin="5"
                                                   Description="{x:Static properties:Resource.Settings_Help_Description}"
                                                   Glyph="&#xE776;"
                                                   IsClickable="True"/>
                         
                     <onePointControls:SettingCard Header="{x:Static properties:Resource.Settings_About}"
-                                                  Margin="5,5,5,10"
+                                                  Margin="5"
                                                   Description="{x:Static properties:Resource.Settings_About_Description}"
                                                   Glyph="&#xE946;"
                                                   Name="AboutUs"

@@ -9,13 +9,13 @@
         <StackPanel Margin="15">
             <onePointControls:SettingCard Header="启动器账户"
                                           Description="单击此处前往 '领域'"
-                                          Margin="5,5,5,10"
+                                          Margin="5"
                                           IsClickable="True"
                                           Glyph="&#xEC26;"/>
             
             <onePointControls:SettingCard Header="游戏账户"
                                           Description="启动 Minecraft 所使用的账户"
-                                          Margin="5,5,5,10"
+                                          Margin="5"
                                           Glyph="&#xE902;">
                 <StackPanel Orientation="Horizontal">
                     <Button Padding="12,8"

@@ -7,19 +7,19 @@
              x:Class="Plugin.BedrockBoot.Views.Pages.MainSubPage.SettingsPage">
     <ScrollViewer>
         <StackPanel Margin="15">
-            <onePointControls:SettingCard Margin="5,5,5,10"
+            <onePointControls:SettingCard Margin="5"
                                           Header="下载"
                                           Description="BedrockBoot 下载时的行为"
                                           Glyph="&#xE896;"
                                           IsClickable="True"/>
             
-            <onePointControls:SettingCard Margin="5,5,5,10"
+            <onePointControls:SettingCard Margin="5"
                                           Header="目录与存储"
                                           Description="游戏目录，存储相关设置项"
                                           Glyph="&#xE8B7;"
                                           IsClickable="True"/>
             
-            <onePointControls:SettingCard Margin="5,5,5,10"
+            <onePointControls:SettingCard Margin="5"
                                           Header="关于插件"
                                           Description="关于我们的插件"
                                           Glyph="&#xE946;"

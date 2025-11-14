@@ -10,7 +10,7 @@
     <ScrollViewer>
         <StackPanel Margin="15">
             <onePointControls:SettingCard Header="主题模式"
-                                          Margin="5,5,5,10"
+                                          Margin="5"
                                           Description="浅色 or 深色"
                                           Glyph="&#xE793;">
                 <ListBox Name="ChooseTheme"
@@ -26,7 +26,7 @@
             </onePointControls:SettingCard>
             
             <onePointControls:SettingCard Header="主色调"
-                                          Margin="5,5,5,10"
+                                          Margin="5"
                                           Description="启动器强调色"
                                           Glyph="&#xE790;">
                 <ListBox Classes="Segmented"
