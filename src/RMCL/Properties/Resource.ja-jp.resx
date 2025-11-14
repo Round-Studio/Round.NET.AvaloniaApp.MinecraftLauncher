@@ -88,8 +88,8 @@
   <data name="OtherAboutUs.Inspiration.LauncherX" xml:space="preserve">
     <value>RMCL 内部のデザインスタイル、アニメーションは LauncherX を参考にしています</value>
   </data>
-  <data name="OtherAboutUs.Inspiration.WonderLabBakaXL" xml:space="preserve">
-    <value>RMCL 内部のページデザイン、機能は WonderLab、BakaXL を参考にしています</value>
+  <data name="OtherAboutUs.Inspiration.WonderLabBakaXLPolymerium" xml:space="preserve">
+    <value>RMCL 内部のページデザイン、機能は WonderLab、BakaXL、Polymerium を参考にしています</value>
   </data>
   <data name="OtherAboutUs.ComponentLibrary" xml:space="preserve">
     <value>コンポーネントライブラリ</value>

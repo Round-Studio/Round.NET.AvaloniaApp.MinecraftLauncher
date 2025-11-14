@@ -384,11 +384,11 @@ namespace RMCL.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to RMCL 内部分页面设计、功能参考 WonderLab、BakaXL.
+        ///   Looks up a localized string similar to RMCL 内部分页面设计、功能参考 WonderLab、BakaXL、Polymerium.
         /// </summary>
-        public static string OtherAboutUs_Inspiration_WonderLabBakaXL {
+        public static string OtherAboutUs_Inspiration_WonderLabBakaXLPolymerium {
             get {
-                return ResourceManager.GetString("OtherAboutUs.Inspiration.WonderLabBakaXL", resourceCulture);
+                return ResourceManager.GetString("OtherAboutUs.Inspiration.WonderLabBakaXLPolymerium", resourceCulture);
             }
         }
         

@@ -42,9 +42,10 @@
             
             <TextBlock Margin="20,1"  Text="{x:Static properties:Resource.OtherAboutUs_Inspiration_LauncherX}"></TextBlock>
             <TextBlock Margin="20,1">(https://corona.studio/lx)</TextBlock>
-            <TextBlock Margin="20,1" Text="{x:Static properties:Resource.OtherAboutUs_Inspiration_WonderLabBakaXL}"></TextBlock>
+            <TextBlock Margin="20,1" Text="{x:Static properties:Resource.OtherAboutUs_Inspiration_WonderLabBakaXLPolymerium}"></TextBlock>
             <TextBlock Margin="20,1">(https://lunova.studio/)</TextBlock>
             <TextBlock Margin="20,1">(https://bakaxl.com/)</TextBlock>
+            <TextBlock Margin="20,1">(https://github.com/d3ara1n/Polymerium)</TextBlock>
             
             <TextBlock Margin="5,20,0,8"
                        FontSize="16"
