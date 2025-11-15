@@ -1,9 +1,11 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Avalonia;
 using Avalonia.Controls;
+using Avalonia.Input;
 using Avalonia.Interactivity;
 using Avalonia.Media;
 using Avalonia.Media.Imaging;
@@ -59,6 +61,35 @@ public partial class MainWindow : OnePointWindow
         }
 
         Console.WriteLine(@"窗体位置信息初始完毕");
+        
+        DragDrop.SetAllowDrop(this, true);
+        AddHandler(DragDrop.DropEvent, OnDrop);
+        AddHandler(DragDrop.DragOverEvent, OnDragOver);
+    }
+    private void OnDragOver(object? sender, DragEventArgs e)
+    {
+        /*if (e.Data.Contains(DataFormats.FileNames))
+        {
+            e.DragEffects = DragDropEffects.Copy;
+        }
+        else
+        {
+            e.DragEffects = DragDropEffects.None;
+        }*/
+        
+        e.DragEffects = DragDropEffects.Copy;
+    }
+
+    private void OnDrop(object? sender, DragEventArgs e)
+    {
+        if (e.Data.Contains(DataFormats.FileNames))
+        {
+            var files = e.Data.GetFileNames()?.ToList();
+            if (files != null && files.Any())
+            {
+                files.ForEach(x => Console.WriteLine($"检测到拖拽文件：{x}"));
+            }
+        }
     }
 
     public async Task UpdateBack()

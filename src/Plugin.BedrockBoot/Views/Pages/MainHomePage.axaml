@@ -5,6 +5,7 @@
              xmlns:onePointControls="clr-namespace:OnePointUI.Avalonia.Styling.Controls.OnePointControls;assembly=OnePointUI.Avalonia"
              xmlns:navigation="clr-namespace:OnePointUI.Avalonia.Styling.Controls.OnePointControls.Navigation;assembly=OnePointUI.Avalonia"
              xmlns:notice="clr-namespace:OnePointUI.Avalonia.Styling.Controls.OnePointControls.Notice;assembly=OnePointUI.Avalonia"
+             xmlns:items="clr-namespace:OnePointUI.Avalonia.Styling.Controls.OnePointControls.Items;assembly=OnePointUI.Avalonia"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="Plugin.BedrockBoot.Views.Pages.MainHomePage">
     <Grid>
@@ -12,11 +13,7 @@
               Opacity="0.6"></Grid>
         
         <Grid RowDefinitions="Auto,*">
-            <Border Grid.Row="0" Background="{DynamicResource PrimaryBackgroundBrush}"
-                    VerticalAlignment="Top"
-                    CornerRadius="12"
-                    BorderThickness="1"
-                    BorderBrush="{DynamicResource PrimaryBorderBrush}"
+            <items:BorderCard Grid.Row="0"
                     Margin="20,20,20,0"
                     Height="48">
                 <Grid>
@@ -41,10 +38,15 @@
                                         State="Warning"/>
                     </Border>
                 </Grid>
-            </Border>
+            </items:BorderCard>
         
             <navigation:NavigationFrame Grid.Row="1" Name="Frame"
                                         Margin="0,0,0,0"/>  
         </Grid>
+        
+        <TextBlock HorizontalAlignment="Right"
+                   VerticalAlignment="Bottom"
+                   Margin="20"
+                   Opacity="0.5">PowerBy BedrockBoot</TextBlock>
     </Grid>
 </UserControl>

@@ -11,6 +11,7 @@ using OnePointUI.Avalonia.Styling.Controls.OnePointControls;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Threading.Tasks;
 
 namespace Plugin.BedrockBoot.Views.Pages.MainSubPage;
@@ -101,7 +102,9 @@ public partial class DownloadPage : UserControl
                     {
                         version = new Version(item.ID);
                     }
-                    catch { }
+                    catch
+                    {
+                    }
 
                     if (item.Type == type)
                     {
@@ -139,6 +142,11 @@ public partial class DownloadPage : UserControl
                 Console.WriteLine(@"序列化完成");
 
                 return (sortedList, sortedList.Count > 0);
+            }
+            catch (WebException ex)
+            {
+                Console.WriteLine($@"网络错误: {ex.Message}");
+                return (new List<VersionInformation>(), false);
             }
             catch (Exception ex)
             {

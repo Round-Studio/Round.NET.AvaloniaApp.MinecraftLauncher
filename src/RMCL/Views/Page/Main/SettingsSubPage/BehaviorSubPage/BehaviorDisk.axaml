@@ -15,7 +15,8 @@
                                                Background="Gray"
                                                HorizontalAlignment="Left"></onePointControls:LabelBox>
                     <TextBlock Margin="5,0,0,0"
-                               FontSize="32">0.0 Gib</TextBlock>
+                               FontSize="32"
+                               Name="TotalText">0.0 Gib</TextBlock>
                 </StackPanel>
                 
                 <onePointControls:LineTextBlock Text="详细信息"
@@ -34,10 +35,12 @@
                             <TextBlock FontWeight="Bold"
                                        Margin="5,0,0,0">Config</TextBlock>
                             <TextBlock Margin="5,0,0,2"
+                                       Name="ConfigText"
                                        Foreground="Gray">0.0 Gib / 0.0 %</TextBlock>
                             
                             <ProgressBar Margin="5"
-                                         Background="{DynamicResource PrimaryForegroundBrush}"></ProgressBar>
+                                         Name="ConfigProgressBar"
+                                         Background="Gray"></ProgressBar>
                         </StackPanel>
                     </items:BorderCard>
                     
@@ -50,10 +53,12 @@
                             <TextBlock FontWeight="Bold"
                                        Margin="5,0,0,0">Packet</TextBlock>
                             <TextBlock Margin="5,0,0,2"
+                                       Name="PacketText"
                                        Foreground="Gray">0.0 Gib / 0.0 %</TextBlock>
                             
                             <ProgressBar Margin="5"
-                                         Background="{DynamicResource PrimaryForegroundBrush}"></ProgressBar>
+                                         Name="PacketProgressBar"
+                                         Background="Gray"></ProgressBar>
                         </StackPanel>
                     </items:BorderCard>
                     
@@ -66,10 +71,12 @@
                             <TextBlock FontWeight="Bold"
                                        Margin="5,0,0,0">Cache</TextBlock>
                             <TextBlock Margin="5,0,0,2"
+                                       Name="CacheText"
                                        Foreground="Gray">0.0 Gib / 0.0 %</TextBlock>
                             
                             <ProgressBar Margin="5"
-                                         Background="{DynamicResource PrimaryForegroundBrush}"></ProgressBar>
+                                         Name="CacheProgressBar"
+                                         Background="Gray"></ProgressBar>
                         </StackPanel>
                     </items:BorderCard>
                 </Grid>
