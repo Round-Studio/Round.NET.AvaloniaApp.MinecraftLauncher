@@ -17,6 +17,7 @@ using RMCL.Base.Entry.Config;
 using RMCL.Base.Enum.Style;
 using RMCL.Models;
 using RMCL.Models.Global;
+using RMCL.Views.Page.Main.DragDropPage;
 using RMCL.Views.Page.Main.MainSubPage;
 using Round.SDK.Logger;
 
@@ -88,6 +89,7 @@ public partial class MainWindow : OnePointWindow
             if (files != null && files.Any())
             {
                 files.ForEach(x => Console.WriteLine($"检测到拖拽文件：{x}"));
+                this.OpenDraw(new DragDropRoot(files),"拖拽文件");
             }
         }
     }
