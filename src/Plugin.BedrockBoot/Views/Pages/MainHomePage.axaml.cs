@@ -12,7 +12,7 @@ public partial class MainHomePage : UserControl
     public MainHomePage()
     {
         InitializeComponent();
-        this.Frame.NavigateTo(new ManagerPage());
+        this.Frame.NavigateTo(new HomePage());
 
         IsEdit = true;
     }

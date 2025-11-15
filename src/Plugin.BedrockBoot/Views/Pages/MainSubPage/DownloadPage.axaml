@@ -47,6 +47,7 @@
                       VerticalContentAlignment="Center"
                       HorizontalAlignment="Stretch">
                 <ComboBox.Items>
+                    <ComboBoxItem Content="所有"></ComboBoxItem>
                     <ComboBoxItem Content="正式版"></ComboBoxItem>
                     <ComboBoxItem Content="预览版"></ComboBoxItem>
                     <ComboBoxItem Content="Beta 版"></ComboBoxItem>

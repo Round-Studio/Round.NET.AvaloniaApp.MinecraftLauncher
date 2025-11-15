@@ -15,14 +15,10 @@
                                         Margin="0,0,0,0"
                                         Text="版本概述"></onePointControls:LineTextBlock>
         
-        <Border Grid.Row="0"
+        <items:BorderCard Grid.Row="0"
                 Height="80"
                 HorizontalAlignment="Stretch"
-                Margin="0,48,0,20"
-                CornerRadius="6"
-                Background="{DynamicResource PrimaryBackgroundBrush}"
-                BorderThickness="1"
-                BorderBrush="{DynamicResource PrimaryBorderBrush}">
+                Margin="0,48,0,20">
             <Panel>
                 <StackPanel Margin="20,0"
                             Orientation="Horizontal"
@@ -70,7 +66,7 @@
                     </Button>
                 </StackPanel>
             </Panel>
-        </Border>
+        </items:BorderCard>
         
         <ScrollViewer Grid.Row="1"
                       Name="OutherInstallItem">

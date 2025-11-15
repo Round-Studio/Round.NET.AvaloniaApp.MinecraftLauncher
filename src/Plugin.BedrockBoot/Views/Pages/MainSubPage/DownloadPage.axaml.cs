@@ -30,7 +30,7 @@ public partial class DownloadPage : UserControl
         IsEdit = true;
     }
 
-    public async void UpdateUI(string type = "Release", string key = "*")
+    public async void UpdateUI(string type = "*", string key = "*")
     {
         // 取消之前的加载任务
         _currentLoadingCancellation.Cancel();
@@ -106,7 +106,7 @@ public partial class DownloadPage : UserControl
                     {
                     }
 
-                    if (item.Type == type)
+                    if (item.Type == type || type == "*")
                     {
                         if (key != "*")
                         {
@@ -205,7 +205,7 @@ public partial class DownloadPage : UserControl
                         x.Date
                     }),
                     IsClickable = true,
-                    Margin = new Thickness(5, 0, 5, 15),
+                    Margin = new Thickness(5, 0, 5, 10),
                     IsFontIcon = false,
                     ImageIcon = GetImage("avares://RMCL/Assets/Icon/Minecraft/草方块.png")
                 };
@@ -241,7 +241,7 @@ public partial class DownloadPage : UserControl
     {
         if (IsEdit && ComboBox.SelectedIndex >= 0)
         {
-            _type = new string[] { "Release", "Preview", "Beta" }[ComboBox.SelectedIndex];
+            _type = new string[] { "*","Release", "Preview", "Beta" }[ComboBox.SelectedIndex];
             UpdateUI(_type, _key);
         }
     }

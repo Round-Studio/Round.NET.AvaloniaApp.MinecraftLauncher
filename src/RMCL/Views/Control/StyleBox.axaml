@@ -38,26 +38,19 @@
                     </Image.RenderTransform>
                 </Image>
                 
-                <Border Width="20" Height="6"
+                <Border Width="8" Height="40"
                         Background="{DynamicResource PrimaryForegroundBrush}"
                         HorizontalAlignment="Left"
-                        VerticalAlignment="Top"
-                        CornerRadius="3"
-                        Margin="8"></Border>
+                        VerticalAlignment="Center"
+                        CornerRadius="2"
+                        Margin="4"></Border>
                 
-                <Border Width="20" Height="6"
+                <Border Width="30" Height="12"
                         Background="{DynamicResource PrimaryForegroundBrush}"
-                        HorizontalAlignment="Right"
+                        HorizontalAlignment="Left"
                         VerticalAlignment="Bottom"
-                        CornerRadius="3"
-                        Margin="8,8,8,12"></Border>
-                
-                <Border Width="40" Height="12"
-                        Background="{DynamicResource PrimaryForegroundBrush}"
-                        HorizontalAlignment="Right"
-                        VerticalAlignment="Bottom"
-                        CornerRadius="3"
-                        Margin="8,8,8,24"></Border>
+                        CornerRadius="2"
+                        Margin="4,4,4,11"></Border>
                 
                 <Grid VerticalAlignment="Bottom">
                     <Grid.ColumnDefinitions>
