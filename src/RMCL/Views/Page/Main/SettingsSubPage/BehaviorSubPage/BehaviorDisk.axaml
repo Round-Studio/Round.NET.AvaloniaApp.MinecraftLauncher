@@ -90,7 +90,7 @@
                                               Header="自动感知"
                                               Description="自动根据占用的情况进行磁盘的优化（仅针对启动器及游戏文件）"
                                               Glyph="&#xE805;">
-                    <ToggleSwitch></ToggleSwitch>
+                    <ToggleSwitch IsEnabled="False"></ToggleSwitch>
                 </onePointControls:SettingCard>
             </StackPanel>
         </ScrollViewer>
