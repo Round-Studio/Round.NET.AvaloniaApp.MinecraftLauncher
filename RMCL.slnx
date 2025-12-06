@@ -1,31 +1,28 @@
 <Solution>
   <Folder Name="/LiteSkinViewer/">
-    <Project Path="src\LiteSkinViewer\LiteSkinViewer.2D.Simple\LiteSkinViewer.2D.Simple.csproj" Type="Classic C#" />
-    <Project Path="src\LiteSkinViewer\LiteSkinViewer.2D\LiteSkinViewer.2D.csproj" Type="Classic C#" />
-    <Project Path="src\LiteSkinViewer\LiteSkinViewer.3D\LiteSkinViewer.3D.csproj" Type="Classic C#" />
-    <Project Path="src\LiteSkinViewer\LiteSkinViewer.Shared\LiteSkinViewer.Shared.csproj" Type="Classic C#" />
+    <Project Path="src\LiteSkinViewer\LiteSkinViewer.2D.Simple\LiteSkinViewer.2D.Simple.csproj" Type="C#" />
+    <Project Path="src\LiteSkinViewer\LiteSkinViewer.2D\LiteSkinViewer.2D.csproj" Type="C#" />
+    <Project Path="src\LiteSkinViewer\LiteSkinViewer.3D\LiteSkinViewer.3D.csproj" Type="C#" />
+    <Project Path="src\LiteSkinViewer\LiteSkinViewer.Shared\LiteSkinViewer.Shared.csproj" Type="C#" />
   </Folder>
   <Folder Name="/OnePointUI.Avalonia/">
-    <Project Path="src\OnePointUI.Avalonia\src\OnePointUI.Avalonia.Test\OnePointUI.Avalonia.Test.csproj" Type="Classic C#" />
-    <Project Path="src\OnePointUI.Avalonia\src\OnePointUI.Avalonia\OnePointUI.Avalonia.csproj" Type="Classic C#" />
+    <Project Path="src\OnePointUI.Avalonia\src\OnePointUI.Avalonia.Test\OnePointUI.Avalonia.Test.csproj" Type="C#" />
+    <Project Path="src\OnePointUI.Avalonia\src\OnePointUI.Avalonia\OnePointUI.Avalonia.csproj" Type="C#" />
   </Folder>
   <Folder Name="/OverrideLauncher.Core/">
-    <Project Path="src\OverrideLauncher.Core\src\OverrideLauncher.Core.Example\OverrideLauncher.Core.Example.csproj" Type="Classic C#" />
-    <Project Path="src\OverrideLauncher.Core\src\OverrideLauncher.Core\OverrideLauncher.Core.csproj" Type="Classic C#" />
+    <Project Path="src\OverrideLauncher.Core\src\OverrideLauncher.Core.Example\OverrideLauncher.Core.Example.csproj" Type="C#" />
+    <Project Path="src\OverrideLauncher.Core\src\OverrideLauncher.Core\OverrideLauncher.Core.csproj" Type="C#" />
   </Folder>
   <Folder Name="/Plugin/">
-    <Project Path="src\Plugin.BedrockBoot\Plugin.BedrockBoot.csproj" Type="Classic C#" />
-    <Project Path="src\Plugin.MusicPlayer\Plugin.MusicPlayer.csproj" Type="Classic C#" />
+    <Project Path="src\Plugin.BedrockBoot\Plugin.BedrockBoot.csproj" Type="C#" />
+    <Project Path="src\Plugin.MusicPlayer\Plugin.MusicPlayer.csproj" Type="C#" />
   </Folder>
   <Folder Name="/RemoteOnline/">
-    <Project Path="src\RemoteOnline\RemoteOnline.Console\RemoteOnline.Console.csproj" Type="Classic C#" />
-    <Project Path="src\RemoteOnline\RemoteOnline\RemoteOnline.csproj" Type="Classic C#" />
+    <Project Path="src\RemoteOnline\RemoteOnline.Console\RemoteOnline.Console.csproj" Type="C#" />
+    <Project Path="src\RemoteOnline\RemoteOnline\RemoteOnline.csproj" Type="C#" />
   </Folder>
   <Folder Name="/SDK/">
-    <Project Path="src\Round.SDK\Round.SDK\Round.SDK.csproj" Type="Classic C#" />
+    <Project Path="src\Round.SDK\Round.SDK\Round.SDK.csproj" Type="C#" />
   </Folder>
-  <Folder Name="/Tools/">
-    <Project Path="src\PluginTools\PluginTools.csproj" Type="Classic C#" />
-  </Folder>
-  <Project Path="src\RMCL\RMCL.csproj" Type="Classic C#" />
+  <Project Path="src\RMCL\RMCL.csproj" Type="C#" />
 </Solution>
