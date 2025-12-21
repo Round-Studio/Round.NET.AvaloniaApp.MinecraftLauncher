@@ -11,6 +11,7 @@
         Icon="/Assets/Icon/RMCL4.Logo.Big.ico"
         Width="1010" MinWidth="1010"
         Height="630" MinHeight="630"
+        IsMainWindow="True"
         Background="Transparent"
         Closing="TopLevel_OnClosing"
         Title="RMCL">
