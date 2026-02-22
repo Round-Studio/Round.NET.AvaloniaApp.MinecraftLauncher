@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
         <OutputType>WinExe</OutputType>
-        <TargetFramework>net9.0</TargetFramework>
+        <TargetFramework>net10.0</TargetFramework>
         <Nullable>enable</Nullable>
         <BuiltInComInteropSupport>true</BuiltInComInteropSupport>
         <ApplicationManifest>app.manifest</ApplicationManifest>
@@ -38,11 +38,6 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Compile Update="Properties\Resource.Designer.cs">
-        <DesignTime>True</DesignTime>
-        <AutoGen>True</AutoGen>
-        <DependentUpon>Resource.resx</DependentUpon>
-      </Compile>
       <Compile Update="Views\Window\MainWindow.axaml.cs">
         <DependentUpon>MainWindow.axaml</DependentUpon>
         <SubType>Code</SubType>
@@ -50,10 +45,6 @@
     </ItemGroup>
 
     <ItemGroup>
-      <EmbeddedResource Update="Properties\Resource.resx">
-        <Generator>PublicResXFileCodeGenerator</Generator>
-        <LastGenOutput>Resource.Designer.cs</LastGenOutput>
-      </EmbeddedResource>
       <None Remove="Properties\Resource.ru.xml" />
     </ItemGroup>
 
@@ -69,5 +60,9 @@
       <AvaloniaResource Update="Assets\Text\OpenSourceProject.md">
         <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       </AvaloniaResource>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Views\Controls\" />
     </ItemGroup>
 </Project>

@@ -1,0 +1,132 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:RMCL.ViewModels"
+        xmlns:items="clr-namespace:OnePointUI.Avalonia.Styling.Controls.OnePointControls.Items;assembly=OnePointUI.Avalonia"
+        xmlns:onePointControls="clr-namespace:OnePointUI.Avalonia.Styling.Controls.OnePointControls;assembly=OnePointUI.Avalonia"
+        xmlns:navigation="clr-namespace:OnePointUI.Avalonia.Styling.Controls.OnePointControls.Navigation;assembly=OnePointUI.Avalonia"
+        x:Class="RMCL.Views.Windows.MainWindow"
+        x:DataType="vm:MainWindowViewModel"
+        Icon="/Assets/Icon/RMCL4.Logo.Big.ico"
+        Width="1010" MinWidth="1010"
+        Height="600" MinHeight="600"
+        Background="Transparent"
+        ExtendClientAreaToDecorationsHint="True"
+        ExtendClientAreaTitleBarHeightHint="-1"
+        ExtendClientAreaChromeHints="NoChrome"
+        TransparencyLevelHint="Mica"
+        Closing="TopLevel_OnClosing"
+        Title="RMCL">
+    
+    <Design.DataContext>
+        <vm:MainWindowViewModel />
+    </Design.DataContext>
+
+    <Grid>
+        <Grid Name="AccentBackgroundBox"
+              Background="{DynamicResource AccentBackgroundBrush}"
+              IsVisible="False" />
+
+        <Grid Name="BackgroundBox"
+              IsVisible="False">
+            <Grid.Effect>
+                <BlurEffect Radius="0" />
+            </Grid.Effect>
+            <Grid Name="BackgroundImage" />
+            <Grid Name="BackgroundImageOpacity"
+                  Opacity="0"
+                  Background="{DynamicResource BackgroundBrush}" />
+        </Grid>
+
+        <Grid RowDefinitions="Auto,*">
+            <!-- 标题栏拖动区域 -->
+            <Grid Grid.Row="0" 
+                  Height="64"
+                  HorizontalAlignment="Stretch"
+                  VerticalAlignment="Top"
+                  Background="#01000000"
+                  PointerPressed="InputElement_OnPointerPressed" />
+            
+            <!-- 顶部导航栏 -->
+            <navigation:NavigationFrame Grid.Row="0"
+                                        Margin="8"
+                                        VerticalAlignment="Center"
+                                        HorizontalAlignment="Center"
+                                        Name="TopNavBar" />
+
+            <!-- 右侧窗口控制按钮 -->
+            <StackPanel Grid.Row="0" 
+                        Orientation="Horizontal"
+                        HorizontalAlignment="Right"
+                        VerticalAlignment="Top"
+                        Margin="16"
+                        Spacing="8">
+                <!-- 最小化按钮 -->
+                <Button Classes="NoBorder"
+                        Height="32" Width="32"
+                        Padding="8"
+                        Click="MinimizeButton_Click">
+                    <onePointControls:FontIcon VerticalAlignment="Center"
+                                               HorizontalAlignment="Center"
+                                               Glyph="&#xE921;"
+                                               FontSize="10" />
+                </Button>
+                
+                <!-- 最大化/还原按钮 -->
+                <Button Classes="NoBorder"
+                        Height="32" Width="32"
+                        Padding="8"
+                        x:Name="MaximizeRestoreButton"
+                        Click="MaximizeRestoreButton_Click">
+                    <onePointControls:FontIcon VerticalAlignment="Center"
+                                               HorizontalAlignment="Center"
+                                               x:Name="MaximizeRestoreIcon"
+                                               Glyph="&#xE922;"
+                                               FontSize="10" />
+                </Button>
+                
+                <!-- 关闭按钮 -->
+                <Button Classes="NoBorder"
+                        Height="32" Width="32"
+                        Padding="8"
+                        Click="CloseButton_Click">
+                    <onePointControls:FontIcon VerticalAlignment="Center"
+                                               HorizontalAlignment="Center"
+                                               Glyph="&#xE8BB;"
+                                               FontSize="10" />
+                </Button>
+            </StackPanel>
+
+            <!-- 左侧应用信息区域 -->
+            <StackPanel Grid.Row="0" 
+                        Orientation="Horizontal"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Top"
+                        Margin="16"
+                        Spacing="8">
+                <Button Classes="NoBorder"
+                        Height="32"
+                        Padding="12,0">
+                    <StackPanel Orientation="Horizontal"
+                                Spacing="6">
+                        <TextBlock Text="RMCL"
+                                   FontSize="16" />
+                    </StackPanel>
+                </Button>
+                <Button Classes="NoBorder"
+                        Height="32" MinWidth="32"
+                        Padding="8">
+                    <StackPanel Orientation="Horizontal"
+                                Spacing="6">
+                        <onePointControls:FontIcon VerticalAlignment="Center"
+                                                   Glyph="&#xE7C4;" />
+                        <TextBlock Text="0 项任务" />
+                    </StackPanel>
+                </Button>
+            </StackPanel>
+            
+            <!-- 主内容区域 -->
+            <navigation:NavigationFrame Grid.Row="1"
+                                        Name="MainFrame" />
+        </Grid>
+    </Grid>
+</Window>
