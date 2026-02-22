@@ -10,7 +10,6 @@ using OverrideLauncher.Core.Base.Dictionary;
 using RMCL.Base.Entry.Config;
 using RMCL.Models;
 using RMCL.Models.Global;
-using RMCL.Models.Helper;
 using Round.SDK.Entity;
 using Round.SDK.Logger;
 
@@ -37,30 +36,6 @@ sealed class Program
             ConsoleRedirector.RegisterThread(Thread.CurrentThread,"Program");
             
             Console.WriteLine(@"Main 入口启动");
-
-            if (false)
-            {
-                Task.Run(() =>
-                {
-                    ConsoleRedirector.RegisterThread(Thread.CurrentThread,"Server");
-                    Console.WriteLine(@"启动后台服务器...");
-                    // 获取当前应用程序的路径和文件名
-                    string applicationPath = Process.GetCurrentProcess().MainModule.FileName;
-
-                    // 启动新的应用程序实例
-                    ProcessStartInfo startInfo = new ProcessStartInfo
-                    {
-                        FileName = applicationPath,
-                        UseShellExecute = true,
-                        ArgumentList = { "-server" }
-                    };
-                    Console.WriteLine(@"初始化后台程序");
-
-                    // 启动新实例
-                    Process.Start(startInfo);
-                    Console.WriteLine(@"服务器启动完毕。");
-                });
-            }
             
             DictionaryDownloadHost.SwitchMirror("official");
             Console.WriteLine(@"Config 读取完毕，即将启动 Avalonia 桌面程序。");
